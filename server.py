@@ -1606,7 +1606,12 @@ def require_cloud_migration_token(handler, payload=None):
         handler.headers.get("X-Cloud-Migration-Token", "")
         or str((payload or {}).get("migrationToken") or "")
     ).strip()
-    if not provided or not hmac.compare_digest(provided, configured):
+    if not provided:
+        raise ApiError("迁移令牌不正确。", status=401)
+
+    provided_bytes = provided.encode("utf-8", errors="surrogatepass")
+    configured_bytes = configured.encode("utf-8", errors="surrogatepass")
+    if not hmac.compare_digest(provided_bytes, configured_bytes):
         raise ApiError("迁移令牌不正确。", status=401)
 
 
