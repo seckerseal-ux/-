@@ -110,7 +110,7 @@ SCENE_PRESETS = {
         {
             "label": "校园服务",
             "tags": ["校园听力", "服务咨询"],
-            "note": "适合校园通知、办公室咨询、课程安排和表格办理场景。",
+            "note": "校园通知、注册和表格办理场景高频。",
             "keywords_cn": "学校 校园 学生 课程 导师 注册 申请 表格 办公室 讲座 教室 图书馆 实验室 学费 奖学金".split(),
             "keywords_en": "campus student course tutor registration application form office lecture classroom library laboratory tuition scholarship".split(),
             "examples": {
@@ -123,7 +123,7 @@ SCENE_PRESETS = {
         {
             "label": "出行预约",
             "tags": ["旅游交通", "时间安排"],
-            "note": "适合订票、改签、路线说明和活动预约类听力场景。",
+            "note": "订票、改签和路线说明场景高频。",
             "keywords_cn": "航班 火车 巴士 机场 车站 行程 票 旅游 预订 预约 酒店 路线 时间 导游".split(),
             "keywords_en": "flight train bus airport station itinerary ticket travel booking reservation hotel route schedule guide".split(),
             "examples": {
@@ -136,7 +136,7 @@ SCENE_PRESETS = {
         {
             "label": "住宿设施",
             "tags": ["住宿生活", "设施通知"],
-            "note": "适合住宿安排、设施维修、押金费用和日常生活通知。",
+            "note": "住宿安排、设施维修和押金费用高频。",
             "keywords_cn": "住宿 宿舍 房间 租房 租约 押金 维修 设施 水电 餐厅 食堂 邻居 公寓".split(),
             "keywords_en": "accommodation dormitory room rent lease deposit maintenance facility electricity cafeteria neighbour apartment".split(),
             "examples": {
@@ -151,7 +151,7 @@ SCENE_PRESETS = {
         {
             "label": "科研方法",
             "tags": ["学术阅读", "研究方法"],
-            "note": "适合研究设计、实验过程、理论说明和结论判断类文章。",
+            "note": "研究设计、实验过程和结论判断高频。",
             "keywords_cn": "研究 实验 理论 机制 数据 分析 模型 假设 证据 学者 统计".split(),
             "keywords_en": "research experiment theory mechanism data analysis model hypothesis evidence scholar statistics".split(),
             "examples": {
@@ -164,7 +164,7 @@ SCENE_PRESETS = {
         {
             "label": "环境生态",
             "tags": ["环境话题", "自然科学"],
-            "note": "适合生态保护、资源变化、气候影响和物种演化类阅读文章。",
+            "note": "环境、资源和气候变化类阅读高频。",
             "keywords_cn": "生态 环境 气候 资源 物种 生物 化石 农业 地质 进化".split(),
             "keywords_en": "ecology environment climate resource species biology fossil agriculture geology evolution".split(),
             "examples": {
@@ -177,7 +177,7 @@ SCENE_PRESETS = {
         {
             "label": "社会历史",
             "tags": ["历史文化", "社会议题"],
-            "note": "适合历史变迁、社会结构、文化现象和行为研究类文章。",
+            "note": "历史变迁、社会结构和文化现象高频。",
             "keywords_cn": "历史 考古 社会 文化 语言 心理 人类 城市 社区 传统 文献".split(),
             "keywords_en": "history archaeology society culture language psychology human urban community tradition document".split(),
             "examples": {
@@ -192,7 +192,7 @@ SCENE_PRESETS = {
         {
             "label": "政府政策",
             "tags": ["写作表达", "政策社会"],
-            "note": "适合政府职责、公共政策、社会治理和责任分配类 Task 2 表达。",
+            "note": "政府、政策和社会治理类写作高频。",
             "keywords_cn": "政府 政策 法规 责任 公共 管理 立法 犯罪 税收 平等".split(),
             "keywords_en": "government policy regulation responsibility public management legislation crime taxation equality".split(),
             "examples": {
@@ -205,7 +205,7 @@ SCENE_PRESETS = {
         {
             "label": "教育科技",
             "tags": ["教育话题", "科技发展"],
-            "note": "适合教育改革、技术影响、媒体使用和学习方式变化类写作题。",
+            "note": "教育、媒体和科技影响类写作高频。",
             "keywords_cn": "教育 技术 媒体 学习 学校 老师 学生 网络 人工智能 培训".split(),
             "keywords_en": "education technology media learning school teacher student internet artificial intelligence training".split(),
             "examples": {
@@ -218,7 +218,7 @@ SCENE_PRESETS = {
         {
             "label": "经济环境",
             "tags": ["经济城市", "环境影响"],
-            "note": "适合城市发展、经济成本、环境压力和资源分配类写作题。",
+            "note": "城市发展、经济成本和环境压力类写作高频。",
             "keywords_cn": "经济 城市 交通 污染 能源 资源 成本 投资 就业 发展".split(),
             "keywords_en": "economy city transport pollution energy resource cost investment employment development".split(),
             "examples": {
@@ -233,7 +233,7 @@ SCENE_PRESETS = {
         {
             "label": "人物经历",
             "tags": ["口语素材", "人物经历"],
-            "note": "适合描述人物、经历、感受变化和印象最深的事件。",
+            "note": "人物、经历和感受表达高频。",
             "keywords_cn": "朋友 家人 老师 人物 经历 童年 记忆 影响 性格 情绪".split(),
             "keywords_en": "friend family teacher person experience childhood memory influence personality emotion".split(),
             "examples": {
@@ -246,7 +246,7 @@ SCENE_PRESETS = {
         {
             "label": "地点旅行",
             "tags": ["地点话题", "旅行生活"],
-            "note": "适合家乡、城市、旅行、想重访的地点和生活环境题目。",
+            "note": "家乡、城市和旅行题高频。",
             "keywords_cn": "家乡 城市 地点 旅行 假期 邻居 街区 公园 海边 酒店".split(),
             "keywords_en": "hometown city place travel holiday neighbourhood park seaside hotel".split(),
             "examples": {
@@ -259,7 +259,7 @@ SCENE_PRESETS = {
         {
             "label": "习惯观点",
             "tags": ["日常习惯", "观点表达"],
-            "note": "适合日常习惯、个人偏好、生活方式和 Part 3 观点展开。",
+            "note": "日常习惯、个人偏好和观点展开高频。",
             "keywords_cn": "习惯 爱好 兴趣 工作 学习 日常 食物 购物 观点 生活".split(),
             "keywords_en": "habit hobby interest work study routine food shopping opinion lifestyle".split(),
             "examples": {
@@ -648,23 +648,662 @@ def capitalize_fragment(value):
     return value[0].upper() + value[1:]
 
 
+SEMANTIC_KEYWORDS = {
+    "person": "人 人员 老师 学生 管理员 助手 官员 职员 导游 旅客 研究者 学者 居民 家长 朋友 librarian teacher student manager officer guide passenger researcher scholar resident parent friend worker staff".split(),
+    "place": "地点 地方 场所 机场 车站 办公室 教室 宿舍 图书馆 大厅 中心 公寓 城市 家乡 公园 海边 房间 工作室 airport station office classroom dormitory library hall centre center apartment city hometown park seaside room venue museum clinic campus studio".split(),
+    "money": "费用 成本 预算 资金 投资 税收 收入 支出 学费 fee cost budget funding investment tax income expense tuition rent salary".split(),
+    "document": "文件 表格 门票 票据 收据 证件 申请 讲义 通知 行程 手册 form ticket receipt document application handout notice schedule handbook record certificate bill".split(),
+    "event": "活动 课程 讲座 会议 预约 预订 行程 比赛 节日 seminar lecture workshop class meeting appointment reservation trip event festival session course tour".split(),
+    "transport": "交通 火车 巴士 航班 船 路线 站点 机场 旅行 列车 车票 train bus flight ship route stop airport travel railway transport".split(),
+    "research": "研究 实验 数据 理论 模型 假设 证据 分析 结果 study experiment data theory model hypothesis evidence analysis result method finding".split(),
+    "environment": "环境 生态 资源 气候 物种 污染 能源 生物 ecology environment resource climate species pollution energy wildlife habitat biodiversity".split(),
+    "policy": "政策 政府 法规 公共 制度 责任 管理 立法 policy government regulation public system responsibility management legislation law measure".split(),
+    "emotion": "情绪 感受 记忆 印象 习惯 爱好 偏好 emotion feeling memory impression habit hobby preference attitude".split(),
+    "abstract": "解释 说明 报告 讨论 概述 过程 影响 变化 结果 原因 效果 观点 现象 规律 账户 账目 account explanation report discussion overview process impact change result cause effect concept issue pattern description summary".split(),
+}
+
+VERB_HINTS = {
+    "change": "推迟 延期 更改 调整 改变 转移 转让 转换 postpone delay reschedule transfer change alter shift convert replace move".split(),
+    "submit": "提交 申请 登记 注册 确认 预约 预订 报名 submit apply register enrol enroll confirm reserve book sign".split(),
+    "contact": "联系 咨询 解释 说明 通知 提醒 汇报 报告 call contact ask report explain inform remind notify".split(),
+    "research": "分析 观察 测量 评估 研究 比较 识别 explain analyse analyze observe measure evaluate compare identify examine investigate".split(),
+    "resource": "分配 拨给 投入 资助 供应 allocate devote channel fund invest finance provide".split(),
+    "control": "限制 规范 监管 施加 impose regulate restrict ban control monitor supervise".split(),
+    "support": "促进 鼓励 提倡 支持 改善 提升 promote encourage advocate support improve enhance foster".split(),
+    "reduce": "缓解 减少 降低 减轻 控制 ease mitigate reduce lower relieve tackle curb".split(),
+    "travel": "到达 出发 旅行 预订 取消 赶上 导航 arrive depart travel reserve cancel catch navigate board".split(),
+    "personal": "喜欢 享受 回忆 描述 欣赏 分享 练习 prefer enjoy remember describe admire share practise practice".split(),
+    "negative": "受苦 遭受 忍受 受害 suffer endure undergo struggle".split(),
+    "communication": "解释 描述 表达 说明 讨论 分享 mention explain describe express discuss share present".split(),
+}
+
+ADJECTIVE_HINTS = {
+    "person_trait": "友好 善良 耐心 和蔼 严厉 自信 礼貌 热情 冷静 外向 内向 可靠 affable friendly kind patient strict confident polite warm calm outgoing introverted reliable cheerful".split(),
+    "interest": "热衷 热爱的 感兴趣 keen avid enthusiastic passionate interested fond devoted".split(),
+    "place_quality": "安静 热闹 现代 方便 拥挤 宽敞 舒适 漂亮 吸引人 scenic quiet lively modern convenient crowded spacious comfortable beautiful attractive peaceful historic urban rural".split(),
+    "event_atmosphere": "节日 节庆 假日 holiday festival festive seasonal".split(),
+    "change_quality": "逐渐 稳定 显著 明显 微小 substantial significant dramatic noticeable steady gradual minor rapid".split(),
+    "evaluative": "有效 实用 重要 必要 合理 可行 经济 负担得起 持续 灵活 useful effective important essential reasonable feasible affordable sustainable flexible practical efficient beneficial".split(),
+}
+
+SCENE_SENTENCE_LIBRARY = {
+    "校园服务": {
+        "noun": {
+            "person": [
+                "The {term} will explain the registration steps after the lecture.",
+                "If you are unsure about the form, ask the {term} at the front desk.",
+            ],
+            "place": [
+                "The {term} is open from nine to four on weekdays.",
+                "Students need to visit the {term} before collecting their ID cards.",
+            ],
+            "document": [
+                "Please submit the {term} to the student office before Friday.",
+                "The handbook explains where to find the {term} online.",
+            ],
+            "money": [
+                "The {term} must be paid before the enrolment deadline.",
+                "Students were told that the {term} could be paid online.",
+            ],
+            "event": [
+                "The {term} begins in the main hall at nine o'clock.",
+                "Everyone attending the {term} should arrive ten minutes early.",
+            ],
+            "abstract": [
+                "The tutor gave a clear {term} of the new registration rules.",
+                "Students asked for a fuller {term} of the course requirements.",
+            ],
+            "general": [
+                "The notice includes important information about the {term}.",
+                "Students discussed the {term} during the orientation session.",
+            ],
+        },
+        "verb": {
+            "change": [
+                "The tutor decided to {term} the workshop until next week.",
+                "The department may {term} the timetable if too many students complain.",
+            ],
+            "submit": [
+                "Students need to {term} the form before the first lecture.",
+                "You should {term} your place online before Friday afternoon.",
+            ],
+            "contact": [
+                "Please {term} the office if you have any questions about registration.",
+                "Students were asked to {term} the department by email.",
+            ],
+            "general": [
+                "First-year students often need to {term} the details more than once.",
+                "The tutor asked everyone to {term} the information carefully.",
+            ],
+        },
+        "adjective": [
+            "Attendance at the safety session is {term} for all first-year students.",
+            "The new arrangement seems {term}, so students should read the notice carefully.",
+        ],
+        "adverb": [
+            "The form should be completed {term} and returned today.",
+            "Students were advised to check the timetable {term} before the course started.",
+        ],
+    },
+    "出行预约": {
+        "noun": {
+            "place": [
+                "The coach to the {term} leaves every half hour.",
+                "We headed straight to the {term} after leaving the city centre.",
+            ],
+            "document": [
+                "Please keep the {term} until the end of your journey.",
+                "The assistant checked the {term} before printing the receipt.",
+            ],
+            "transport": [
+                "The last {term} to the city centre leaves at 10:15.",
+                "They missed the earlier {term} because of the heavy traffic.",
+            ],
+            "money": [
+                "There is an extra {term} if you change the booking at the last minute.",
+                "The traveller was told that the {term} was included in the final price.",
+            ],
+            "event": [
+                "Your {term} was confirmed by email that evening.",
+                "The guide checked the {term} before the tour began.",
+            ],
+            "abstract": [
+                "The guide gave a brief {term} of the travel plan before departure.",
+                "We received a clear {term} of the route and the meeting point.",
+            ],
+            "general": [
+                "The receptionist explained the {term} before we paid for the tickets.",
+                "The assistant mentioned the {term} while checking the booking details.",
+            ],
+        },
+        "verb": {
+            "change": [
+                "The airline may {term} the departure time because of the weather.",
+                "The agency had to {term} the schedule at the last minute.",
+            ],
+            "submit": [
+                "Passengers should {term} the booking before leaving for the station.",
+                "You need to {term} your travel details online this evening.",
+            ],
+            "travel": [
+                "We planned to {term} to the island early in the morning.",
+                "Most visitors {term} by train because it is cheaper than flying.",
+            ],
+            "contact": [
+                "Please {term} the booking office if you need to change the route.",
+                "The traveller had to {term} the hotel before midnight.",
+            ],
+            "general": [
+                "Travellers should {term} the details carefully before they leave.",
+                "The guide asked everyone to {term} the plan again after lunch.",
+            ],
+        },
+        "adjective": [
+            "The direct service is {term} than the local train.",
+            "It was a {term} journey, so we reached the hotel before noon.",
+        ],
+        "adverb": [
+            "The guide spoke {term} during the safety briefing.",
+            "Passengers moved {term} towards the correct platform.",
+        ],
+    },
+    "住宿设施": {
+        "noun": {
+            "place": [
+                "The {term} is close to the university library.",
+                "They checked the {term} before signing the rental agreement.",
+            ],
+            "document": [
+                "Please keep the {term} in case the landlord asks for proof of payment.",
+                "The manager attached the {term} to the welcome email.",
+            ],
+            "money": [
+                "The {term} will be returned when you move out of the flat.",
+                "Students complained that the {term} was too high for a small room.",
+            ],
+            "event": [
+                "The {term} was arranged for the day before move-in.",
+                "Residents received a message about the {term} in the evening.",
+            ],
+            "abstract": [
+                "The manager gave a short {term} of the new housing rules.",
+                "Residents wanted a clearer {term} of how the repair system worked.",
+            ],
+            "general": [
+                "The {term} was mentioned in the maintenance notice this morning.",
+                "Residents discussed the {term} after dinner in the common room.",
+            ],
+        },
+        "verb": {
+            "change": [
+                "The manager may {term} the room allocation after the inspection.",
+                "They had to {term} the repair schedule because the parts arrived late.",
+            ],
+            "submit": [
+                "Residents must {term} the request before the repair team can visit.",
+                "You should {term} the payment online before collecting the keys.",
+            ],
+            "contact": [
+                "Please {term} the housing office if the heater stops working.",
+                "The resident decided to {term} the landlord about the leak.",
+            ],
+            "general": [
+                "Residents often need to {term} the problem as soon as they notice it.",
+                "The notice asked everyone to {term} the details before move-in day.",
+            ],
+        },
+        "adjective": [
+            "The room was clean, quiet, and surprisingly {term}.",
+            "Students were told that the new rule was {term} for all residents.",
+        ],
+        "adverb": [
+            "The maintenance team worked {term} and finished before noon.",
+            "Residents were asked to report problems {term} through the online form.",
+        ],
+    },
+    "科研方法": {
+        "noun": {
+            "research": [
+                "The study identifies {term} as a key part of the experiment.",
+                "The report suggests that {term} plays an important role in the findings.",
+            ],
+            "abstract": [
+                "The article uses {term} to explain the main research process.",
+                "The report gives a clear {term} of how the experiment was designed.",
+            ],
+            "general": [
+                "The article refers to {term} when explaining the research method.",
+                "The passage uses {term} to clarify the main argument.",
+            ],
+        },
+        "verb": {
+            "research": [
+                "Researchers used the data to {term} the difference between the two groups.",
+                "The team tried to {term} why the results changed over time.",
+            ],
+            "general": [
+                "The author uses one case study to {term} the main point.",
+                "The passage helps readers {term} the relationship between the variables.",
+            ],
+        },
+        "adjective": {
+            "change_quality": [
+                "The results suggest that the change was {term} rather than immediate.",
+                "The report describes a {term} difference between the two groups.",
+            ],
+            "evaluative": [
+                "The passage offers an explanation that seems {term} and easy to follow.",
+                "The method appears {term} for a study of this size.",
+            ],
+            "general": [
+                "The results show a {term} difference between the two groups.",
+                "The passage uses a {term} explanation of how the process works.",
+            ],
+        },
+        "adverb": [
+            "The data were analysed {term} before the report was published.",
+            "The theory is explained {term} in the final paragraph.",
+        ],
+    },
+    "环境生态": {
+        "noun": {
+            "environment": [
+                "The report highlights {term} as a major environmental concern.",
+                "Scientists are studying how {term} affects local wildlife.",
+            ],
+            "general": [
+                "The article mentions {term} while discussing climate change.",
+                "The passage links {term} to long-term ecological pressure.",
+            ],
+        },
+        "verb": {
+            "research": [
+                "Researchers continue to {term} the impact of rising temperatures.",
+                "Scientists used field data to {term} the change in the habitat.",
+            ],
+            "general": [
+                "The government should {term} the damage before it becomes irreversible.",
+                "Conservation groups hope to {term} the pressure on local species.",
+            ],
+        },
+        "adjective": [
+            "The river is becoming less {term} as industrial waste increases.",
+            "It was a {term} change in the local climate.",
+        ],
+        "adverb": [
+            "The species adapted {term} to the colder environment.",
+            "The population declined {term} over the ten-year period.",
+        ],
+    },
+    "社会历史": {
+        "noun": {
+            "abstract": [
+                "The writer gives a useful {term} of how the custom developed over time.",
+                "The passage offers a brief {term} of the social background.",
+            ],
+            "general": [
+                "The writer uses {term} to explain the social change more clearly.",
+                "The passage presents {term} as an important feature of the period.",
+            ],
+        },
+        "verb": {
+            "research": [
+                "Historians continue to {term} how the community changed over time.",
+                "The article tries to {term} why the custom became so popular.",
+            ],
+            "general": [
+                "The passage uses one example to {term} the contrast between old and new values.",
+                "The writer aims to {term} the effect of migration on local culture.",
+            ],
+        },
+        "adjective": [
+            "The article describes a {term} change in family structure.",
+            "It was a {term} example of social inequality at the time.",
+        ],
+        "adverb": [
+            "The custom spread {term} across the region.",
+            "The two groups responded {term} to the same historical pressure.",
+        ],
+    },
+    "政府政策": {
+        "noun": {
+            "policy": [
+                "Governments should give greater attention to {term} when making policy.",
+                "The essay argues that {term} deserves more public support.",
+            ],
+            "money": [
+                "More {term} should be directed towards public transport and healthcare.",
+                "The government needs to manage {term} more carefully in difficult times.",
+            ],
+            "general": [
+                "The policy debate often centres on {term} and social responsibility.",
+                "The writer presents {term} as a key issue in public policy.",
+            ],
+        },
+        "verb": {
+            "resource": [
+                "Governments should {term} more funding to public transport and healthcare.",
+                "Local authorities need to {term} enough resources to frontline services.",
+            ],
+            "control": [
+                "Governments should {term} harmful advertising aimed at children.",
+                "The state needs to {term} the market more carefully.",
+            ],
+            "support": [
+                "Public policy can {term} equal access to education.",
+                "Schools should {term} healthier habits among young people.",
+            ],
+            "reduce": [
+                "Governments should {term} traffic congestion in major cities.",
+                "Stronger measures could {term} pressure on public hospitals.",
+            ],
+            "policy": [
+                "Governments should {term} stronger measures to protect vulnerable groups.",
+                "Many people believe the state should {term} public services more effectively.",
+            ],
+            "general": [
+                "Policymakers need to {term} the long-term effects before making a decision.",
+                "The essay suggests that governments should {term} the problem at an early stage.",
+            ],
+        },
+        "adjective": {
+            "evaluative": [
+                "This approach seems {term} in the long run.",
+                "The policy would be more {term} if local needs were considered.",
+            ],
+            "general": [
+                "This is a more {term} way to improve public services.",
+                "The writer supports a {term} approach to social policy.",
+            ],
+        },
+        "adverb": [
+            "Public money should be spent {term} rather than wasted on short-term fixes.",
+            "The policy was applied {term} across different regions.",
+        ],
+    },
+    "教育科技": {
+        "noun": {
+            "general": [
+                "The essay presents {term} as a major influence on modern education.",
+                "Teachers often discuss {term} when they compare old and new learning methods.",
+            ],
+        },
+        "verb": {
+            "general": [
+                "Schools should {term} technology in ways that genuinely help students learn.",
+                "Teachers can {term} real examples to make difficult ideas easier to understand.",
+            ],
+            "resource": [
+                "Schools should {term} more funding to digital resources in poorer areas.",
+                "Governments need to {term} enough support to teacher training.",
+            ],
+            "support": [
+                "Governments need to {term} more support for digital education in rural areas.",
+                "Schools should {term} the pressure on teachers by sharing more online resources.",
+            ],
+        },
+        "adjective": {
+            "evaluative": [
+                "Online learning can become more {term} when students receive timely feedback.",
+                "This change seems {term} for both teachers and students.",
+            ],
+            "general": [
+                "Online learning can be more {term} when students receive timely feedback.",
+                "It is a {term} example of how technology can improve access to education.",
+            ],
+        },
+        "adverb": [
+            "Students can learn more {term} if digital tools are used well.",
+            "Teachers should introduce new media {term} rather than all at once.",
+        ],
+    },
+    "经济环境": {
+        "noun": {
+            "money": [
+                "The city must balance {term} against long-term environmental benefits.",
+                "There is growing concern about the {term} of rapid urban growth.",
+            ],
+            "general": [
+                "The essay links {term} to traffic, housing, and energy use.",
+                "Urban planners often discuss {term} when they evaluate city development.",
+            ],
+        },
+        "verb": {
+            "resource": [
+                "Governments must {term} resources more fairly across urban and rural areas.",
+                "City leaders should {term} more funding to public transport.",
+            ],
+            "reduce": [
+                "City authorities should {term} the pressure on public hospitals and schools.",
+                "The policy aims to {term} pollution from private vehicles.",
+            ],
+            "general": [
+                "Planners need to {term} the long-term cost of expanding the road network.",
+                "The essay argues that cities should {term} environmental damage more seriously.",
+            ],
+        },
+        "adjective": {
+            "evaluative": [
+                "Public transport is often a more {term} option than private cars.",
+                "This solution seems {term} for cities facing rapid population growth.",
+            ],
+            "general": [
+                "Public transport is often a more {term} option than private cars.",
+                "It would be a {term} solution for cities facing rapid population growth.",
+            ],
+        },
+        "adverb": [
+            "Housing prices have risen {term} in many large cities.",
+            "Resources should be distributed more {term} across the community.",
+        ],
+    },
+    "人物经历": {
+        "noun": {
+            "person": [
+                "My teacher was such an {term} person that everyone respected him.",
+                "She is the most {term} person I have ever met.",
+            ],
+            "place": [
+                "I still remember the {term} because we spent so much time there after school.",
+                "The {term} was where one of my best memories happened.",
+            ],
+            "emotion": [
+                "That trip left me with a strong sense of {term}.",
+                "I still remember the moment because it was full of {term}.",
+            ],
+            "general": [
+                "That experience taught me the value of {term}.",
+                "The story became memorable because of one small moment of {term}.",
+            ],
+        },
+        "verb": {
+            "personal": [
+                "I still {term} the advice my grandfather gave me when I was a child.",
+                "That experience taught me how to {term} difficult situations more calmly.",
+            ],
+            "negative": [
+                "Many students {term} from stress before important exams.",
+                "I used to {term} from headaches when I slept too late.",
+            ],
+            "communication": [
+                "It is hard to {term} that feeling in just a few words.",
+                "I tried to {term} the experience as clearly as I could.",
+            ],
+            "general": [
+                "That experience helped me {term} my feelings more clearly.",
+                "The story gave me a chance to {term} what really mattered to me.",
+            ],
+        },
+        "adjective": {
+            "person_trait": [
+                "She was so {term} that everyone felt comfortable talking to her.",
+                "He seemed genuinely {term}, which made the conversation much easier.",
+            ],
+            "evaluative": [
+                "The experience felt {term} from beginning to end.",
+                "It was a {term} moment in my life.",
+            ],
+            "general": [
+                "She was so {term} that everyone felt comfortable talking to her.",
+                "The whole experience felt {term} and easy to remember.",
+            ],
+        },
+        "adverb": [
+            "He spoke {term} about the people who had helped him.",
+            "I reacted {term} because I had never seen anything like it before.",
+        ],
+    },
+    "地点旅行": {
+        "noun": {
+            "place": [
+                "The {term} was the first place I wanted to visit in the city.",
+                "We stopped at the {term} before heading back to the hotel.",
+            ],
+            "transport": [
+                "The {term} was crowded, but the journey itself was enjoyable.",
+                "We nearly missed the {term}, so we had to walk much faster.",
+            ],
+            "general": [
+                "The trip became more enjoyable because of the {term}.",
+                "I would love to return there because the {term} left a strong impression on me.",
+            ],
+        },
+        "verb": {
+            "travel": [
+                "We decided to {term} around the old town on foot.",
+                "I hope to {term} that place again when I have more free time.",
+            ],
+            "personal": [
+                "The trip helped me {term} the city from a completely new angle.",
+                "I usually {term} new places with one close friend.",
+            ],
+            "general": [
+                "The guide encouraged us to {term} a quieter part of the city.",
+                "I would like to {term} the area more slowly next time.",
+            ],
+        },
+        "adjective": {
+            "place_quality": [
+                "The neighbourhood felt more {term} in the evening.",
+                "It is a {term} place to visit if you enjoy quiet streets and old buildings.",
+            ],
+            "event_atmosphere": [
+                "The town had a strong {term} atmosphere during the holiday.",
+                "The market looked especially {term} on Saturday night.",
+            ],
+            "general": [
+                "The place felt {term} from the moment we arrived.",
+                "The neighbourhood looked more {term} in the evening.",
+            ],
+        },
+        "adverb": [
+            "We travelled {term} because the roads were empty in the morning.",
+            "The town has grown {term} over the last decade.",
+        ],
+    },
+    "习惯观点": {
+        "noun": {
+            "emotion": [
+                "Reading has become an important part of my daily {term}.",
+                "My main {term} is listening to music when I get home.",
+            ],
+            "place": [
+                "I spend a lot of my free time in the {term} near my home.",
+                "The {term} is where I usually go when I want to relax.",
+            ],
+            "general": [
+                "I think {term} is one of the best ways to relax after work.",
+                "People often mention {term} when they talk about a healthy lifestyle.",
+            ],
+        },
+        "verb": {
+            "personal": [
+                "I usually {term} the same breakfast because it saves time in the morning.",
+                "Most people {term} this option because it is both cheap and convenient.",
+            ],
+            "general": [
+                "I would {term} this habit because it helps me stay organised.",
+                "People often {term} their choices based on cost and convenience.",
+            ],
+        },
+        "adjective": {
+            "interest": [
+                "I have always been an {term} reader since primary school.",
+                "My brother is an {term} football fan, so he never misses a match.",
+            ],
+            "evaluative": [
+                "That seems {term} for busy students who have very little free time.",
+                "I think this routine is {term} for people who want a better work-life balance.",
+            ],
+            "general": [
+                "That seems {term} for someone with a busy schedule.",
+                "I think this habit has become more {term} over the last few years.",
+            ],
+        },
+        "adverb": [
+            "I usually study {term} in the evening when the house is quiet.",
+            "People now shop more {term} than they did in the past.",
+        ],
+    },
+}
+
+
+def semantic_bag(candidate):
+    return f'{candidate["word"]} {candidate["translation"]}'.lower()
+
+
+def detect_semantic_role(candidate):
+    bag = semantic_bag(candidate)
+    for role, keywords in SEMANTIC_KEYWORDS.items():
+        if any(keyword.lower() in bag for keyword in keywords):
+            return role
+    return "general"
+
+
+def detect_verb_hint(candidate):
+    bag = semantic_bag(candidate)
+    for hint, keywords in VERB_HINTS.items():
+        if any(keyword.lower() in bag for keyword in keywords):
+            return hint
+    return "general"
+
+
+def detect_adjective_hint(candidate):
+    bag = semantic_bag(candidate)
+    for hint, keywords in ADJECTIVE_HINTS.items():
+        if any(keyword.lower() in bag for keyword in keywords):
+            return hint
+    return "general"
+
+
+def fix_articles(sentence):
+    sentence = re.sub(r"\ba ([aeiou])", r"an \1", sentence, flags=re.I)
+    return re.sub(r"\ban (?=[bcdfghjklmnpqrstvwxyz])", "a ", sentence, flags=re.I)
+
+
 def build_scene_example(category, candidate, scene):
-    parts = SCENE_SENTENCE_PARTS[scene["label"]]
-    actor = pick_variant(parts["actors"], stable_seed(category, scene["label"], candidate["word"], "actor"), 1)
-    anchor = pick_variant(parts["anchors"], stable_seed(category, scene["label"], candidate["word"], "anchor"), 2)
-    action = pick_variant(parts["actions"], stable_seed(category, scene["label"], candidate["word"], "action"), 3)
-    detail = pick_variant(parts["details"], stable_seed(category, scene["label"], candidate["word"], "detail"), 4)
-    followup = pick_variant(CATEGORY_FOLLOWUPS[category], stable_seed(category, scene["label"], candidate["word"], "followup"), 5)
-    template = pick_variant(EXAMPLE_TEMPLATES, stable_seed(category, scene["label"], candidate["word"], candidate["translation"], "template"), 6)
-    sentence = template.format(
-        term=candidate["word"],
-        actor=actor,
-        actor_cap=capitalize_fragment(actor),
-        anchor=anchor,
-        action=action,
-        detail=detail,
-        followup=followup,
-    )
+    library = SCENE_SENTENCE_LIBRARY[scene["label"]]
+    pos = candidate["pos"]
+    seed = stable_seed(category, scene["label"], candidate["word"], candidate["translation"])
+
+    if pos == "n":
+        role = detect_semantic_role(candidate)
+        templates = library["noun"].get(role) or library["noun"].get("general") or []
+    elif pos == "v":
+        hint = detect_verb_hint(candidate)
+        templates = library["verb"].get(hint) or library["verb"].get("general") or []
+    elif pos == "a":
+        adjective_library = library["adjective"]
+        if isinstance(adjective_library, dict):
+            hint = detect_adjective_hint(candidate)
+            templates = adjective_library.get(hint) or adjective_library.get("general") or []
+        else:
+            templates = adjective_library
+    else:
+        templates = library["adverb"]
+
+    template = pick_variant(templates, seed, 1)
+    sentence = fix_articles(template.format(term=candidate["word"]))
     return capitalize_fragment(sentence)
 
 
