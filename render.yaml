@@ -11,7 +11,7 @@ services:
       - key: PORT
         value: 10000
       - key: BACKEND_STORAGE_DIR
-        value: /opt/data
+        value: /tmp/ielts-lexicon-sprint-data
       - key: AI_PROVIDER
         value: openai
       - key: OPENAI_BASE_URL

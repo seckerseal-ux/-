@@ -242,6 +242,7 @@ python3 server.py
 - `AI_PROVIDER=openai`
 - `OPENAI_BASE_URL=https://api.gemai.cc/v1`
 - `GEMAI_API_KEY` 作为主密钥变量
+- 免费 Render 实例不支持持久磁盘，所以默认 `BACKEND_STORAGE_DIR` 会落到 `/tmp/ielts-lexicon-sprint-data`；这种模式能跑，但云端同步数据在实例重启后可能丢失。
 
 如果你想直接走 Render，这个仓库已经满足官方 Deploy to Render 的按钮要求，可以直接用：
 

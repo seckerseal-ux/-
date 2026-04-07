@@ -43,8 +43,40 @@ def load_env_file():
 
 load_env_file()
 
-STORAGE_DIR = pathlib.Path(os.getenv("BACKEND_STORAGE_DIR", BASE_DIR / ".backend-storage")).expanduser()
-STORAGE_DIR.mkdir(parents=True, exist_ok=True)
+def ensure_writable_storage_dir():
+    requested = os.getenv("BACKEND_STORAGE_DIR", "").strip()
+    candidates = []
+    if requested:
+        candidates.append(pathlib.Path(requested).expanduser())
+    candidates.extend(
+        [
+            BASE_DIR / ".backend-storage",
+            pathlib.Path("/tmp/ielts-lexicon-sprint-data"),
+        ]
+    )
+
+    seen = set()
+    errors = []
+    for candidate in candidates:
+        resolved = candidate.resolve(strict=False)
+        key = str(resolved)
+        if key in seen:
+            continue
+        seen.add(key)
+        try:
+            resolved.mkdir(parents=True, exist_ok=True)
+            probe = resolved / ".write-test"
+            probe.write_text("ok", encoding="utf-8")
+            probe.unlink(missing_ok=True)
+            return resolved
+        except OSError as error:
+            errors.append(f"{resolved}: {error}")
+            continue
+
+    raise RuntimeError("无法找到可写的后端存储目录：" + " | ".join(errors))
+
+
+STORAGE_DIR = ensure_writable_storage_dir()
 PROGRESS_STATE_FILE = STORAGE_DIR / "local-progress.json"
 CLOUD_SYNC_DB_FILE = STORAGE_DIR / "cloud-sync.sqlite3"
 
