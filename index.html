@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IELTS 词汇冲刺舱</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="texture"></div>
+    <div class="orb orb--coral"></div>
+    <div class="orb orb--teal"></div>
+    <div class="app-shell">
+      <header class="panel hero" id="top">
+        <div class="hero__copy">
+          <p class="eyebrow">IELTS Lexicon Sprint</p>
+          <h1>把雅思单词背成能听懂、会拼写、能输出的词汇系统</h1>
+          <p class="hero__lead">
+            按听力、阅读、写作、口语分类整理，听力/写作/口语额外加入词块背诵；内置发音、拼写训练、每日新词上限和基于遗忘曲线的复习节奏，适合雅思备考的日常冲刺。
+          </p>
+          <div class="hero__meta">
+            <span>听力单词</span>
+            <span>阅读单词</span>
+            <span>写作单词 + 词块</span>
+            <span>口语单词 + 词块</span>
+            <span>离线可用</span>
+          </div>
+          <div class="hero__actions">
+            <button class="button button--primary" data-scroll-target="study-arena" type="button">开始今日任务</button>
+            <button class="button button--ghost" data-scroll-target="settings" type="button">调整计划</button>
+          </div>
+        </div>
+        <aside class="hero__stats">
+          <article class="stat-card stat-card--accent">
+            <span class="stat-card__label">今日待复习</span>
+            <strong class="stat-card__value" id="hero-due-count">0</strong>
+          </article>
+          <article class="stat-card">
+            <span class="stat-card__label">今日新词额度</span>
+            <strong class="stat-card__value" id="hero-new-limit">0</strong>
+          </article>
+          <article class="stat-card">
+            <span class="stat-card__label">已掌握词条</span>
+            <strong class="stat-card__value" id="hero-mastered-count">0</strong>
+          </article>
+          <article class="stat-card">
+            <span class="stat-card__label">连续学习天数</span>
+            <strong class="stat-card__value" id="hero-streak">0</strong>
+          </article>
+        </aside>
+      </header>
+
+      <section class="panel plan-panel" id="today">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">今日计划</p>
+            <h2>先复习，再开新词，再做拼写巩固</h2>
+          </div>
+          <p class="section-head__hint" id="plan-summary">系统会优先安排到期复习，再按你的每日上限补入新词。</p>
+        </div>
+        <div class="metric-grid">
+          <article class="metric-card metric-card--accent">
+            <span class="metric-card__label">到期复习</span>
+            <strong class="metric-card__value" id="today-due-total">0</strong>
+            <p>这些词已经到了该回看的时间点。</p>
+          </article>
+          <article class="metric-card">
+            <span class="metric-card__label">剩余新词名额</span>
+            <strong class="metric-card__value" id="today-new-slots">0</strong>
+            <p>每日上限可在右侧设置中调整。</p>
+          </article>
+          <article class="metric-card">
+            <span class="metric-card__label">今日已学习</span>
+            <strong class="metric-card__value" id="today-reviewed-count">0</strong>
+            <p>普通背诵和拼写训练都会计入今日进度。</p>
+          </article>
+          <article class="metric-card">
+            <span class="metric-card__label">今日正确率</span>
+            <strong class="metric-card__value" id="today-accuracy">0%</strong>
+            <p>主要根据拼写与复习反馈综合估算。</p>
+          </article>
+        </div>
+        <div class="curve-strip" id="curve-strip"></div>
+      </section>
+
+      <div class="layout-grid">
+        <main class="main-column">
+          <section class="panel" id="decks">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">分类词库</p>
+                <h2>按雅思四大板块拆开记</h2>
+              </div>
+              <p class="section-head__hint">阅读偏学术词，听力偏场景词，写作和口语同时补强可直接输出的词块。</p>
+            </div>
+            <div class="deck-grid" id="deck-grid"></div>
+          </section>
+
+          <section class="panel" id="study-arena">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">背诵主场</p>
+                <h2>普通背诵 + 发音 + 记忆反馈</h2>
+              </div>
+              <p class="section-head__hint">单词、例句和词块都会优先走在线 TTS，只有在线音频暂时不可用时才退回系统朗读。先看单词或词块，再展开答案，根据熟悉度推进复习间隔。</p>
+            </div>
+            <div class="toolbar">
+              <label>
+                练习来源
+                <select id="study-source">
+                  <option value="today">今日混合任务</option>
+                  <option value="due">只做复习</option>
+                  <option value="fresh">只开新词</option>
+                  <option value="chunks">词块专练</option>
+                </select>
+              </label>
+              <label>
+                分类
+                <select id="study-category">
+                  <option value="all">全部分类</option>
+                  <option value="listening">听力单词</option>
+                  <option value="reading">阅读单词</option>
+                  <option value="writing">写作单词</option>
+                  <option value="speaking">口语单词</option>
+                </select>
+              </label>
+              <label>
+                项目类型
+                <select id="study-kind">
+                  <option value="all">单词 + 词块</option>
+                  <option value="word">只看单词</option>
+                  <option value="chunk">只看词块</option>
+                </select>
+              </label>
+              <button class="button button--ghost" id="study-start" type="button">生成任务</button>
+            </div>
+            <div class="session-strip">
+              <span class="chip" id="study-queue-size">0 张卡片</span>
+              <span class="chip" id="study-queue-meta">优先显示今日到期内容</span>
+              <span class="chip chip--info" id="pronunciation-status">发音状态：待命。点发音后，这里会提示是在线播放、系统朗读，还是浏览器/网络拦截。</span>
+            </div>
+            <div class="study-card" id="study-card"></div>
+          </section>
+
+          <section class="panel" id="spelling">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">拼写训练</p>
+                <h2>把会认变成会默写</h2>
+              </div>
+              <p class="section-head__hint">建议在普通背诵后做一轮拼写，尤其适合听力、写作和口语词块。</p>
+            </div>
+            <div class="toolbar">
+              <label>
+                练习来源
+                <select id="spelling-source">
+                  <option value="today">今日任务</option>
+                  <option value="due">到期复习</option>
+                  <option value="chunks">词块专练</option>
+                  <option value="category">按分类抽题</option>
+                </select>
+              </label>
+              <label>
+                分类
+                <select id="spelling-category">
+                  <option value="all">全部分类</option>
+                  <option value="listening">听力单词</option>
+                  <option value="reading">阅读单词</option>
+                  <option value="writing">写作单词</option>
+                  <option value="speaking">口语单词</option>
+                </select>
+              </label>
+              <button class="button button--ghost" id="spelling-start" type="button">刷新题目</button>
+            </div>
+            <div class="study-card study-card--spelling" id="spelling-card"></div>
+          </section>
+
+          <section class="panel" id="speaking-mock">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">口语模考辅助</p>
+                <h2>按 Part 1 / 2 / 3 连续上传录音，做整轮仿真模考</h2>
+              </div>
+              <p class="section-head__hint">
+                参考官方结构：整个口语考试约 11-14 分钟，其中 Part 1 约 4-5 分钟，Part 2 含 1 分钟准备和 1-2 分钟陈述，Part 3 约 4-5 分钟。现在支持单段复盘，也支持提交完 Part 1 后自动进入 Part 2、Part 3 的整轮仿真训练。
+              </p>
+            </div>
+            <div class="toolbar">
+              <label>
+                训练模式
+                <select id="speaking-mode">
+                  <option value="full">全真三段模考</option>
+                  <option value="single">单段复盘</option>
+                </select>
+              </label>
+              <label>
+                题型
+                <select id="speaking-part">
+                  <option value="part1">Part 1: 日常问答</option>
+                  <option value="part2">Part 2: Cue Card</option>
+                  <option value="part3">Part 3: 深入讨论</option>
+                </select>
+              </label>
+              <label>
+                题目
+                <select id="speaking-prompt"></select>
+              </label>
+            </div>
+            <div id="speaking-session-shell"></div>
+            <div class="mock-grid">
+              <article class="mock-card" id="speaking-prompt-card"></article>
+              <article class="mock-card mock-card--upload">
+                <div class="badge-row">
+                  <span class="badge" id="ai-status-chip">AI 状态检测中</span>
+                  <span class="badge" id="ai-model-meta">需要通过本地代理服务连接 OpenAI 或 OpenRouter</span>
+                </div>
+                <label class="upload-field">
+                  上传录音文件
+                  <input id="speaking-audio" type="file" accept="audio/*" />
+                </label>
+                <audio id="speaking-audio-player" controls preload="metadata"></audio>
+                <label class="field-block" for="speaking-transcript">
+                  可选转写文本
+                  <textarea
+                    id="speaking-transcript"
+                    class="support-box"
+                    placeholder="如果你手动补一份转写，系统就能进一步分析 filler、词汇丰富度和素材短板。"
+                  ></textarea>
+                </label>
+                <div class="inline-actions">
+                  <button class="button button--ghost" id="speaking-analyze-local" type="button">本地分析</button>
+                  <button class="button button--primary" id="speaking-analyze-ai" type="button">AI 深度批改</button>
+                  <button class="button button--subtle" id="speaking-reset-mock" type="button">重新开始模考</button>
+                </div>
+                <p class="micro-copy">
+                  全真三段模考会在每次提交后先生成当前段的 AI 转写、四项评分分析和素材建议，再自动推进到下一段；第三段结束后会汇总整轮总评。API Key 不会放在浏览器里，而是通过本地代理服务安全转发；离线页与本地代理页也会优先同步同一份学习进度。
+                </p>
+              </article>
+            </div>
+            <div class="result-panel" id="speaking-result"></div>
+          </section>
+
+          <section class="panel" id="speaking-progress">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">口语提分轨迹</p>
+                <h2>把每次 AI 批改沉淀成长期复盘档案</h2>
+              </div>
+              <p class="section-head__hint">这里会自动汇总最近的 AI 模考记录、高频语法问题，以及你当前最需要补的维度。</p>
+            </div>
+            <div class="metric-grid" id="speaking-metrics"></div>
+            <div class="speaking-progress-grid">
+              <div class="due-panel">
+                <div class="due-panel__head">
+                  <h3>高频语法问题</h3>
+                  <span class="chip" id="speaking-grammar-chip">0 个模式</span>
+                </div>
+                <div class="grammar-list" id="speaking-grammar-list"></div>
+              </div>
+              <div class="due-panel">
+                <div class="due-panel__head">
+                  <h3>最近 AI 模考记录</h3>
+                  <span class="chip" id="speaking-history-chip">0 次批改</span>
+                </div>
+                <div class="review-log" id="speaking-history-list"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" id="bank">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">词库总览</p>
+                <h2>所有词条可直接筛选和跟读</h2>
+              </div>
+              <p class="section-head__hint">可以先从分类卡片开始，也可以在这里按主题挑自己薄弱的内容。</p>
+            </div>
+            <div class="toolbar toolbar--bank">
+              <label>
+                分类
+                <select id="bank-category">
+                  <option value="all">全部分类</option>
+                  <option value="listening">听力单词</option>
+                  <option value="reading">阅读单词</option>
+                  <option value="writing">写作单词</option>
+                  <option value="speaking">口语单词</option>
+                </select>
+              </label>
+              <label>
+                类型
+                <select id="bank-kind">
+                  <option value="all">全部</option>
+                  <option value="word">单词</option>
+                  <option value="chunk">词块</option>
+                </select>
+              </label>
+              <label class="toolbar__search">
+                搜索
+                <input id="bank-search" type="search" placeholder="搜索英文、中文或例句关键词" />
+              </label>
+            </div>
+            <div class="bank-grid" id="bank-grid"></div>
+          </section>
+
+          <section class="panel" id="review">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">复习节奏</p>
+                <h2>按遗忘曲线安排回看频率</h2>
+              </div>
+              <p class="section-head__hint">默认是 10 分钟、1 天、2 天、4 天、7 天、15 天、30 天，也可以切换成冲刺节奏。</p>
+            </div>
+            <div class="timeline-grid" id="timeline-grid"></div>
+            <div class="due-panel">
+              <div class="due-panel__head">
+                <h3>最近需要复习的词条</h3>
+                <span class="chip" id="due-total-chip">0 条待复习</span>
+              </div>
+              <div class="due-list" id="due-list"></div>
+            </div>
+          </section>
+        </main>
+
+        <aside class="side-column">
+          <section class="panel" id="settings">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">学习设置</p>
+                <h2>按自己的节奏调参</h2>
+              </div>
+            </div>
+            <form class="settings-form" id="settings-form">
+              <label>
+                每日新词上限
+                <input id="daily-limit" type="number" min="4" max="100" step="1" />
+              </label>
+              <label>
+                复习节奏
+                <select id="review-scheme">
+                  <option value="standard">标准遗忘曲线</option>
+                  <option value="sprint">冲刺模式</option>
+                  <option value="steady">稳扎稳打</option>
+                </select>
+              </label>
+              <label>
+                新词优先分类
+                <select id="preferred-focus">
+                  <option value="all">平均推进</option>
+                  <option value="listening">听力优先</option>
+                  <option value="reading">阅读优先</option>
+                  <option value="writing">写作优先</option>
+                  <option value="speaking">口语优先</option>
+                </select>
+              </label>
+              <label>
+                发音偏好
+                <select id="preferred-accent">
+                  <option value="uk">英音优先</option>
+                  <option value="us">美音优先</option>
+                </select>
+              </label>
+            </form>
+            <div class="cloud-sync-card">
+              <div class="cloud-sync__head">
+                <div>
+                  <p class="eyebrow eyebrow--compact">云端同步</p>
+                  <h3>登录后跨设备接力</h3>
+                </div>
+                <span class="chip chip--info" id="cloud-sync-status">云端同步：未登录</span>
+              </div>
+              <p class="cloud-sync__meta" id="cloud-sync-meta">
+                登录同一个同步账号后，所有连到同一云端接口的入口都能共用同一份学习进度。
+              </p>
+              <form class="cloud-sync-form" id="cloud-auth-form">
+                <div class="cloud-sync-form__grid">
+                  <label>
+                    同步账号
+                    <input id="cloud-account" type="text" autocomplete="username" placeholder="建议用英文名或邮箱" />
+                  </label>
+                  <label>
+                    同步口令
+                    <input id="cloud-password" type="password" autocomplete="current-password" placeholder="至少 6 位，跨设备请保持一致" />
+                  </label>
+                </div>
+                <div class="cloud-sync__summary">
+                  <span class="badge" id="cloud-account-chip">当前：本地模式</span>
+                  <span class="badge" id="cloud-last-sync-chip">最近同步：尚未同步</span>
+                </div>
+                <div class="cloud-sync__actions">
+                  <button class="button button--primary button--tiny" id="cloud-register" type="button">注册并同步</button>
+                  <button class="button button--subtle button--tiny" id="cloud-login" type="submit">登录同步</button>
+                  <button class="button button--ghost button--tiny" id="cloud-sync-now" type="button">立即同步</button>
+                  <button class="button button--ghost button--tiny" id="cloud-logout" type="button">退出账号</button>
+                </div>
+              </form>
+              <p class="micro-copy">系统会优先保留更新时间更近的一份进度，本地缓存仍然会继续保留，断网时也不会直接丢失。</p>
+            </div>
+            <div class="callout">
+              <h3>推荐用法</h3>
+              <p>雅思冲刺期建议把每日新词控制在 8-15 个之间，优先守住复习，不要只开新词不回看；如果你经常切换入口，记得先登录云端同步账号。</p>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">备考建议</p>
+                <h2>系统给你的提示</h2>
+              </div>
+            </div>
+            <div class="coach-stack" id="coach-tips"></div>
+          </section>
+
+          <section class="panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">使用说明</p>
+                <h2>更适合雅思备考的方式</h2>
+              </div>
+            </div>
+            <div class="note-stack">
+              <article class="note-card">
+                <h3>听力单词</h3>
+                <p>重点看校园、课程、预约、告示等场景词，再配合词块做听抄和跟读。</p>
+              </article>
+              <article class="note-card">
+                <h3>阅读单词</h3>
+                <p>优先识别学术词和逻辑词，目标是看得懂文章，而不是单独死记定义。</p>
+              </article>
+              <article class="note-card">
+                <h3>写作与口语</h3>
+                <p>不要只背单词本身，要把能直接上考场的词块一起记下来，输出会更自然。</p>
+              </article>
+            </div>
+          </section>
+        </aside>
+      </div>
+
+      <footer class="footer">
+        <p>内置的是一套适合雅思备考的分类词表示例，已接上发音、拼写、每日上限和遗忘曲线复习逻辑；后续如果你想扩成更大的词库，可以继续在当前数据结构上追加内容。</p>
+      </footer>
+      <p class="sr-only" id="live-region" aria-live="polite"></p>
+    </div>
+
+    <script defer src="./site-config.js"></script>
+    <script defer src="./vocabulary-generated.js"></script>
+    <script defer src="./app.js"></script>
+  </body>
+</html>
