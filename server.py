@@ -123,6 +123,10 @@ def is_gemai_base_url(value):
     return "api.gemai.cc" in str(value or "").strip().lower()
 
 
+def is_aihubmix_base_url(value):
+    return "aihubmix.com" in str(value or "").strip().lower()
+
+
 def infer_provider_name():
     configured = os.getenv("AI_PROVIDER", "").strip().lower()
     if configured in DEFAULT_PROVIDER_BASE_URLS:
@@ -139,11 +143,11 @@ def infer_provider_name():
         return "gemini"
     if "openrouter.ai" in base_hint:
         return "openrouter"
-    if is_gemai_base_url(base_hint):
+    if is_gemai_base_url(base_hint) or is_aihubmix_base_url(base_hint):
         return "openai"
     if os.getenv("GEMINI_API_KEY", "").strip():
         return "gemini"
-    if os.getenv("GEMAI_API_KEY", "").strip():
+    if os.getenv("GEMAI_API_KEY", "").strip() or os.getenv("AIHUBMIX_API_KEY", "").strip():
         return "openai"
     return "openai"
 
@@ -575,6 +579,7 @@ def get_provider_api_key(provider=None):
     return (
         os.getenv("OPENAI_API_KEY", "").strip()
         or os.getenv("GEMAI_API_KEY", "").strip()
+        or os.getenv("AIHUBMIX_API_KEY", "").strip()
         or (
         os.getenv("AI_API_KEY", "").strip() if AI_PROVIDER == "openai" else ""
         )
@@ -602,6 +607,7 @@ def get_provider_base_url(provider=None):
     return (
         os.getenv("OPENAI_BASE_URL", "").strip()
         or os.getenv("GEMAI_BASE_URL", "").strip()
+        or os.getenv("AIHUBMIX_BASE_URL", "").strip()
         or (os.getenv("AI_BASE_URL", "").strip() if AI_PROVIDER == "openai" else "")
         or DEFAULT_PROVIDER_BASE_URLS["openai"]
     )
@@ -719,6 +725,8 @@ def get_provider_label(provider=None):
         return "OpenRouter"
     if provider == "gemini":
         return "Gemini"
+    if is_aihubmix_base_url(get_provider_base_url(provider)) or os.getenv("AIHUBMIX_API_KEY", "").strip():
+        return "AiHubMix"
     if is_gemai_base_url(get_provider_base_url(provider)) or os.getenv("GEMAI_API_KEY", "").strip():
         return "GemAI"
     return "OpenAI"
@@ -743,6 +751,8 @@ def get_missing_key_message(provider):
         return "缺少 GEMINI_API_KEY，请先在后端环境变量里设置 Gemini Key。"
     if provider == "openrouter":
         return "缺少 OPENROUTER_API_KEY，请先在启动代理前设置 OpenRouter Key。"
+    if is_aihubmix_base_url(get_provider_base_url(provider)) or os.getenv("AIHUBMIX_API_KEY", "").strip():
+        return "缺少 AIHUBMIX_API_KEY，请先在后端环境变量里设置 AiHubMix Key。"
     if is_gemai_base_url(get_provider_base_url(provider)) or os.getenv("GEMAI_API_KEY", "").strip():
         return "缺少 GEMAI_API_KEY，请先在后端环境变量里设置 GemAI Key。"
     return "缺少 OPENAI_API_KEY，请先在启动代理前设置 OpenAI Key。"

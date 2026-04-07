@@ -75,17 +75,18 @@ export GEMINI_REVIEW_MODEL_PRIORITY="gemini-2.5-flash-lite,gemini-2.5-flash"
 export GEMINI_WRITING_MODEL_PRIORITY="gemini-2.5-flash-lite,gemini-2.5-flash"
 ```
 
-### 方式 E：直接用环境变量启动 GemAI 兼容网关
+### 方式 E：直接用环境变量启动 AiHubMix 兼容网关
 
 ```bash
 cd /Users/shyn/Documents/Playground/lexicon-sprint
 export AI_PROVIDER="openai"
-export OPENAI_BASE_URL="https://api.gemai.cc/v1"
-export GEMAI_BASE_URL="https://api.gemai.cc/v1"
-export GEMAI_API_KEY="你的 GemAI Key"
-export OPENAI_TRANSCRIBE_MODEL="gemini-2.5-flash-lite"
-export OPENAI_REVIEW_MODEL="gemini-2.5-flash-lite"
-export OPENAI_WRITING_REVIEW_MODEL="gemini-2.5-flash-lite"
+export OPENAI_BASE_URL="https://aihubmix.com/v1"
+export AIHUBMIX_BASE_URL="https://aihubmix.com/v1"
+export AIHUBMIX_API_KEY="你的 AiHubMix Key"
+export OPENAI_API_KEY="你的 AiHubMix Key"
+export OPENAI_TRANSCRIBE_MODEL="gemini-3-flash-preview-free"
+export OPENAI_REVIEW_MODEL="gemini-3-flash-preview-free"
+export OPENAI_WRITING_REVIEW_MODEL="gemini-3-flash-preview-free"
 python3 server.py
 ```
 
@@ -125,12 +126,13 @@ GEMINI_WRITING_MODEL_PRIORITY=gemini-2.5-flash-lite,gemini-2.5-flash
 
 ```bash
 AI_PROVIDER=openai
-OPENAI_BASE_URL=https://api.gemai.cc/v1
-GEMAI_BASE_URL=https://api.gemai.cc/v1
-GEMAI_API_KEY=你的GemAIKey
-OPENAI_TRANSCRIBE_MODEL=gemini-2.5-flash-lite
-OPENAI_REVIEW_MODEL=gemini-2.5-flash-lite
-OPENAI_WRITING_REVIEW_MODEL=gemini-2.5-flash-lite
+OPENAI_BASE_URL=https://aihubmix.com/v1
+AIHUBMIX_BASE_URL=https://aihubmix.com/v1
+AIHUBMIX_API_KEY=你的AiHubMixKey
+OPENAI_API_KEY=你的AiHubMixKey
+OPENAI_TRANSCRIBE_MODEL=gemini-3-flash-preview-free
+OPENAI_REVIEW_MODEL=gemini-3-flash-preview-free
+OPENAI_WRITING_REVIEW_MODEL=gemini-3-flash-preview-free
 ```
 
 然后直接运行：
@@ -199,21 +201,21 @@ python3 server.py
 - 通用 provider：`AI_PROVIDER`
 - 通用 Key：`AI_API_KEY`
 - OpenAI Key：`OPENAI_API_KEY`
-- GemAI Key：`GEMAI_API_KEY`
+- AiHubMix Key：`AIHUBMIX_API_KEY`
 - OpenRouter Key：`OPENROUTER_API_KEY`
 - Gemini Key：`GEMINI_API_KEY`
 - 通用转写模型：`AI_TRANSCRIBE_MODEL`
 - 通用口语批改模型：`AI_REVIEW_MODEL`
 - 通用写作批改模型：`AI_WRITING_REVIEW_MODEL`
 - OpenAI 兼容旧变量：`OPENAI_TRANSCRIBE_MODEL`、`OPENAI_REVIEW_MODEL`、`OPENAI_WRITING_REVIEW_MODEL`
-- GemAI 兼容变量：`GEMAI_BASE_URL`
+- AiHubMix 兼容变量：`AIHUBMIX_BASE_URL`
 - Gemini 专用变量：`GEMINI_TRANSCRIBE_MODEL`、`GEMINI_REVIEW_MODEL`、`GEMINI_WRITING_REVIEW_MODEL`
 - Gemini 速度优先候选：`GEMINI_TRANSCRIBE_MODEL_PRIORITY`、`GEMINI_REVIEW_MODEL_PRIORITY`、`GEMINI_WRITING_MODEL_PRIORITY`
 
 如果你不额外设置：
 
 - `openai` 默认使用 `gpt-4o-mini-transcribe` 做转写，`gpt-5-mini` 做口语 / 写作批改。
-- 如果你把 `OPENAI_BASE_URL` 指到 `https://api.gemai.cc/v1`，后端会自动按 OpenAI 兼容方式连 GemAI。
+- 如果你把 `OPENAI_BASE_URL` 指到 `https://aihubmix.com/v1`，后端会自动按 OpenAI 兼容方式连 AiHubMix。
 - `openrouter` 默认使用 `openrouter/auto`，你也可以手动改成自己想试的免费或低价模型。
 - `gemini` 默认使用 `gemini-2.5-flash-lite`，并支持用 `GEMINI_*_MODEL_PRIORITY` 设定低延迟优先的候选顺序。
 - 现在仓库默认的 Gemini 候选顺序已经调成 `gemini-2.5-flash-lite -> gemini-2.5-flash`，优先兼顾响应速度。
@@ -239,10 +241,11 @@ python3 server.py
 - `/api/pronunciation`：在线发音代理
 
 推荐把它部署到一个单独的 Python Web Service，然后把前端的 `backendBaseUrl` 指向它。仓库里已经附带了 [render.yaml](/Users/shyn/Documents/Playground/lexicon-sprint/render.yaml) 作为独立后端样例，而且默认不会再接到旧的 Netlify 站点上。
-当前 `render.yaml` 默认就是按 `GemAI OpenAI 兼容网关` 写的：
+当前 `render.yaml` 默认就是按 `AiHubMix OpenAI 兼容网关` 写的：
 - `AI_PROVIDER=openai`
-- `OPENAI_BASE_URL=https://api.gemai.cc/v1`
-- `GEMAI_API_KEY` 作为主密钥变量
+- `OPENAI_BASE_URL=https://aihubmix.com/v1`
+- `AIHUBMIX_API_KEY` 作为主密钥变量
+- 默认模型固定为 `gemini-3-flash-preview-free`
 - 免费 Render 实例不支持持久磁盘，所以默认 `BACKEND_STORAGE_DIR` 会落到 `/tmp/ielts-lexicon-sprint-data`；这种模式能跑，但云端同步数据在实例重启后可能丢失。
 
 如果你想直接走 Render，这个仓库已经满足官方 Deploy to Render 的按钮要求，可以直接用：

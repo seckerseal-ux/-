@@ -15,16 +15,16 @@ services:
       - key: AI_PROVIDER
         value: openai
       - key: OPENAI_BASE_URL
-        value: https://api.gemai.cc/v1
-      - key: GEMAI_BASE_URL
-        value: https://api.gemai.cc/v1
+        value: https://aihubmix.com/v1
+      - key: AIHUBMIX_BASE_URL
+        value: https://aihubmix.com/v1
       - key: OPENAI_TRANSCRIBE_MODEL
-        value: gemini-2.5-flash-lite
+        value: gemini-3-flash-preview-free
       - key: OPENAI_REVIEW_MODEL
-        value: gemini-2.5-flash-lite
+        value: gemini-3-flash-preview-free
       - key: OPENAI_WRITING_REVIEW_MODEL
-        value: gemini-2.5-flash-lite
-      - key: GEMAI_API_KEY
+        value: gemini-3-flash-preview-free
+      - key: AIHUBMIX_API_KEY
         sync: false
       - key: OPENAI_API_KEY
         sync: false
