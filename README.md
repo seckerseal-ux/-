@@ -9,11 +9,15 @@
 1. 把 `lexicon-sprint` 目录本身作为一个 GitHub 仓库根目录。
 2. 推送后，在仓库 `Settings -> Pages` 里把 `Source` 设成 `GitHub Actions`。
 3. 仓库里已经带了 [deploy-pages.yml](/Users/shyn/Documents/Playground/lexicon-sprint/.github/workflows/deploy-pages.yml)，后续 push 到 `main` 或 `master` 会自动发布。
-4. GitHub Pages 版默认是纯静态站点：
+4. 如果你已经有独立后端域名，推荐在仓库 `Settings -> Secrets and variables -> Actions -> Variables` 里配置：
+   - `BACKEND_BASE_URL`
+   - 或分别配置 `AI_API_BASE_URL`、`CLOUD_SYNC_BASE_URL`、`PRONUNCIATION_API_BASE_URL`
+5. GitHub Actions 发布时会自动把这些变量写进最终的 `site-config.js`，这样前端不用再手改。
+6. GitHub Pages 版默认是纯静态站点：
    - 背词、拼写、复习、本地进度都能正常用
    - 发音会优先走浏览器可直接访问的在线 TTS
    - AI 批改和云端同步需要额外后端，不能直接跑在 GitHub Pages 上
-5. 如果你后面给它单独配了 API 后端，可以在 [site-config.js](/Users/shyn/Documents/Playground/lexicon-sprint/site-config.js) 里填：
+7. 如果你后面想手动改前端配置，也可以直接在 [site-config.js](/Users/shyn/Documents/Playground/lexicon-sprint/site-config.js) 里填：
 
 ```js
 window.__IELTS_LEXICON_CONFIG__ = {
@@ -205,3 +209,13 @@ python3 server.py
 - `/api/pronunciation`：在线发音代理
 
 推荐把它部署到一个单独的 Python Web Service，然后把前端的 `backendBaseUrl` 指向它。仓库里已经附带了 [render.yaml](/Users/shyn/Documents/Playground/lexicon-sprint/render.yaml) 作为独立后端样例，而且默认不会再接到旧的 Netlify 站点上。
+
+如果你想直接走 Render，这个仓库已经满足官方 Deploy to Render 的按钮要求，可以直接用：
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/seckerseal-ux/-.git)
+
+Render 官方文档：
+- [Deploy to Render Button](https://render.com/docs/deploy-to-render)
+- [Blueprint YAML Reference](https://render.com/docs/blueprint-spec)
+
+部署完成后，拿到新的 `https://xxx.onrender.com` 后端域名，再把它填到 GitHub 仓库变量 `BACKEND_BASE_URL`，GitHub Pages 前端下次发布时就会自动连上这一台独立后端。

@@ -32,14 +32,26 @@ jobs:
           enablement: true
 
       - name: Prepare static bundle
+        env:
+          BACKEND_BASE_URL: ${{ vars.BACKEND_BASE_URL }}
+          AI_API_BASE_URL: ${{ vars.AI_API_BASE_URL }}
+          CLOUD_SYNC_BASE_URL: ${{ vars.CLOUD_SYNC_BASE_URL }}
+          PRONUNCIATION_API_BASE_URL: ${{ vars.PRONUNCIATION_API_BASE_URL }}
         run: |
           mkdir -p dist
           cp index.html dist/index.html
           cp app.js dist/app.js
           cp styles.css dist/styles.css
           cp vocabulary-generated.js dist/vocabulary-generated.js
-          cp site-config.js dist/site-config.js
           cp .nojekyll dist/.nojekyll
+          cat > dist/site-config.js <<EOF
+          window.__IELTS_LEXICON_CONFIG__ = {
+            backendBaseUrl: "${BACKEND_BASE_URL}",
+            aiApiBaseUrl: "${AI_API_BASE_URL}",
+            cloudSyncBaseUrl: "${CLOUD_SYNC_BASE_URL}",
+            pronunciationApiBaseUrl: "${PRONUNCIATION_API_BASE_URL}",
+          };
+          EOF
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
