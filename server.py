@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import base64
-import cgi
+from email.parser import BytesParser
+from email.policy import default as email_policy_default
 import hashlib
 import hmac
 import json
@@ -768,6 +769,58 @@ def read_json_body(handler):
         return json.loads(raw.decode("utf-8"))
     except json.JSONDecodeError as error:
         raise ApiError("请求中的 JSON 格式不正确。", status=400) from error
+
+
+def parse_multipart_form_data(handler):
+    content_type = str(handler.headers.get("Content-Type", "")).strip()
+    if "multipart/form-data" not in content_type.lower():
+        raise ApiError("当前请求不是有效的 multipart/form-data 表单。", status=400)
+
+    try:
+        content_length = int(handler.headers.get("Content-Length", "0"))
+    except ValueError as error:
+        raise ApiError("请求体长度无效。", status=400) from error
+
+    if content_length <= 0:
+        raise ApiError("上传请求体为空。", status=400)
+
+    raw_body = handler.rfile.read(content_length)
+    message = BytesParser(policy=email_policy_default).parsebytes(
+        (
+            f"Content-Type: {content_type}\r\n"
+            "MIME-Version: 1.0\r\n"
+            "\r\n"
+        ).encode("utf-8")
+        + raw_body
+    )
+
+    if not message.is_multipart():
+        raise ApiError("上传表单解析失败，请重新上传音频。", status=400)
+
+    fields = {}
+    files = {}
+    for part in message.iter_parts():
+        name = part.get_param("name", header="content-disposition")
+        if not name:
+            continue
+
+        filename = part.get_filename()
+        payload = part.get_payload(decode=True) or b""
+        if filename:
+            files[name] = {
+                "filename": filename,
+                "content_type": part.get_content_type() or "application/octet-stream",
+                "content": payload,
+            }
+            continue
+
+        charset = part.get_content_charset() or "utf-8"
+        try:
+            fields[name] = payload.decode(charset)
+        except UnicodeDecodeError:
+            fields[name] = payload.decode("utf-8", errors="replace")
+
+    return fields, files
 
 
 def normalize_tts_text(value):
@@ -2000,36 +2053,26 @@ class AppHandler(SimpleHTTPRequestHandler):
 
             if route_path == "/api/ai/speaking-review":
                 get_request_cloud_session(self, required=False)
-                form = cgi.FieldStorage(
-                    fp=self.rfile,
-                    headers=self.headers,
-                    environ={
-                        "REQUEST_METHOD": "POST",
-                        "CONTENT_TYPE": self.headers.get("Content-Type", ""),
-                        "CONTENT_LENGTH": self.headers.get("Content-Length", "0"),
-                    },
-                    keep_blank_values=True,
-                )
+                form_fields, form_files = parse_multipart_form_data(self)
 
-                if "audio" not in form:
+                if "audio" not in form_files:
                     raise ApiError("请求里缺少音频文件。", status=400)
 
-                audio_field = form["audio"]
-                if not getattr(audio_field, "file", None):
-                    raise ApiError("上传的音频文件无效。", status=400)
-
-                audio_bytes = audio_field.file.read()
+                audio_field = form_files["audio"]
+                audio_bytes = audio_field["content"]
                 if not audio_bytes:
                     raise ApiError("上传的音频文件为空。", status=400)
                 if len(audio_bytes) > MAX_AUDIO_BYTES:
                     raise ApiError("音频文件过大，请控制在 20MB 以内。", status=400)
 
-                filename = audio_field.filename or "response.webm"
-                content_type = audio_field.type or mimetypes.guess_type(filename)[0] or "application/octet-stream"
-                provider = require_provider_name(form.getfirst("backend") or form.getfirst("provider") or AI_PROVIDER)
-                prompt_payload = json.loads(form.getfirst("prompt_payload", "{}"))
-                transcript_hint = form.getfirst("transcript_hint", "").strip()
-                local_metrics_raw = form.getfirst("local_metrics", "{}")
+                filename = audio_field["filename"] or "response.webm"
+                content_type = audio_field["content_type"] or mimetypes.guess_type(filename)[0] or "application/octet-stream"
+                provider = require_provider_name(
+                    form_fields.get("backend") or form_fields.get("provider") or AI_PROVIDER
+                )
+                prompt_payload = json.loads(form_fields.get("prompt_payload", "{}"))
+                transcript_hint = str(form_fields.get("transcript_hint", "")).strip()
+                local_metrics_raw = form_fields.get("local_metrics", "{}")
                 local_metrics = json.loads(local_metrics_raw)
 
                 transcript = transcribe_audio(audio_bytes, filename, content_type, provider=provider)
