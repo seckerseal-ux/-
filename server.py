@@ -79,6 +79,24 @@ def ensure_writable_storage_dir():
 STORAGE_DIR = ensure_writable_storage_dir()
 PROGRESS_STATE_FILE = STORAGE_DIR / "local-progress.json"
 CLOUD_SYNC_DB_FILE = STORAGE_DIR / "cloud-sync.sqlite3"
+UPSTASH_REDIS_REST_URL = os.getenv("UPSTASH_REDIS_REST_URL", "").strip().rstrip("/")
+UPSTASH_REDIS_REST_TOKEN = os.getenv("UPSTASH_REDIS_REST_TOKEN", "").strip()
+UPSTASH_KEY_PREFIX = os.getenv("UPSTASH_KEY_PREFIX", "ielts-lexicon-sprint").strip() or "ielts-lexicon-sprint"
+
+
+def infer_cloud_sync_backend():
+    configured = (
+        os.getenv("CLOUD_SYNC_BACKEND", "").strip().lower()
+        or os.getenv("CLOUD_SYNC_PROVIDER", "").strip().lower()
+    )
+    if configured in {"sqlite", "upstash"}:
+        return configured
+    if UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN:
+        return "upstash"
+    return "sqlite"
+
+
+CLOUD_SYNC_BACKEND = infer_cloud_sync_backend()
 
 HOST = os.getenv("HOST", "0.0.0.0")
 PORT = int(os.getenv("PORT", "8000"))
@@ -771,6 +789,14 @@ def get_provider_status(provider):
     }
 
 
+def get_cloud_sync_status():
+    return {
+        "backend": CLOUD_SYNC_BACKEND,
+        "using_upstash": use_upstash_cloud_sync(),
+        "upstash_configured": bool(UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN),
+    }
+
+
 def get_missing_key_message(provider):
     provider = normalize_provider_name(provider)
     if provider == "gemini":
@@ -974,6 +1000,166 @@ def write_progress_snapshot(state_payload, updated_at):
     temp_path.replace(PROGRESS_STATE_FILE)
 
 
+def use_upstash_cloud_sync():
+    return CLOUD_SYNC_BACKEND == "upstash"
+
+
+def get_cloud_session_secret():
+    return (
+        os.getenv("CLOUD_SESSION_SECRET", "").strip()
+        or UPSTASH_REDIS_REST_TOKEN
+        or os.getenv("OPENAI_API_KEY", "").strip()
+        or os.getenv("AIHUBMIX_API_KEY", "").strip()
+        or os.getenv("GEMAI_API_KEY", "").strip()
+    )
+
+
+def base64url_encode(value):
+    return base64.urlsafe_b64encode(value).decode("ascii").rstrip("=")
+
+
+def base64url_decode(value):
+    padding = "=" * (-len(value) % 4)
+    return base64.urlsafe_b64decode(f"{value}{padding}")
+
+
+def build_cloud_session_record(user_row, issued_at=None, expires_at=None, last_active_at=None, token=None):
+    issued_at = int(issued_at or time.time() * 1000)
+    expires_at = int(expires_at or (issued_at + CLOUD_SESSION_TTL_MS))
+    last_active_at = int(last_active_at or issued_at)
+    return {
+        "token": token or "",
+        "normalized_id": user_row["normalized_id"],
+        "account_id": user_row["account_id"],
+        "issued_at": issued_at,
+        "expires_at": expires_at,
+        "last_active_at": last_active_at,
+    }
+
+
+def encode_stateless_cloud_session_token(session):
+    secret = get_cloud_session_secret()
+    if not secret:
+        raise ApiError("缺少 CLOUD_SESSION_SECRET，请先为云同步配置稳定的会话密钥。", status=503)
+
+    payload = {
+        "nid": session["normalized_id"],
+        "aid": session["account_id"],
+        "iat": int(session["issued_at"]),
+        "exp": int(session["expires_at"]),
+    }
+    encoded_payload = base64url_encode(json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode("utf-8"))
+    signature = hmac.new(secret.encode("utf-8"), encoded_payload.encode("utf-8"), hashlib.sha256).digest()
+    return f"v1.{encoded_payload}.{base64url_encode(signature)}"
+
+
+def decode_stateless_cloud_session_token(token):
+    normalized_token = normalize_session_token(token)
+    parts = normalized_token.split(".")
+    if len(parts) != 3 or parts[0] != "v1":
+        raise ApiError("登录状态已经失效，请重新登录云端同步账号。", status=401)
+
+    secret = get_cloud_session_secret()
+    if not secret:
+        raise ApiError("缺少 CLOUD_SESSION_SECRET，请先为云同步配置稳定的会话密钥。", status=503)
+
+    encoded_payload = parts[1]
+    expected_signature = base64url_encode(
+        hmac.new(secret.encode("utf-8"), encoded_payload.encode("utf-8"), hashlib.sha256).digest()
+    )
+    if not hmac.compare_digest(expected_signature, parts[2]):
+        raise ApiError("登录状态已经失效，请重新登录云端同步账号。", status=401)
+
+    try:
+        payload = json.loads(base64url_decode(encoded_payload).decode("utf-8"))
+    except (ValueError, json.JSONDecodeError, UnicodeDecodeError) as error:
+        raise ApiError("登录状态已经失效，请重新登录云端同步账号。", status=401) from error
+
+    return {
+        "token": normalized_token,
+        "normalized_id": normalize_account_id(payload.get("nid")),
+        "account_id": normalize_account_id(payload.get("aid")),
+        "issued_at": int(payload.get("iat") or 0),
+        "expires_at": int(payload.get("exp") or 0),
+        "last_active_at": int(time.time() * 1000),
+    }
+
+
+def upstash_request(command, *args):
+    if not UPSTASH_REDIS_REST_URL or not UPSTASH_REDIS_REST_TOKEN:
+        raise ApiError("缺少 Upstash 配置，请先设置 UPSTASH_REDIS_REST_URL 和 UPSTASH_REDIS_REST_TOKEN。", status=503)
+
+    payload = json.dumps([command, *args], ensure_ascii=False).encode("utf-8")
+    request = urllib.request.Request(
+        UPSTASH_REDIS_REST_URL,
+        data=payload,
+        headers={
+            "Authorization": f"Bearer {UPSTASH_REDIS_REST_TOKEN}",
+            "Content-Type": "application/json; charset=utf-8",
+            "Accept": "application/json",
+        },
+        method="POST",
+    )
+
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            body = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as error:
+        detail = error.read().decode("utf-8", errors="replace")
+        raise ApiError(f"Upstash 云同步接口返回错误：{detail}", status=502) from error
+    except urllib.error.URLError as error:
+        raise ApiError(f"无法连接 Upstash 云同步接口：{error.reason}", status=502) from error
+    except json.JSONDecodeError as error:
+        raise ApiError("Upstash 云同步接口返回了无法解析的响应。", status=502) from error
+
+    if body.get("error"):
+        raise ApiError(f"Upstash 云同步接口返回错误：{body['error']}", status=502)
+    return body.get("result")
+
+
+def get_upstash_key(*parts):
+    normalized_parts = [UPSTASH_KEY_PREFIX, *[str(part or "").strip() for part in parts]]
+    return ":".join(part for part in normalized_parts if part)
+
+
+def get_upstash_user_key(normalized_id):
+    return get_upstash_key("cloud", "user", normalized_id)
+
+
+def get_upstash_revoked_session_key(token):
+    return get_upstash_key("cloud", "revoked-session", token)
+
+
+def read_upstash_json(key):
+    result = upstash_request("GET", key)
+    if result in {None, ""}:
+        return None
+    try:
+        payload = json.loads(result)
+    except (TypeError, json.JSONDecodeError):
+        return None
+    return payload if isinstance(payload, dict) else None
+
+
+def write_upstash_json(key, payload):
+    upstash_request("SET", key, json.dumps(payload, ensure_ascii=False))
+
+
+def setnx_upstash_json(key, payload):
+    result = upstash_request("SETNX", key, json.dumps(payload, ensure_ascii=False))
+    return str(result) == "1"
+
+
+def psetex_upstash_json(key, ttl_ms, payload):
+    upstash_request("PSETEX", key, int(ttl_ms), json.dumps(payload, ensure_ascii=False))
+
+
+def initialize_cloud_sync_storage():
+    if use_upstash_cloud_sync():
+        return
+    initialize_cloud_sync_storage()
+
+
 def get_db_connection():
     connection = sqlite3.connect(CLOUD_SYNC_DB_FILE, timeout=30, check_same_thread=False)
     connection.row_factory = sqlite3.Row
@@ -1088,16 +1274,12 @@ def get_cloud_user(connection, normalized_id):
     ).fetchone()
 
 
+def get_upstash_cloud_user(normalized_id):
+    return read_upstash_json(get_upstash_user_key(normalized_id))
+
+
 def create_cloud_session(connection, user_row):
-    now = int(time.time() * 1000)
-    session = {
-        "token": secrets.token_urlsafe(32),
-        "normalized_id": user_row["normalized_id"],
-        "account_id": user_row["account_id"],
-        "issued_at": now,
-        "expires_at": now + CLOUD_SESSION_TTL_MS,
-        "last_active_at": now,
-    }
+    session = build_cloud_session_record(user_row, token=secrets.token_urlsafe(32))
     connection.execute(
         """
         INSERT INTO cloud_sessions (token, normalized_id, account_id, issued_at, expires_at, last_active_at)
@@ -1116,12 +1298,35 @@ def create_cloud_session(connection, user_row):
     return session
 
 
+def create_upstash_cloud_session(user_row):
+    session = build_cloud_session_record(user_row)
+    session["token"] = encode_stateless_cloud_session_token(session)
+    return session
+
+
 def register_cloud_account(account_id, password):
     normalized_id = validate_account_id(account_id)
     normalized_password = validate_password(password)
     now = int(time.time() * 1000)
     salt_hex = secrets.token_hex(16)
     password_hash = hash_password(normalized_password, salt_hex)
+
+    if use_upstash_cloud_sync():
+        record = {
+            "normalized_id": normalized_id,
+            "account_id": normalized_id,
+            "salt_hex": salt_hex,
+            "password_hash": password_hash,
+            "created_at": now,
+            "updated_at": now,
+            "progress_updated_at": 0,
+            "state": None,
+            "saved_at": 0,
+        }
+        if not setnx_upstash_json(get_upstash_user_key(normalized_id), record):
+            raise ApiError("这个云端同步账号已经存在了，直接登录就好。", status=409)
+        session = create_upstash_cloud_session(record)
+        return serialize_cloud_session(session)
 
     with DB_LOCK:
         connection = get_db_connection()
@@ -1148,6 +1353,13 @@ def login_cloud_account(account_id, password):
     normalized_id = validate_account_id(account_id)
     normalized_password = validate_password(password)
 
+    if use_upstash_cloud_sync():
+        user_row = get_upstash_cloud_user(normalized_id)
+        if not user_row or not verify_password(normalized_password, user_row):
+            raise ApiError("账号或同步口令不对，请再检查一下。", status=401)
+        session = create_upstash_cloud_session(user_row)
+        return serialize_cloud_session(session)
+
     with DB_LOCK:
         connection = get_db_connection()
         try:
@@ -1165,6 +1377,19 @@ def logout_cloud_session(token):
     if not normalized_token:
         return
 
+    if use_upstash_cloud_sync():
+        try:
+            session = decode_stateless_cloud_session_token(normalized_token)
+        except ApiError:
+            return
+        remaining_ttl = max(1000, int(session["expires_at"]) - int(time.time() * 1000))
+        psetex_upstash_json(
+            get_upstash_revoked_session_key(normalized_token),
+            remaining_ttl,
+            {"revoked": True, "account_id": session["account_id"]},
+        )
+        return
+
     with DB_LOCK:
         connection = get_db_connection()
         try:
@@ -1178,6 +1403,21 @@ def require_cloud_session(token):
     normalized_token = normalize_session_token(token)
     if not normalized_token:
         raise ApiError("请先登录云端同步账号。", status=401)
+
+    if use_upstash_cloud_sync():
+        session = decode_stateless_cloud_session_token(normalized_token)
+        if int(session["expires_at"] or 0) <= int(time.time() * 1000):
+            raise ApiError("登录状态已经过期，请重新登录云端同步账号。", status=401)
+        revoked = read_upstash_json(get_upstash_revoked_session_key(normalized_token))
+        if revoked:
+            raise ApiError("登录状态已经失效，请重新登录云端同步账号。", status=401)
+
+        user_row = get_upstash_cloud_user(session["normalized_id"])
+        if not user_row:
+            raise ApiError("当前云端账号不存在，请重新注册或登录。", status=401)
+
+        session["account_id"] = user_row["account_id"]
+        return session
 
     now = int(time.time() * 1000)
     with DB_LOCK:
@@ -1240,6 +1480,19 @@ def get_request_cloud_session(handler, required=False):
 
 def read_cloud_progress(token):
     session = require_cloud_session(token)
+
+    if use_upstash_cloud_sync():
+        row = get_upstash_cloud_user(session["normalized_id"])
+        if not row:
+            raise ApiError("当前云端账号不存在，请重新注册或登录。", status=401)
+        state = row.get("state") if isinstance(row.get("state"), dict) else None
+        return {
+            "accountId": row["account_id"],
+            "updatedAt": int(row.get("progress_updated_at") or 0),
+            "state": state,
+            "savedAt": int(row.get("saved_at") or 0),
+        }
+
     with DB_LOCK:
         connection = get_db_connection()
         try:
@@ -1287,6 +1540,34 @@ def write_cloud_progress(token, incoming_state, incoming_updated_at):
         updated_at = fallback_updated_at
 
     now = int(time.time() * 1000)
+
+    if use_upstash_cloud_sync():
+        record = get_upstash_cloud_user(session["normalized_id"])
+        if not record:
+            raise ApiError("当前云端账号不存在，请重新注册或登录。", status=401)
+
+        current_updated_at = int(record.get("progress_updated_at") or 0)
+        if current_updated_at > updated_at:
+            current_state = record.get("state") if isinstance(record.get("state"), dict) else None
+            return {
+                "conflict": True,
+                "accountId": record["account_id"],
+                "updatedAt": current_updated_at,
+                "state": current_state,
+            }
+
+        record["progress_updated_at"] = updated_at
+        record["state"] = incoming_state
+        record["saved_at"] = now
+        record["updated_at"] = now
+        write_upstash_json(get_upstash_user_key(session["normalized_id"]), record)
+        return {
+            "conflict": False,
+            "accountId": session["account_id"],
+            "updatedAt": updated_at,
+            "state": incoming_state,
+        }
+
     with DB_LOCK:
         connection = get_db_connection()
         try:
@@ -2086,6 +2367,7 @@ class AppHandler(SimpleHTTPRequestHandler):
                     {
                         **active_status,
                         "available": bool(get_api_key()),
+                        "cloud_sync": get_cloud_sync_status(),
                         "backends": backend_status,
                     },
                 )

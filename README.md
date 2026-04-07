@@ -151,6 +151,8 @@ python3 server.py
    - 配好以后，在右侧“云端同步”里注册或登录同一个同步账号。
    - 登录后，所有连到同一云同步接口的入口都会自动对比本地与云端的更新时间。
    - 系统会优先保留更新时间更近的一份进度，并继续把新改动自动推回云端。
+   - 如果你不想把云端账号和进度继续存在 Render 本地临时目录里，现在推荐直接改成 `Upstash Redis REST`。
+   - 只要在后端环境变量里补上 `UPSTASH_REDIS_REST_URL`、`UPSTASH_REDIS_REST_TOKEN`，再把 `CLOUD_SYNC_BACKEND` 设成 `upstash`，云同步就会自动切到持久化方案。
 7. 在右侧设置里调整：
    - 每日新词上限
    - 复习节奏
@@ -186,6 +188,7 @@ python3 server.py
 - 离线页与本地代理页共享进度同步
 - 可选云端同步账号：跨浏览器、跨设备、跨入口共享一份进度
 - 浏览器本地缓存保底，即使云端暂时断开也不会立刻丢记录
+- 可选 `Upstash Redis REST` 持久云同步，避免 Render 免费实例重启后账号和进度丢失
 
 ## 口语模考说明
 
@@ -224,6 +227,7 @@ python3 server.py
 
 - 当前内置的是一套适合雅思备考的分类词表示例，可以继续按现有数据结构扩充。
 - 浏览器本地依然会保留 `localStorage` 作为兜底；只要本地代理可用，离线页和本地代理页会同步一份共享进度；如果再配置了云同步后端，线上、离线和本地 AI 版也能继续共享同一份进度。
+- 如果 `CLOUD_SYNC_BACKEND=upstash` 且配置了 `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN`，后端会把云端账号、登录会话撤销状态和学习进度都放到 Upstash，而不是落在 Render 本地磁盘。
 - 站点不依赖构建工具；AI 版只额外需要 Python 3 和对应 provider 的 API Key。
 - `netlify/` 目录里的函数仍然可以继续当作一个现成后端样例，但 GitHub Pages 本身只负责静态托管，不会直接运行这些函数。
 - 如果你要继续维护 `netlify/` 目录里的函数，可以在项目目录运行一次 `npm install` 安装依赖。
@@ -247,6 +251,21 @@ python3 server.py
 - `AIHUBMIX_API_KEY` 作为主密钥变量
 - 默认模型固定为 `gemini-3-flash-preview-free`
 - 免费 Render 实例不支持持久磁盘，所以默认 `BACKEND_STORAGE_DIR` 会落到 `/tmp/ielts-lexicon-sprint-data`；这种模式能跑，但云端同步数据在实例重启后可能丢失。
+
+如果你要把云同步切到免费的持久方案，推荐直接在 Render 里加这几项：
+
+```bash
+CLOUD_SYNC_BACKEND=upstash
+UPSTASH_REDIS_REST_URL=https://your-db.upstash.io
+UPSTASH_REDIS_REST_TOKEN=你的UpstashRestToken
+UPSTASH_KEY_PREFIX=ielts-lexicon-sprint
+CLOUD_SESSION_SECRET=一段你自己生成的长随机串
+```
+
+说明：
+- `UPSTASH_REDIS_REST_URL` 和 `UPSTASH_REDIS_REST_TOKEN` 来自 Upstash 控制台里的 REST API。
+- `CLOUD_SESSION_SECRET` 用来签发云同步登录令牌，建议单独生成，不要直接复用 AI Key。
+- 配好后重新部署 Render，云同步就会自动从本地 sqlite 切到 Upstash。
 
 如果你想直接走 Render，这个仓库已经满足官方 Deploy to Render 的按钮要求，可以直接用：
 
