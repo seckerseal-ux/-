@@ -5253,10 +5253,10 @@ function renderAiWritingReview(prompt, aiPayload) {
 function requestAiWritingReview(prompt, localReview, essayText) {
   return fetch(getApiUrl("/api/ai/writing-review"), {
     method: "POST",
-    headers: {
+    headers: createAiRequestHeaders({
       "Content-Type": "application/json",
       Accept: "application/json",
-    },
+    }),
     body: JSON.stringify({
       prompt_payload: prompt,
       essay_text: essayText,
@@ -7173,6 +7173,7 @@ async function requestAiSpeakingReview(file, prompt, localReview) {
 
   const response = await fetch(getApiUrl("/api/ai/speaking-review"), {
     method: "POST",
+    headers: createAiRequestHeaders(),
     body: formData,
   });
 
@@ -7186,10 +7187,10 @@ async function requestAiSpeakingReview(file, prompt, localReview) {
 async function requestAiSpeakingMockSummary(parts) {
   const response = await fetch(getApiUrl("/api/ai/speaking-mock-summary"), {
     method: "POST",
-    headers: {
+    headers: createAiRequestHeaders({
       "Content-Type": "application/json",
       Accept: "application/json",
-    },
+    }),
     body: JSON.stringify({ parts }),
   });
 

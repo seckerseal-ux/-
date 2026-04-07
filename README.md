@@ -27,12 +27,12 @@ window.__IELTS_LEXICON_CONFIG__ = {
 
 1. 当前新版离线页入口是 [lexicon-sprint/index.html](/Users/shyn/Documents/Playground/lexicon-sprint/index.html)。
 2. 根目录的 [index.html](/Users/shyn/Documents/Playground/index.html) 是旧入口，不是这套最新版。
-3. 如果要启用本地 AI 口语批改和本地代理共享进度，在项目目录启动根目录的 [server.py](/Users/shyn/Documents/Playground/server.py)。
+3. 如果要启用本地 AI 口语批改和本地代理共享进度，直接在当前项目目录启动 [server.py](/Users/shyn/Documents/Playground/lexicon-sprint/server.py)。
 
 ### 方式 A：直接用环境变量启动 OpenAI
 
 ```bash
-cd /Users/shyn/Documents/Playground
+cd /Users/shyn/Documents/Playground/lexicon-sprint
 export AI_PROVIDER="openai"
 export OPENAI_API_KEY="你的 OpenAI Key"
 python3 server.py
@@ -41,7 +41,7 @@ python3 server.py
 ### 方式 B：直接用环境变量启动 OpenRouter
 
 ```bash
-cd /Users/shyn/Documents/Playground
+cd /Users/shyn/Documents/Playground/lexicon-sprint
 export AI_PROVIDER="openrouter"
 export OPENROUTER_API_KEY="你的 OpenRouter Key"
 export AI_TRANSCRIBE_MODEL="openrouter/auto"
@@ -50,9 +50,18 @@ export AI_WRITING_REVIEW_MODEL="openrouter/auto"
 python3 server.py
 ```
 
-### 方式 C：把配置写到 `.env`
+### 方式 C：直接用环境变量启动 Gemini
 
-可以在 [server.py](/Users/shyn/Documents/Playground/server.py) 同目录新建 `.env`，例如：
+```bash
+cd /Users/shyn/Documents/Playground/lexicon-sprint
+export AI_PROVIDER="gemini"
+export GEMINI_API_KEY="你的 Gemini Key"
+python3 server.py
+```
+
+### 方式 D：把配置写到 `.env`
+
+可以在 [server.py](/Users/shyn/Documents/Playground/lexicon-sprint/server.py) 同目录新建 `.env`，例如：
 
 ```bash
 AI_PROVIDER=openai
@@ -69,10 +78,20 @@ AI_REVIEW_MODEL=openrouter/auto
 AI_WRITING_REVIEW_MODEL=openrouter/auto
 ```
 
+或者：
+
+```bash
+AI_PROVIDER=gemini
+GEMINI_API_KEY=你的GeminiKey
+GEMINI_TRANSCRIBE_MODEL=gemini-2.5-flash
+GEMINI_REVIEW_MODEL=gemini-2.5-flash
+GEMINI_WRITING_REVIEW_MODEL=gemini-2.5-flash
+```
+
 然后直接运行：
 
 ```bash
-cd /Users/shyn/Documents/Playground
+cd /Users/shyn/Documents/Playground/lexicon-sprint
 python3 server.py
 ```
 
@@ -109,7 +128,7 @@ python3 server.py
 - Speaking Part 1 / 2 / 3 题型化口语模考区
 - 全真三段模考流程：提交完 Part 1 后自动进入 Part 2、Part 3
 - 上传录音后的本地时长 / 停顿 / 节奏分析
-- OpenAI / OpenRouter 双后端 AI 口语批改
+- OpenAI / OpenRouter / Gemini 三后端 AI 口语批改
 - AI 转写分析模块
 - AI 四项评分分析：流利连贯、词汇资源、语法范围与准确度、发音表现
 - AI 维度评分、问题定位、改写建议和推荐积累素材
@@ -136,15 +155,19 @@ python3 server.py
 - 通用 Key：`AI_API_KEY`
 - OpenAI Key：`OPENAI_API_KEY`
 - OpenRouter Key：`OPENROUTER_API_KEY`
+- Gemini Key：`GEMINI_API_KEY`
 - 通用转写模型：`AI_TRANSCRIBE_MODEL`
 - 通用口语批改模型：`AI_REVIEW_MODEL`
 - 通用写作批改模型：`AI_WRITING_REVIEW_MODEL`
 - OpenAI 兼容旧变量：`OPENAI_TRANSCRIBE_MODEL`、`OPENAI_REVIEW_MODEL`、`OPENAI_WRITING_REVIEW_MODEL`
+- Gemini 专用变量：`GEMINI_TRANSCRIBE_MODEL`、`GEMINI_REVIEW_MODEL`、`GEMINI_WRITING_REVIEW_MODEL`
+- Gemini 速度优先候选：`GEMINI_TRANSCRIBE_MODEL_PRIORITY`、`GEMINI_REVIEW_MODEL_PRIORITY`、`GEMINI_WRITING_MODEL_PRIORITY`
 
 如果你不额外设置：
 
 - `openai` 默认使用 `gpt-4o-mini-transcribe` 做转写，`gpt-5-mini` 做口语 / 写作批改。
 - `openrouter` 默认使用 `openrouter/auto`，你也可以手动改成自己想试的免费或低价模型。
+- `gemini` 默认使用 `gemini-2.5-flash`，并支持用 `GEMINI_*_MODEL_PRIORITY` 设定低延迟优先的候选顺序。
 
 ## 说明
 
@@ -153,5 +176,6 @@ python3 server.py
 - 站点不依赖构建工具；AI 版只额外需要 Python 3 和对应 provider 的 API Key。
 - `netlify/` 目录里的函数仍然可以继续当作一个现成后端样例，但 GitHub Pages 本身只负责静态托管，不会直接运行这些函数。
 - 如果你要继续维护 `netlify/` 目录里的函数，可以在项目目录运行一次 `npm install` 安装依赖。
+- GitHub Pages 线上版如果要自动连 AI，需要把独立后端地址填进 [site-config.js](/Users/shyn/Documents/Playground/lexicon-sprint/site-config.js) 的 `aiApiBaseUrl`，不要把 API Key 直接写进前端。
 - OpenRouter 是否能稳定使用免费模型，取决于你选择的具体模型是否同时支持音频输入和结构化输出；如果某个免费模型不兼容，优先改成 `openrouter/auto` 或你自己指定的兼容模型。
 - 大词库生成文件是 [vocabulary-generated.js](/Users/shyn/Documents/Playground/lexicon-sprint/vocabulary-generated.js)，由 [scripts/build_large_vocabulary.py](/Users/shyn/Documents/Playground/lexicon-sprint/scripts/build_large_vocabulary.py) 基于 ECDICT（MIT License）筛选生成。
