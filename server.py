@@ -127,6 +127,32 @@ def is_aihubmix_base_url(value):
     return "aihubmix.com" in str(value or "").strip().lower()
 
 
+def get_aihubmix_gemini_base_url():
+    configured = (
+        os.getenv("AIHUBMIX_GEMINI_BASE_URL", "").strip()
+        or os.getenv("AIHUBMIX_BASE_URL", "").strip()
+        or "https://aihubmix.com/gemini"
+    ).rstrip("/")
+    if configured.endswith("/v1beta"):
+        return configured
+    if configured.endswith("/gemini"):
+        return f"{configured}/v1beta"
+    if configured.endswith("/v1"):
+        configured = configured[: -len("/v1")]
+    return f"{configured}/gemini/v1beta"
+
+
+def is_aihubmix_native_gemini_model(provider, model):
+    provider = normalize_provider_name(provider)
+    model_name = str(model or "").strip().lower()
+    return (
+        provider == "openai"
+        and is_aihubmix_base_url(get_provider_base_url(provider))
+        and model_name.startswith("gemini")
+        and not model_name.endswith(("-nothink", "-search"))
+    )
+
+
 def infer_provider_name():
     configured = os.getenv("AI_PROVIDER", "").strip().lower()
     if configured in DEFAULT_PROVIDER_BASE_URLS:
@@ -1391,6 +1417,50 @@ def api_request(path, data, content_type, method="POST", extra_headers=None, pro
         raise ApiError(f"无法连接 {get_provider_label(provider)} 接口：{error.reason}", status=502) from error
 
 
+def native_gemini_api_request(path, data, content_type, method="POST", extra_headers=None, provider=None):
+    provider = normalize_provider_name(provider)
+    api_key = get_provider_api_key(provider)
+    if not api_key:
+        raise ApiError(get_missing_key_message(provider), status=503)
+
+    base_url = get_provider_base_url(provider)
+    if provider == "openai" and is_aihubmix_base_url(base_url):
+        base_url = get_aihubmix_gemini_base_url()
+
+    headers = {
+        "Content-Type": content_type,
+        "Accept": "application/json",
+        "x-goog-api-key": api_key,
+    }
+    if extra_headers:
+        headers.update(extra_headers)
+
+    request = urllib.request.Request(
+        f"{base_url}{path}",
+        data=data,
+        headers=headers,
+        method=method,
+    )
+
+    try:
+        with urllib.request.urlopen(request, timeout=120) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as error:
+        detail = error.read().decode("utf-8", errors="replace")
+        try:
+            payload = json.loads(detail)
+            error_payload = payload.get("error")
+            if isinstance(error_payload, dict):
+                message = error_payload.get("message") or detail
+            else:
+                message = detail
+        except json.JSONDecodeError:
+            message = detail
+        raise ApiError(f"{get_provider_label(provider)} 接口返回错误：{message}", status=error.code) from error
+    except urllib.error.URLError as error:
+        raise ApiError(f"无法连接 {get_provider_label(provider)} 接口：{error.reason}", status=502) from error
+
+
 def extract_openai_response_text(payload, provider="openai"):
     if payload.get("output_text"):
         return payload["output_text"]
@@ -1489,7 +1559,8 @@ def parse_json_text_response(text, provider=None):
     raise ApiError(f"{get_provider_label(provider)} 返回了无法解析的 JSON 结果。", status=502)
 
 
-def gemini_generate_json(model, instructions, user_input, schema_name, schema):
+def gemini_generate_json(model, instructions, user_input, schema_name, schema, provider="gemini"):
+    provider = normalize_provider_name(provider)
     payload = {
         "systemInstruction": {
             "parts": [
@@ -1514,13 +1585,14 @@ def gemini_generate_json(model, instructions, user_input, schema_name, schema):
             "responseJsonSchema": schema,
         },
     }
-    response = api_request(
+    request_fn = native_gemini_api_request if provider == "gemini" or is_aihubmix_native_gemini_model(provider, model) else api_request
+    response = request_fn(
         f"/models/{model}:generateContent",
         json.dumps(payload).encode("utf-8"),
         "application/json",
-        provider="gemini",
+        provider=provider,
     )
-    return parse_json_text_response(extract_gemini_response_text(response, "gemini"), "gemini")
+    return parse_json_text_response(extract_gemini_response_text(response, provider), provider)
 
 
 def get_audio_format(filename, content_type):
@@ -1584,18 +1656,27 @@ def structured_json_request(model, instructions, user_input, schema_name, schema
             raise last_error
         raise ApiError("OpenRouter 免费模型当前不可用，请稍后再试。", status=503)
 
-    if provider == "gemini":
+    if provider == "gemini" or is_aihubmix_native_gemini_model(provider, model):
         last_error = None
         for candidate_model in get_provider_model_candidates(provider, capability or "review"):
             try:
-                return gemini_generate_json(candidate_model, instructions, user_input, schema_name, schema)
+                if provider != "gemini" and not is_aihubmix_native_gemini_model(provider, candidate_model):
+                    continue
+                return gemini_generate_json(
+                    candidate_model,
+                    instructions,
+                    user_input,
+                    schema_name,
+                    schema,
+                    provider=provider,
+                )
             except ApiError as error:
                 last_error = error
                 if error.status not in {404, 429, 500, 502, 503, 504}:
                     raise
         if last_error:
             raise last_error
-        raise ApiError("Gemini 当前不可用，请稍后再试。", status=503)
+        raise ApiError(f"{get_provider_label(provider)} 当前不可用，请稍后再试。", status=503)
 
     payload = {
         "model": model,
@@ -1748,7 +1829,7 @@ def clamp_mock_summary_payload(payload):
 def transcribe_audio(audio_bytes, filename, content_type, provider=None):
     provider = normalize_provider_name(provider)
     model = get_provider_model(provider, "transcribe")
-    if provider in {"openrouter", "gemini"}:
+    if provider == "openrouter":
         payload = {
             "model": model,
             "messages": [
@@ -1782,6 +1863,49 @@ def transcribe_audio(audio_bytes, filename, content_type, provider=None):
             provider=provider,
         )
         transcript = extract_chat_completion_text(response, provider).strip().strip('"')
+        if not transcript:
+            raise ApiError(f"{get_provider_label(provider)} 已接收音频，但没有返回可用的转写结果。", status=502)
+        return transcript
+
+    if provider == "gemini" or is_aihubmix_native_gemini_model(provider, model):
+        resolved_content_type = content_type or mimetypes.guess_type(filename or "")[0] or "audio/mpeg"
+        payload = {
+            "systemInstruction": {
+                "parts": [
+                    {
+                        "text": (
+                            "Please transcribe this IELTS speaking test response in English. "
+                            "Preserve hesitations and filler words when they are audible. "
+                            "Return only the transcript text."
+                        )
+                    }
+                ]
+            },
+            "contents": [
+                {
+                    "role": "user",
+                    "parts": [
+                        {
+                            "inline_data": {
+                                "mime_type": resolved_content_type,
+                                "data": base64.b64encode(audio_bytes).decode("ascii"),
+                            }
+                        }
+                    ],
+                }
+            ],
+            "generationConfig": {
+                "temperature": 0.1,
+                "responseMimeType": "text/plain",
+            },
+        }
+        response = native_gemini_api_request(
+            f"/models/{model}:generateContent",
+            json.dumps(payload).encode("utf-8"),
+            "application/json",
+            provider=provider,
+        )
+        transcript = extract_gemini_response_text(response, provider).strip().strip('"')
         if not transcript:
             raise ApiError(f"{get_provider_label(provider)} 已接收音频，但没有返回可用的转写结果。", status=502)
         return transcript
