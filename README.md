@@ -17,11 +17,14 @@
 
 ```js
 window.__IELTS_LEXICON_CONFIG__ = {
+  backendBaseUrl: "https://your-backend.example.com",
   aiApiBaseUrl: "https://your-api.example.com",
   cloudSyncBaseUrl: "https://your-cloud-sync.example.com",
   pronunciationApiBaseUrl: "https://your-pronunciation.example.com",
 };
 ```
+
+如果你用的是同一个独立后端域名，通常只填 `backendBaseUrl` 就够了，AI、云同步和发音会自动共用这一条地址。
 
 ## 怎么用
 
@@ -59,6 +62,14 @@ export GEMINI_API_KEY="你的 Gemini Key"
 python3 server.py
 ```
 
+如果你想让 Gemini 按“速度优先”自动回退，可以额外设：
+
+```bash
+export GEMINI_TRANSCRIBE_MODEL_PRIORITY="gemini-2.5-flash-lite,gemini-2.5-flash"
+export GEMINI_REVIEW_MODEL_PRIORITY="gemini-2.5-flash-lite,gemini-2.5-flash"
+export GEMINI_WRITING_MODEL_PRIORITY="gemini-2.5-flash-lite,gemini-2.5-flash"
+```
+
 ### 方式 D：把配置写到 `.env`
 
 可以在 [server.py](/Users/shyn/Documents/Playground/lexicon-sprint/server.py) 同目录新建 `.env`，例如：
@@ -83,9 +94,12 @@ AI_WRITING_REVIEW_MODEL=openrouter/auto
 ```bash
 AI_PROVIDER=gemini
 GEMINI_API_KEY=你的GeminiKey
-GEMINI_TRANSCRIBE_MODEL=gemini-2.5-flash
-GEMINI_REVIEW_MODEL=gemini-2.5-flash
-GEMINI_WRITING_REVIEW_MODEL=gemini-2.5-flash
+GEMINI_TRANSCRIBE_MODEL=gemini-2.5-flash-lite
+GEMINI_REVIEW_MODEL=gemini-2.5-flash-lite
+GEMINI_WRITING_REVIEW_MODEL=gemini-2.5-flash-lite
+GEMINI_TRANSCRIBE_MODEL_PRIORITY=gemini-2.5-flash-lite,gemini-2.5-flash
+GEMINI_REVIEW_MODEL_PRIORITY=gemini-2.5-flash-lite,gemini-2.5-flash
+GEMINI_WRITING_MODEL_PRIORITY=gemini-2.5-flash-lite,gemini-2.5-flash
 ```
 
 然后直接运行：
@@ -100,7 +114,7 @@ python3 server.py
    - 或继续打开离线页 [lexicon-sprint/index.html](/Users/shyn/Documents/Playground/lexicon-sprint/index.html)
 5. 只要本地代理开着，离线页和 `127.0.0.1:8000` 会优先同步同一份本地学习进度，不再因为切入口就像“清零”。
 6. 如果你想跨浏览器、跨设备、跨入口同步：
-   - 需要先给站点配置一个可用的云同步后端地址，也就是 [site-config.js](/Users/shyn/Documents/Playground/lexicon-sprint/site-config.js) 里的 `cloudSyncBaseUrl`。
+   - 需要先给站点配置一个可用的云同步后端地址，也就是 [site-config.js](/Users/shyn/Documents/Playground/lexicon-sprint/site-config.js) 里的 `backendBaseUrl` 或 `cloudSyncBaseUrl`。
    - 配好以后，在右侧“云端同步”里注册或登录同一个同步账号。
    - 登录后，所有连到同一云同步接口的入口都会自动对比本地与云端的更新时间。
    - 系统会优先保留更新时间更近的一份进度，并继续把新改动自动推回云端。
@@ -167,7 +181,8 @@ python3 server.py
 
 - `openai` 默认使用 `gpt-4o-mini-transcribe` 做转写，`gpt-5-mini` 做口语 / 写作批改。
 - `openrouter` 默认使用 `openrouter/auto`，你也可以手动改成自己想试的免费或低价模型。
-- `gemini` 默认使用 `gemini-2.5-flash`，并支持用 `GEMINI_*_MODEL_PRIORITY` 设定低延迟优先的候选顺序。
+- `gemini` 默认使用 `gemini-2.5-flash-lite`，并支持用 `GEMINI_*_MODEL_PRIORITY` 设定低延迟优先的候选顺序。
+- 现在仓库默认的 Gemini 候选顺序已经调成 `gemini-2.5-flash-lite -> gemini-2.5-flash`，优先兼顾响应速度。
 
 ## 说明
 
@@ -176,6 +191,17 @@ python3 server.py
 - 站点不依赖构建工具；AI 版只额外需要 Python 3 和对应 provider 的 API Key。
 - `netlify/` 目录里的函数仍然可以继续当作一个现成后端样例，但 GitHub Pages 本身只负责静态托管，不会直接运行这些函数。
 - 如果你要继续维护 `netlify/` 目录里的函数，可以在项目目录运行一次 `npm install` 安装依赖。
-- GitHub Pages 线上版如果要自动连 AI，需要把独立后端地址填进 [site-config.js](/Users/shyn/Documents/Playground/lexicon-sprint/site-config.js) 的 `aiApiBaseUrl`，不要把 API Key 直接写进前端。
+- GitHub Pages 线上版如果要自动连 AI，需要把独立后端地址填进 [site-config.js](/Users/shyn/Documents/Playground/lexicon-sprint/site-config.js) 的 `backendBaseUrl`（或 `aiApiBaseUrl`），不要把 API Key 直接写进前端。
+- 这次更推荐直接在 [site-config.js](/Users/shyn/Documents/Playground/lexicon-sprint/site-config.js) 里填 `backendBaseUrl`，统一接一个独立后端域名，不要再连回旧的 Netlify 函数。
 - OpenRouter 是否能稳定使用免费模型，取决于你选择的具体模型是否同时支持音频输入和结构化输出；如果某个免费模型不兼容，优先改成 `openrouter/auto` 或你自己指定的兼容模型。
 - 大词库生成文件是 [vocabulary-generated.js](/Users/shyn/Documents/Playground/lexicon-sprint/vocabulary-generated.js)，由 [scripts/build_large_vocabulary.py](/Users/shyn/Documents/Playground/lexicon-sprint/scripts/build_large_vocabulary.py) 基于 ECDICT（MIT License）筛选生成。
+
+## 独立后端部署
+
+仓库现在已经把独立后端合并到 [server.py](/Users/shyn/Documents/Playground/lexicon-sprint/server.py) 里了，包含：
+
+- `/api/ai/*`：口语/写作 AI 批改
+- `/api/cloud-sync/*`：云端账号注册、登录、进度同步
+- `/api/pronunciation`：在线发音代理
+
+推荐把它部署到一个单独的 Python Web Service，然后把前端的 `backendBaseUrl` 指向它。仓库里已经附带了 [render.yaml](/Users/shyn/Documents/Playground/lexicon-sprint/render.yaml) 作为独立后端样例，而且默认不会再接到旧的 Netlify 站点上。

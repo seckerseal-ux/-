@@ -1,19 +1,25 @@
 #!/usr/bin/env python3
 import base64
 import cgi
+import hashlib
+import hmac
 import json
 import mimetypes
 import os
 import pathlib
+import re
+import secrets
+import sqlite3
+import threading
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 import uuid
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent
 SITE_DIR = BASE_DIR
-PROGRESS_STATE_FILE = BASE_DIR / ".ielts-lexicon-sprint-progress.json"
 
 
 def load_env_file():
@@ -36,7 +42,12 @@ def load_env_file():
 
 load_env_file()
 
-HOST = os.getenv("HOST", "127.0.0.1")
+STORAGE_DIR = pathlib.Path(os.getenv("BACKEND_STORAGE_DIR", BASE_DIR / ".backend-storage")).expanduser()
+STORAGE_DIR.mkdir(parents=True, exist_ok=True)
+PROGRESS_STATE_FILE = STORAGE_DIR / "local-progress.json"
+CLOUD_SYNC_DB_FILE = STORAGE_DIR / "cloud-sync.sqlite3"
+
+HOST = os.getenv("HOST", "0.0.0.0")
 PORT = int(os.getenv("PORT", "8000"))
 DEFAULT_PROVIDER_BASE_URLS = {
     "openai": "https://api.openai.com/v1",
@@ -55,9 +66,9 @@ DEFAULT_PROVIDER_MODELS = {
         "writing": "openrouter/free",
     },
     "gemini": {
-        "transcribe": "gemini-2.5-flash",
-        "review": "gemini-2.5-flash",
-        "writing": "gemini-2.5-flash",
+        "transcribe": "gemini-2.5-flash-lite",
+        "review": "gemini-2.5-flash-lite",
+        "writing": "gemini-2.5-flash-lite",
     },
 }
 OPENROUTER_FREE_MODEL_ROUTER = DEFAULT_PROVIDER_MODELS["openrouter"]["writing"]
@@ -68,9 +79,9 @@ DEFAULT_OPENROUTER_FREE_WRITING_PRIORITY = (
     OPENROUTER_FREE_MODEL_ROUTER,
 )
 DEFAULT_GEMINI_MODEL_PRIORITY = {
-    "transcribe": ("gemini-2.5-flash", "gemini-2.5-flash-lite"),
-    "review": ("gemini-2.5-flash", "gemini-2.5-flash-lite"),
-    "writing": ("gemini-2.5-flash", "gemini-2.5-flash-lite"),
+    "transcribe": ("gemini-2.5-flash-lite", "gemini-2.5-flash"),
+    "review": ("gemini-2.5-flash-lite", "gemini-2.5-flash"),
+    "writing": ("gemini-2.5-flash-lite", "gemini-2.5-flash"),
 }
 SUPPORTED_PROVIDERS = tuple(DEFAULT_PROVIDER_BASE_URLS.keys())
 
@@ -119,8 +130,20 @@ GEMINI_OPENAI_COMPAT_BASE_URL = os.getenv(
     "GEMINI_OPENAI_COMPAT_BASE_URL",
     "https://generativelanguage.googleapis.com/v1beta/openai",
 )
+ACCOUNT_PATTERN = re.compile(r"^[a-z0-9](?:[a-z0-9._@-]{1,46}[a-z0-9])?$")
+MIN_PASSWORD_LENGTH = 6
+MAX_PASSWORD_LENGTH = 72
+CLOUD_SESSION_TTL_MS = int(
+    os.getenv("CLOUD_SYNC_SESSION_TTL_MS", str(90 * 24 * 60 * 60 * 1000))
+)
+GOOGLE_TTS_BASE_URL = os.getenv(
+    "GOOGLE_TTS_BASE_URL",
+    "https://translate.googleapis.com/translate_tts",
+)
+MAX_TTS_CHARACTERS = 220
 MAX_AUDIO_BYTES = 20 * 1024 * 1024
 MAX_WRITING_CHARS = 20000
+DB_LOCK = threading.RLock()
 
 SPEAKING_BAND_BREAKDOWN_SCHEMA = {
     "type": "object",
@@ -730,6 +753,57 @@ def read_json_body(handler):
         raise ApiError("请求中的 JSON 格式不正确。", status=400) from error
 
 
+def normalize_tts_text(value):
+    return re.sub(r"\s+", " ", str(value or "")).strip()
+
+
+def resolve_tts_locale(accent):
+    return "en-US" if str(accent or "").strip().lower() == "us" else "en-GB"
+
+
+def proxy_pronunciation(handler):
+    parsed = urllib.parse.urlparse(handler.path)
+    params = urllib.parse.parse_qs(parsed.query)
+    text = normalize_tts_text((params.get("text") or [""])[0])
+    if not text:
+        raise ApiError("缺少 text 参数。", status=400)
+    if len(text) > MAX_TTS_CHARACTERS:
+        raise ApiError("单次发音内容太长，请控制在 220 个字符以内。", status=413)
+
+    query = urllib.parse.urlencode(
+        {
+            "ie": "UTF-8",
+            "client": "gtx",
+            "tl": resolve_tts_locale((params.get("accent") or [""])[0]),
+            "q": text,
+        }
+    )
+    request = urllib.request.Request(
+        f"{GOOGLE_TTS_BASE_URL}?{query}",
+        headers={
+            "User-Agent": "Mozilla/5.0 IELTS Lexicon Sprint Pronunciation Proxy",
+        },
+        method="GET",
+    )
+
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            payload = response.read()
+            content_type = response.headers.get("Content-Type") or "audio/mpeg"
+    except urllib.error.HTTPError as error:
+        raise ApiError(f"在线发音服务返回错误：{error.code}", status=502) from error
+    except urllib.error.URLError as error:
+        raise ApiError(f"无法连接在线发音服务：{error.reason}", status=502) from error
+
+    handler.send_response(200)
+    write_cors_headers(handler)
+    handler.send_header("Content-Type", content_type)
+    handler.send_header("Cache-Control", "public, max-age=604800")
+    handler.send_header("Content-Length", str(len(payload)))
+    handler.end_headers()
+    handler.wfile.write(payload)
+
+
 def read_progress_snapshot():
     if not PROGRESS_STATE_FILE.exists():
         return {"state": None, "updatedAt": 0}
@@ -760,6 +834,369 @@ def write_progress_snapshot(state_payload, updated_at):
     temp_path = PROGRESS_STATE_FILE.with_suffix(".tmp")
     temp_path.write_text(json.dumps(envelope, ensure_ascii=False, indent=2), encoding="utf-8")
     temp_path.replace(PROGRESS_STATE_FILE)
+
+
+def get_db_connection():
+    connection = sqlite3.connect(CLOUD_SYNC_DB_FILE, timeout=30, check_same_thread=False)
+    connection.row_factory = sqlite3.Row
+    connection.execute("PRAGMA journal_mode=WAL")
+    connection.execute("PRAGMA foreign_keys=ON")
+    return connection
+
+
+def initialize_cloud_sync_db():
+    with DB_LOCK:
+        connection = get_db_connection()
+        try:
+            connection.executescript(
+                """
+                CREATE TABLE IF NOT EXISTS cloud_users (
+                    normalized_id TEXT PRIMARY KEY,
+                    account_id TEXT NOT NULL,
+                    salt_hex TEXT NOT NULL,
+                    password_hash TEXT NOT NULL,
+                    created_at INTEGER NOT NULL,
+                    updated_at INTEGER NOT NULL
+                );
+
+                CREATE TABLE IF NOT EXISTS cloud_sessions (
+                    token TEXT PRIMARY KEY,
+                    normalized_id TEXT NOT NULL,
+                    account_id TEXT NOT NULL,
+                    issued_at INTEGER NOT NULL,
+                    expires_at INTEGER NOT NULL,
+                    last_active_at INTEGER NOT NULL,
+                    FOREIGN KEY(normalized_id) REFERENCES cloud_users(normalized_id) ON DELETE CASCADE
+                );
+
+                CREATE TABLE IF NOT EXISTS cloud_progress (
+                    normalized_id TEXT PRIMARY KEY,
+                    account_id TEXT NOT NULL,
+                    updated_at INTEGER NOT NULL,
+                    state_json TEXT,
+                    saved_at INTEGER NOT NULL,
+                    FOREIGN KEY(normalized_id) REFERENCES cloud_users(normalized_id) ON DELETE CASCADE
+                );
+
+                CREATE INDEX IF NOT EXISTS idx_cloud_sessions_normalized_id
+                ON cloud_sessions(normalized_id);
+                """
+            )
+            connection.commit()
+        finally:
+            connection.close()
+
+
+def normalize_account_id(value):
+    return str(value or "").strip().lower()
+
+
+def normalize_session_token(value):
+    return str(value or "").strip()
+
+
+def hash_password(password, salt_hex):
+    derived = hashlib.pbkdf2_hmac(
+        "sha256",
+        str(password).encode("utf-8"),
+        bytes.fromhex(salt_hex),
+        200000,
+        dklen=32,
+    )
+    return derived.hex()
+
+
+def verify_password(password, user_row):
+    expected = hash_password(password, user_row["salt_hex"])
+    return hmac.compare_digest(expected, user_row["password_hash"])
+
+
+def validate_account_id(account_id):
+    normalized_id = normalize_account_id(account_id)
+    if not normalized_id:
+        raise ApiError("请先填写同步账号。", status=400)
+    if len(normalized_id) < 3 or len(normalized_id) > 48 or not ACCOUNT_PATTERN.match(normalized_id):
+        raise ApiError("同步账号请使用 3-48 位英文、数字、点号、下划线、中横线或邮箱格式。", status=400)
+    return normalized_id
+
+
+def validate_password(password):
+    normalized_password = str(password or "")
+    if len(normalized_password) < MIN_PASSWORD_LENGTH:
+        raise ApiError(f"同步口令至少需要 {MIN_PASSWORD_LENGTH} 位。", status=400)
+    if len(normalized_password) > MAX_PASSWORD_LENGTH:
+        raise ApiError(f"同步口令最长支持 {MAX_PASSWORD_LENGTH} 位。", status=400)
+    return normalized_password
+
+
+def serialize_cloud_session(session_row):
+    return {
+        "token": session_row["token"],
+        "accountId": session_row["account_id"],
+        "issuedAt": int(session_row["issued_at"]),
+        "expiresAt": int(session_row["expires_at"]),
+        "lastActiveAt": int(session_row["last_active_at"]),
+    }
+
+
+def get_cloud_user(connection, normalized_id):
+    return connection.execute(
+        """
+        SELECT normalized_id, account_id, salt_hex, password_hash, created_at, updated_at
+        FROM cloud_users
+        WHERE normalized_id = ?
+        """,
+        (normalized_id,),
+    ).fetchone()
+
+
+def create_cloud_session(connection, user_row):
+    now = int(time.time() * 1000)
+    session = {
+        "token": secrets.token_urlsafe(32),
+        "normalized_id": user_row["normalized_id"],
+        "account_id": user_row["account_id"],
+        "issued_at": now,
+        "expires_at": now + CLOUD_SESSION_TTL_MS,
+        "last_active_at": now,
+    }
+    connection.execute(
+        """
+        INSERT INTO cloud_sessions (token, normalized_id, account_id, issued_at, expires_at, last_active_at)
+        VALUES (?, ?, ?, ?, ?, ?)
+        """,
+        (
+            session["token"],
+            session["normalized_id"],
+            session["account_id"],
+            session["issued_at"],
+            session["expires_at"],
+            session["last_active_at"],
+        ),
+    )
+    connection.commit()
+    return session
+
+
+def register_cloud_account(account_id, password):
+    normalized_id = validate_account_id(account_id)
+    normalized_password = validate_password(password)
+    now = int(time.time() * 1000)
+    salt_hex = secrets.token_hex(16)
+    password_hash = hash_password(normalized_password, salt_hex)
+
+    with DB_LOCK:
+        connection = get_db_connection()
+        try:
+            existing = get_cloud_user(connection, normalized_id)
+            if existing:
+                raise ApiError("这个云端同步账号已经存在了，直接登录就好。", status=409)
+
+            connection.execute(
+                """
+                INSERT INTO cloud_users (normalized_id, account_id, salt_hex, password_hash, created_at, updated_at)
+                VALUES (?, ?, ?, ?, ?, ?)
+                """,
+                (normalized_id, normalized_id, salt_hex, password_hash, now, now),
+            )
+            user_row = get_cloud_user(connection, normalized_id)
+            session = create_cloud_session(connection, user_row)
+            return serialize_cloud_session(session)
+        finally:
+            connection.close()
+
+
+def login_cloud_account(account_id, password):
+    normalized_id = validate_account_id(account_id)
+    normalized_password = validate_password(password)
+
+    with DB_LOCK:
+        connection = get_db_connection()
+        try:
+            user_row = get_cloud_user(connection, normalized_id)
+            if not user_row or not verify_password(normalized_password, user_row):
+                raise ApiError("账号或同步口令不对，请再检查一下。", status=401)
+            session = create_cloud_session(connection, user_row)
+            return serialize_cloud_session(session)
+        finally:
+            connection.close()
+
+
+def logout_cloud_session(token):
+    normalized_token = normalize_session_token(token)
+    if not normalized_token:
+        return
+
+    with DB_LOCK:
+        connection = get_db_connection()
+        try:
+            connection.execute("DELETE FROM cloud_sessions WHERE token = ?", (normalized_token,))
+            connection.commit()
+        finally:
+            connection.close()
+
+
+def require_cloud_session(token):
+    normalized_token = normalize_session_token(token)
+    if not normalized_token:
+        raise ApiError("请先登录云端同步账号。", status=401)
+
+    now = int(time.time() * 1000)
+    with DB_LOCK:
+        connection = get_db_connection()
+        try:
+            session_row = connection.execute(
+                """
+                SELECT token, normalized_id, account_id, issued_at, expires_at, last_active_at
+                FROM cloud_sessions
+                WHERE token = ?
+                """,
+                (normalized_token,),
+            ).fetchone()
+
+            if not session_row:
+                raise ApiError("登录状态已经失效，请重新登录云端同步账号。", status=401)
+
+            expires_at = int(session_row["expires_at"] or 0)
+            if expires_at <= now:
+                connection.execute("DELETE FROM cloud_sessions WHERE token = ?", (normalized_token,))
+                connection.commit()
+                raise ApiError("登录状态已经过期，请重新登录云端同步账号。", status=401)
+
+            refreshed = {
+                "token": session_row["token"],
+                "normalized_id": session_row["normalized_id"],
+                "account_id": session_row["account_id"],
+                "issued_at": int(session_row["issued_at"]),
+                "expires_at": now + CLOUD_SESSION_TTL_MS,
+                "last_active_at": now,
+            }
+            connection.execute(
+                """
+                UPDATE cloud_sessions
+                SET expires_at = ?, last_active_at = ?
+                WHERE token = ?
+                """,
+                (refreshed["expires_at"], refreshed["last_active_at"], normalized_token),
+            )
+            connection.commit()
+            return refreshed
+        finally:
+            connection.close()
+
+
+def get_request_cloud_session(handler, required=False):
+    token = handler.headers.get("X-Cloud-Session", "")
+    account_hint = normalize_account_id(handler.headers.get("X-Cloud-Account", ""))
+    normalized_token = normalize_session_token(token)
+    if not normalized_token:
+        if account_hint:
+            raise ApiError("云端账号校验失败，请重新登录后再试。", status=401)
+        return require_cloud_session(token) if required else None
+
+    session = require_cloud_session(normalized_token)
+    if account_hint and account_hint != session["account_id"]:
+        raise ApiError("当前云端账号和登录会话不一致，请重新登录后再试。", status=403)
+    return session
+
+
+def read_cloud_progress(token):
+    session = require_cloud_session(token)
+    with DB_LOCK:
+        connection = get_db_connection()
+        try:
+            row = connection.execute(
+                """
+                SELECT account_id, updated_at, state_json, saved_at
+                FROM cloud_progress
+                WHERE normalized_id = ?
+                """,
+                (session["normalized_id"],),
+            ).fetchone()
+        finally:
+            connection.close()
+
+    if not row:
+        return {
+            "accountId": session["account_id"],
+            "updatedAt": 0,
+            "state": None,
+            "savedAt": 0,
+        }
+
+    try:
+        state = json.loads(row["state_json"]) if row["state_json"] else None
+    except json.JSONDecodeError:
+        state = None
+
+    return {
+        "accountId": row["account_id"],
+        "updatedAt": int(row["updated_at"] or 0),
+        "state": state if isinstance(state, dict) else None,
+        "savedAt": int(row["saved_at"] or 0),
+    }
+
+
+def write_cloud_progress(token, incoming_state, incoming_updated_at):
+    if not isinstance(incoming_state, dict):
+        raise ApiError("云端同步请求里缺少有效的 state 对象。", status=400)
+
+    session = require_cloud_session(token)
+    fallback_updated_at = int(incoming_state.get("meta", {}).get("updatedAt") or time.time() * 1000)
+    try:
+        updated_at = int(incoming_updated_at or fallback_updated_at)
+    except (TypeError, ValueError):
+        updated_at = fallback_updated_at
+
+    now = int(time.time() * 1000)
+    with DB_LOCK:
+        connection = get_db_connection()
+        try:
+            current = connection.execute(
+                """
+                SELECT updated_at, state_json
+                FROM cloud_progress
+                WHERE normalized_id = ?
+                """,
+                (session["normalized_id"],),
+            ).fetchone()
+
+            current_updated_at = int(current["updated_at"] or 0) if current else 0
+            if current and current_updated_at > updated_at:
+                try:
+                    current_state = json.loads(current["state_json"]) if current["state_json"] else None
+                except json.JSONDecodeError:
+                    current_state = None
+                return {
+                    "conflict": True,
+                    "accountId": session["account_id"],
+                    "updatedAt": current_updated_at,
+                    "state": current_state if isinstance(current_state, dict) else None,
+                }
+
+            state_json = json.dumps(incoming_state, ensure_ascii=False)
+            connection.execute(
+                """
+                INSERT INTO cloud_progress (normalized_id, account_id, updated_at, state_json, saved_at)
+                VALUES (?, ?, ?, ?, ?)
+                ON CONFLICT(normalized_id) DO UPDATE SET
+                    account_id = excluded.account_id,
+                    updated_at = excluded.updated_at,
+                    state_json = excluded.state_json,
+                    saved_at = excluded.saved_at
+                """,
+                (session["normalized_id"], session["account_id"], updated_at, state_json, now),
+            )
+            connection.commit()
+        finally:
+            connection.close()
+
+    return {
+        "conflict": False,
+        "accountId": session["account_id"],
+        "updatedAt": updated_at,
+        "state": incoming_state,
+    }
 
 
 def build_multipart_body(fields, files):
@@ -1401,34 +1838,61 @@ class AppHandler(SimpleHTTPRequestHandler):
         self.end_headers()
 
     def do_GET(self):
-        if self.path == "/api/ai/status":
-            active_status = get_provider_status(AI_PROVIDER)
-            backend_status = {provider: get_provider_status(provider) for provider in SUPPORTED_PROVIDERS}
-            json_response(
-                self,
-                {
-                    **active_status,
-                    "available": bool(get_api_key()),
-                    "backends": backend_status,
-                },
-            )
-            return
-        if self.path == "/api/progress/state":
-            snapshot = read_progress_snapshot()
-            json_response(
-                self,
-                {
-                    "ok": True,
-                    "updatedAt": snapshot["updatedAt"],
-                    "state": snapshot["state"],
-                },
-            )
-            return
-        super().do_GET()
+        try:
+            parsed_path = urllib.parse.urlparse(self.path)
+            route_path = parsed_path.path
+
+            if route_path == "/api/ai/status":
+                active_status = get_provider_status(AI_PROVIDER)
+                backend_status = {provider: get_provider_status(provider) for provider in SUPPORTED_PROVIDERS}
+                json_response(
+                    self,
+                    {
+                        **active_status,
+                        "available": bool(get_api_key()),
+                        "backends": backend_status,
+                    },
+                )
+                return
+            if route_path == "/api/progress/state":
+                snapshot = read_progress_snapshot()
+                json_response(
+                    self,
+                    {
+                        "ok": True,
+                        "updatedAt": snapshot["updatedAt"],
+                        "state": snapshot["state"],
+                    },
+                )
+                return
+            if route_path == "/api/cloud-sync/state":
+                session = get_request_cloud_session(self, required=True)
+                snapshot = read_cloud_progress(session["token"])
+                json_response(
+                    self,
+                    {
+                        "ok": True,
+                        "accountId": snapshot["accountId"],
+                        "updatedAt": snapshot["updatedAt"],
+                        "state": snapshot["state"],
+                    },
+                )
+                return
+            if route_path == "/api/pronunciation":
+                proxy_pronunciation(self)
+                return
+            super().do_GET()
+        except ApiError as error:
+            json_response(self, {"error": error.message}, status=error.status)
+        except Exception as error:
+            json_response(self, {"error": f"服务内部错误：{error}"}, status=500)
 
     def do_POST(self):
         try:
-            if self.path == "/api/progress/state":
+            parsed_path = urllib.parse.urlparse(self.path)
+            route_path = parsed_path.path
+
+            if route_path == "/api/progress/state":
                 payload = read_json_body(self)
                 incoming_state = payload.get("state")
                 if not isinstance(incoming_state, dict):
@@ -1468,7 +1932,57 @@ class AppHandler(SimpleHTTPRequestHandler):
                 )
                 return
 
-            if self.path == "/api/ai/speaking-review":
+            if route_path == "/api/cloud-sync/auth":
+                payload = read_json_body(self)
+                action = str(payload.get("action") or "").strip().lower()
+                if action == "register":
+                    session = register_cloud_account(payload.get("accountId"), payload.get("password"))
+                    json_response(
+                        self,
+                        {
+                            "ok": True,
+                            "accountId": session["accountId"],
+                            "token": session["token"],
+                            "expiresAt": session["expiresAt"],
+                        },
+                    )
+                    return
+                if action == "login":
+                    session = login_cloud_account(payload.get("accountId"), payload.get("password"))
+                    json_response(
+                        self,
+                        {
+                            "ok": True,
+                            "accountId": session["accountId"],
+                            "token": session["token"],
+                            "expiresAt": session["expiresAt"],
+                        },
+                    )
+                    return
+                if action == "logout":
+                    logout_cloud_session(payload.get("token") or self.headers.get("X-Cloud-Session"))
+                    json_response(self, {"ok": True})
+                    return
+                raise ApiError("不支持的云同步操作。", status=400)
+
+            if route_path == "/api/cloud-sync/state":
+                session = get_request_cloud_session(self, required=True)
+                payload = read_json_body(self)
+                result = write_cloud_progress(session["token"], payload.get("state"), payload.get("updatedAt"))
+                json_response(
+                    self,
+                    {
+                        "ok": True,
+                        "conflict": bool(result["conflict"]),
+                        "accountId": result["accountId"],
+                        "updatedAt": result["updatedAt"],
+                        "state": result["state"],
+                    },
+                )
+                return
+
+            if route_path == "/api/ai/speaking-review":
+                get_request_cloud_session(self, required=False)
                 form = cgi.FieldStorage(
                     fp=self.rfile,
                     headers=self.headers,
@@ -1523,7 +2037,8 @@ class AppHandler(SimpleHTTPRequestHandler):
                 )
                 return
 
-            if self.path == "/api/ai/writing-review":
+            if route_path == "/api/ai/writing-review":
+                get_request_cloud_session(self, required=False)
                 payload = read_json_body(self)
                 provider = require_provider_name(payload.get("backend") or payload.get("provider"))
                 essay_text = str(payload.get("essay_text", "")).strip()
@@ -1554,7 +2069,8 @@ class AppHandler(SimpleHTTPRequestHandler):
                 )
                 return
 
-            if self.path == "/api/ai/speaking-mock-summary":
+            if route_path == "/api/ai/speaking-mock-summary":
+                get_request_cloud_session(self, required=False)
                 payload = read_json_body(self)
                 provider = require_provider_name(payload.get("backend") or payload.get("provider") or AI_PROVIDER)
                 parts = payload.get("parts") or []
@@ -1581,6 +2097,7 @@ class AppHandler(SimpleHTTPRequestHandler):
 
 
 def main():
+    initialize_cloud_sync_db()
     server = ThreadingHTTPServer((HOST, PORT), AppHandler)
     print(f"Serving IELTS Sprint Studio at http://{HOST}:{PORT}")
     print(
@@ -1594,6 +2111,7 @@ def main():
         f"Gemini={get_provider_model('gemini', 'writing')} ({'ready' if get_provider_api_key('gemini') else 'missing key'})"
     )
     print(f"Shared progress store: {PROGRESS_STATE_FILE}")
+    print(f"Cloud sync database: {CLOUD_SYNC_DB_FILE}")
     server.serve_forever()
 
 

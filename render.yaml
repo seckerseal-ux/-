@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: ielts-lexicon-sprint-api
+    runtime: python
+    buildCommand: python -m py_compile server.py
+    startCommand: python server.py
+    healthCheckPath: /api/ai/status
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 10000
+      - key: BACKEND_STORAGE_DIR
+        value: /opt/data
+      - key: AI_PROVIDER
+        value: gemini
+      - key: GEMINI_TRANSCRIBE_MODEL
+        value: gemini-2.5-flash-lite
+      - key: GEMINI_REVIEW_MODEL
+        value: gemini-2.5-flash-lite
+      - key: GEMINI_WRITING_REVIEW_MODEL
+        value: gemini-2.5-flash-lite
+      - key: GEMINI_TRANSCRIBE_MODEL_PRIORITY
+        value: gemini-2.5-flash-lite,gemini-2.5-flash
+      - key: GEMINI_REVIEW_MODEL_PRIORITY
+        value: gemini-2.5-flash-lite,gemini-2.5-flash
+      - key: GEMINI_WRITING_MODEL_PRIORITY
+        value: gemini-2.5-flash-lite,gemini-2.5-flash
+      - key: GEMINI_API_KEY
+        sync: false
+    disk:
+      name: app-data
+      mountPath: /opt/data
+      sizeGB: 1

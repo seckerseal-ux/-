@@ -19,6 +19,7 @@ const SPEAKING_PART_LABELS = {
 };
 
 const DEFAULT_RUNTIME_CONFIG = Object.freeze({
+  backendBaseUrl: "",
   aiApiBaseUrl: "",
   cloudSyncBaseUrl: "",
   pronunciationApiBaseUrl: "",
@@ -33,12 +34,14 @@ function readRuntimeConfig() {
     typeof window !== "undefined" && window.__IELTS_LEXICON_CONFIG__ && typeof window.__IELTS_LEXICON_CONFIG__ === "object"
       ? window.__IELTS_LEXICON_CONFIG__
       : {};
+  const backendBaseUrl = normalizeBaseUrl(source.backendBaseUrl || source.apiBaseUrl);
 
   return {
     ...DEFAULT_RUNTIME_CONFIG,
-    aiApiBaseUrl: normalizeBaseUrl(source.aiApiBaseUrl || source.apiBaseUrl),
-    cloudSyncBaseUrl: normalizeBaseUrl(source.cloudSyncBaseUrl),
-    pronunciationApiBaseUrl: normalizeBaseUrl(source.pronunciationApiBaseUrl),
+    backendBaseUrl,
+    aiApiBaseUrl: normalizeBaseUrl(source.aiApiBaseUrl) || backendBaseUrl,
+    cloudSyncBaseUrl: normalizeBaseUrl(source.cloudSyncBaseUrl) || backendBaseUrl,
+    pronunciationApiBaseUrl: normalizeBaseUrl(source.pronunciationApiBaseUrl) || backendBaseUrl,
   };
 }
 
@@ -2404,9 +2407,9 @@ async function syncSharedProgressOnStartup() {
 function getDefaultCloudSyncDetail() {
   if (!hasCloudSyncSupport()) {
     if (isGitHubPagesHost()) {
-      return "GitHub Pages 版默认只保存浏览器本地进度；如果还想跨设备同步，请在 site-config.js 里配置 cloudSyncBaseUrl 指向独立后端。";
+      return "GitHub Pages 版默认只保存浏览器本地进度；如果还想跨设备同步，请在 site-config.js 里配置 backendBaseUrl（或 cloudSyncBaseUrl）指向独立后端。";
     }
-    return "当前入口默认只保留浏览器本地进度；如果还想跨设备同步，请在 site-config.js 里配置 cloudSyncBaseUrl 指向独立后端。";
+    return "当前入口默认只保留浏览器本地进度；如果还想跨设备同步，请在 site-config.js 里配置 backendBaseUrl（或 cloudSyncBaseUrl）指向独立后端。";
   }
 
   return "登录同一个同步账号后，所有接到同一云端接口的入口都能共用同一份学习进度。";
@@ -6199,9 +6202,9 @@ function updateAiStatusUI() {
 function getUnavailableAiHint() {
   if (!hasAiApiSupport()) {
     if (isGitHubPagesHost()) {
-      return "GitHub Pages 只能托管静态前端；如果要继续用 AI 口语和写作批改，请在 site-config.js 里配置 aiApiBaseUrl 指向独立后端。";
+      return "GitHub Pages 只能托管静态前端；如果要继续用 AI 口语和写作批改，请在 site-config.js 里配置 backendBaseUrl（或 aiApiBaseUrl）指向独立后端。";
     }
-    return "当前入口还没有接上 AI 后端；请在 site-config.js 里配置 aiApiBaseUrl，或者继续用本地 server.py。";
+    return "当前入口还没有接上 AI 后端；请在 site-config.js 里配置 backendBaseUrl（或 aiApiBaseUrl），或者继续用本地 server.py。";
   }
 
   return "请用 server.py 启动本地代理，并设置 AI_API_KEY（或 OPENAI_API_KEY / OPENROUTER_API_KEY）";
