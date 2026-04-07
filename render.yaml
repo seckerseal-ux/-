@@ -13,20 +13,20 @@ services:
       - key: BACKEND_STORAGE_DIR
         value: /opt/data
       - key: AI_PROVIDER
-        value: gemini
-      - key: GEMINI_TRANSCRIBE_MODEL
+        value: openai
+      - key: OPENAI_BASE_URL
+        value: https://api.gemai.cc/v1
+      - key: GEMAI_BASE_URL
+        value: https://api.gemai.cc/v1
+      - key: OPENAI_TRANSCRIBE_MODEL
         value: gemini-2.5-flash-lite
-      - key: GEMINI_REVIEW_MODEL
+      - key: OPENAI_REVIEW_MODEL
         value: gemini-2.5-flash-lite
-      - key: GEMINI_WRITING_REVIEW_MODEL
+      - key: OPENAI_WRITING_REVIEW_MODEL
         value: gemini-2.5-flash-lite
-      - key: GEMINI_TRANSCRIBE_MODEL_PRIORITY
-        value: gemini-2.5-flash-lite,gemini-2.5-flash
-      - key: GEMINI_REVIEW_MODEL_PRIORITY
-        value: gemini-2.5-flash-lite,gemini-2.5-flash
-      - key: GEMINI_WRITING_MODEL_PRIORITY
-        value: gemini-2.5-flash-lite,gemini-2.5-flash
-      - key: GEMINI_API_KEY
+      - key: GEMAI_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
         sync: false
     disk:
       name: app-data
