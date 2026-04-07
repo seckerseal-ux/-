@@ -260,12 +260,44 @@ UPSTASH_REDIS_REST_URL=https://your-db.upstash.io
 UPSTASH_REDIS_REST_TOKEN=你的UpstashRestToken
 UPSTASH_KEY_PREFIX=ielts-lexicon-sprint
 CLOUD_SESSION_SECRET=一段你自己生成的长随机串
+CLOUD_SYNC_MIGRATION_TOKEN=一段一次性迁移令牌
 ```
 
 说明：
 - `UPSTASH_REDIS_REST_URL` 和 `UPSTASH_REDIS_REST_TOKEN` 来自 Upstash 控制台里的 REST API。
 - `CLOUD_SESSION_SECRET` 用来签发云同步登录令牌，建议单独生成，不要直接复用 AI Key。
+- `CLOUD_SYNC_MIGRATION_TOKEN` 用来保护一次性迁移接口，迁完可以删掉。
 - 配好后重新部署 Render，云同步就会自动从本地 sqlite 切到 Upstash。
+
+如果你想把旧 sqlite 里的云端账号和学习状态一起迁过去，有两种方式：
+
+1. 用迁移脚本：
+
+```bash
+cd /Users/shyn/Documents/Playground/lexicon-sprint
+python3 scripts/migrate_cloud_sync_to_upstash.py --sqlite-path /path/to/cloud-sync.sqlite3
+```
+
+只检查不写入：
+
+```bash
+cd /Users/shyn/Documents/Playground/lexicon-sprint
+python3 scripts/migrate_cloud_sync_to_upstash.py --sqlite-path /path/to/cloud-sync.sqlite3 --dry-run
+```
+
+2. 用后端一次性迁移接口：
+
+```bash
+curl -X POST https://your-backend.example.com/api/cloud-sync/migrate \
+  -H "Content-Type: application/json" \
+  -H "X-Cloud-Migration-Token: 你设置的CLOUD_SYNC_MIGRATION_TOKEN" \
+  -d '{"sqlitePath":"/tmp/ielts-lexicon-sprint-data/cloud-sync.sqlite3"}'
+```
+
+说明：
+- 迁移接口会把 `cloud_users` 和 `cloud_progress` 里的内容合并写进 Upstash。
+- 已经在 Upstash 里存在的账号，不会直接粗暴覆盖；会优先保留更新时间更新的学习状态。
+- 旧的登录会话不会迁移，迁完后重新登录一次云端同步账号就可以继续用。
 
 如果你想直接走 Render，这个仓库已经满足官方 Deploy to Render 的按钮要求，可以直接用：
 

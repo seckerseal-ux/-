@@ -233,6 +233,7 @@ MAX_TTS_CHARACTERS = 220
 MAX_AUDIO_BYTES = 20 * 1024 * 1024
 MAX_WRITING_CHARS = 20000
 DB_LOCK = threading.RLock()
+CLOUD_SYNC_MIGRATION_TOKEN = os.getenv("CLOUD_SYNC_MIGRATION_TOKEN", "").strip()
 
 SPEAKING_BAND_BREAKDOWN_SCHEMA = {
     "type": "object",
@@ -794,6 +795,7 @@ def get_cloud_sync_status():
         "backend": CLOUD_SYNC_BACKEND,
         "using_upstash": use_upstash_cloud_sync(),
         "upstash_configured": bool(UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN),
+        "migration_enabled": bool(CLOUD_SYNC_MIGRATION_TOKEN),
     }
 
 
@@ -1157,7 +1159,124 @@ def psetex_upstash_json(key, ttl_ms, payload):
 def initialize_cloud_sync_storage():
     if use_upstash_cloud_sync():
         return
-    initialize_cloud_sync_storage()
+    initialize_cloud_sync_db()
+
+
+def build_cloud_record_from_sqlite_rows(user_row, progress_row=None):
+    state = None
+    if progress_row and progress_row["state_json"]:
+        try:
+            candidate_state = json.loads(progress_row["state_json"])
+            if isinstance(candidate_state, dict):
+                state = candidate_state
+        except json.JSONDecodeError:
+            state = None
+
+    return {
+        "normalized_id": user_row["normalized_id"],
+        "account_id": user_row["account_id"],
+        "salt_hex": user_row["salt_hex"],
+        "password_hash": user_row["password_hash"],
+        "created_at": int(user_row["created_at"] or 0),
+        "updated_at": int(user_row["updated_at"] or 0),
+        "progress_updated_at": int(progress_row["updated_at"] or 0) if progress_row else 0,
+        "state": state,
+        "saved_at": int(progress_row["saved_at"] or 0) if progress_row else 0,
+    }
+
+
+def merge_cloud_record_for_upstash(incoming_record, existing_record):
+    if not existing_record:
+        return incoming_record, True
+
+    merged = dict(existing_record)
+    merged["account_id"] = incoming_record["account_id"] or existing_record.get("account_id")
+    merged["salt_hex"] = incoming_record["salt_hex"] or existing_record.get("salt_hex")
+    merged["password_hash"] = incoming_record["password_hash"] or existing_record.get("password_hash")
+
+    incoming_created_at = int(incoming_record.get("created_at") or 0)
+    existing_created_at = int(existing_record.get("created_at") or 0)
+    merged["created_at"] = min(value for value in [incoming_created_at, existing_created_at] if value) if (incoming_created_at or existing_created_at) else 0
+
+    merged["updated_at"] = max(
+        int(incoming_record.get("updated_at") or 0),
+        int(existing_record.get("updated_at") or 0),
+    )
+
+    incoming_progress_updated_at = int(incoming_record.get("progress_updated_at") or 0)
+    existing_progress_updated_at = int(existing_record.get("progress_updated_at") or 0)
+    if incoming_progress_updated_at >= existing_progress_updated_at:
+        merged["progress_updated_at"] = incoming_progress_updated_at
+        merged["state"] = incoming_record.get("state")
+        merged["saved_at"] = int(incoming_record.get("saved_at") or 0)
+    else:
+        merged["progress_updated_at"] = existing_progress_updated_at
+        merged["state"] = existing_record.get("state")
+        merged["saved_at"] = int(existing_record.get("saved_at") or 0)
+
+    changed = json.dumps(merged, ensure_ascii=False, sort_keys=True) != json.dumps(existing_record, ensure_ascii=False, sort_keys=True)
+    return merged, changed
+
+
+def migrate_sqlite_cloud_sync_to_upstash(sqlite_path=None, dry_run=False):
+    if not UPSTASH_REDIS_REST_URL or not UPSTASH_REDIS_REST_TOKEN:
+        raise ApiError("缺少 Upstash 配置，请先设置 UPSTASH_REDIS_REST_URL 和 UPSTASH_REDIS_REST_TOKEN。", status=503)
+
+    source_path = pathlib.Path(sqlite_path or CLOUD_SYNC_DB_FILE).expanduser()
+    if not source_path.exists():
+        raise ApiError(f"找不到要迁移的 sqlite 文件：{source_path}", status=404)
+
+    connection = sqlite3.connect(source_path, timeout=30, check_same_thread=False)
+    connection.row_factory = sqlite3.Row
+    try:
+        user_rows = connection.execute(
+            """
+            SELECT normalized_id, account_id, salt_hex, password_hash, created_at, updated_at
+            FROM cloud_users
+            ORDER BY normalized_id ASC
+            """
+        ).fetchall()
+        progress_rows = {
+            row["normalized_id"]: row
+            for row in connection.execute(
+                """
+                SELECT normalized_id, account_id, updated_at, state_json, saved_at
+                FROM cloud_progress
+                """
+            ).fetchall()
+        }
+    finally:
+        connection.close()
+
+    summary = {
+        "sqlitePath": str(source_path),
+        "dryRun": bool(dry_run),
+        "scannedUsers": len(user_rows),
+        "migratedUsers": 0,
+        "updatedUsers": 0,
+        "unchangedUsers": 0,
+        "errors": [],
+    }
+
+    for user_row in user_rows:
+        try:
+            normalized_id = user_row["normalized_id"]
+            incoming_record = build_cloud_record_from_sqlite_rows(user_row, progress_rows.get(normalized_id))
+            existing_record = get_upstash_cloud_user(normalized_id)
+            merged_record, changed = merge_cloud_record_for_upstash(incoming_record, existing_record)
+            if not changed:
+                summary["unchangedUsers"] += 1
+                continue
+            if not dry_run:
+                write_upstash_json(get_upstash_user_key(normalized_id), merged_record)
+            if existing_record:
+                summary["updatedUsers"] += 1
+            else:
+                summary["migratedUsers"] += 1
+        except Exception as error:
+            summary["errors"].append(f"{user_row['normalized_id']}: {error}")
+
+    return summary
 
 
 def get_db_connection():
@@ -1476,6 +1595,19 @@ def get_request_cloud_session(handler, required=False):
     if account_hint and account_hint != session["account_id"]:
         raise ApiError("当前云端账号和登录会话不一致，请重新登录后再试。", status=403)
     return session
+
+
+def require_cloud_migration_token(handler, payload=None):
+    configured = CLOUD_SYNC_MIGRATION_TOKEN
+    if not configured:
+        raise ApiError("当前服务没有启用云同步迁移令牌。", status=403)
+
+    provided = (
+        handler.headers.get("X-Cloud-Migration-Token", "")
+        or str((payload or {}).get("migrationToken") or "")
+    ).strip()
+    if not provided or not hmac.compare_digest(provided, configured):
+        raise ApiError("迁移令牌不正确。", status=401)
 
 
 def read_cloud_progress(token):
@@ -2499,6 +2631,16 @@ class AppHandler(SimpleHTTPRequestHandler):
                 )
                 return
 
+            if route_path == "/api/cloud-sync/migrate":
+                payload = read_json_body(self)
+                require_cloud_migration_token(self, payload)
+                summary = migrate_sqlite_cloud_sync_to_upstash(
+                    sqlite_path=payload.get("sqlitePath"),
+                    dry_run=bool(payload.get("dryRun")),
+                )
+                json_response(self, {"ok": True, **summary})
+                return
+
             if route_path == "/api/ai/speaking-review":
                 get_request_cloud_session(self, required=False)
                 form_fields, form_files = parse_multipart_form_data(self)
@@ -2605,7 +2747,7 @@ class AppHandler(SimpleHTTPRequestHandler):
 
 
 def main():
-    initialize_cloud_sync_db()
+    initialize_cloud_sync_storage()
     server = ThreadingHTTPServer((HOST, PORT), AppHandler)
     print(f"Serving IELTS Sprint Studio at http://{HOST}:{PORT}")
     print(
@@ -2619,7 +2761,11 @@ def main():
         f"Gemini={get_provider_model('gemini', 'writing')} ({'ready' if get_provider_api_key('gemini') else 'missing key'})"
     )
     print(f"Shared progress store: {PROGRESS_STATE_FILE}")
-    print(f"Cloud sync database: {CLOUD_SYNC_DB_FILE}")
+    print(
+        "Cloud sync backend: "
+        f"{CLOUD_SYNC_BACKEND}"
+        + (f" | sqlite={CLOUD_SYNC_DB_FILE}" if not use_upstash_cloud_sync() else " | using Upstash Redis REST")
+    )
     server.serve_forever()
 
 
