@@ -13,11 +13,12 @@
    - `BACKEND_BASE_URL`
    - 或分别配置 `AI_API_BASE_URL`、`CLOUD_SYNC_BASE_URL`、`PRONUNCIATION_API_BASE_URL`
 5. GitHub Actions 发布时会自动把这些变量写进最终的 `site-config.js`，这样前端不用再手改。
-6. GitHub Pages 版默认是纯静态站点：
+6. 如果这些变量没填，当前仓库会默认回退到 `https://ielts-lexicon-sprint-api.onrender.com` 这台独立后端。
+7. GitHub Pages 版默认是纯静态站点：
    - 背词、拼写、复习、本地进度都能正常用
    - 发音会优先走浏览器可直接访问的在线 TTS
    - AI 批改和云端同步需要额外后端，不能直接跑在 GitHub Pages 上
-7. 如果你后面想手动改前端配置，也可以直接在 [site-config.js](/Users/shyn/Documents/Playground/lexicon-sprint/site-config.js) 里填：
+8. 如果你后面想手动改前端配置，也可以直接在 [site-config.js](/Users/shyn/Documents/Playground/lexicon-sprint/site-config.js) 里填：
 
 ```js
 window.__IELTS_LEXICON_CONFIG__ = {

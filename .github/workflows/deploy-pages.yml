@@ -38,6 +38,11 @@ jobs:
           CLOUD_SYNC_BASE_URL: ${{ vars.CLOUD_SYNC_BASE_URL }}
           PRONUNCIATION_API_BASE_URL: ${{ vars.PRONUNCIATION_API_BASE_URL }}
         run: |
+          DEFAULT_BACKEND_BASE_URL="https://ielts-lexicon-sprint-api.onrender.com"
+          EFFECTIVE_BACKEND_BASE_URL="${BACKEND_BASE_URL:-$DEFAULT_BACKEND_BASE_URL}"
+          EFFECTIVE_AI_API_BASE_URL="${AI_API_BASE_URL:-$EFFECTIVE_BACKEND_BASE_URL}"
+          EFFECTIVE_CLOUD_SYNC_BASE_URL="${CLOUD_SYNC_BASE_URL:-$EFFECTIVE_BACKEND_BASE_URL}"
+          EFFECTIVE_PRONUNCIATION_API_BASE_URL="${PRONUNCIATION_API_BASE_URL:-$EFFECTIVE_BACKEND_BASE_URL}"
           mkdir -p dist
           cp index.html dist/index.html
           cp app.js dist/app.js
@@ -46,10 +51,10 @@ jobs:
           cp .nojekyll dist/.nojekyll
           cat > dist/site-config.js <<EOF
           window.__IELTS_LEXICON_CONFIG__ = {
-            backendBaseUrl: "${BACKEND_BASE_URL}",
-            aiApiBaseUrl: "${AI_API_BASE_URL}",
-            cloudSyncBaseUrl: "${CLOUD_SYNC_BASE_URL}",
-            pronunciationApiBaseUrl: "${PRONUNCIATION_API_BASE_URL}",
+            backendBaseUrl: "${EFFECTIVE_BACKEND_BASE_URL}",
+            aiApiBaseUrl: "${EFFECTIVE_AI_API_BASE_URL}",
+            cloudSyncBaseUrl: "${EFFECTIVE_CLOUD_SYNC_BASE_URL}",
+            pronunciationApiBaseUrl: "${EFFECTIVE_PRONUNCIATION_API_BASE_URL}",
           };
           EOF
 
