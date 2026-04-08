@@ -6,7 +6,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-01-work-or-studies",
       "part": "part1",
       "title": "工作/学习",
-      "intro": "周思成题库补充 · Work or studies。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you like your subject?",
         "Do you have any plans for your studies in the next five years?",
@@ -36,7 +36,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-02-home-accommodation",
       "part": "part1",
       "title": "家庭/住所",
-      "intro": "周思成题库补充 · Home/accommodation。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "What kind of house or apartment do you want to live in in the future?",
         "Do you think it is important to live in a comfortable environment?",
@@ -67,7 +67,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-03-hometown",
       "part": "part1",
       "title": "家乡",
-      "intro": "周思成题库补充 · Hometown。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you like your hometown?",
         "Do you think you will continue living there for a long time?",
@@ -97,7 +97,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-04-the-area-you-live-in",
       "part": "part1",
       "title": "居住地",
-      "intro": "周思成题库补充 · The area you live in。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you like the area that you live in?",
         "Do you know any of your neighbors?",
@@ -126,7 +126,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-05-the-city-you-live-in",
       "part": "part1",
       "title": "现居城市",
-      "intro": "周思成题库补充 · The city you live in。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you like this city? Why?",
         "Would you recommend your city to others?",
@@ -156,7 +156,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-06-mobile-phone",
       "part": "part1",
       "title": "移动手机",
-      "intro": "周思成题库补充 · Mobile phone。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "How has your mobile phone changed your life?",
         "Have you ever lost your mobile phone?",
@@ -186,7 +186,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-07-taking-photos",
       "part": "part1",
       "title": "拍照",
-      "intro": "周思成题库补充 · Taking photos。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you like taking photos?",
         "Do you want to improve your photography skills?",
@@ -214,7 +214,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-08-young-people-teenagers",
       "part": "part1",
       "title": "年轻人/青少年",
-      "intro": "周思成题库补充 · Young people/teenagers。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you care about teenagers’ fashion trends?",
         "What activities do young people like to do in your country?",
@@ -241,7 +241,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-09-social-media",
       "part": "part1",
       "title": "社交媒体",
-      "intro": "周思成题库补充 · Social media。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you think you spend too much time on social media?",
         "When did you start using social media?",
@@ -269,7 +269,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-10-music-musical-instruments",
       "part": "part1",
       "title": "乐器",
-      "intro": "周思成题库补充 · Music/Musical instruments。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "What musical instruments do you enjoy listening to the most?",
         "Do you think children should learn to play an instrument at school?",
@@ -298,7 +298,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-11-teachers",
       "part": "part1",
       "title": "教师",
-      "intro": "周思成题库补充 · Teachers。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you have a favourite teacher?",
         "Do you want to be a teacher in the future?",
@@ -327,7 +327,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-12-computers-tablets",
       "part": "part1",
       "title": "电脑",
-      "intro": "周思成题库补充 · Computers/tablets。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Would you like to use a computer or tablet?",
         "What would your life be like without computers or tablets?",
@@ -356,7 +356,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-13-fishing",
       "part": "part1",
       "title": "钓鱼",
-      "intro": "周思成题库补充 · Fishing。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you like fishing?",
         "Did you ever go fishing when you were a child?",
@@ -384,7 +384,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-14-hobby",
       "part": "part1",
       "title": "爱好",
-      "intro": "周思成题库补充 · Hobby。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you have any hobbies?",
         "Did you have any hobbies when you were a child?",
@@ -411,7 +411,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-15-books-and-reading-habits",
       "part": "part1",
       "title": "书籍和阅读习惯",
-      "intro": "周思成题库补充 · Books and reading habits。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Which do you prefer, reading books or watching movies?",
         "Are your reading habits now different than before?",
@@ -439,7 +439,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-16-weekends",
       "part": "part1",
       "title": "周末",
-      "intro": "周思成题库补充 · Weekends。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you like weekends?",
         "Do you make plans for your weekends?",
@@ -467,7 +467,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-17-electronic-devices-technology",
       "part": "part1",
       "title": "电子设备/科技",
-      "intro": "周思成题库补充 · Electronic devices/Technology。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "What technology do you often use, computers or cellphones?",
         "Is technology important in your life?",
@@ -496,7 +496,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-18-morning-routines",
       "part": "part1",
       "title": "晨起习惯",
-      "intro": "周思成题库补充 · Morning routines。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you like to get up early in the morning?",
         "Is breakfast important?",
@@ -524,7 +524,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-19-doing-sports",
       "part": "part1",
       "title": "运动",
-      "intro": "周思成题库补充 · Doing sports。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "What sports do you like?",
         "Do you think students need more exercise?",
@@ -554,7 +554,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-20-staying-at-home",
       "part": "part1",
       "title": "呆在家",
-      "intro": "周思成题库补充 · Staying at home。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Are you a person who likes to stay at home?",
         "Would you like to stay at home a lot in the future?",
@@ -583,7 +583,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-21-names",
       "part": "part1",
       "title": "姓名文化",
-      "intro": "周思成题库补充 · Names。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "How would you choose names for your next generation?",
         "Does your name have any special meaning?",
@@ -614,7 +614,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-22-list",
       "part": "part1",
       "title": "列清单习惯",
-      "intro": "周思成题库补充 · List。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you prefer to make a list on paper or your phone?",
         "Why don't some people like making lists?",
@@ -642,7 +642,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-23-machine",
       "part": "part1",
       "title": "家用机器",
-      "intro": "周思成题库补充 · Machine。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "What is your favourite machine in your home?",
         "Do you think washing machines and sweeping machines are important?",
@@ -670,7 +670,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-24-birthday",
       "part": "part1",
       "title": "庆祝生日",
-      "intro": "周思成题库补充 · Birthday。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "What do you usually do on your birthday?",
         "Do you think it is important for you to celebrate your birthday?",
@@ -698,7 +698,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-25-plan-schedule",
       "part": "part1",
       "title": "制定计划",
-      "intro": "周思成题库补充 · Plan / schedule。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you like making plans?",
         "What are the benefits of making plans?",
@@ -725,7 +725,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-26-library",
       "part": "part1",
       "title": "图书馆",
-      "intro": "周思成题库补充 · Library。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Did you go to the library when you were a kid?",
         "Do Chinese kids often go to the library？",
@@ -753,7 +753,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-27-spending-time-by-yourself",
       "part": "part1",
       "title": "独处时光",
-      "intro": "周思成题库补充 · Spending time by yourself。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you like spending time by yourself?",
         "What did you do last time you were by yourself?",
@@ -780,7 +780,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-28-geography",
       "part": "part1",
       "title": "地理兴趣",
-      "intro": "周思成题库补充 · Geography。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "How do you like geography?",
         "Do you think geography is useful?",
@@ -810,7 +810,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-29-text-messages",
       "part": "part1",
       "title": "发短信习惯",
-      "intro": "周思成题库补充 · Text messages。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you reply to messages as soon as you receive them?",
         "Did you send more messages when you were younger?",
@@ -837,7 +837,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-30-snacks",
       "part": "part1",
       "title": "零食时光",
-      "intro": "周思成题库补充 · Snacks。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "What snacks do you like to eat?",
         "Do you think it is healthy for you to eat snacks?",
@@ -865,7 +865,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-31-jewelry",
       "part": "part1",
       "title": "珠宝",
-      "intro": "周思成题库补充 · Jewelry。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "What type of jewelry do you like?",
         "Why do you think some people wear a piece of jewelry for a long time?",
@@ -892,7 +892,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-32-happy-things",
       "part": "part1",
       "title": "快乐的事情",
-      "intro": "周思成题库补充 · Happy things。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you feel happy when buying new things?",
         "Do you think people are happy when buying new things?",
@@ -921,7 +921,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-33-flowers",
       "part": "part1",
       "title": "喜爱花卉",
-      "intro": "周思成题库补充 · Flowers。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you love flowers?",
         "Do you take photos of flowers in your daily life?",
@@ -952,7 +952,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-34-public-transportation",
       "part": "part1",
       "title": "公共交通",
-      "intro": "周思成题库补充 · Public transportation。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "What kind of public transportation do you usually take?",
         "Will there be more people taking public transportation in the future?",
@@ -982,7 +982,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-35-gifts",
       "part": "part1",
       "title": "礼物",
-      "intro": "周思成题库补充 · Gifts。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you think you are good at choosing gifts?",
         "Have you ever sent handmade gifts to others?",
@@ -1011,7 +1011,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-36-t-shirt",
       "part": "part1",
       "title": "T恤",
-      "intro": "周思成题库补充 · T-shirt。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you like wearing T-shirts?",
         "Do you think older people who wear T-shirts are fashionable?",
@@ -1041,7 +1041,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-37-writing",
       "part": "part1",
       "title": "写作习惯",
-      "intro": "周思成题库补充 · Writing。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "What do you like to write? Why?",
         "Do you think the things you write would change?",
@@ -1071,7 +1071,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-38-holidays",
       "part": "part1",
       "title": "假期",
-      "intro": "周思成题库补充 · Holidays。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you like holidays? Why?",
         "Where did you go for your last holiday?",
@@ -1101,7 +1101,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-39-memory",
       "part": "part1",
       "title": "记忆力话题",
-      "intro": "周思成题库补充 · Memory。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Have you ever forgotten something important?",
         "Are you good at memorising things?",
@@ -1129,7 +1129,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-40-chocolate",
       "part": "part1",
       "title": "巧克力喜好",
-      "intro": "周思成题库补充 · Chocolate。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you like eating chocolate? Why or why not?",
         "Do you think it is good to use chocolate as gifts to others?",
@@ -1160,7 +1160,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-41-small-business",
       "part": "part1",
       "title": "小企业",
-      "intro": "周思成题库补充 · Small business。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you prefer buying things from big companies or small businesses?",
         "Have you ever worked in small businesses?",
@@ -1188,7 +1188,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-42-staying-up",
       "part": "part1",
       "title": "熬夜经历",
-      "intro": "周思成题库补充 · Staying up。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Did you stay up late when you were a kid?",
         "What do you do when you stay up late?",
@@ -1215,7 +1215,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-43-puzzles",
       "part": "part1",
       "title": "拼图游戏",
-      "intro": "周思成题库补充 · Puzzles。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you like doing word puzzles or number puzzles?",
         "Do you think it is good for old people to do puzzles?",
@@ -1245,7 +1245,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-44-being-busy",
       "part": "part1",
       "title": "忙碌生活",
-      "intro": "周思成题库补充 · Being busy。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Are you busier now than when you were a child?",
         "Are you often busy?",
@@ -1272,7 +1272,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-45-saying-thank-you",
       "part": "part1",
       "title": "表达感谢",
-      "intro": "周思成题库补充 · Saying ‘thank you’。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Why do people need to say ‘thank you’?",
         "Have you ever sent a thank you card to others?",
@@ -1300,7 +1300,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-46-praise-encouragement",
       "part": "part1",
       "title": "表扬与鼓励",
-      "intro": "周思成题库补充 · Praise / encouragement。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "How do you feel when you are praised?",
         "Do you think parents should often praise and encourage their children?",
@@ -1329,7 +1329,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-47-spare-time",
       "part": "part1",
       "title": "业余时间",
-      "intro": "周思成题库补充 · Spare time。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "What do you usually do in your spare time?",
         "Would you like to have more free time in the future?",
@@ -1358,7 +1358,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-48-weather",
       "part": "part1",
       "title": "天气与气候",
-      "intro": "周思成题库补充 · Weather。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you prefer cold or hot weather?",
         "What do you think are the effects of climate change in recent years?",
@@ -1386,7 +1386,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-49-patience",
       "part": "part1",
       "title": "耐心与性格",
-      "intro": "周思成题库补充 · Patience。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Are you a patient person?",
         "Does your job require you to be patient?",
@@ -1417,7 +1417,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-50-singing",
       "part": "part1",
       "title": "唱歌乐趣",
-      "intro": "周思成题库补充 · Singing。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you like singing? Why?",
         "Do you think singing can bring happiness to people?",
@@ -1447,7 +1447,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-51-internet",
       "part": "part1",
       "title": "使用网络",
-      "intro": "周思成题库补充 · Internet。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you think you spend too much time online?",
         "How does the internet influence people?",
@@ -1476,7 +1476,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-52-housework-and-cooking",
       "part": "part1",
       "title": "家务与烹饪",
-      "intro": "周思成题库补充 · Housework and cooking。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "What housework do you like or dislike doing?",
         "Do you want to learn how to cook well?",
@@ -1504,7 +1504,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-53-party",
       "part": "part1",
       "title": "派对",
-      "intro": "周思成题库补充 · Party。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you like parties?",
         "How often did you have a party when you were a kid?",
@@ -1533,7 +1533,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-54-app",
       "part": "part1",
       "title": "手机应用",
-      "intro": "周思成题库补充 · APP。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "What apps do you still use?",
         "What kind of apps have you downloaded on your phone?",
@@ -1560,7 +1560,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part1-55-outer-space-and-stars",
       "part": "part1",
       "title": "外太空",
-      "intro": "周思成题库补充 · Outer space and stars。Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
+      "intro": "Part 1 建议每题用 2-4 句回答，并顺手补一个原因或小例子。",
       "questions": [
         "Do you want to go into outer space in the future?",
         "Do you want to know more about outer space?",
@@ -1589,7 +1589,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-01-an-ideal-and-perfect-place-where-you",
       "part": "part2",
       "title": "理想空间",
-      "intro": "周思成题库补充 · Describe an ideal and perfect place where you would like to stay (e.g. a house, an apartment)。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where it would be",
         "What it would look like",
@@ -1620,7 +1620,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-02-someone-else-s-room-you-enjoy-spendi",
       "part": "part2",
       "title": "别人的房间",
-      "intro": "周思成题库补充 · Describe someone else's room you enjoy spending time in。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When you visited there",
         "Whose room it is",
@@ -1651,7 +1651,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-03-a-quiet-place-you-like-to-go",
       "part": "part2",
       "title": "一个你喜欢的僻静之处",
-      "intro": "周思成题库补充 · Describe a quiet place you like to go。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where it is",
         "How you knew it",
@@ -1682,7 +1682,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-04-a-person-who-helps-to-protect-the-en",
       "part": "part2",
       "title": "环保人士",
-      "intro": "周思成题库补充 · Describe a person who helps to protect the environment。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who this person is",
         "When this person does this",
@@ -1712,7 +1712,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-05-an-energetic-person-that-you-know",
       "part": "part2",
       "title": "一个精力充沛的人",
-      "intro": "周思成题库补充 · Describe an energetic person that you know。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who this person is",
         "How you knew this person",
@@ -1742,7 +1742,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-06-someone-you-like-to-spend-time-with",
       "part": "part2",
       "title": "喜欢和他待在一起的人",
-      "intro": "周思成题库补充 · Describe someone you like to spend time with。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who this person is",
         "How you knew him/her",
@@ -1772,7 +1772,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-07-an-interesting-discussion-you-had-wi",
       "part": "part2",
       "title": "和朋友进行的有趣讨论",
-      "intro": "周思成题库补充 · Describe an interesting discussion you had with your friend。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What the discussion was about",
         "What opinions you and your friend had",
@@ -1801,7 +1801,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-08-an-important-decision-that-you-made",
       "part": "part2",
       "title": "一个你做的重要决定",
-      "intro": "周思成题库补充 · Describe an important decision that you made。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What the decision was",
         "How you made your decision",
@@ -1831,7 +1831,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-09-a-time-you-made-a-promise-to-someone",
       "part": "part2",
       "title": "许下的承诺",
-      "intro": "周思成题库补充 · Describe a time you made a promise to someone。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What the promise was To whom you made it",
         "Whether it was easy or difficult to keep",
@@ -1860,7 +1860,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-10-a-time-when-you-missed-or-were-late-",
       "part": "part2",
       "title": "迟到",
-      "intro": "周思成题库补充 · Describe a time when you missed or were late for an important meeting/event。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When it happened",
         "What happened",
@@ -1890,7 +1890,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-11-a-kind-of-foreign-food-you-like-and-",
       "part": "part2",
       "title": "外国食物",
-      "intro": "周思成题库补充 · Describe a kind of foreign food you like and you have had。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is",
         "When and where you had it",
@@ -1920,7 +1920,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-12-one-of-your-grandparents-jobs",
       "part": "part2",
       "title": "祖辈的工作",
-      "intro": "周思成题库补充 · Describe one of your grandparents’ jobs。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
         "How long he or she had this job",
@@ -1950,7 +1950,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-13-a-place-you-visited-and-enjoyed-in-t",
       "part": "part2",
       "title": "喜欢的乡村地点",
-      "intro": "周思成题库补充 · Describe a place you visited and enjoyed in the countryside。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where it was in the countryside",
         "What you did there",
@@ -1979,7 +1979,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-14-a-shop-store-you-enjoy-visiting",
       "part": "part2",
       "title": "商店",
-      "intro": "周思成题库补充 · Describe a shop/store you enjoy visiting。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What the shop’s name is",
         "Where it is",
@@ -2009,7 +2009,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-15-a-city-that-you-have-been-to-and-wou",
       "part": "part2",
       "title": "想再去一次的城市",
-      "intro": "周思成题库补充 · Describe a city that you have been to and would like to visit again。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When you visited it",
         "What you did there",
@@ -2039,7 +2039,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-16-a-place-in-your-country-or-part-of-y",
       "part": "part2",
       "title": "向游客们推荐的本国旅游地",
-      "intro": "周思成题库补充 · Describe a place in your country or part of your country that you would like to recommend to visitors/travelers。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is",
         "Where it is",
@@ -2069,7 +2069,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-17-a-place-where-you-saw-animals",
       "part": "part2",
       "title": "看到过动物的地方",
-      "intro": "周思成题库补充 · Describe a place where you saw animals。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When you went there",
         "Who you went with",
@@ -2099,7 +2099,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-18-the-home-of-someone-you-know-well-an",
       "part": "part2",
       "title": "经常拜访的熟人之家",
-      "intro": "周思成题库补充 · Describe the home of someone you know well and that you often visit。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Whose home it is",
         "How often you go there",
@@ -2129,7 +2129,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-19-an-unusual-but-interesting-building-",
       "part": "part2",
       "title": "想参观的不寻常且有趣的建筑",
-      "intro": "周思成题库补充 · Describe an unusual but interesting building you would like to visit。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where it is",
         "What it looks like",
@@ -2159,7 +2159,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-20-a-noisy-place-you-have-been-to",
       "part": "part2",
       "title": "很吵的地方",
-      "intro": "周思成题库补充 · Describe a noisy place you have been to。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where it is",
         "When you went there",
@@ -2189,7 +2189,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-21-your-favorite-place-in-your-house-wh",
       "part": "part2",
       "title": "家里放松的地方",
-      "intro": "周思成题库补充 · Describe your favorite place in your house where you can relax。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where it is",
         "What it is like",
@@ -2219,7 +2219,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-22-a-person-s-house-apartment-that-you-",
       "part": "part2",
       "title": "别人家的好房子",
-      "intro": "周思成题库补充 · Describe a person’s house/apartment that you think is very good。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who this person is",
         "What the house/apartment is like",
@@ -2249,7 +2249,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-23-a-popular-place-for-sports-e-g-a-sta",
       "part": "part2",
       "title": "受欢迎的运动场所",
-      "intro": "周思成题库补充 · Describe a popular place for sports (e.g. a stadium) that you’ve been to。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where it is",
         "When you went there",
@@ -2279,7 +2279,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-24-a-person-you-have-met-who-you-want-t",
       "part": "part2",
       "title": "想要一起学习/工作的人",
-      "intro": "周思成题库补充 · Describe a person you have met who you want to work/study with。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who this person is",
         "How you met this person",
@@ -2309,7 +2309,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-25-a-person-who-shows-his-her-feelings-",
       "part": "part2",
       "title": "情绪外露的人",
-      "intro": "周思成题库补充 · Describe a person who shows his/her feelings very openly。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she is",
         "How you knew him/her",
@@ -2339,7 +2339,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-26-a-famous-person-you-would-like-to-me",
       "part": "part2",
       "title": "想见的名人",
-      "intro": "周思成题库补充 · Describe a famous person you would like to meet。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she is",
         "How you knew him/her How/where you would like to meet him/her",
@@ -2368,7 +2368,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-27-a-singer-you-like",
       "part": "part2",
       "title": "喜欢的歌手",
-      "intro": "周思成题库补充 · Describe a singer you like。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she is",
         "What his/her personality is like",
@@ -2398,7 +2398,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-28-a-person-who-you-think-wears-unusual",
       "part": "part2",
       "title": "穿着不寻常的人",
-      "intro": "周思成题库补充 · Describe a person who you think wears unusual clothes。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who this person is",
         "How you knew this person",
@@ -2428,7 +2428,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-29-a-person-from-a-different-cultural-b",
       "part": "part2",
       "title": "愿意相处的不同文化背景的人",
-      "intro": "周思成题库补充 · Describe a person from a different cultural background with whom you enjoy spending time。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she is",
         "Where he/she is from Where/how you knew him/her",
@@ -2457,7 +2457,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-30-a-friend-from-your-childhood",
       "part": "part2",
       "title": "发小",
-      "intro": "周思成题库补充 · Describe a friend from your childhood。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she is",
         "Where and how you met each other",
@@ -2487,7 +2487,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-31-a-person-who-inspired-you-to-do-some",
       "part": "part2",
       "title": "激励你做有趣事情的人",
-      "intro": "周思成题库补充 · Describe a person who inspired you to do something interesting。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she is",
         "How you knew him/her",
@@ -2517,7 +2517,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-32-a-time-when-you-saw-children-behave-",
       "part": "part2",
       "title": "熊孩子",
-      "intro": "周思成题库补充 · Describe a time when you saw children behave badly in public。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where it was",
         "What the children were doing",
@@ -2547,7 +2547,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-33-a-time-when-a-person-persuaded-you-t",
       "part": "part2",
       "title": "劝你的人",
-      "intro": "周思成题库补充 · Describe a time when a person persuaded you to do something and you were happy about that。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she was When/where it happened",
         "What he/she persuaded you to do",
@@ -2576,7 +2576,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-34-a-person-you-disliked-at-first-but-e",
       "part": "part2",
       "title": "由不喜欢到喜欢的朋友",
-      "intro": "周思成题库补充 · Describe a person you disliked at first but ended up being friends with。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she is",
         "How you knew him/her",
@@ -2606,7 +2606,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-35-a-friend-of-yours-who-is-well-dresse",
       "part": "part2",
       "title": "会穿搭的朋友",
-      "intro": "周思成题库补充 · Describe a friend of yours who is well-dressed and is good at dressing up。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she is",
         "How you knew him/her",
@@ -2636,7 +2636,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-36-an-intelligent-person-you-know",
       "part": "part2",
       "title": "聪明的人",
-      "intro": "周思成题库补充 · Describe an intelligent person you know。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who this person is",
         "How you knew this person",
@@ -2666,7 +2666,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-37-a-person-you-know-who-loves-to-grow-",
       "part": "part2",
       "title": "养花/种菜的人",
-      "intro": "周思成题库补充 · Describe a person you know who loves to grow plants (e.g. vegetables / fruits / flowers etc.)。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who this person is",
         "What he/she grows",
@@ -2696,7 +2696,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-38-an-interesting-decision-that-you-and",
       "part": "part2",
       "title": "与朋友做的有趣决定",
-      "intro": "周思成题库补充 · Describe an interesting decision that you and your friend made together。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When and why you made the decision",
         "What the decision was about",
@@ -2726,7 +2726,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-39-a-time-when-you-received-money-as-a-",
       "part": "part2",
       "title": "收钱作礼物",
-      "intro": "周思成题库补充 · Describe a time when you received money as a gift。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When it happened",
         "Who gave you money",
@@ -2756,7 +2756,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-40-a-disagreement-you-had-with-someone",
       "part": "part2",
       "title": "和别人的争论",
-      "intro": "周思成题库补充 · Describe a disagreement you had with someone。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who you had the disagreement with",
         "What the disagreement was",
@@ -2786,7 +2786,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-41-a-time-when-you-and-some-other-peopl",
       "part": "part2",
       "title": "和他人一起计划活动",
-      "intro": "周思成题库补充 · Describe a time when you and some other people made a plan to do an activity。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
         "When and where you made it",
@@ -2816,7 +2816,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-42-an-impressive-and-interesting-conver",
       "part": "part2",
       "title": "有趣且印象深的谈话",
-      "intro": "周思成题库补充 · Describe an impressive and interesting conversation you had that you remember well。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who you talked to",
         "When and where you had it",
@@ -2846,7 +2846,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-43-an-impressive-english-lesson-you-had",
       "part": "part2",
       "title": "印象深刻的英语课",
-      "intro": "周思成题库补充 · Describe an impressive English lesson you had and enjoyed。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was about",
         "When you had it",
@@ -2875,7 +2875,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-44-a-time-when-you-had-to-share-somethi",
       "part": "part2",
       "title": "分享时刻",
-      "intro": "周思成题库补充 · Describe a time when you had to share something with others。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
         "When it happened",
@@ -2906,7 +2906,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-45-a-goal-you-set-that-you-tried-your-b",
       "part": "part2",
       "title": "努力尝试并实现的目标",
-      "intro": "周思成题库补充 · Describe a goal you set that you tried your best to achieve。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
         "When you set it",
@@ -2935,7 +2935,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-46-an-argument-two-of-your-friends-had",
       "part": "part2",
       "title": "朋友们的争吵",
-      "intro": "周思成题库补充 · Describe an argument two of your friends had。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When it happened",
         "What it was about",
@@ -2964,7 +2964,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-47-a-time-when-you-forgot-missed-an-app",
       "part": "part2",
       "title": "失约的事",
-      "intro": "周思成题库补充 · Describe a time when you forgot/missed an appointment。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What the appointment was for",
         "Who you made it with",
@@ -2994,7 +2994,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-48-a-time-when-you-saw-a-lot-of-plastic",
       "part": "part2",
       "title": "看到很多塑料垃圾的时刻",
-      "intro": "周思成题库补充 · Describe a time when you saw a lot of plastic waste (e.g. in a park, on the beach, etc.)。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where and when you saw the plastic waste",
         "Why there were a lot of plastic waste",
@@ -3024,7 +3024,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-49-a-problem-you-had-while-shopping-onl",
       "part": "part2",
       "title": "在商店购物时遇到的问题",
-      "intro": "周思成题库补充 · Describe a problem you had while shopping online or in a store。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When it happened",
         "What you bought",
@@ -3054,7 +3054,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-50-a-sports-competition-you-watched",
       "part": "part2",
       "title": "看过的体育赛事",
-      "intro": "周思成题库补充 · Describe a sports competition you watched。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was When/where you watched it",
         "Who you watched it with",
@@ -3083,7 +3083,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-51-a-sports-event-that-you-would-like-t",
       "part": "part2",
       "title": "一场想要成为观众观看的体育赛事",
-      "intro": "周思成题库补充 · Describe a sports event that you would like to attend as part of the audience。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is",
         "Who you want to watch with",
@@ -3113,7 +3113,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-52-a-time-when-you-were-praised-for-som",
       "part": "part2",
       "title": "被表扬的时刻",
-      "intro": "周思成题库补充 · Describe a time when you were praised for something you did。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When it happened",
         "What you did",
@@ -3143,7 +3143,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-53-a-time-when-you-needed-to-search-for",
       "part": "part2",
       "title": "检索信息",
-      "intro": "周思成题库补充 · Describe a time when you needed to search for information。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What information you needed to search for",
         "When you searched for it",
@@ -3173,7 +3173,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-54-your-first-day-at-school-that-you-re",
       "part": "part2",
       "title": "开学第一天",
-      "intro": "周思成题库补充 · Describe your first day at school that you remember。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where the school was",
         "How you went there",
@@ -3202,7 +3202,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-55-something-that-you-did-with-someone-",
       "part": "part2",
       "title": "和别人一起做的事情",
-      "intro": "周思成题库补充 · Describe something that you did with someone/a group of people。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
         "Who you did it with",
@@ -3232,7 +3232,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-56-an-article-on-health-you-read-in-a-m",
       "part": "part2",
       "title": "健康文章",
-      "intro": "周思成题库补充 · Describe an article on health you read in a magazine or on the Internet。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
         "Where you read it",
@@ -3261,7 +3261,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-57-an-important-thing-you-learned-not-a",
       "part": "part2",
       "title": "校外学到的重要事情",
-      "intro": "周思成题库补充 · Describe an important thing you learned (not at school or college)。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
         "When you learned it",
@@ -3291,7 +3291,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-58-a-skill-that-you-think-you-can-teach",
       "part": "part2",
       "title": "可以教给别人的技能",
-      "intro": "周思成题库补充 · Describe a skill that you think you can teach other people。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is",
         "When you learned it",
@@ -3321,7 +3321,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-59-an-object-that-you-think-is-beautifu",
       "part": "part2",
       "title": "漂亮物品",
-      "intro": "周思成题库补充 · Describe an object that you think is beautiful。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is",
         "Where you saw it",
@@ -3351,7 +3351,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-60-a-movie-you-watched-recently-and-wou",
       "part": "part2",
       "title": "想再看的电影",
-      "intro": "周思成题库补充 · Describe a movie you watched recently and would like to watch again。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What type of movie it was",
         "What it was about",
@@ -3381,7 +3381,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-61-a-photo-you-took-that-you-are-proud-",
       "part": "part2",
       "title": "让你自豪的照片",
-      "intro": "周思成题库补充 · Describe a photo you took that you are proud of。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When you took it",
         "Where you took it",
@@ -3411,7 +3411,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-62-a-beautiful-sky-you-enjoyed-seeing",
       "part": "part2",
       "title": "美丽天空",
-      "intro": "周思成题库补充 · Describe a beautiful sky you enjoyed seeing。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where you saw it",
         "Who you saw it with",
@@ -3440,7 +3440,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-63-an-advertisement-you-have-seen-that-",
       "part": "part2",
       "title": "有名产品的广告",
-      "intro": "周思成题库补充 · Describe an advertisement you have seen that introduced a well-known product。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When and where you saw the advertisement",
         "What the product was",
@@ -3470,7 +3470,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-64-a-time-you-made-a-decision-to-wait-f",
       "part": "part2",
       "title": "决定等待",
-      "intro": "周思成题库补充 · Describe a time you made a decision to wait for something。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When it happened",
         "What you waited for",
@@ -3500,7 +3500,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-65-a-difficult-thing-you-did-and-succee",
       "part": "part2",
       "title": "克服困难获得成功的事",
-      "intro": "周思成题库补充 · Describe a difficult thing you did and succeeded。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
         "How you overcame the difficulties",
@@ -3530,7 +3530,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-66-a-story-or-novel-you-have-read-that-",
       "part": "part2",
       "title": "读过的有趣的故事/小说",
-      "intro": "周思成题库补充 · Describe a story or novel you have read that you found interesting。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When you read it",
         "What the story or novel was about",
@@ -3560,7 +3560,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-67-a-film-that-made-you-laugh",
       "part": "part2",
       "title": "看过的搞笑电影",
-      "intro": "周思成题库补充 · Describe a film that made you laugh。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is",
         "When you watched it",
@@ -3590,7 +3590,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-68-a-program-you-like-to-watch",
       "part": "part2",
       "title": "喜欢的节目",
-      "intro": "周思成题库补充 · Describe a program you like to watch。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is",
         "What it is about",
@@ -3620,7 +3620,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-69-an-outdoor-sport-you-would-like-to-d",
       "part": "part2",
       "title": "想要尝试的户外运动",
-      "intro": "周思成题库补充 · Describe an outdoor sport you would like to do。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is When/where you would like to do it With whom you would like to do it",
         "And explain why you would like to do it"
@@ -3648,7 +3648,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-70-a-photo-that-you-enjoy-looking-at",
       "part": "part2",
       "title": "喜欢的照片",
-      "intro": "周思成题库补充 · Describe a photo that you enjoy looking at。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who took it",
         "When and where it was taken",
@@ -3678,7 +3678,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-71-a-time-when-someone-gave-you-somethi",
       "part": "part2",
       "title": "收到想要的物品",
-      "intro": "周思成题库补充 · Describe a time when someone gave you something that you really wanted。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
         "When you received it",
@@ -3708,7 +3708,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-72-a-website-you-often-visit",
       "part": "part2",
       "title": "常用的网站",
-      "intro": "周思成题库补充 · Describe a website you often visit。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is about",
         "How you found out about it",
@@ -3738,7 +3738,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part2-73-a-website-that-sells-second-hand-ite",
       "part": "part2",
       "title": "二手物品网站",
-      "intro": "周思成题库补充 · Describe a website that sells second-hand items。Cue Card 建议按提示词讲清背景、细节、感受和原因。",
+      "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is",
         "How you found out about it",
@@ -3770,7 +3770,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-01-topic",
       "part": "part3",
       "title": "理想空间 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“理想空间”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What are apartments like in your country?",
         "Why are apartments popular in some places while not in other places?",
@@ -3801,7 +3801,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-02-topic",
       "part": "part3",
       "title": "别人的房间 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“别人的房间”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you like to invite your friends to your home?",
         "Do most people visit other people's houses during the Spring Festival?",
@@ -3832,7 +3832,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-03-topic",
       "part": "part3",
       "title": "一个你喜欢的僻静之处 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“一个你喜欢的僻静之处”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Is it easy to find quiet places in your country?",
         "How do people spend their leisure time in your country?",
@@ -3863,7 +3863,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-04-topic",
       "part": "part3",
       "title": "环保人士 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“环保人士”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why can recycling help the environment?",
         "What have people done to damage the environment?",
@@ -3893,7 +3893,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-05-topic",
       "part": "part3",
       "title": "一个精力充沛的人 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“一个精力充沛的人”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What kinds of jobs need a lot of physical work?",
         "Can physical workers receive higher salaries in the future?",
@@ -3924,7 +3924,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-06-topic",
       "part": "part3",
       "title": "喜欢和他待在一起的人 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“喜欢和他待在一起的人”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What kinds of people are easy to get along with?",
         "How do leaders get along with their subordinates?",
@@ -3955,7 +3955,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-07-topic",
       "part": "part3",
       "title": "和朋友进行的有趣讨论 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“和朋友进行的有趣讨论”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "When do children normally form their own views?",
         "Do children have strong opinions?",
@@ -3986,7 +3986,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-08-topic",
       "part": "part3",
       "title": "一个你做的重要决定 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“一个你做的重要决定”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think children sometimes have to make important decisions?",
         "What important decisions do teenagers need to make after graduation?",
@@ -4017,7 +4017,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-09-topic",
       "part": "part3",
       "title": "许下的承诺 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“许下的承诺”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why do some people fail to keep their promises?",
         "Do children keep their promises?",
@@ -4048,7 +4048,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-10-topic",
       "part": "part3",
       "title": "迟到 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“迟到”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Are you a punctual person?",
         "Do you think it is important to be on time?",
@@ -4079,7 +4079,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-11-topic",
       "part": "part3",
       "title": "外国食物 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“外国食物”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do most people like to eat the food they are familiar with or try new food?",
         "What kinds of foreign food are popular in your country?",
@@ -4109,7 +4109,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-12-topic",
       "part": "part3",
       "title": "祖辈的工作 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“祖辈的工作”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What jobs do you think are rather difficult?",
         "What qualities do people need to do difficult jobs?",
@@ -4140,7 +4140,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-13-topic",
       "part": "part3",
       "title": "喜欢的乡村地点 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“喜欢的乡村地点”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Where do people like to visit in the countryside?",
         "What are the consequences of the decrease of population in the countryside?"
@@ -4168,7 +4168,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-14-topic",
       "part": "part3",
       "title": "商店 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“商店”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think shops and shopping malls will disappear in the future?",
         "Do you think shops and shopping malls will disappear in the future?",
@@ -4199,7 +4199,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-15-topic",
       "part": "part3",
       "title": "想再去一次的城市 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“想再去一次的城市”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think it is possible that all of the population move to cities?",
         "Do you think people in the countryside are friendlier than people in the city?",
@@ -4230,7 +4230,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-16-topic",
       "part": "part3",
       "title": "向游客们推荐的本国旅游地 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“向游客们推荐的本国旅游地”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Can you trust other people's travel journals on the Internet?",
         "Will you go to a foreign country to travel because of the distinct landscape?",
@@ -4261,7 +4261,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-17-topic",
       "part": "part3",
       "title": "看到过动物的地方 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“看到过动物的地方”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think people are more interested in animals now than they were in the past?",
         "Why do stories and movies for children always feature animals?",
@@ -4290,7 +4290,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-18-topic",
       "part": "part3",
       "title": "经常拜访的熟人之家 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“经常拜访的熟人之家”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you prefer to live in the city or in the countryside?",
         "Do you think the location is a key factor in where people choose to live?",
@@ -4321,7 +4321,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-19-topic",
       "part": "part3",
       "title": "想参观的不寻常且有趣的建筑 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“想参观的不寻常且有趣的建筑”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why do some people choose to build houses by themselves?",
         "What factors do you consider when choosing a house or an apartment?",
@@ -4351,7 +4351,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-20-topic",
       "part": "part3",
       "title": "很吵的地方 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“很吵的地方”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think it is good for children to make noise?",
         "Should children not be allowed to make noise under any circumstances?",
@@ -4382,7 +4382,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-21-topic",
       "part": "part3",
       "title": "家里放松的地方 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“家里放松的地方”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why is it difficult for some people to relax?",
         "What are the benefits of doing exercise?",
@@ -4413,7 +4413,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-22-topic",
       "part": "part3",
       "title": "别人家的好房子 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“别人家的好房子”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do many people spend a lot of money renovating and decorating their houses or apartments?",
         "Is natural light important for a house or apartment?",
@@ -4443,7 +4443,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-23-topic",
       "part": "part3",
       "title": "受欢迎的运动场所 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“受欢迎的运动场所”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do young people like to do sports?",
         "Do you think local sports teams can help increase community connections?",
@@ -4474,7 +4474,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-24-topic",
       "part": "part3",
       "title": "想要一起学习/工作的人 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“想要一起学习/工作的人”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why should children be kind to their classmates?",
         "Can children choose their deskmates?",
@@ -4505,7 +4505,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-25-topic",
       "part": "part3",
       "title": "情绪外露的人 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“情绪外露的人”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think it is good or bad for people to show feelings openly?",
         "Who tend to show their feelings more openly, adults or children?"
@@ -4533,7 +4533,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-26-topic",
       "part": "part3",
       "title": "想见的名人 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“想见的名人”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What are the advantages and disadvantages of being a famous child?",
         "What can today’s children do to become famous?",
@@ -4563,7 +4563,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-27-topic",
       "part": "part3",
       "title": "喜欢的歌手 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“喜欢的歌手”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do Chinese parents require their children to learn to play musical instruments?",
         "Why do some people like to listen to live music while others prefer CDs?",
@@ -4593,7 +4593,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-28-topic",
       "part": "part3",
       "title": "穿着不寻常的人 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“穿着不寻常的人”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What factors affect people’s decisions when buying clothes?",
         "Do you think that the style of the clothing is more important than its comfort?",
@@ -4624,7 +4624,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-29-topic",
       "part": "part3",
       "title": "愿意相处的不同文化背景的人 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“愿意相处的不同文化背景的人”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Is it easy to meet people from different cultural backgrounds in your country?",
         "What do people from different cultural backgrounds usually talk about with each other?",
@@ -4655,7 +4655,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-30-topic",
       "part": "part3",
       "title": "发小 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“发小”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you still keep in touch with your friends from childhood?",
         "Why or why not?",
@@ -4686,7 +4686,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-31-topic",
       "part": "part3",
       "title": "激励你做有趣事情的人 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“激励你做有趣事情的人”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What qualities make someone a role model?",
         "Why should children learn from role models?",
@@ -4717,7 +4717,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-32-topic",
       "part": "part3",
       "title": "熊孩子 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“熊孩子”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What bad behavior do children usually have?",
         "How should parents stop their children from behaving badly in public?",
@@ -4746,7 +4746,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-33-topic",
       "part": "part3",
       "title": "劝你的人 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“劝你的人”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What impact does advertising have on children and their parents?",
         "What do parents often persuade their children to do?",
@@ -4777,7 +4777,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-34-topic",
       "part": "part3",
       "title": "由不喜欢到喜欢的朋友 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“由不喜欢到喜欢的朋友”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What do you think of making friends online?",
         "Is it a good idea to make friends with people who are much older than you?",
@@ -4808,7 +4808,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-35-topic",
       "part": "part3",
       "title": "会穿搭的朋友 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“会穿搭的朋友”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do most people in your country prefer to buy clothes online or at the street market?",
         "Do you think young people know more about fashion and are better at dressing up than elderly people?",
@@ -4839,7 +4839,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-36-topic",
       "part": "part3",
       "title": "聪明的人 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“聪明的人”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Who do you think plays a more important role in a child’s development, teachers or parents?",
         "Do you think smart people tend to be selfish?",
@@ -4870,7 +4870,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-37-topic",
       "part": "part3",
       "title": "养花/种菜的人 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“养花/种菜的人”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Are there many people growing their own vegetables now?",
         "Do you think it’s good to let kids learn how to plant?",
@@ -4901,7 +4901,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-38-topic",
       "part": "part3",
       "title": "与朋友做的有趣决定 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“与朋友做的有趣决定”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What decisions can children make by themselves?"
       ],
@@ -4928,7 +4928,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-39-topic",
       "part": "part3",
       "title": "收钱作礼物 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“收钱作礼物”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why do people rarely use cash now?",
         "When do children begin to comprehend the value of money?",
@@ -4959,7 +4959,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-40-topic",
       "part": "part3",
       "title": "和别人的争论 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“和别人的争论”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What do you do if you disagree with someone?",
         "How can we stop an argument from escalating into a fight?",
@@ -4990,7 +4990,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-41-topic",
       "part": "part3",
       "title": "和他人一起计划活动 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“和他人一起计划活动”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What kind of plans do young people often make?",
         "Why can’t people always follow their plans?",
@@ -5021,7 +5021,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-42-topic",
       "part": "part3",
       "title": "有趣且印象深的谈话 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“有趣且印象深的谈话”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What topics do young people like to talk about?",
         "Is it important to have good communication skills at work?",
@@ -5051,7 +5051,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-43-topic",
       "part": "part3",
       "title": "印象深刻的英语课 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“印象深刻的英语课”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why do people learn foreign languages?",
         "What makes a good foreign language teacher?",
@@ -5082,7 +5082,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-44-topic",
       "part": "part3",
       "title": "分享时刻 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“分享时刻”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think kids like to share?",
         "How can parents teach their children to share?",
@@ -5112,7 +5112,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-45-topic",
       "part": "part3",
       "title": "努力尝试并实现的目标 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“努力尝试并实现的目标”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do people in your country set goals?",
         "Do people usually set long-term goals or short-term ones?",
@@ -5143,7 +5143,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-46-topic",
       "part": "part3",
       "title": "朋友们的争吵 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“朋友们的争吵”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think arguments are important?",
         "What do family members usually have arguments about?",
@@ -5174,7 +5174,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-47-topic",
       "part": "part3",
       "title": "失约的事 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“失约的事”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Is punctuality important to people?",
         "How do people who are busy remember things they need to do?",
@@ -5205,7 +5205,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-48-topic",
       "part": "part3",
       "title": "看到很多塑料垃圾的时刻 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“看到很多塑料垃圾的时刻”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think we can do without plastic altogether in the future?",
         "Do you think we should use plastic products?",
@@ -5236,7 +5236,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-49-topic",
       "part": "part3",
       "title": "在商店购物时遇到的问题 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“在商店购物时遇到的问题”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Can customer complaints help improve product quality?",
         "What are the differences between shopping online and in-store?",
@@ -5267,7 +5267,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-50-topic",
       "part": "part3",
       "title": "看过的体育赛事 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“看过的体育赛事”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think it is necessary to award prizes and incentives to athletes?",
         "Do you think there should be more matches or competitions broadcast on TV?",
@@ -5297,7 +5297,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-51-topic",
       "part": "part3",
       "title": "一场想要成为观众观看的体育赛事 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“一场想要成为观众观看的体育赛事”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do people in your country enjoy watching football games?",
         "Do encouragement and applause from the audience have an impact on athletes?",
@@ -5328,7 +5328,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-52-topic",
       "part": "part3",
       "title": "被表扬的时刻 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“被表扬的时刻”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "When do parents usually praise their children?",
         "Do you think people should always point out and correct others’ mistakes?"
@@ -5356,7 +5356,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-53-topic",
       "part": "part3",
       "title": "检索信息 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“检索信息”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Is it good if people could have more access to information in the future?",
         "Do you think libraries are still important in the digital age?",
@@ -5387,7 +5387,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-54-topic",
       "part": "part3",
       "title": "开学第一天 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“开学第一天”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What would parents prepare when their kids go to school on the first day?",
         "How do children socialize with each other?",
@@ -5418,7 +5418,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-55-topic",
       "part": "part3",
       "title": "和别人一起做的事情 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“和别人一起做的事情”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "How do you get along with your neighbors?",
         "How do neighbors help each other?",
@@ -5449,7 +5449,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-56-topic",
       "part": "part3",
       "title": "健康文章 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“健康文章”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "How do today’s people keep healthy?",
         "Is it difficult to keep healthy?",
@@ -5480,7 +5480,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-57-topic",
       "part": "part3",
       "title": "校外学到的重要事情 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“校外学到的重要事情”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What can children learn from parents?",
         "Do you think some children are well-behaved because they are influenced by their parents?",
@@ -5511,7 +5511,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-58-topic",
       "part": "part3",
       "title": "可以教给别人的技能 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“可以教给别人的技能”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Should teachers be funny when they teach?",
         "What qualities should teachers have?",
@@ -5541,7 +5541,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-59-topic",
       "part": "part3",
       "title": "漂亮物品 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“漂亮物品”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think there are more beautiful things now than in the past?",
         "What beautiful scenery spots are there in your country?",
@@ -5572,7 +5572,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-60-topic",
       "part": "part3",
       "title": "想再看的电影 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“想再看的电影”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Where do people normally watch movies?",
         "What are the differences between watching movies at home and in a cinema?",
@@ -5603,7 +5603,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-61-topic",
       "part": "part3",
       "title": "让你自豪的照片 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“让你自豪的照片”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why do some people like to record important things with photos?",
         "What can people learn from historical photographs?",
@@ -5634,7 +5634,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-62-topic",
       "part": "part3",
       "title": "美丽天空 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“美丽天空”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What kind of people are interested in stars?",
         "Is high technology helpful for star watching?",
@@ -5665,7 +5665,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-63-topic",
       "part": "part3",
       "title": "有名产品的广告 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“有名产品的广告”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Where do we often see advertisements?",
         "What are the benefits of advertising?",
@@ -5696,7 +5696,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-64-topic",
       "part": "part3",
       "title": "决定等待 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“决定等待”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Is being patient good for people?",
         "Why do children lack patience?",
@@ -5727,7 +5727,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-65-topic",
       "part": "part3",
       "title": "克服困难获得成功的事 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“克服困难获得成功的事”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "How would you define success?",
         "Are successful people often lonely?",
@@ -5758,7 +5758,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-66-topic",
       "part": "part3",
       "title": "读过的有趣的故事/小说 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“读过的有趣的故事/小说”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you prefer to read e-books or printed books?",
         "Why do some people prefer reading novels to playing computer games in this digital world?",
@@ -5789,7 +5789,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-67-topic",
       "part": "part3",
       "title": "看过的搞笑电影 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“看过的搞笑电影”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do people like comedy?",
         "Is it good to tell jokes in business activities?",
@@ -5820,7 +5820,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-68-topic",
       "part": "part3",
       "title": "喜欢的节目 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“喜欢的节目”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do people in your country like to watch foreign TV programs?",
         "Do teachers play videos in class in your country?",
@@ -5851,7 +5851,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-69-topic",
       "part": "part3",
       "title": "想要尝试的户外运动 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“想要尝试的户外运动”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "How do weather affect outdoor sports?",
         "What are the differences between indoor sports and outdoor sports?"
@@ -5879,7 +5879,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-70-topic",
       "part": "part3",
       "title": "喜欢的照片 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“喜欢的照片”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why do many people like to share photos on social media platforms?"
       ],
@@ -5906,7 +5906,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-71-topic",
       "part": "part3",
       "title": "收到想要的物品 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“收到想要的物品”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Should employees have their own goals?",
         "How should bosses reward employees?",
@@ -5937,7 +5937,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-72-topic",
       "part": "part3",
       "title": "常用的网站 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“常用的网站”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What are the most popular and least popular apps in China?",
         "Why do some people like to read the news on the internet instead of getting it from TV?",
@@ -5968,7 +5968,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-73-topic",
       "part": "part3",
       "title": "二手物品网站 · 深挖讨论",
-      "intro": "周思成题库补充 · 围绕“二手物品网站”做 Part 3 延伸，尽量给观点、原因和例子。",
+      "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Should the government encourage people to recycle items?",
         "How do people in your country recycle various items they don’t want?",

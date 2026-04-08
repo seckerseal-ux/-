@@ -215,9 +215,12 @@
                   <span class="badge" id="ai-model-meta">需要通过本地代理服务连接 OpenAI 或 OpenRouter</span>
                 </div>
                 <label class="upload-field">
-                  上传录音文件
-                  <input id="speaking-audio" type="file" accept="audio/*" />
+                  上传录音文件（最多 4 个）
+                  <input id="speaking-audio" type="file" accept="audio/*" multiple />
                 </label>
+                <p class="micro-copy" id="speaking-audio-summary">
+                  可一次上传最多 4 个音频文件。单段复盘默认使用第 1 个；全真三段模考会按 Part 1 / Part 2 / Part 3 自动读取前 3 个文件。
+                </p>
                 <audio id="speaking-audio-player" controls preload="metadata"></audio>
                 <label class="field-block" for="speaking-transcript">
                   可选转写文本

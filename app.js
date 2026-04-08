@@ -1225,7 +1225,7 @@ const expandedVocabularyBank = [
       translation: "从教育角度来看",
       note: "Task 2 展开观点很自然。",
       example: "From an educational perspective, smaller classes can improve participation.",
-      tags: ["写作词块", "观点"],
+      tags: ["写作词块", "Task 2 观点"],
     },
     {
       id: "heavy-burden",
@@ -1234,7 +1234,7 @@ const expandedVocabularyBank = [
       translation: "给……带来沉重负担",
       note: "表达成本和压力很实用。",
       example: "Rising housing prices place a heavy burden on young families.",
-      tags: ["写作词块", "影响"],
+      tags: ["写作词块", "Task 2 影响"],
     },
     {
       id: "positive-change",
@@ -1243,7 +1243,7 @@ const expandedVocabularyBank = [
       translation: "带来积极变化",
       note: "政策效果和总结段很常用。",
       example: "Well-designed regulations can bring about positive change in the long run.",
-      tags: ["写作词块", "结果"],
+      tags: ["写作词块", "Task 2 结果"],
     },
     {
       id: "widely-argued",
@@ -1252,7 +1252,7 @@ const expandedVocabularyBank = [
       translation: "人们普遍认为",
       note: "引入观点时很顺手。",
       example: "It is widely argued that schools should do more than teach academic subjects.",
-      tags: ["写作词块", "引入"],
+      tags: ["写作词块", "Task 2 引入"],
     },
     {
       id: "practical-steps",
@@ -1261,7 +1261,7 @@ const expandedVocabularyBank = [
       translation: "采取切实措施去……",
       note: "解决方案段落高频。",
       example: "Governments must take practical steps to improve air quality in major cities.",
-      tags: ["写作词块", "解决方案"],
+      tags: ["写作词块", "Task 2 方案"],
     },
     {
       id: "outweigh-drawbacks",
@@ -1270,7 +1270,7 @@ const expandedVocabularyBank = [
       translation: "利大于弊",
       note: "利弊题结论段非常常见。",
       example: "In this case, the benefits are likely to outweigh the drawbacks.",
-      tags: ["写作词块", "结论"],
+      tags: ["写作词块", "Task 2 结论"],
     },
     {
       id: "no-denying",
@@ -1279,7 +1279,7 @@ const expandedVocabularyBank = [
       translation: "不可否认的是……",
       note: "引入让步或承认现实情况时很好用。",
       example: "There is no denying that digital devices have changed the way people learn.",
-      tags: ["写作词块", "引入"],
+      tags: ["写作词块", "Task 2 引入"],
     },
     {
       id: "body-evidence",
@@ -1288,7 +1288,7 @@ const expandedVocabularyBank = [
       translation: "越来越多的证据表明……",
       note: "让论证更像正式学术写作。",
       example: "A growing body of evidence suggests that early intervention can reduce long-term social costs.",
-      tags: ["写作词块", "论证"],
+      tags: ["写作词块", "Task 2 论证"],
     },
     {
       id: "far-reaching",
@@ -1297,7 +1297,7 @@ const expandedVocabularyBank = [
       translation: "对……产生深远影响",
       note: "分析政策、科技和教育影响时很常见。",
       example: "Rapid urbanisation may have far-reaching implications for public health and housing.",
-      tags: ["写作词块", "影响"],
+      tags: ["写作词块", "Task 2 影响"],
     },
     {
       id: "widen-gap",
@@ -1306,7 +1306,7 @@ const expandedVocabularyBank = [
       translation: "扩大……之间的差距",
       note: "写不平等、城乡差异和教育机会题很实用。",
       example: "Unequal access to resources can widen the gap between rich and poor students.",
-      tags: ["写作词块", "影响"],
+      tags: ["写作词块", "Task 2 影响"],
     },
     {
       id: "have-access",
@@ -1315,7 +1315,7 @@ const expandedVocabularyBank = [
       translation: "有机会接触；能够获得",
       note: "教育、医疗和公共服务话题高频。",
       example: "People in rural areas should have access to reliable medical care.",
-      tags: ["写作词块", "社会"],
+      tags: ["写作词块", "Task 2 社会"],
     },
     {
       id: "strike-balance",
@@ -1324,7 +1324,7 @@ const expandedVocabularyBank = [
       translation: "在……之间取得平衡",
       note: "利弊对比和双边讨论题非常常见。",
       example: "Governments need to strike a balance between economic growth and environmental protection.",
-      tags: ["写作词块", "观点"],
+      tags: ["写作词块", "Task 2 平衡"],
     },
     {
       id: "attributed-to",
@@ -1333,7 +1333,7 @@ const expandedVocabularyBank = [
       translation: "这在很大程度上归因于……",
       note: "分析原因时很顺手，语气也更正式。",
       example: "This can largely be attributed to poor planning and weak enforcement.",
-      tags: ["写作词块", "原因"],
+      tags: ["写作词块", "Task 2 原因"],
     },
     {
       id: "viable-solution",
@@ -1342,7 +1342,178 @@ const expandedVocabularyBank = [
       translation: "一个可行的解决办法是……",
       note: "问题解决题和建议段都很好用。",
       example: "A viable solution would be to invest more heavily in preventive care.",
-      tags: ["写作词块", "解决方案"],
+      tags: ["写作词块", "Task 2 方案"],
+    },
+    {
+      id: "upward-trend",
+      kind: "chunk",
+      term: "show an upward trend",
+      translation: "呈现上升趋势",
+      note: "Task 1 描述增长趋势很高频。",
+      example: "The number of commuters using the underground showed an upward trend over the period.",
+      tags: ["写作词块", "Task 1 趋势"],
+    },
+    {
+      id: "stable-level",
+      kind: "chunk",
+      term: "remain relatively stable",
+      translation: "保持相对稳定",
+      note: "Task 1 描述平稳走势很常用。",
+      example: "Spending on public transport remained relatively stable between 2005 and 2010.",
+      tags: ["写作词块", "Task 1 趋势"],
+    },
+    {
+      id: "account-for",
+      kind: "chunk",
+      term: "account for",
+      translation: "占据；构成",
+      note: "Task 1 写比例和占比最常见的表达之一。",
+      example: "Private cars accounted for the largest share of daily travel.",
+      tags: ["写作词块", "Task 1 占比"],
+    },
+    {
+      id: "by-contrast",
+      kind: "chunk",
+      term: "by contrast",
+      translation: "相比之下",
+      note: "Task 1 比较不同对象时很好用。",
+      example: "By contrast, spending on rail transport rose only slightly.",
+      tags: ["写作词块", "Task 1 对比"],
+    },
+    {
+      id: "reach-peak",
+      kind: "chunk",
+      term: "reach a peak of",
+      translation: "达到峰值",
+      note: "Task 1 描述最高点很自然。",
+      example: "The figure reached a peak of 75 percent in 2018.",
+      tags: ["写作词块", "Task 1 趋势"],
+    },
+    {
+      id: "overall-it-is-clear",
+      kind: "chunk",
+      term: "overall, it is clear that",
+      translation: "总体来看，很明显……",
+      note: "Task 1 overview 段核心高频句型。",
+      example: "Overall, it is clear that rail travel became more popular over time.",
+      tags: ["写作词块", "Task 1 概述"],
+    },
+    {
+      id: "stood-at",
+      kind: "chunk",
+      term: "the figure stood at",
+      translation: "该数据为……",
+      note: "Task 1 写具体数值最常见的句型之一。",
+      example: "In 2015, the figure stood at just under 40 percent.",
+      tags: ["写作词块", "Task 1 数值"],
+    },
+    {
+      id: "slight-decline",
+      kind: "chunk",
+      term: "experience a slight decline",
+      translation: "出现小幅下降",
+      note: "Task 1 写轻微下降趋势很自然。",
+      example: "Car ownership experienced a slight decline towards the end of the period.",
+      tags: ["写作词块", "Task 1 趋势"],
+    },
+    {
+      id: "followed-by",
+      kind: "chunk",
+      term: "be followed by",
+      translation: "随后出现……",
+      note: "Task 1 串联两个阶段走势很顺手。",
+      example: "A sharp increase was followed by a period of stability.",
+      tags: ["写作词块", "Task 1 趋势"],
+    },
+    {
+      id: "in-comparison-with",
+      kind: "chunk",
+      term: "in comparison with",
+      translation: "与……相比",
+      note: "Task 1 比较不同对象时高频。",
+      example: "In comparison with rural areas, city centres saw a much faster rise.",
+      tags: ["写作词块", "Task 1 对比"],
+    },
+    {
+      id: "narrowed-gap",
+      kind: "chunk",
+      term: "the gap narrowed considerably",
+      translation: "差距明显缩小",
+      note: "Task 1 写两组数据靠近时很好用。",
+      example: "By the end of the period, the gap narrowed considerably.",
+      tags: ["写作词块", "Task 1 对比"],
+    },
+    {
+      id: "often-claimed",
+      kind: "chunk",
+      term: "it is often claimed that",
+      translation: "人们常常声称……",
+      note: "Task 2 引入社会普遍观点时很好用。",
+      example: "It is often claimed that university education should be free for everyone.",
+      tags: ["写作词块", "Task 2 引入"],
+    },
+    {
+      id: "raises-question",
+      kind: "chunk",
+      term: "this raises the question of whether",
+      translation: "这引出了一个问题，即是否……",
+      note: "引出争议点和讨论方向很自然。",
+      example: "This raises the question of whether public money should be spent on space exploration.",
+      tags: ["写作词块", "Task 2 观点"],
+    },
+    {
+      id: "possible-explanation",
+      kind: "chunk",
+      term: "one possible explanation is that",
+      translation: "一种可能的解释是……",
+      note: "分析原因时很常用。",
+      example: "One possible explanation is that many parents have less free time than before.",
+      tags: ["写作词块", "Task 2 原因"],
+    },
+    {
+      id: "unintended-consequences",
+      kind: "chunk",
+      term: "lead to unintended consequences",
+      translation: "导致意想不到的后果",
+      note: "评价政策副作用和长期影响很实用。",
+      example: "Poorly designed regulations may lead to unintended consequences for small businesses.",
+      tags: ["写作词块", "Task 2 影响"],
+    },
+    {
+      id: "pose-threat",
+      kind: "chunk",
+      term: "pose a serious threat to",
+      translation: "对……构成严重威胁",
+      note: "环境、健康和社会问题题高频。",
+      example: "Air pollution poses a serious threat to children's health.",
+      tags: ["写作词块", "Task 2 影响"],
+    },
+    {
+      id: "better-position",
+      kind: "chunk",
+      term: "be in a better position to",
+      translation: "更有条件去……",
+      note: "写能力、资源和机会差异时很好用。",
+      example: "Well-funded schools are in a better position to support disadvantaged students.",
+      tags: ["写作词块", "Task 2 论证"],
+    },
+    {
+      id: "lay-foundation",
+      kind: "chunk",
+      term: "lay the foundation for",
+      translation: "为……奠定基础",
+      note: "写教育、长期发展和制度建设很高频。",
+      example: "Early reading habits can lay the foundation for lifelong learning.",
+      tags: ["写作词块", "Task 2 结果"],
+    },
+    {
+      id: "broader-social",
+      kind: "chunk",
+      term: "from a broader social perspective",
+      translation: "从更广泛的社会角度来看",
+      note: "从个人层面过渡到社会层面时很好用。",
+      example: "From a broader social perspective, stable employment benefits entire communities.",
+      tags: ["写作词块", "Task 2 观点"],
     },
   ]),
   ...createExpandedVocabularyEntries("speak", "speaking", [
@@ -1515,7 +1686,7 @@ const expandedVocabularyBank = [
       translation: "最让我印象深刻的是",
       note: "Part 2 展开细节很好用。",
       example: "What impresses me most is how friendly the local people were.",
-      tags: ["词块", "展开"],
+      tags: ["口语词块", "Part 2 展开"],
     },
     {
       id: "honest-with-you",
@@ -1524,7 +1695,7 @@ const expandedVocabularyBank = [
       translation: "老实说",
       note: "Part 1 自然口语衔接高频。",
       example: "To be honest with you, I do not cook very often because I am usually busy.",
-      tags: ["词块", "口语衔接"],
+      tags: ["口语词块", "Part 1 开场"],
     },
     {
       id: "ended-up",
@@ -1533,7 +1704,7 @@ const expandedVocabularyBank = [
       translation: "结果我……；最后我……",
       note: "讲经历变化非常自然。",
       example: "I planned to stay for one hour, but I ended up spending the whole afternoon there.",
-      tags: ["词块", "经历"],
+      tags: ["口语词块", "Part 2 经历"],
     },
     {
       id: "reminds-me-of",
@@ -1542,7 +1713,7 @@ const expandedVocabularyBank = [
       translation: "它让我想起……",
       note: "物品、地方和人物题非常常见。",
       example: "It reminds me of the small park near my primary school.",
-      tags: ["词块", "回忆"],
+      tags: ["口语词块", "Part 2 回忆"],
     },
     {
       id: "main-reasons",
@@ -1551,7 +1722,7 @@ const expandedVocabularyBank = [
       translation: "其中一个主要原因是……",
       note: "回答 why 问题很顺手。",
       example: "One of the main reasons is that it saves me a lot of time.",
-      tags: ["词块", "原因"],
+      tags: ["口语词块", "Part 3 原因"],
     },
     {
       id: "mixed-feelings",
@@ -1560,7 +1731,7 @@ const expandedVocabularyBank = [
       translation: "我对……看法有些复杂",
       note: "Part 3 表达平衡观点很实用。",
       example: "I have mixed feelings about online shopping because it is convenient but wasteful.",
-      tags: ["词块", "观点"],
+      tags: ["口语词块", "Part 3 观点"],
     },
     {
       id: "comes-to-mind",
@@ -1569,7 +1740,7 @@ const expandedVocabularyBank = [
       translation: "我第一时间想到的是……",
       note: "Part 1 和 Part 2 开头都很自然。",
       example: "The first thing that comes to mind is the huge library near my secondary school.",
-      tags: ["词块", "展开"],
+      tags: ["口语词块", "Part 1 开场"],
     },
     {
       id: "had-to-choose",
@@ -1578,7 +1749,7 @@ const expandedVocabularyBank = [
       translation: "如果一定要选的话",
       note: "比较题和偏好题很好用。",
       example: "If I had to choose, I would definitely live in a quieter neighbourhood.",
-      tags: ["词块", "观点"],
+      tags: ["口语词块", "Part 3 比较"],
     },
     {
       id: "personal-experience",
@@ -1587,7 +1758,7 @@ const expandedVocabularyBank = [
       translation: "根据我自己的经历来说",
       note: "Part 3 让观点更自然、更可信。",
       example: "Speaking from personal experience, learning with friends is much more motivating.",
-      tags: ["词块", "观点"],
+      tags: ["口语词块", "Part 3 观点"],
     },
     {
       id: "really-enjoy",
@@ -1596,7 +1767,7 @@ const expandedVocabularyBank = [
       translation: "我真正喜欢的是……",
       note: "爱好、地点和活动题很常用。",
       example: "What I really enjoy is the relaxed atmosphere in small local cafes.",
-      tags: ["词块", "习惯"],
+      tags: ["口语词块", "Part 1 习惯"],
     },
     {
       id: "worth-mentioning",
@@ -1605,7 +1776,7 @@ const expandedVocabularyBank = [
       translation: "有一点值得一提，那就是……",
       note: "补细节和补充理由时很好用。",
       example: "One thing worth mentioning is that the service there was much better than I expected.",
-      tags: ["词块", "展开"],
+      tags: ["口语词块", "Part 2 展开"],
     },
     {
       id: "sense-of",
@@ -1614,7 +1785,7 @@ const expandedVocabularyBank = [
       translation: "它给我一种……的感觉",
       note: "描述感受、地点和人物时特别顺手。",
       example: "It gives me a sense of comfort because I used to go there with my family.",
-      tags: ["词块", "感受"],
+      tags: ["口语词块", "Part 2 感受"],
     },
     {
       id: "compared-past",
@@ -1623,7 +1794,7 @@ const expandedVocabularyBank = [
       translation: "和过去相比",
       note: "Part 3 谈变化趋势很高频。",
       example: "Compared with the past, young people now have many more ways to learn online.",
-      tags: ["词块", "变化"],
+      tags: ["口语词块", "Part 3 变化"],
     },
     {
       id: "depends-on",
@@ -1632,7 +1803,7 @@ const expandedVocabularyBank = [
       translation: "我会说这要看……",
       note: "Part 3 回答开放题特别好用。",
       example: "I would say it depends on the person's age, lifestyle, and daily schedule.",
-      tags: ["词块", "观点"],
+      tags: ["口语词块", "Part 3 观点"],
     },
     {
       id: "kind-of-person",
@@ -1641,7 +1812,7 @@ const expandedVocabularyBank = [
       translation: "我是那种会……的人",
       note: "描述习惯和性格时很自然。",
       example: "I am the kind of person who needs a clear plan before starting anything important.",
-      tags: ["词块", "人物"],
+      tags: ["口语词块", "Part 1 人物"],
     },
     {
       id: "matters-most",
@@ -1650,7 +1821,133 @@ const expandedVocabularyBank = [
       translation: "对我来说最重要的是……",
       note: "偏好题、价值观题和选择题高频。",
       example: "What matters most to me is whether a place feels peaceful and easy to get around.",
-      tags: ["词块", "观点"],
+      tags: ["口语词块", "Part 3 观点"],
+    },
+    {
+      id: "if-remember-correctly",
+      kind: "chunk",
+      term: "if I remember correctly",
+      translation: "如果我没记错的话",
+      note: "回忆时间、地点和细节时很自然。",
+      example: "If I remember correctly, I first visited that museum when I was about ten.",
+      tags: ["口语词块", "Part 2 回忆"],
+    },
+    {
+      id: "would-describe",
+      kind: "chunk",
+      term: "I would describe it as",
+      translation: "我会把它描述为……",
+      note: "描述人物、地点和经历的万能句。",
+      example: "I would describe it as a calm and welcoming place.",
+      tags: ["口语词块", "Part 2 展开"],
+    },
+    {
+      id: "put-simply",
+      kind: "chunk",
+      term: "to put it simply",
+      translation: "简单来说",
+      note: "Part 3 解释观点时特别顺手。",
+      example: "To put it simply, people are busier now and want faster solutions.",
+      tags: ["口语词块", "Part 3 观点"],
+    },
+    {
+      id: "another-mention",
+      kind: "chunk",
+      term: "another thing I should mention is that",
+      translation: "还有一点我想补充的是……",
+      note: "Part 2 和 Part 3 补充信息很好用。",
+      example: "Another thing I should mention is that the service was much better than I expected.",
+      tags: ["口语词块", "Part 2 展开"],
+    },
+    {
+      id: "moment-when",
+      kind: "chunk",
+      term: "that was probably the moment when",
+      translation: "那大概就是……的时刻",
+      note: "讲转折和关键记忆点很自然。",
+      example: "That was probably the moment when I realised how important teamwork could be.",
+      tags: ["口语词块", "Part 2 经历"],
+    },
+    {
+      id: "what-i-mean",
+      kind: "chunk",
+      term: "what I mean is",
+      translation: "我的意思是……",
+      note: "口语里修正和补充说明非常自然。",
+      example: "What I mean is that the place is small, but it feels extremely cosy.",
+      tags: ["口语词块", "Part 1 开场"],
+    },
+    {
+      id: "soft-spot",
+      kind: "chunk",
+      term: "I have always had a soft spot for",
+      translation: "我一直对……情有独钟",
+      note: "爱好、地点和食物题很出彩。",
+      example: "I have always had a soft spot for old bookshops and quiet cafes.",
+      tags: ["口语词块", "Part 1 习惯"],
+    },
+    {
+      id: "depends-situation",
+      kind: "chunk",
+      term: "it really depends on the situation",
+      translation: "这真的要看具体情况",
+      note: "Part 3 回答开放题和比较题很高频。",
+      example: "It really depends on the situation, because different people have very different priorities.",
+      tags: ["口语词块", "Part 3 比较"],
+    },
+    {
+      id: "looking-back",
+      kind: "chunk",
+      term: "looking back on it",
+      translation: "现在回头看",
+      note: "Part 2 总结感受时特别自然。",
+      example: "Looking back on it, I think that experience made me much more confident.",
+      tags: ["口语词块", "Part 2 回忆"],
+    },
+    {
+      id: "tend-to",
+      kind: "chunk",
+      term: "these days, people tend to",
+      translation: "如今，人们往往会……",
+      note: "Part 3 谈普遍趋势非常常用。",
+      example: "These days, people tend to rely more on digital tools for everyday tasks.",
+      tags: ["口语词块", "Part 3 变化"],
+    },
+    {
+      id: "older-get",
+      kind: "chunk",
+      term: "the older I get, the more I",
+      translation: "年纪越大，我越……",
+      note: "表达习惯变化和价值变化很自然。",
+      example: "The older I get, the more I value peace and quiet in daily life.",
+      tags: ["口语词块", "Part 3 变化"],
+    },
+    {
+      id: "totally-understand",
+      kind: "chunk",
+      term: "I can totally understand why",
+      translation: "我完全能理解为什么……",
+      note: "Part 3 回应不同观点时很好用。",
+      example: "I can totally understand why many parents worry about children's screen time.",
+      tags: ["口语词块", "Part 3 观点"],
+    },
+    {
+      id: "for-me-personally",
+      kind: "chunk",
+      term: "for me personally",
+      translation: "对我个人来说",
+      note: "Part 1 和 Part 3 加强个人立场很自然。",
+      example: "For me personally, living close to green space is much more important than living downtown.",
+      tags: ["口语词块", "Part 1 开场"],
+    },
+    {
+      id: "not-really-into",
+      kind: "chunk",
+      term: "I am not really into",
+      translation: "我其实不太喜欢……",
+      note: "Part 1 表达不偏好时比直接说 dislike 更自然。",
+      example: "I am not really into team sports because I prefer doing things at my own pace.",
+      tags: ["口语词块", "Part 1 习惯"],
     },
   ]),
 ];
@@ -2089,6 +2386,7 @@ const elements = {
   writingHistoryChip: document.querySelector("#writing-history-chip"),
   writingHistoryList: document.querySelector("#writing-history-list"),
   speakingAudio: document.querySelector("#speaking-audio"),
+  speakingAudioSummary: document.querySelector("#speaking-audio-summary"),
   speakingAudioPlayer: document.querySelector("#speaking-audio-player"),
   speakingTranscript: document.querySelector("#speaking-transcript"),
   speakingAnalyzeLocal: document.querySelector("#speaking-analyze-local"),
@@ -3273,6 +3571,117 @@ function escapeHtml(value) {
 
 function escapeRegExp(value) {
   return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function dedupeStrings(values) {
+  const seen = new Set();
+  return values
+    .map((value) => String(value || "").trim())
+    .filter((value) => {
+      if (!value) {
+        return false;
+      }
+      const normalized = value.toLowerCase();
+      if (seen.has(normalized)) {
+        return false;
+      }
+      seen.add(normalized);
+      return true;
+    });
+}
+
+function buildChunkGroups(category, groupDefinitions, options = {}) {
+  const { exclude = [], limitPerGroup = 4 } = options;
+  const seen = new Set(dedupeStrings(exclude).map((item) => item.toLowerCase()));
+
+  return groupDefinitions
+    .map((group) => {
+      const terms = [];
+      vocabularyBank.forEach((item) => {
+        if (item.category !== category || item.kind !== "chunk") {
+          return;
+        }
+        if (!group.tags.some((tag) => item.tags?.includes(tag))) {
+          return;
+        }
+        const term = String(item.term || "").trim();
+        const normalized = term.toLowerCase();
+        if (!term || seen.has(normalized) || terms.length >= limitPerGroup) {
+          return;
+        }
+        terms.push(term);
+        seen.add(normalized);
+      });
+      return {
+        label: group.label,
+        terms,
+      };
+    })
+    .filter((group) => group.terms.length);
+}
+
+function getSpeakingPromptIntro(prompt) {
+  return String(prompt?.intro || "")
+    .replace(/^(?:周思成题库补充|题库补充)\s*·\s*[^。!?]*[。.]?\s*/u, "")
+    .trim();
+}
+
+function getSpeakingChunkGroups(prompt) {
+  const baseMaterials = dedupeStrings(prompt?.materials || []);
+  const groupMap = {
+    part1: [
+      { label: "开场与态度", tags: ["Part 1 开场"] },
+      { label: "习惯与人物", tags: ["Part 1 习惯", "Part 1 人物"] },
+    ],
+    part2: [
+      { label: "展开与经历", tags: ["Part 2 展开", "Part 2 经历", "Part 2 回忆"] },
+      { label: "感受与收束", tags: ["Part 2 感受"] },
+    ],
+    part3: [
+      { label: "观点表达", tags: ["Part 3 观点"] },
+      { label: "原因比较", tags: ["Part 3 原因", "Part 3 比较", "Part 3 变化"] },
+    ],
+  };
+
+  return buildChunkGroups("speaking", groupMap[prompt?.part] || [], {
+    exclude: baseMaterials,
+    limitPerGroup: 4,
+  });
+}
+
+function getWritingChunkGroups(prompt) {
+  const baseMaterials = dedupeStrings(prompt?.materials || []);
+  const groupDefinitions =
+    prompt?.task === "task1"
+      ? [
+          { label: "概述与趋势", tags: ["Task 1 概述", "Task 1 趋势"] },
+          { label: "对比与数据", tags: ["Task 1 对比", "Task 1 占比", "Task 1 数值"] },
+        ]
+      : [
+          { label: "开头立场", tags: ["Task 2 引入", "Task 2 观点"] },
+          { label: "原因论证", tags: ["Task 2 原因", "Task 2 论证", "Task 2 影响", "Task 2 结果"] },
+          { label: "方案与收束", tags: ["Task 2 方案", "Task 2 平衡", "Task 2 结论", "Task 2 社会"] },
+        ];
+
+  return buildChunkGroups("writing", groupDefinitions, {
+    exclude: baseMaterials,
+    limitPerGroup: 4,
+  });
+}
+
+function renderChunkGroupList(groups) {
+  return groups
+    .map(
+      (group) => `
+        <div class="prompt-item">
+          <strong>${escapeHtml(group.label)}</strong>
+          <div class="tag-row">
+            ${group.terms.map((item) => `<span class="tag">${escapeHtml(item)}</span>`).join("")}
+          </div>
+        </div>
+      `,
+    )
+    .join("");
 }
 
 function countEssayWords(text) {
@@ -6011,17 +6420,84 @@ function getNextSpeakingPart(part) {
   return currentIndex >= 0 && currentIndex < SPEAKING_PART_ORDER.length - 1 ? SPEAKING_PART_ORDER[currentIndex + 1] : null;
 }
 
-function clearSpeakingInput() {
+function getSelectedSpeakingAudioFiles() {
+  return Array.from(elements.speakingAudio?.files || []).slice(0, 4);
+}
+
+function getActiveSpeakingAudioIndex(part = getSelectedSpeakingPrompt()?.part) {
+  if (!isSpeakingFullMockMode()) {
+    return 0;
+  }
+  const index = getSpeakingPartIndex(part || ui.speakingMockSession.activePart || SPEAKING_PART_ORDER[0]);
+  return index >= 0 ? index : 0;
+}
+
+function getActiveSpeakingAudioFile(part = getSelectedSpeakingPrompt()?.part) {
+  const files = getSelectedSpeakingAudioFiles();
+  if (!files.length) {
+    return null;
+  }
+  return files[getActiveSpeakingAudioIndex(part)] || null;
+}
+
+function updateSpeakingAudioSummary(part = getSelectedSpeakingPrompt()?.part) {
+  if (!elements.speakingAudioSummary) {
+    return;
+  }
+  const rawCount = elements.speakingAudio?.files?.length || 0;
+  const files = getSelectedSpeakingAudioFiles();
+  if (!rawCount) {
+    elements.speakingAudioSummary.textContent =
+      "可一次上传最多 4 个音频文件。单段复盘默认使用第 1 个；全真三段模考会按 Part 1 / Part 2 / Part 3 自动读取前 3 个文件。";
+    return;
+  }
+
+  const activeIndex = getActiveSpeakingAudioIndex(part);
+  const activeFile = files[activeIndex];
+  const ignoredCount = Math.max(rawCount - files.length, 0);
+
+  if (!activeFile) {
+    elements.speakingAudioSummary.textContent = `已选 ${rawCount} 个音频文件${ignoredCount ? `，其中后 ${ignoredCount} 个暂不使用` : ""}。当前进行到 ${SPEAKING_PART_LABELS[part] || "当前段"}，请补上这一段对应的录音。`;
+    return;
+  }
+
+  const activeLabel = isSpeakingFullMockMode()
+    ? `当前 ${SPEAKING_PART_LABELS[part] || "这一段"} 会使用第 ${activeIndex + 1} 个文件`
+    : "当前会使用第 1 个文件";
+  elements.speakingAudioSummary.textContent = `已选 ${rawCount} 个音频文件${ignoredCount ? `，系统只会使用前 ${files.length} 个` : ""}；${activeLabel}：${activeFile.name}`;
+}
+
+function syncSpeakingAudioPreview(part = getSelectedSpeakingPrompt()?.part) {
   cleanupSpeakingAudioUrl();
-  if (elements.speakingAudio) {
+  const file = getActiveSpeakingAudioFile(part);
+  if (!file || !elements.speakingAudioPlayer) {
+    elements.speakingAudioPlayer?.removeAttribute("src");
+    elements.speakingAudioPlayer?.load();
+    updateSpeakingAudioSummary(part);
+    return;
+  }
+  ui.speakingAudioUrl = URL.createObjectURL(file);
+  elements.speakingAudioPlayer.src = ui.speakingAudioUrl;
+  updateSpeakingAudioSummary(part);
+}
+
+function clearSpeakingInput(options = {}) {
+  const { keepFiles = false, previewPart = getSelectedSpeakingPrompt()?.part } = options;
+  cleanupSpeakingAudioUrl();
+  if (elements.speakingAudio && !keepFiles) {
     elements.speakingAudio.value = "";
   }
-  if (elements.speakingAudioPlayer) {
+  if (!keepFiles && elements.speakingAudioPlayer) {
     elements.speakingAudioPlayer.removeAttribute("src");
     elements.speakingAudioPlayer.load();
   }
   if (elements.speakingTranscript) {
     elements.speakingTranscript.value = "";
+  }
+  if (keepFiles) {
+    syncSpeakingAudioPreview(previewPart);
+  } else {
+    updateSpeakingAudioSummary(previewPart);
   }
 }
 
@@ -6162,6 +6638,7 @@ function populateSpeakingPrompts() {
   const prompts = speakingMockBank[part];
   if (!prompts?.length) {
     elements.speakingPrompt.innerHTML = "";
+    updateSpeakingAudioSummary(part);
     return;
   }
   const storedPromptId = ui.speakingPromptSelections[part];
@@ -6172,6 +6649,7 @@ function populateSpeakingPrompts() {
   ui.speakingPromptSelections[part] = elements.speakingPrompt.value;
   renderSpeakingPromptCard();
   renderSpeakingSessionShell();
+  syncSpeakingAudioPreview(part);
   updateSpeakingActionButtons();
 }
 
@@ -6186,6 +6664,9 @@ function renderSpeakingPromptCard() {
     return;
   }
   const target = `${formatSeconds(prompt.targetDuration.min)} - ${formatSeconds(prompt.targetDuration.max)}`;
+  const intro = getSpeakingPromptIntro(prompt);
+  const baseMaterials = dedupeStrings(prompt.materials || []).slice(0, 6);
+  const chunkGroups = getSpeakingChunkGroups(prompt);
   const modeHint = isSpeakingFullMockMode()
     ? `当前是全真三段模考，会在完成 ${SPEAKING_PART_LABELS[prompt.part]} 后自动进入下一段。`
     : "当前是单段复盘模式，可以单独练这一段。";
@@ -6195,19 +6676,31 @@ function renderSpeakingPromptCard() {
         <span class="badge">${prompt.part.toUpperCase()}</span>
         <span class="badge">建议时长 ${target}</span>
       </div>
-      <h3>${prompt.title}</h3>
-      <p class="mock-shell__meta">${prompt.intro}</p>
-      <p class="mock-shell__meta">${modeHint}</p>
+      <h3>${escapeHtml(prompt.title)}</h3>
+      <p class="mock-shell__meta">${escapeHtml(intro)}</p>
+      <p class="mock-shell__meta">${escapeHtml(modeHint)}</p>
       <div class="prompt-list">
-        ${prompt.questions.map((question) => `<div class="prompt-item">${question}</div>`).join("")}
+        ${prompt.questions.map((question) => `<div class="prompt-item">${escapeHtml(question)}</div>`).join("")}
       </div>
       <div class="material-card">
         <h4>建议先准备的素材</h4>
         <p>先把这些词块或展开角度背顺，录音时更容易自然展开。</p>
         <div class="material-strip">
-          ${prompt.materials.map((material) => `<span class="tag">${material}</span>`).join("")}
+          ${baseMaterials.map((material) => `<span class="tag">${escapeHtml(material)}</span>`).join("")}
         </div>
       </div>
+      ${
+        chunkGroups.length
+          ? `
+            <div class="material-card">
+              <h4>按这一段更顺手的词块来背</h4>
+              <div class="prompt-list">
+                ${renderChunkGroupList(chunkGroups)}
+              </div>
+            </div>
+          `
+          : ""
+      }
     </div>
   `;
 }
@@ -6270,11 +6763,8 @@ function renderWritingPromptCard() {
     return;
   }
 
-  const writingChunks = vocabularyBank
-    .filter((item) => item.category === "writing" && item.kind === "chunk")
-    .slice(0, 3)
-    .map((item) => item.term);
-  const materials = [...prompt.materials, ...writingChunks].slice(0, 6);
+  const materials = dedupeStrings(prompt.materials || []).slice(0, 6);
+  const chunkGroups = getWritingChunkGroups(prompt);
 
   elements.writingPromptCard.innerHTML = `
     <div class="mock-shell">
@@ -6304,6 +6794,18 @@ function renderWritingPromptCard() {
           ${materials.map((item) => `<span class="tag">${escapeHtml(item)}</span>`).join("")}
         </div>
       </div>
+      ${
+        chunkGroups.length
+          ? `
+            <div class="material-card">
+              <h4>按用途分好的高频词块</h4>
+              <div class="prompt-list">
+                ${renderChunkGroupList(chunkGroups)}
+              </div>
+            </div>
+          `
+          : ""
+      }
     </div>
   `;
 }
@@ -6322,7 +6824,7 @@ function renderSpeakingPlaceholder() {
     <div class="study-empty">
       <div>
         <h3>${isSpeakingFullMockMode() ? "从 Part 1 开始上传录音，就能进入整轮模考" : "上传一段口语录音后就能开始分析"}</h3>
-        <p>${isSpeakingFullMockMode() ? "每段各上传一次音频，系统会自动推进到下一部分，并在 Part 3 结束后生成整轮总评。" : "你可以先做本地节奏分析；如果通过本地代理连上 AI，还能拿到 AI 转写和真正的口语批改结果。"}</p>
+        <p>${isSpeakingFullMockMode() ? "你可以一次上传最多 4 个音频文件。全真模考会优先按 Part 1 / Part 2 / Part 3 自动读取前 3 个文件，并在 Part 3 结束后生成整轮总评。" : "单段复盘也支持一次放进最多 4 个文件，默认会先分析第 1 个；如果通过 AI 后端连上模型，还能拿到转写和真正的口语批改结果。"}</p>
       </div>
     </div>
   `;
@@ -6456,15 +6958,7 @@ function cleanupSpeakingAudioUrl() {
 }
 
 function handleSpeakingAudioChange() {
-  cleanupSpeakingAudioUrl();
-  const file = elements.speakingAudio.files?.[0];
-  if (!file) {
-    elements.speakingAudioPlayer.removeAttribute("src");
-    elements.speakingAudioPlayer.load();
-    return;
-  }
-  ui.speakingAudioUrl = URL.createObjectURL(file);
-  elements.speakingAudioPlayer.src = ui.speakingAudioUrl;
+  syncSpeakingAudioPreview(getSelectedSpeakingPrompt()?.part);
 }
 
 async function decodeAudio(file) {
@@ -7386,15 +7880,37 @@ async function requestAiSpeakingMockSummary(parts) {
   return payload;
 }
 
+function getSpeakingFileForCurrentPrompt(prompt) {
+  const files = getSelectedSpeakingAudioFiles();
+  if (!files.length) {
+    return null;
+  }
+  if (!isSpeakingFullMockMode()) {
+    return files[0];
+  }
+  return files[getActiveSpeakingAudioIndex(prompt?.part)] || null;
+}
+
+function getMissingSpeakingFileHint(prompt) {
+  const files = getSelectedSpeakingAudioFiles();
+  if (!files.length) {
+    return "先选择音频文件，再开始分析。";
+  }
+  if (!isSpeakingFullMockMode()) {
+    return "当前会默认使用第 1 个文件；如果想分析别的录音，请重新调整选择顺序后再试。";
+  }
+  return `当前进行到 ${SPEAKING_PART_LABELS[prompt?.part] || "这一段"}，但你只准备了 ${files.length} 个文件。请补上传这一段对应的录音，或重新选择最多 4 个文件。`;
+}
+
 async function handleSpeakingLocalAnalysis() {
-  const file = elements.speakingAudio.files?.[0];
   const prompt = getSelectedSpeakingPrompt();
+  const file = getSpeakingFileForCurrentPrompt(prompt);
   if (isSpeakingFullMockMode() && ui.speakingMockSession.summary) {
     renderSpeakingMessage("warning", "这一轮模考已经完成", "如果你想开始下一轮全真模考，先点“重新开始模考”，系统会从 Part 1 重新计时。");
     return;
   }
   if (!file) {
-    renderSpeakingMessage("warning", "还没有上传录音", "先选择一个音频文件，再点击分析。");
+    renderSpeakingMessage("warning", "还没有可用录音", getMissingSpeakingFileHint(prompt));
     return;
   }
 
@@ -7412,14 +7928,14 @@ async function handleSpeakingLocalAnalysis() {
 }
 
 async function handleSpeakingAiAnalysis() {
-  const file = elements.speakingAudio.files?.[0];
   const prompt = getSelectedSpeakingPrompt();
+  const file = getSpeakingFileForCurrentPrompt(prompt);
   if (isSpeakingFullMockMode() && ui.speakingMockSession.summary) {
     renderSpeakingMessage("warning", "这一轮模考已经完成", "请先点“重新开始模考”，再从 Part 1 继续新的一轮三段仿真训练。");
     return;
   }
   if (!file) {
-    renderSpeakingMessage("warning", "还没有上传录音", "先选择一个音频文件，再点击 AI 深度批改。");
+    renderSpeakingMessage("warning", "还没有可用录音", getMissingSpeakingFileHint(prompt));
     return;
   }
 
@@ -7451,10 +7967,11 @@ async function handleSpeakingAiAnalysis() {
 
       const nextPart = getNextSpeakingPart(prompt.part);
       if (nextPart) {
+        const keepQueuedFiles = getSelectedSpeakingAudioFiles().length > getActiveSpeakingAudioIndex(nextPart);
         ui.speakingMockSession.activePart = nextPart;
         elements.speakingResult.insertAdjacentHTML("beforeend", renderSpeakingMockTransition(partEntry, nextPart));
-        clearSpeakingInput();
         syncSpeakingControlsForPart(nextPart);
+        clearSpeakingInput({ keepFiles: keepQueuedFiles, previewPart: nextPart });
         renderCoachTips();
         announce(`${SPEAKING_PART_LABELS[prompt.part]} 已完成，已切换到 ${SPEAKING_PART_LABELS[nextPart]}`);
         return;
@@ -7596,6 +8113,7 @@ function bindEvents() {
     ui.speakingPromptSelections[part] = elements.speakingPrompt.value;
     renderSpeakingPromptCard();
     renderSpeakingSessionShell();
+    syncSpeakingAudioPreview(part);
   });
   if (elements.writingTask) {
     elements.writingTask.addEventListener("change", () => {
