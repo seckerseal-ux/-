@@ -1498,7 +1498,24 @@ if (Array.isArray(window.__LEXICON_LARGE_VOCABULARY__)) {
   vocabularyBank.push(...window.__LEXICON_LARGE_VOCABULARY__);
 }
 
-const speakingMockBank = {
+const generatedSpeakingMockBank = window.__LEXICON_SPEAKING_BANK__ || { part1: [], part2: [], part3: [] };
+
+function mergeSpeakingPromptBanks(baseBank, extraBank) {
+  return SPEAKING_PART_ORDER.reduce((accumulator, part) => {
+    const seen = new Set();
+    const merged = [...(baseBank[part] || []), ...(extraBank[part] || [])].filter((prompt) => {
+      if (!prompt?.id || seen.has(prompt.id)) {
+        return false;
+      }
+      seen.add(prompt.id);
+      return true;
+    });
+    accumulator[part] = merged;
+    return accumulator;
+  }, {});
+}
+
+const speakingMockBank = mergeSpeakingPromptBanks({
   part1: [
     {
       id: "part1-home",
@@ -1640,7 +1657,7 @@ const speakingMockBank = {
       angles: ["趋势判断", "原因分析", "解决方案", "社会影响"],
     },
   ],
-};
+}, generatedSpeakingMockBank);
 
 const writingPromptBank = {
   task1: [
