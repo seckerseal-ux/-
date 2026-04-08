@@ -47,6 +47,7 @@ jobs:
           cp index.html dist/index.html
           cp app.js dist/app.js
           cp styles.css dist/styles.css
+          cp speaking-bank-generated.js dist/speaking-bank-generated.js
           cp vocabulary-generated.js dist/vocabulary-generated.js
           cp .nojekyll dist/.nojekyll
           cat > dist/site-config.js <<EOF
