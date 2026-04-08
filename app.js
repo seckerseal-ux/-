@@ -4081,6 +4081,9 @@ function renderSpellingCard() {
 }
 
 function renderWordBank() {
+  if (!elements.bankCategory || !elements.bankKind || !elements.bankSearch || !elements.bankGrid) {
+    return;
+  }
   const category = elements.bankCategory.value;
   const kind = elements.bankKind.value;
   const keyword = elements.bankSearch.value.trim().toLowerCase();
@@ -7379,9 +7382,11 @@ function bindEvents() {
 
   elements.studyStart.addEventListener("click", startStudySession);
   elements.spellingStart.addEventListener("click", startSpellingSession);
-  elements.bankCategory.addEventListener("change", renderWordBank);
-  elements.bankKind.addEventListener("change", renderWordBank);
-  elements.bankSearch.addEventListener("input", renderWordBank);
+  if (elements.bankCategory && elements.bankKind && elements.bankSearch) {
+    elements.bankCategory.addEventListener("change", renderWordBank);
+    elements.bankKind.addEventListener("change", renderWordBank);
+    elements.bankSearch.addEventListener("input", renderWordBank);
+  }
   elements.dailyLimit.addEventListener("change", updateSettings);
   elements.reviewScheme.addEventListener("change", updateSettings);
   elements.preferredFocus.addEventListener("change", updateSettings);

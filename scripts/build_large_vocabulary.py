@@ -6,12 +6,20 @@ import re
 from pathlib import Path
 from urllib.request import urlopen
 
+try:
+    from pypdf import PdfReader
+except Exception:
+    PdfReader = None
+
 ROOT = Path(__file__).resolve().parents[1]
 APP_JS = ROOT / "app.js"
 CACHE_DIR = ROOT / ".cache"
 SOURCE_PATH = CACHE_DIR / "ecdict.csv"
 OUTPUT_PATH = ROOT / "vocabulary-generated.js"
 SOURCE_URL = "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv"
+PDF_SOURCE_PATHS = [
+    Path.home() / "Downloads" / "雅思一万词汇班(1).pdf",
+]
 
 TARGET_QUOTAS = {
     "listening": 1050,
@@ -105,6 +113,271 @@ POS_LABELS = {
     "r": "adv. 副词",
 }
 
+PDF_PRIORITY_SCALE = 3
+
+PDF_THEME_CATEGORY_BOOSTS = {
+    "scientific research": {"reading": 6, "writing": 4, "listening": 3},
+    "scientific processes": {"reading": 6, "writing": 4, "listening": 3},
+    "substances&qualities": {"reading": 5, "writing": 4, "listening": 2},
+    "the environment": {"reading": 6, "writing": 5, "listening": 3, "speaking": 2},
+    "chemistry": {"reading": 5, "writing": 3, "listening": 2},
+    "physics": {"reading": 5, "writing": 3, "listening": 2},
+    "applied sciences": {"reading": 5, "writing": 4, "listening": 3},
+    "biology & medicine": {"reading": 6, "writing": 4, "listening": 3},
+    "biological processes& research": {"reading": 6, "writing": 4, "listening": 3},
+    "plants& animals": {"reading": 5, "writing": 3, "listening": 2, "speaking": 2},
+    "health": {"reading": 5, "writing": 5, "listening": 3, "speaking": 2},
+    "physical geography": {"reading": 5, "writing": 4, "listening": 2, "speaking": 2},
+    "sociology": {"writing": 6, "reading": 5, "speaking": 3},
+    "business": {"writing": 6, "reading": 4, "speaking": 2, "listening": 2},
+    "law": {"writing": 6, "reading": 4, "speaking": 2},
+    "art": {"speaking": 4, "reading": 4, "writing": 3},
+    "history": {"reading": 5, "writing": 4, "speaking": 3},
+    "actions& processes": {"writing": 5, "speaking": 3, "reading": 3},
+    "size&amount": {"writing": 5, "speaking": 4, "reading": 3},
+    "opinion，uncertainty & probability": {"writing": 7, "speaking": 5, "reading": 3},
+    "linking words": {"writing": 8, "speaking": 3, "reading": 2},
+    "research methods": {"reading": 7, "writing": 5, "listening": 2},
+}
+
+PDF_MANUAL_PRIORITY = {
+    "allocate": {"writing": 7, "reading": 3},
+    "consensus": {"writing": 6, "speaking": 4, "reading": 3},
+    "cumulative": {"reading": 5, "writing": 5},
+    "empirical": {"reading": 6, "writing": 5},
+    "fieldwork": {"reading": 7, "writing": 5},
+    "meticulous": {"writing": 4, "speaking": 3},
+    "myriad": {"writing": 4, "speaking": 3, "reading": 3},
+    "nominal": {"reading": 5, "writing": 5},
+    "parameter": {"reading": 7, "writing": 5},
+    "pragmatic": {"writing": 6, "speaking": 5},
+    "protocol": {"reading": 6, "writing": 4, "listening": 3},
+    "salient": {"reading": 6, "writing": 6},
+    "stance": {"writing": 6, "speaking": 5},
+    "superfluous": {"writing": 5, "reading": 4},
+}
+
+BLOCKED_TERMS = {
+    "ammunition",
+    "artillery",
+    "bomber",
+    "cannon",
+    "grenade",
+    "missile",
+    "mortar",
+    "obituary",
+    "obsequies",
+    "rifle",
+    "supremacist",
+    "supremacism",
+    "sycophant",
+    "torpedo",
+    "truculent",
+    "warhead",
+    "wanton",
+    "weapon",
+}
+
+BLOCKED_CN_SNIPPETS = {
+    "火炮",
+    "炮兵",
+    "鱼雷",
+    "弹药",
+    "武器",
+    "导弹",
+    "手榴弹",
+    "迫击炮",
+    "葬礼",
+    "讣告",
+    "种族优越主义",
+    "阿谀奉承者",
+    "爱吵架的",
+    "淫荡的",
+}
+
+BLOCKED_EN_SNIPPETS = {
+    "ammunition",
+    "artillery",
+    "funeral",
+    "grenade",
+    "missile",
+    "mortar",
+    "obituary",
+    "rifle",
+    "supremacist",
+    "sycophant",
+    "torpedo",
+    "truculent",
+    "warhead",
+    "wanton",
+    "weapon",
+}
+
+TERM_OVERRIDES = {
+    "adolescent": {
+        "category": "writing",
+        "translation": "青少年的；青少年",
+        "example": "Adolescent mental health has become a major public concern in many cities.",
+        "note": "教育、家庭和青少年发展类写作高频。",
+    },
+    "aesthetic": {
+        "category": "speaking",
+        "translation": "审美的；美观的",
+        "example": "Many people value the aesthetic appeal of historic buildings in their city.",
+        "note": "建筑、设计和艺术审美类口语常用。",
+    },
+    "aesthetics": {
+        "category": "speaking",
+        "translation": "美学；审美风格",
+        "example": "The cafe combines traditional details with modern aesthetics.",
+        "note": "设计、建筑和艺术品味类口语常用。",
+    },
+    "aforementioned": {
+        "category": "writing",
+        "translation": "上述的；前文提到的",
+        "example": "The aforementioned measures would help reduce pressure on public hospitals.",
+        "note": "承接前文观点和举措时的正式写作连接词。",
+    },
+    "assertion": {
+        "category": "writing",
+        "translation": "断言；主张",
+        "example": "The essay challenges the assertion that technology can solve every educational problem.",
+        "note": "评价观点、反驳论断类写作高频。",
+    },
+    "collaborate": {
+        "category": "reading",
+        "translation": "合作；协作",
+        "example": "Universities often collaborate with local businesses on research projects.",
+        "note": "科研合作、项目协作和研究方法类阅读高频。",
+    },
+    "collaboration": {
+        "category": "reading",
+        "translation": "合作；协作",
+        "example": "The article highlights collaboration between scientists from different countries.",
+        "note": "科研合作和跨机构项目类阅读高频。",
+    },
+    "collate": {
+        "category": "reading",
+        "translation": "整理比对；汇编",
+        "example": "The researchers collated the survey data before analysing the results.",
+        "note": "数据整理、研究步骤和实验流程类阅读高频。",
+    },
+    "contention": {
+        "category": "writing",
+        "translation": "论点；争论",
+        "example": "My main contention is that cities need better public transport rather than more roads.",
+        "note": "提出中心论点、展开争议话题类写作高频。",
+    },
+    "census": {
+        "category": "writing",
+        "translation": "人口普查；统计调查",
+        "example": "A regular census helps governments plan schools, transport, and healthcare more effectively.",
+        "note": "人口结构、公共服务和社会规划类写作高频。",
+    },
+    "curator": {
+        "category": "speaking",
+        "translation": "策展人；馆长",
+        "example": "The curator explained why the exhibition was arranged around a single theme.",
+        "note": "博物馆、展览和艺术话题口语常用。",
+    },
+    "demography": {
+        "category": "reading",
+        "translation": "人口统计学；人口结构研究",
+        "example": "The passage links demography to changing household size and migration patterns.",
+        "note": "社会结构、人口变化和统计研究类阅读高频。",
+    },
+    "discourse": {
+        "category": "writing",
+        "translation": "论述；话语体系",
+        "example": "Public discourse on education has shifted towards equal access and quality.",
+        "note": "社会讨论、公共议题和正式论述类写作常用。",
+    },
+    "discretion": {
+        "category": "writing",
+        "translation": "自主决定权；谨慎",
+        "example": "Teachers should have some discretion in how they adapt lessons to different classes.",
+        "note": "规则执行、权责分配和制度设计类写作常用。",
+    },
+    "ecosystem": {
+        "category": "reading",
+        "translation": "生态系统",
+        "example": "Protecting one ecosystem can also benefit nearby farmland and water sources.",
+        "note": "环境、生态平衡和生物多样性类阅读高频。",
+    },
+    "empirical": {
+        "category": "writing",
+        "translation": "以实证为基础的；经验性的",
+        "example": "The conclusion should be supported by empirical evidence rather than personal opinion.",
+        "note": "论证证据、研究依据和学术写作类高频。",
+    },
+    "fieldwork": {
+        "category": "reading",
+        "translation": "实地调查；田野调查",
+        "example": "The researchers carried out fieldwork in three rural communities.",
+        "note": "研究方法、田野调查和实证研究类阅读高频。",
+    },
+    "gauge": {
+        "category": "listening",
+        "translation": "测量仪器；衡量标准",
+        "example": "In the lecture, the professor used a simple gauge to measure changes in air pressure.",
+        "note": "实验仪器、测量过程和学术讲座类听力常见。",
+    },
+    "figurative": {
+        "category": "speaking",
+        "translation": "比喻性的；形象化的",
+        "example": "The poem uses figurative language to express uncertainty and loss.",
+        "note": "艺术、文学和表达方式类口语常用。",
+    },
+    "metaphor": {
+        "category": "reading",
+        "translation": "隐喻；比喻说法",
+        "example": "The passage explains how the writer uses metaphor to describe social change.",
+        "note": "文学、修辞和文化类阅读常见表达。",
+    },
+    "nonetheless": {
+        "category": "writing",
+        "translation": "尽管如此；不过",
+        "example": "The plan is expensive; nonetheless, many residents still support it.",
+        "note": "让步转折和衔接论证类写作高频连接词。",
+    },
+    "parameter": {
+        "category": "reading",
+        "translation": "参数；界限",
+        "example": "Cost is only one parameter when governments evaluate public projects.",
+        "note": "数据分析、变量控制和研究方法类阅读高频。",
+    },
+    "pragmatic": {
+        "category": "writing",
+        "translation": "务实的；实际的",
+        "example": "A pragmatic solution would be to improve buses before expanding the underground network.",
+        "note": "提出实际可行方案时的写作高频词。",
+    },
+    "protocol": {
+        "category": "reading",
+        "translation": "协议；规程",
+        "example": "The lab followed a strict protocol to ensure the results were reliable.",
+        "note": "实验流程、技术规范和研究步骤类阅读高频。",
+    },
+    "salient": {
+        "category": "writing",
+        "translation": "显著的；突出的",
+        "example": "One salient problem is the widening gap between urban and rural schools.",
+        "note": "概括关键问题、突出核心特征类写作高频。",
+    },
+    "ritual": {
+        "category": "speaking",
+        "translation": "仪式；传统惯例",
+        "example": "In my hometown, family meals during festivals have become a small ritual for us.",
+        "note": "节日、传统和文化习惯类口语常用。",
+    },
+    "stance": {
+        "category": "writing",
+        "translation": "立场；态度",
+        "example": "My stance is that public money should be spent on essential services first.",
+        "note": "表达立场、评价争议话题类写作高频。",
+    },
+}
+
 SCENE_PRESETS = {
     "listening": [
         {
@@ -118,6 +391,19 @@ SCENE_PRESETS = {
                 "v": 'At the student office, "{term}" may appear when staff explain what students need to do before registration is complete.',
                 "a": 'At the student office, "{term}" can describe a rule, a requirement, or an arrangement students need to pay attention to.',
                 "r": 'At the student office, "{term}" can show how students are expected to respond or complete a task.',
+            },
+        },
+        {
+            "label": "学术讲座",
+            "tags": ["学术听力", "讲座笔记"],
+            "note": "学术讲座、实验介绍和科研说明场景高频。",
+            "keywords_cn": "研究 实验 数据 图表 讲座 教授 方法 样本 结果 理论 模型 过程 学术 科研 变量".split(),
+            "keywords_en": "research experiment data chart lecture professor method sample result theory model process academic variable laboratory protocol parameter fieldwork".split(),
+            "examples": {
+                "n": 'In a lecture, "{term}" often refers to a concept, a stage, or a piece of evidence students need to note down.',
+                "v": 'In a lecture, "{term}" may appear when a professor explains how a study is carried out or how results are interpreted.',
+                "a": 'In a lecture, "{term}" can describe a method, a result, or a research feature in a more precise way.',
+                "r": 'In a lecture, "{term}" often shows how clearly or how strongly a change is explained.',
             },
         },
         {
@@ -187,6 +473,19 @@ SCENE_PRESETS = {
                 "r": 'In a history or society passage, "{term}" often shows the degree or pace of a social change.',
             },
         },
+        {
+            "label": "艺术人文",
+            "tags": ["文化艺术", "人文阅读"],
+            "note": "艺术、展览和文化现象类阅读高频。",
+            "keywords_cn": "艺术 审美 展览 博物馆 诗歌 文学 设计 电影 绘画 隐喻 文化".split(),
+            "keywords_en": "art aesthetic exhibition museum poetry literature design film painting metaphor curator imagery genre culture".split(),
+            "examples": {
+                "n": 'In an arts or culture passage, "{term}" often refers to a concept, a feature, or a role the writer wants to explain.',
+                "v": 'In an arts or culture passage, "{term}" may be used to describe how an artist, writer, or curator presents an idea.',
+                "a": 'In an arts or culture passage, "{term}" can describe style, meaning, or visual effect more precisely.',
+                "r": 'In an arts or culture passage, "{term}" often shows how strongly an effect is created or interpreted.',
+            },
+        },
     ],
     "writing": [
         {
@@ -254,6 +553,19 @@ SCENE_PRESETS = {
                 "v": 'In Part 2, "{term}" is handy when you explain what you did during a trip or how you explored a place.',
                 "a": 'In Part 1 or Part 2, "{term}" can describe a place, a journey, or the atmosphere of an area more vividly.',
                 "r": 'In Part 1 or Part 2, "{term}" can show how often or how comfortably you travel or spend time somewhere.',
+            },
+        },
+        {
+            "label": "文化艺术",
+            "tags": ["艺术话题", "文化表达"],
+            "note": "艺术、展览和审美体验类口语常用。",
+            "keywords_cn": "艺术 审美 设计 展览 博物馆 电影 建筑 绘画 文学 音乐 文化".split(),
+            "keywords_en": "art aesthetic design exhibition museum film architecture painting literature music culture curator metaphor imagery".split(),
+            "examples": {
+                "n": 'In Part 2 or Part 3, "{term}" is useful when you talk about a museum, a design style, or an artistic experience.',
+                "v": 'In Part 2 or Part 3, "{term}" can help you explain how a film, a building, or an exhibition affected you.',
+                "a": 'In Part 2 or Part 3, "{term}" can describe the style, atmosphere, or visual appeal of something more vividly.',
+                "r": 'In Part 2 or Part 3, "{term}" can show how strongly you reacted to a cultural experience.',
             },
         },
         {
@@ -407,6 +719,84 @@ ABSTRACT_SUFFIXES = ("tion", "sion", "ment", "ity", "ance", "ence", "ism", "ist"
 FORMAL_SUFFIXES = ("ive", "ous", "able", "ible", "al", "ary", "ory", "ate", "ify")
 
 
+def normalize_pdf_text(text):
+    return (
+        (text or "")
+        .replace("ﬁ", "fi")
+        .replace("ﬂ", "fl")
+        .replace("’", "'")
+        .replace("“", '"')
+        .replace("”", '"')
+        .replace("–", "-")
+        .replace("—", "-")
+        .replace("\u3000", " ")
+    )
+
+
+def detect_pdf_theme(page_text):
+    lowered = normalize_pdf_text(page_text).lower()
+    for theme in sorted(PDF_THEME_CATEGORY_BOOSTS, key=len, reverse=True):
+        if theme in lowered:
+            return theme
+    return None
+
+
+def extract_pdf_headwords(page_text):
+    words = set()
+    for raw_line in normalize_pdf_text(page_text).splitlines():
+        line = re.sub(r"\s+", " ", raw_line).strip()
+        if not line or not line[0].isascii() or not line[0].isalpha():
+            continue
+        lowered = line.lower()
+        if lowered.startswith("word clusters") or lowered.startswith("the most difficult words in ielts"):
+            continue
+        match = re.match(r"^([A-Za-z][A-Za-z-]{2,24})(?=\s*(?:\||\[|\(|n\.|vt\.|vi\.|v\.|a\.|adj\.|adv\.|uc|cn|$))", line)
+        if not match:
+            continue
+        word = match.group(1).lower()
+        if not word.isalpha() or word in STOP_WORDS:
+            continue
+        words.add(word)
+    return words
+
+
+def load_pdf_priority_terms():
+    priority = {}
+    if PdfReader is None:
+        return priority
+
+    for source_path in PDF_SOURCE_PATHS:
+        if not source_path.exists():
+            continue
+        reader = PdfReader(str(source_path))
+        for page in reader.pages:
+            text = normalize_pdf_text(page.extract_text() or "")
+            theme = detect_pdf_theme(text)
+            boosts = PDF_THEME_CATEGORY_BOOSTS.get(theme)
+            if not boosts:
+                continue
+            for word in extract_pdf_headwords(text):
+                bucket = priority.setdefault(word, {category: 0 for category in TARGET_QUOTAS})
+                for category, weight in boosts.items():
+                    bucket[category] += weight
+
+    for word, boosts in PDF_MANUAL_PRIORITY.items():
+        bucket = priority.setdefault(word, {category: 0 for category in TARGET_QUOTAS})
+        for category, weight in boosts.items():
+            bucket[category] += weight
+    return priority
+
+
+def is_blocked_term(word, translation="", definition=""):
+    lowered_word = (word or "").lower()
+    if lowered_word in BLOCKED_TERMS:
+        return True
+
+    bag_cn = f"{translation}".lower()
+    bag_en = f"{definition} {word}".lower()
+    return any(snippet in bag_cn for snippet in BLOCKED_CN_SNIPPETS) or any(snippet in bag_en for snippet in BLOCKED_EN_SNIPPETS)
+
+
 def ensure_source():
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     if SOURCE_PATH.exists() and SOURCE_PATH.stat().st_size > 10_000_000:
@@ -479,7 +869,7 @@ def common_bonus(rank):
     return max(0.0, 7 - math.log10(rank + 10) * 1.8)
 
 
-def build_candidate_rows(source_path, existing_terms):
+def build_candidate_rows(source_path, existing_terms, pdf_priority_terms):
     rows = []
     lemmas = set()
     with source_path.open(encoding="utf-8", errors="replace") as handle:
@@ -490,9 +880,11 @@ def build_candidate_rows(source_path, existing_terms):
                 continue
             if word in existing_terms or word in STOP_WORDS:
                 continue
+            if is_blocked_term(word, row.get("translation") or "", row.get("definition") or ""):
+                continue
 
             tags = set((row.get("tag") or "").lower().split())
-            if not (tags & CORE_TAGS):
+            if not (tags & CORE_TAGS or word in pdf_priority_terms):
                 continue
 
             translation = normalize_translation(row.get("translation"))
@@ -501,7 +893,7 @@ def build_candidate_rows(source_path, existing_terms):
 
             frq = int(row.get("frq") or 0)
             bnc = int(row.get("bnc") or 0)
-            if not (frq or bnc or "ielts" in tags or "toefl" in tags):
+            if not (frq or bnc or "ielts" in tags or "toefl" in tags or word in pdf_priority_terms):
                 continue
 
             lemma = lemma_of(row.get("exchange") or "", word)
@@ -524,13 +916,16 @@ def build_candidate_rows(source_path, existing_terms):
     return [row for row in rows if not (row["lemma"] != row["word"] and row["lemma"] in lemmas)]
 
 
-def score_candidate(row):
+def score_candidate(row, pdf_priority):
     word = row["word"]
     tags = row["tags"]
     rank = row["frq"] or row["bnc"] or 50_000
     bonus = common_bonus(rank)
     bag_cn = f'{row["translation"]} {row["definition"]}'.lower()
     bag_en = f'{row["definition"]} {word}'.lower()
+    pdf_boosts = pdf_priority.get(word, {})
+    override = TERM_OVERRIDES.get(word, {})
+    override_category = override.get("category")
 
     topic_hits = {
         category: sum(1 for kw in CN_KEYWORDS[category] if kw in bag_cn)
@@ -544,6 +939,13 @@ def score_candidate(row):
     scores["reading"] = topic_hits["reading"] * 8 + (3 if tags & {"ielts", "toefl"} else 0) + (2 if row["pos"] in {"n", "a"} else 0) + (2 if word.endswith(ABSTRACT_SUFFIXES) else 0)
     scores["writing"] = topic_hits["writing"] * 8 + (3 if tags & {"ielts", "toefl"} else 0) + (2 if row["pos"] in {"n", "a"} else 0) + (2 if word.endswith(ABSTRACT_SUFFIXES + FORMAL_SUFFIXES) else 0)
 
+    for category in TARGET_QUOTAS:
+        scores[category] += pdf_boosts.get(category, 0) * PDF_PRIORITY_SCALE
+
+    if override_category:
+        for category in TARGET_QUOTAS:
+            scores[category] += 60 if category == override_category else -4
+
     if max(topic_hits.values()) == 0:
         if row["pos"] == "v":
             scores["listening"] += 1.5
@@ -556,13 +958,16 @@ def score_candidate(row):
             scores["writing"] += 1.5
 
     category_eligible = {
-        "listening": topic_hits["listening"] > 0 or (tags & {"cet4", "cet6"} and bonus >= 1.2 and row["pos"] in {"n", "v", "a"}),
-        "speaking": topic_hits["speaking"] > 0 or (tags & {"cet4", "cet6"} and bonus >= 1.2 and row["pos"] in {"n", "v", "a", "r"}),
-        "reading": topic_hits["reading"] > 0 or (tags & {"ielts", "toefl"} and (word.endswith(ABSTRACT_SUFFIXES) or row["pos"] in {"n", "a"})),
-        "writing": topic_hits["writing"] > 0 or ((tags & {"ielts", "toefl", "cet6"}) and (word.endswith(ABSTRACT_SUFFIXES + FORMAL_SUFFIXES) or row["pos"] in {"n", "a"})),
+        "listening": topic_hits["listening"] > 0 or pdf_boosts.get("listening", 0) >= 2 or (tags & {"cet4", "cet6"} and bonus >= 1.2 and row["pos"] in {"n", "v", "a"}),
+        "speaking": topic_hits["speaking"] > 0 or pdf_boosts.get("speaking", 0) >= 2 or (tags & {"cet4", "cet6"} and bonus >= 1.2 and row["pos"] in {"n", "v", "a", "r"}),
+        "reading": topic_hits["reading"] > 0 or pdf_boosts.get("reading", 0) >= 2 or (tags & {"ielts", "toefl"} and (word.endswith(ABSTRACT_SUFFIXES) or row["pos"] in {"n", "a"})),
+        "writing": topic_hits["writing"] > 0 or pdf_boosts.get("writing", 0) >= 2 or ((tags & {"ielts", "toefl", "cet6"}) and (word.endswith(ABSTRACT_SUFFIXES + FORMAL_SUFFIXES) or row["pos"] in {"n", "a"})),
     }
 
-    base = (5 if "ielts" in tags else 0) + (4 if "toefl" in tags else 0) + (3 if "cet6" in tags else 0) + (2 if "cet4" in tags else 0) + bonus
+    if override_category:
+        category_eligible = {category: category == override_category for category in TARGET_QUOTAS}
+
+    base = (5 if "ielts" in tags else 0) + (4 if "toefl" in tags else 0) + (3 if "cet6" in tags else 0) + (2 if "cet4" in tags else 0) + bonus + sum(pdf_boosts.values()) * 0.5 + (20 if override_category else 0)
 
     return {
         **row,
@@ -577,19 +982,38 @@ def select_candidates(candidates):
     selected = {category: [] for category in TARGET_QUOTAS}
     used_words = set()
 
-    # Reserve category-specific words first so the labels stay meaningful.
-    for category in ["listening", "speaking", "writing", "reading"]:
-        ranked = sorted(
-            (candidate for candidate in candidates if candidate["eligible"][category]),
-            key=lambda item: (-item["scores"][category], -item["base"], item["rank"], item["word"]),
+    preferred_order = ["writing", "reading", "speaking", "listening"]
+
+    def preferred_category(candidate):
+        eligible = [category for category in preferred_order if candidate["eligible"][category]]
+        if not eligible:
+            return None
+        return max(
+            eligible,
+            key=lambda category: (
+                candidate["scores"][category],
+                -preferred_order.index(category),
+            ),
         )
-        for candidate in ranked:
-            if candidate["word"] in used_words:
-                continue
-            selected[category].append(candidate)
-            used_words.add(candidate["word"])
-            if len(selected[category]) >= TARGET_QUOTAS[category]:
-                break
+
+    primary_ranked = sorted(
+        [item for item in candidates if any(item["eligible"].values())],
+        key=lambda item: (
+            -max(item["scores"][category] for category in TARGET_QUOTAS if item["eligible"][category]),
+            -item["base"],
+            item["rank"],
+            item["word"],
+        ),
+    )
+
+    for candidate in primary_ranked:
+        if candidate["word"] in used_words:
+            continue
+        category = preferred_category(candidate)
+        if not category or len(selected[category]) >= TARGET_QUOTAS[category]:
+            continue
+        selected[category].append(candidate)
+        used_words.add(candidate["word"])
 
     if all(len(selected[category]) >= TARGET_QUOTAS[category] for category in TARGET_QUOTAS):
         return selected
@@ -599,7 +1023,7 @@ def select_candidates(candidates):
         key=lambda item: (-max(item["scores"].values()), -item["base"], item["rank"], item["word"]),
     )
 
-    for category in TARGET_QUOTAS:
+    for category in preferred_order:
         for candidate in fallback:
             if len(selected[category]) >= TARGET_QUOTAS[category]:
                 break
@@ -743,6 +1167,40 @@ SCENE_SENTENCE_LIBRARY = {
         "adverb": [
             "The form should be completed {term} and returned today.",
             "Students were advised to check the timetable {term} before the course started.",
+        ],
+    },
+    "学术讲座": {
+        "noun": {
+            "research": [
+                "The lecturer introduced the {term} before comparing the two studies.",
+                "Students were asked to note the {term} in the final part of the lecture.",
+            ],
+            "abstract": [
+                "The professor gave a clear {term} of the method used in the experiment.",
+                "The lecture returned to the {term} when the results were explained.",
+            ],
+            "general": [
+                "The lecturer mentioned the {term} while describing the research process.",
+                "Students wrote down the {term} as soon as it appeared on the slide.",
+            ],
+        },
+        "verb": {
+            "research": [
+                "The professor used the chart to {term} the difference between the two groups.",
+                "The lecture explained how researchers {term} the results over time.",
+            ],
+            "general": [
+                "The lecturer tried to {term} the main idea with a simple example.",
+                "Students need to {term} the evidence carefully before answering the question.",
+            ],
+        },
+        "adjective": [
+            "The speaker described the method as {term} enough for a large-scale study.",
+            "It was a {term} feature of the experiment, so students were told to underline it.",
+        ],
+        "adverb": [
+            "The process was explained {term} in the second half of the lecture.",
+            "The data were presented {term}, which made the trend easy to follow.",
         ],
     },
     "出行预约": {
@@ -963,6 +1421,28 @@ SCENE_SENTENCE_LIBRARY = {
         "adverb": [
             "The custom spread {term} across the region.",
             "The two groups responded {term} to the same historical pressure.",
+        ],
+    },
+    "艺术人文": {
+        "noun": {
+            "general": [
+                "The passage uses {term} to explain how meaning is created in the artwork.",
+                "The writer presents {term} as a key feature of the exhibition.",
+            ],
+        },
+        "verb": {
+            "general": [
+                "The article explains how artists {term} familiar objects in unexpected ways.",
+                "The writer uses one example to {term} the cultural meaning of the painting.",
+            ],
+        },
+        "adjective": [
+            "The passage describes a {term} contrast between modern and traditional styles.",
+            "It was a {term} feature of the exhibition and appeared in several rooms.",
+        ],
+        "adverb": [
+            "The museum text explains the idea {term} through a series of examples.",
+            "The review describes the performance {term} without overexplaining it.",
         ],
     },
     "政府政策": {
@@ -1201,6 +1681,28 @@ SCENE_SENTENCE_LIBRARY = {
             "The town has grown {term} over the last decade.",
         ],
     },
+    "文化艺术": {
+        "noun": {
+            "general": [
+                "The exhibition made me think more deeply about the {term} behind the artist's work.",
+                "One reason I enjoyed the museum was the {term} of the whole space.",
+            ],
+        },
+        "verb": {
+            "general": [
+                "The exhibition helped me {term} the artist's idea much more clearly.",
+                "That visit made me {term} local culture in a more personal way.",
+            ],
+        },
+        "adjective": [
+            "The building looked really {term}, especially when the lights came on in the evening.",
+            "It was a {term} experience because every room had a different style.",
+        ],
+        "adverb": [
+            "The guide described the paintings {term}, so the whole tour felt more engaging.",
+            "I reacted {term} because I had never seen that style before.",
+        ],
+    },
     "习惯观点": {
         "noun": {
             "emotion": [
@@ -1308,18 +1810,24 @@ def build_scene_example(category, candidate, scene):
 
 
 def build_entry(category, candidate):
-    scene = pick_scene(category, candidate)
-    tags = [CATEGORY_CN_LABELS[category], *scene["tags"], "高频扩展"]
+    override = TERM_OVERRIDES.get(candidate["word"], {})
+    effective_category = override.get("category", category)
+    candidate_context = {
+        **candidate,
+        "translation": override.get("translation", candidate["translation"]),
+    }
+    scene = pick_scene(effective_category, candidate_context)
+    tags = [CATEGORY_CN_LABELS[effective_category], *scene["tags"], "高频扩展"]
     return {
-        "id": f'bulk-{category}-{candidate["word"]}',
-        "category": category,
+        "id": f'bulk-{effective_category}-{candidate["word"]}',
+        "category": effective_category,
         "kind": "word",
         "term": candidate["word"],
         "phonetic": candidate["phonetic"],
         "partOfSpeech": format_part_of_speech(candidate["pos"]),
-        "translation": candidate["translation"],
-        "note": scene["note"],
-        "example": build_scene_example(category, candidate, scene),
+        "translation": candidate_context["translation"],
+        "note": override.get("note", scene["note"]),
+        "example": override.get("example", build_scene_example(effective_category, candidate_context, scene)),
         "tags": tags,
     }
 
@@ -1327,8 +1835,9 @@ def build_entry(category, candidate):
 def main():
     source_path = ensure_source()
     existing_terms = parse_existing_terms()
-    raw_candidates = build_candidate_rows(source_path, existing_terms)
-    scored_candidates = [score_candidate(candidate) for candidate in raw_candidates]
+    pdf_priority = load_pdf_priority_terms()
+    raw_candidates = build_candidate_rows(source_path, existing_terms, set(pdf_priority))
+    scored_candidates = [score_candidate(candidate, pdf_priority) for candidate in raw_candidates]
     selected = select_candidates(scored_candidates)
 
     entries = []
@@ -1346,6 +1855,7 @@ def main():
 
     total = sum(counts.values())
     print(f"Generated {total} new word entries -> {OUTPUT_PATH}")
+    print(f"  pdf-priority terms: {len(pdf_priority)}")
     for category, count in counts.items():
         print(f"  {category}: {count}")
 
