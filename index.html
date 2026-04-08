@@ -29,6 +29,12 @@
             <button class="button button--primary" data-scroll-target="study-arena" type="button">开始今日任务</button>
             <button class="button button--ghost" data-scroll-target="settings" type="button">调整计划</button>
           </div>
+          <div class="hero__quick-nav">
+            <button class="button button--chip" data-scroll-target="today" type="button">先看今日计划</button>
+            <button class="button button--chip" data-scroll-target="study-arena" type="button">去背单词</button>
+            <button class="button button--chip" data-scroll-target="speaking-mock" type="button">练口语</button>
+            <button class="button button--chip" data-scroll-target="review" type="button">看复习安排</button>
+          </div>
         </div>
         <aside class="hero__stats">
           <article class="stat-card stat-card--accent">
@@ -56,7 +62,7 @@
             <p class="eyebrow">今日计划</p>
             <h2>先复习，再开新词，再做拼写巩固</h2>
           </div>
-          <p class="section-head__hint" id="plan-summary">系统会优先安排到期复习，再按你的每日上限补入新词。</p>
+          <p class="section-head__hint" id="plan-summary">今天先把该回看的词稳住，再按你的节奏补一点新词，压力会小很多。</p>
         </div>
         <div class="metric-grid">
           <article class="metric-card metric-card--accent">
@@ -137,7 +143,7 @@
             <div class="session-strip">
               <span class="chip" id="study-queue-size">0 张卡片</span>
               <span class="chip" id="study-queue-meta">优先显示今日到期内容</span>
-              <span class="chip chip--info" id="pronunciation-status">发音状态：待命。点发音后，这里会提示是在线播放、系统朗读，还是浏览器/网络拦截。</span>
+              <span class="chip chip--info" id="pronunciation-status">发音提示：准备好了。点一下小喇叭，这里会告诉你现在走的是在线发音、系统朗读，还是被浏览器拦住了。</span>
             </div>
             <div class="study-card" id="study-card"></div>
           </section>
@@ -148,7 +154,7 @@
                 <p class="eyebrow">拼写训练</p>
                 <h2>把会认变成会默写</h2>
               </div>
-              <p class="section-head__hint">建议在普通背诵后做一轮拼写，尤其适合听力、写作和口语词块。</p>
+              <p class="section-head__hint">如果想把“眼熟”真的变成“会写”，背完马上接一轮拼写最有效。</p>
             </div>
             <div class="toolbar">
               <label>
@@ -211,8 +217,8 @@
               <article class="mock-card" id="speaking-prompt-card"></article>
               <article class="mock-card mock-card--upload">
                 <div class="badge-row">
-                  <span class="badge" id="ai-status-chip">AI 状态检测中</span>
-                  <span class="badge" id="ai-model-meta">需要通过本地代理服务连接 OpenAI 或 OpenRouter</span>
+                  <span class="badge" id="ai-status-chip">批改连接检测中</span>
+                  <span class="badge" id="ai-model-meta">连上后就能直接做转写、评分和逐条反馈</span>
                 </div>
                 <label class="upload-field">
                   上传录音文件（最多 4 个）
@@ -232,11 +238,11 @@
                 </label>
                 <div class="inline-actions">
                   <button class="button button--ghost" id="speaking-analyze-local" type="button">本地分析</button>
-                  <button class="button button--primary" id="speaking-analyze-ai" type="button">AI 深度批改</button>
+                  <button class="button button--primary" id="speaking-analyze-ai" type="button">开始深度批改</button>
                   <button class="button button--subtle" id="speaking-reset-mock" type="button">重新开始模考</button>
                 </div>
                 <p class="micro-copy">
-                  全真三段模考会在每次提交后先生成当前段的 AI 转写、四项评分分析和素材建议，再自动推进到下一段；第三段结束后会汇总整轮总评。API Key 不会放在浏览器里，而是通过本地代理服务安全转发；离线页与本地代理页也会优先同步同一份学习进度。
+                  做整轮模考时，每提交一段都会先拿到这段的转写、四项评分和下一步建议，然后再自动切到下一部分。第三段结束后，会把整轮表现一起收成一份总复盘。
                 </p>
               </article>
             </div>
@@ -247,9 +253,9 @@
             <div class="section-head">
               <div>
                 <p class="eyebrow">口语提分轨迹</p>
-                <h2>把每次 AI 批改沉淀成长期复盘档案</h2>
+                <h2>把每次口语练习慢慢攒成自己的提分轨迹</h2>
               </div>
-              <p class="section-head__hint">这里会自动汇总最近的 AI 模考记录、高频语法问题，以及你当前最需要补的维度。</p>
+              <p class="section-head__hint">这里会帮你慢慢看出重复犯的毛病、最近的状态波动，以及眼下最该补的那一项。</p>
             </div>
             <div class="metric-grid" id="speaking-metrics"></div>
             <div class="speaking-progress-grid">
@@ -334,10 +340,10 @@
                   <p class="eyebrow eyebrow--compact">云端同步</p>
                   <h3>登录后跨设备接力</h3>
                 </div>
-                <span class="chip chip--info" id="cloud-sync-status">云端同步：未登录</span>
+                <span class="chip chip--info" id="cloud-sync-status">进度同步：未登录</span>
               </div>
               <p class="cloud-sync__meta" id="cloud-sync-meta">
-                登录同一个同步账号后，所有连到同一云端接口的入口都能共用同一份学习进度。
+                登录同一个账号后，不管你从哪个入口打开，学习进度都能尽量接着往下走。
               </p>
               <form class="cloud-sync-form" id="cloud-auth-form">
                 <div class="cloud-sync-form__grid">
@@ -361,11 +367,11 @@
                   <button class="button button--ghost button--tiny" id="cloud-logout" type="button">退出账号</button>
                 </div>
               </form>
-              <p class="micro-copy">系统会优先保留更新时间更近的一份进度，本地缓存仍然会继续保留，断网时也不会直接丢失。</p>
+              <p class="micro-copy">如果本地和云端都有记录，会优先保留更新得更近的那一份；你断网时，本地进度也还会留着。</p>
             </div>
             <div class="callout">
-              <h3>推荐用法</h3>
-              <p>雅思冲刺期建议把每日新词控制在 8-15 个之间，优先守住复习，不要只开新词不回看；如果你经常切换入口，记得先登录云端同步账号。</p>
+              <h3>更顺手的用法</h3>
+              <p>冲刺期别急着一天开太多新词。先把复习守住，再慢慢加新词，记得会稳很多；如果你常换设备，顺手登录一下同步账号会省事不少。</p>
             </div>
           </section>
 

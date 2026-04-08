@@ -2,6 +2,7 @@
   --paper: #f6efe4;
   --paper-strong: rgba(255, 251, 245, 0.86);
   --paper-soft: rgba(255, 255, 255, 0.74);
+  --paper-elevated: rgba(255, 255, 255, 0.92);
   --ink: #1f2937;
   --ink-soft: #5c6778;
   --line: rgba(31, 41, 55, 0.12);
@@ -84,18 +85,24 @@ body {
 .app-shell {
   position: relative;
   z-index: 1;
-  width: min(1240px, calc(100% - 28px));
+  width: min(1320px, calc(100% - 28px));
   margin: 28px auto 48px;
 }
 
 .panel {
-  background: var(--paper-strong);
+  background:
+    linear-gradient(180deg, rgba(255, 251, 245, 0.94), rgba(248, 240, 230, 0.82));
   border-radius: var(--radius-xl);
   border: 1px solid rgba(255, 255, 255, 0.48);
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
-  padding: 28px;
+  padding: 30px;
   animation: rise-in 0.7s ease both;
+}
+
+.panel:not(.hero) {
+  content-visibility: auto;
+  contain-intrinsic-size: 640px;
 }
 
 .panel + .panel,
@@ -221,6 +228,13 @@ p {
   margin-top: 22px;
 }
 
+.hero__quick-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
 .hero__meta span,
 .chip,
 .badge,
@@ -316,6 +330,14 @@ textarea {
   border: 1px solid rgba(30, 122, 116, 0.16);
 }
 
+.button--chip {
+  min-height: 38px;
+  padding: 8px 14px;
+  color: var(--slate);
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid rgba(31, 41, 55, 0.08);
+}
+
 .button--tiny {
   min-height: 34px;
   padding: 7px 12px;
@@ -380,11 +402,18 @@ textarea {
   justify-content: space-between;
   align-items: start;
   gap: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(31, 41, 55, 0.08);
 }
 
 .section-head__hint {
-  max-width: 44ch;
+  max-width: 42ch;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(31, 41, 55, 0.06);
   font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .metric-grid,
@@ -484,6 +513,10 @@ textarea {
 .toolbar {
   margin-top: 20px;
   align-items: end;
+  padding: 14px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.44);
+  border: 1px solid rgba(31, 41, 55, 0.06);
 }
 
 label {
@@ -614,6 +647,10 @@ textarea {
 
 .session-strip {
   margin-top: 18px;
+  padding: 12px 14px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.44);
+  border: 1px solid rgba(31, 41, 55, 0.06);
 }
 
 .study-card {
@@ -625,12 +662,21 @@ textarea {
 .spelling-shell,
 .mock-shell,
 .analysis-shell {
+  display: grid;
+  gap: 16px;
   padding: 24px;
   border-radius: 24px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(247, 241, 231, 0.72));
   border: 1px solid rgba(31, 41, 55, 0.08);
   box-shadow: var(--shadow-soft);
+}
+
+.study-shell > *,
+.spelling-shell > *,
+.mock-shell > *,
+.analysis-shell > * {
+  margin-top: 0;
 }
 
 .study-shell__top,
@@ -833,6 +879,8 @@ textarea {
   display: grid;
   gap: 16px;
   align-content: start;
+  position: sticky;
+  top: 18px;
 }
 
 .upload-field {
@@ -884,7 +932,7 @@ audio {
 .prompt-list {
   display: grid;
   gap: 12px;
-  margin-top: 18px;
+  margin-top: 0;
 }
 
 .prompt-item {
@@ -927,8 +975,58 @@ audio {
 .material-card {
   padding: 18px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.76);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(250, 245, 238, 0.78));
   border: 1px solid rgba(31, 41, 55, 0.08);
+}
+
+.fold-card {
+  border-radius: 22px;
+  border: 1px solid rgba(31, 41, 55, 0.08);
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.fold-card summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 16px;
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 18px;
+}
+
+.fold-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.fold-card__copy p {
+  margin-top: 6px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.fold-card__toggle {
+  flex: 0 0 auto;
+  min-height: 34px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(31, 41, 55, 0.07);
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.fold-card[open] .fold-card__toggle {
+  background: rgba(30, 122, 116, 0.12);
+  color: var(--teal-dark);
+}
+
+.fold-card__body {
+  display: grid;
+  gap: 14px;
+  padding: 0 18px 18px;
 }
 
 .ai-review-shell {
@@ -958,6 +1056,15 @@ audio {
   display: grid;
   gap: 12px;
   margin-top: 16px;
+}
+
+.grammar-list,
+.review-log,
+.due-list,
+.coach-stack {
+  max-height: 420px;
+  overflow: auto;
+  padding-right: 4px;
 }
 
 .grammar-item,
@@ -1168,6 +1275,11 @@ audio {
   text-align: center;
 }
 
+.footer p {
+  max-width: 58ch;
+  margin: 0 auto;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1197,6 +1309,10 @@ audio {
   .mock-grid,
   .speaking-progress-grid {
     grid-template-columns: 1fr;
+  }
+
+  .mock-card--upload {
+    position: static;
   }
 
   .section-head {
@@ -1287,6 +1403,7 @@ audio {
   }
 
   .hero__actions,
+  .hero__quick-nav,
   .inline-actions,
   .spelling-form__row {
     display: grid;

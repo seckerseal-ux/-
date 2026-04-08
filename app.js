@@ -3684,6 +3684,22 @@ function renderChunkGroupList(groups) {
     .join("");
 }
 
+function renderDisclosureCard(title, description, body, options = {}) {
+  const { open = false, tone = "soft" } = options;
+  return `
+    <details class="fold-card fold-card--${tone}" ${open ? "open" : ""}>
+      <summary>
+        <div class="fold-card__copy">
+          <strong>${escapeHtml(title)}</strong>
+          ${description ? `<p>${escapeHtml(description)}</p>` : ""}
+        </div>
+        <span class="fold-card__toggle">展开</span>
+      </summary>
+      <div class="fold-card__body">${body}</div>
+    </details>
+  `;
+}
+
 function countEssayWords(text) {
   const matches = text.trim().match(/[A-Za-z0-9]+(?:['-][A-Za-z0-9]+)*/g);
   return matches ? matches.length : 0;
@@ -5114,6 +5130,35 @@ function renderSpeakingProgress() {
     if (entry.entryType === "full_mock") {
       const partReports = (entry.partReports || []).slice(0, 3);
       const materials = (entry.recommendedMaterials || []).slice(0, 4);
+      const reviewDetails = renderDisclosureCard(
+        "查看这一轮的分段回顾和素材",
+        "外面先留结论和分数，想细看时再展开。",
+        `
+          <div class="history-card__block">
+            <strong>分段回顾</strong>
+            <ul>
+              ${partReports.length
+                ? partReports
+                    .map(
+                      (item) =>
+                        `<li>${escapeHtml(SPEAKING_PART_LABELS[item.part] || item.part)}：${escapeHtml(item.main_issue)}；下一步先做 ${escapeHtml(item.next_focus)}</li>`,
+                    )
+                    .join("")
+                : "<li>这一轮已经生成整轮复盘，建议优先回看四项评分和整轮转写趋势。</li>"}
+            </ul>
+          </div>
+          <div class="history-card__block">
+            <strong>推荐素材包</strong>
+            ${
+              materials.length
+                ? `<div class="tag-row">
+                    ${materials.map((item) => `<span class="tag">${escapeHtml(item.content)}</span>`).join("")}
+                  </div>`
+                : "<p>这轮先优先补通用连接、例子展开和更自然的句型切换。</p>"
+            }
+          </div>
+        `,
+      );
       return `
         <article class="history-card">
           <div class="history-card__head">
@@ -5130,29 +5175,7 @@ function renderSpeakingProgress() {
             <span class="badge">PR ${Number(breakdown.pronunciation || 0).toFixed(1)}</span>
           </div>
           <p class="history-card__meta">${escapeHtml(entry.primaryIssue || entry.summary || "")}</p>
-          <div class="history-card__block">
-            <strong>分段回顾</strong>
-            <ul>
-              ${partReports.length
-                ? partReports
-                    .map(
-                      (item) =>
-                        `<li>${escapeHtml(SPEAKING_PART_LABELS[item.part] || item.part)}：${escapeHtml(item.main_issue)}；下一步先做 ${escapeHtml(item.next_focus)}</li>`,
-                    )
-                    .join("") 
-                : "<li>这一轮已经生成整轮总评，建议优先回看四项评分分析和整轮转写趋势。</li>"}
-            </ul>
-          </div>
-          <div class="history-card__block">
-            <strong>推荐素材包</strong>
-            ${
-              materials.length
-                ? `<div class="tag-row">
-                    ${materials.map((item) => `<span class="tag">${escapeHtml(item.content)}</span>`).join("")}
-                  </div>`
-                : "<p>这轮先优先补通用连接、例子展开和更自然的句型切换。</p>"
-            }
-          </div>
+          ${reviewDetails}
         </article>
       `;
     }
@@ -5161,22 +5184,10 @@ function renderSpeakingProgress() {
     const pack = entry.partMaterialPack || {};
     const phrases = (pack.reusable_phrases || []).slice(0, 3);
     const hooks = (pack.content_hooks || []).slice(0, 2);
-    return `
-      <article class="history-card">
-        <div class="history-card__head">
-          <div>
-            <strong>${escapeHtml(entry.promptTitle)}</strong>
-            <p>${escapeHtml((entry.part || "").toUpperCase())} · ${formatCalendarDate(entry.timestamp)}</p>
-          </div>
-          <span class="badge badge--success">Band ${Number(entry.overallBand || 0).toFixed(1)}</span>
-        </div>
-        <div class="history-card__scores">
-          <span class="badge">FC ${Number(breakdown.fluency_coherence || 0).toFixed(1)}</span>
-          <span class="badge">LR ${Number(breakdown.lexical_resource || 0).toFixed(1)}</span>
-          <span class="badge">GRA ${Number(breakdown.grammatical_range_accuracy || 0).toFixed(1)}</span>
-          <span class="badge">PR ${Number(breakdown.pronunciation || 0).toFixed(1)}</span>
-        </div>
-        <p class="history-card__meta">${escapeHtml(entry.primaryIssue || "")}</p>
+    const reviewDetails = renderDisclosureCard(
+      "查看追问和推荐素材",
+      "先留一句结论，想继续顺着练再展开。",
+      `
         <div class="history-card__block">
           <strong>下轮追问建议</strong>
           <ul>
@@ -5195,6 +5206,25 @@ function renderSpeakingProgress() {
               : "<p>这次先优先围绕该题型补背景、原因和例子三层内容。</p>"
           }
         </div>
+      `,
+    );
+    return `
+      <article class="history-card">
+        <div class="history-card__head">
+          <div>
+            <strong>${escapeHtml(entry.promptTitle)}</strong>
+            <p>${escapeHtml((entry.part || "").toUpperCase())} · ${formatCalendarDate(entry.timestamp)}</p>
+          </div>
+          <span class="badge badge--success">Band ${Number(entry.overallBand || 0).toFixed(1)}</span>
+        </div>
+        <div class="history-card__scores">
+          <span class="badge">FC ${Number(breakdown.fluency_coherence || 0).toFixed(1)}</span>
+          <span class="badge">LR ${Number(breakdown.lexical_resource || 0).toFixed(1)}</span>
+          <span class="badge">GRA ${Number(breakdown.grammatical_range_accuracy || 0).toFixed(1)}</span>
+          <span class="badge">PR ${Number(breakdown.pronunciation || 0).toFixed(1)}</span>
+        </div>
+        <p class="history-card__meta">${escapeHtml(entry.primaryIssue || "")}</p>
+        ${reviewDetails}
       </article>
     `;
   }).join("");
@@ -5572,6 +5602,47 @@ function renderLocalWritingReview(prompt, review) {
   }
   const targetGap = Math.max(0, Number(state.settings.writingTargetBand) - review.overallBand);
   const criterionLabel = review.task === "task1" ? "Task Achievement" : "Task Response";
+  const secondaryPanels = [
+    renderDisclosureCard(
+      "结构信号与亮点",
+      "把结构判断、亮点和当前重写焦点收在这里，需要时再展开看。",
+      `
+        <div class="tag-row">
+          <span class="tag">关键词覆盖 ${review.keywordCoverage}%</span>
+          <span class="tag">连接词 ${review.connectorCount} 个</span>
+          <span class="tag">${review.signals.hasOverview ? "有 overview" : "缺 overview"}</span>
+          <span class="tag">${review.signals.hasOpinion ? "有立场句" : "立场偏弱"}</span>
+          <span class="tag">${review.signals.hasConclusion ? "有结尾" : "结尾偏弱"}</span>
+        </div>
+        <div class="feedback-grid">
+          <article class="feedback-card">
+            <h3>这次的亮点</h3>
+            <p>${review.strengths.map((item) => escapeHtml(item)).join(" ")}</p>
+          </article>
+          <article class="feedback-card">
+            <h3>下一轮重写焦点</h3>
+            <p>${review.focusAreas.length ? review.focusAreas.map((item) => escapeHtml(item)).join("、") : "当前没有特别突出的焦点项。"} </p>
+          </article>
+          <article class="feedback-card">
+            <h3>当前题目</h3>
+            <p>${escapeHtml(prompt.title)} · ${escapeHtml(prompt.genre)}</p>
+          </article>
+        </div>
+      `,
+    ),
+    renderDisclosureCard(
+      "重写骨架与可套表达",
+      "把段落骨架和建议表达收进这一栏，避免结果区一次铺太满。",
+      `
+        <div class="prompt-list">
+          ${review.paragraphPlan.map((item) => `<div class="prompt-item">${escapeHtml(item)}</div>`).join("")}
+        </div>
+        <div class="material-strip">
+          ${review.usefulPhrases.map((item) => `<span class="tag">${escapeHtml(item)}</span>`).join("")}
+        </div>
+      `,
+    ),
+  ].join("");
 
   elements.writingResult.innerHTML = `
     <div class="analysis-shell">
@@ -5623,42 +5694,7 @@ function renderLocalWritingReview(prompt, review) {
           <p>${review.improvementActions.map((item) => escapeHtml(item)).join(" ")}</p>
         </article>
       </div>
-      <div class="material-card">
-        <h3>结构信号</h3>
-        <div class="tag-row">
-          <span class="tag">关键词覆盖 ${review.keywordCoverage}%</span>
-          <span class="tag">连接词 ${review.connectorCount} 个</span>
-          <span class="tag">${review.signals.hasOverview ? "有 overview" : "缺 overview"}</span>
-          <span class="tag">${review.signals.hasOpinion ? "有立场句" : "立场偏弱"}</span>
-          <span class="tag">${review.signals.hasConclusion ? "有结尾" : "结尾偏弱"}</span>
-        </div>
-      </div>
-      <div class="feedback-grid">
-        <article class="feedback-card">
-          <h3>这次的亮点</h3>
-          <p>${review.strengths.map((item) => escapeHtml(item)).join(" ")}</p>
-        </article>
-        <article class="feedback-card">
-          <h3>下一轮重写焦点</h3>
-          <p>${review.focusAreas.length ? review.focusAreas.map((item) => escapeHtml(item)).join("、") : "当前没有特别突出的焦点项。"} </p>
-        </article>
-        <article class="feedback-card">
-          <h3>当前题目</h3>
-          <p>${escapeHtml(prompt.title)} · ${escapeHtml(prompt.genre)}</p>
-        </article>
-      </div>
-      <div class="material-card">
-        <h3>下一轮重写骨架</h3>
-        <div class="prompt-list">
-          ${review.paragraphPlan.map((item) => `<div class="prompt-item">${escapeHtml(item)}</div>`).join("")}
-        </div>
-      </div>
-      <div class="material-card">
-        <h3>建议主动套用的表达</h3>
-        <div class="material-strip">
-          ${review.usefulPhrases.map((item) => `<span class="tag">${escapeHtml(item)}</span>`).join("")}
-        </div>
-      </div>
+      ${secondaryPanels}
     </div>
   `;
 }
@@ -5704,6 +5740,102 @@ function renderAiWritingReview(prompt, aiPayload) {
   const review = aiPayload.review;
   const criterionLabel = prompt.task === "task1" ? "Task Achievement" : "Task Response";
   const targetGap = Math.max(0, Number(state.settings.writingTargetBand) - review.overall_band);
+  const correctionsBlock =
+    (review.sentence_upgrades || []).length || (review.vocabulary_upgrades || []).length
+      ? renderDisclosureCard(
+          "句子与词汇升级",
+          "把可直接复写的升级建议收进这里，需要精修时再展开看。",
+          `
+            ${
+              (review.sentence_upgrades || []).length
+                ? `
+                  <div class="correction-list">
+                    ${review.sentence_upgrades
+                      .map(
+                        (item) => `
+                          <article class="correction-item">
+                            <strong>原句</strong>
+                            <p>${escapeHtml(item.source)}</p>
+                            <strong>更优写法</strong>
+                            <p>${escapeHtml(item.better_version)}</p>
+                            <p>${escapeHtml(item.why)}</p>
+                          </article>
+                        `,
+                      )
+                      .join("")}
+                  </div>
+                `
+                : ""
+            }
+            ${
+              (review.vocabulary_upgrades || []).length
+                ? `
+                  <div class="correction-list">
+                    ${review.vocabulary_upgrades
+                      .map(
+                        (item) => `
+                          <article class="correction-item">
+                            <strong>可替换表达</strong>
+                            <p>${escapeHtml(item.original)} -> ${escapeHtml(item.improved)}</p>
+                            <p>${escapeHtml(item.reason)}</p>
+                          </article>
+                        `,
+                      )
+                      .join("")}
+                  </div>
+                `
+                : ""
+            }
+          `,
+        )
+      : "";
+  const grammarBlock =
+    (review.grammar_patterns || []).length || (review.paragraph_plan || []).length || (review.useful_phrases || []).length
+      ? renderDisclosureCard(
+          "语法模式、提纲与高频表达",
+          "把语法修正、重写提纲和建议表达都收在这里，避免结果区过长。",
+          `
+            ${
+              (review.grammar_patterns || []).length
+                ? `
+                  <div class="correction-list">
+                    ${review.grammar_patterns
+                      .map(
+                        (item) => `
+                          <article class="correction-item">
+                            <strong>${escapeHtml(item.label)}</strong>
+                            <p>${escapeHtml(item.symptom)}</p>
+                            <p>${escapeHtml(item.advice)}</p>
+                            ${item.evidence ? `<p>${escapeHtml(item.evidence)}</p>` : ""}
+                          </article>
+                        `,
+                      )
+                      .join("")}
+                  </div>
+                `
+                : ""
+            }
+            ${
+              (review.paragraph_plan || []).length
+                ? `
+                  <div class="prompt-list">
+                    ${(review.paragraph_plan || []).map((item) => `<div class="prompt-item">${escapeHtml(item)}</div>`).join("")}
+                  </div>
+                `
+                : ""
+            }
+            ${
+              (review.useful_phrases || []).length
+                ? `
+                  <div class="material-strip">
+                    ${(review.useful_phrases || []).map((item) => `<span class="tag">${escapeHtml(item)}</span>`).join("")}
+                  </div>
+                `
+                : ""
+            }
+          `,
+        )
+      : "";
 
   return `
     <div class="analysis-shell ai-review-shell">
@@ -5754,92 +5886,28 @@ function renderAiWritingReview(prompt, aiPayload) {
           <p>${(review.improvement_actions || []).map((item) => escapeHtml(item)).join(" ")}</p>
         </article>
       </div>
-      <div class="feedback-grid">
-        <article class="feedback-card">
-          <h3>这次的亮点</h3>
-          <p>${(review.strengths || []).map((item) => escapeHtml(item)).join(" ")}</p>
-        </article>
-        <article class="feedback-card">
-          <h3>焦点清单</h3>
-          <p>${(review.focus_areas || []).length ? review.focus_areas.map((item) => escapeHtml(item)).join("、") : "这次没有返回额外焦点标签。"} </p>
-        </article>
-        <article class="feedback-card">
-          <h3>适用题目</h3>
-          <p>${escapeHtml(prompt.title)} · ${escapeHtml(prompt.genre)}</p>
-        </article>
-      </div>
-      ${
-        (review.sentence_upgrades || []).length
-          ? `
-            <div class="correction-list">
-              ${review.sentence_upgrades
-                .map(
-                  (item) => `
-                    <article class="correction-item">
-                      <strong>原句</strong>
-                      <p>${escapeHtml(item.source)}</p>
-                      <strong>更优写法</strong>
-                      <p>${escapeHtml(item.better_version)}</p>
-                      <p>${escapeHtml(item.why)}</p>
-                    </article>
-                  `,
-                )
-                .join("")}
-            </div>
-          `
-          : ""
-      }
-      ${
-        (review.vocabulary_upgrades || []).length
-          ? `
-            <div class="correction-list">
-              ${review.vocabulary_upgrades
-                .map(
-                  (item) => `
-                    <article class="correction-item">
-                      <strong>可替换表达</strong>
-                      <p>${escapeHtml(item.original)} -> ${escapeHtml(item.improved)}</p>
-                      <p>${escapeHtml(item.reason)}</p>
-                    </article>
-                  `,
-                )
-                .join("")}
-            </div>
-          `
-          : ""
-      }
-      ${
-        (review.grammar_patterns || []).length
-          ? `
-            <div class="correction-list">
-              ${review.grammar_patterns
-                .map(
-                  (item) => `
-                    <article class="correction-item">
-                      <strong>${escapeHtml(item.label)}</strong>
-                      <p>${escapeHtml(item.symptom)}</p>
-                      <p>${escapeHtml(item.advice)}</p>
-                      ${item.evidence ? `<p>${escapeHtml(item.evidence)}</p>` : ""}
-                    </article>
-                  `,
-                )
-                .join("")}
-            </div>
-          `
-          : ""
-      }
-      <div class="material-card">
-        <h3>下一轮重写提纲</h3>
-        <div class="prompt-list">
-          ${(review.paragraph_plan || []).map((item) => `<div class="prompt-item">${escapeHtml(item)}</div>`).join("")}
-        </div>
-      </div>
-      <div class="material-card">
-        <h3>建议反复调用的表达</h3>
-        <div class="material-strip">
-          ${(review.useful_phrases || []).map((item) => `<span class="tag">${escapeHtml(item)}</span>`).join("")}
-        </div>
-      </div>
+      ${renderDisclosureCard(
+        "亮点与焦点清单",
+        "把优势、重点修正方向和适用题目信息收在这里，更方便复盘时再展开。",
+        `
+          <div class="feedback-grid">
+            <article class="feedback-card">
+              <h3>这次的亮点</h3>
+              <p>${(review.strengths || []).map((item) => escapeHtml(item)).join(" ")}</p>
+            </article>
+            <article class="feedback-card">
+              <h3>焦点清单</h3>
+              <p>${(review.focus_areas || []).length ? review.focus_areas.map((item) => escapeHtml(item)).join("、") : "这次没有返回额外焦点标签。"} </p>
+            </article>
+            <article class="feedback-card">
+              <h3>适用题目</h3>
+              <p>${escapeHtml(prompt.title)} · ${escapeHtml(prompt.genre)}</p>
+            </article>
+          </div>
+        `,
+      )}
+      ${correctionsBlock}
+      ${grammarBlock}
     </div>
   `;
 }
@@ -6512,10 +6580,10 @@ function updateSpeakingActionButtons() {
 
   if (elements.speakingAnalyzeAi) {
     if (!ui.ai.available) {
-      elements.speakingAnalyzeAi.textContent = isSpeakingFullMockMode() ? "AI 未连接，暂时不能进入下一部分" : "AI 未连接";
+      elements.speakingAnalyzeAi.textContent = isSpeakingFullMockMode() ? "批改还没连上，暂时不能继续下一段" : "批改暂时不可用";
       elements.speakingAnalyzeAi.disabled = true;
     } else if (!isSpeakingFullMockMode()) {
-      elements.speakingAnalyzeAi.textContent = "AI 深度批改";
+      elements.speakingAnalyzeAi.textContent = "开始深度批改";
       elements.speakingAnalyzeAi.disabled = false;
     } else if (ui.speakingMockSession.summary) {
       elements.speakingAnalyzeAi.textContent = "本轮已完成，请先重置";
@@ -6548,7 +6616,7 @@ function renderSpeakingSessionShell() {
           </div>
           <span class="badge">可单独训练任一 Part</span>
         </div>
-        <p class="mock-session-shell__hint">适合单独练一个题目。提交音频后会直接返回这一段的 AI 转写、问题定位和素材建议。</p>
+        <p class="mock-session-shell__hint">想单独磨一题时用这个模式最顺手。交上录音后，会先告诉你这段哪里顺、哪里还卡，以及下次可以怎么说得更自然。</p>
       </div>
     `;
     return;
@@ -6594,7 +6662,7 @@ function renderSpeakingSessionShell() {
         <span class="badge">${completedCount}/3 已完成</span>
       </div>
       <p class="mock-session-shell__hint">
-        每段各上传一次录音。系统会先给当前段的 AI 转写和问题定位，再自动推进到下一段；第三段结束后会生成整轮总评。
+        每一段交上来后，先看这段的转写、短板和建议，再继续下一段。等 Part 3 结束，整轮表现会一起收成一份复盘。
       </p>
       <div class="mock-stage-grid">${partCards}</div>
       ${
@@ -6668,8 +6736,8 @@ function renderSpeakingPromptCard() {
   const baseMaterials = dedupeStrings(prompt.materials || []).slice(0, 6);
   const chunkGroups = getSpeakingChunkGroups(prompt);
   const modeHint = isSpeakingFullMockMode()
-    ? `当前是全真三段模考，会在完成 ${SPEAKING_PART_LABELS[prompt.part]} 后自动进入下一段。`
-    : "当前是单段复盘模式，可以单独练这一段。";
+    ? `现在这题会接在整轮模考里，做完 ${SPEAKING_PART_LABELS[prompt.part]} 就会自动切到下一段。`
+    : "现在是单段练习模式，你可以只盯这一段慢慢磨。";
   elements.speakingPromptCard.innerHTML = `
     <div class="mock-shell">
       <div class="badge-row">
@@ -6683,8 +6751,8 @@ function renderSpeakingPromptCard() {
         ${prompt.questions.map((question) => `<div class="prompt-item">${escapeHtml(question)}</div>`).join("")}
       </div>
       <div class="material-card">
-        <h4>建议先准备的素材</h4>
-        <p>先把这些词块或展开角度背顺，录音时更容易自然展开。</p>
+        <h4>这题先背这几组素材会更顺</h4>
+        <p>先把这些表达和展开角度练熟，开口时会更容易说得自然一些。</p>
         <div class="material-strip">
           ${baseMaterials.map((material) => `<span class="tag">${escapeHtml(material)}</span>`).join("")}
         </div>
@@ -6824,7 +6892,7 @@ function renderSpeakingPlaceholder() {
     <div class="study-empty">
       <div>
         <h3>${isSpeakingFullMockMode() ? "从 Part 1 开始上传录音，就能进入整轮模考" : "上传一段口语录音后就能开始分析"}</h3>
-        <p>${isSpeakingFullMockMode() ? "你可以一次上传最多 4 个音频文件。全真模考会优先按 Part 1 / Part 2 / Part 3 自动读取前 3 个文件，并在 Part 3 结束后生成整轮总评。" : "单段复盘也支持一次放进最多 4 个文件，默认会先分析第 1 个；如果通过 AI 后端连上模型，还能拿到转写和真正的口语批改结果。"}</p>
+        <p>${isSpeakingFullMockMode() ? "你可以一次放进最多 4 个音频文件。整轮模考会按 Part 1 / Part 2 / Part 3 依次读取前 3 个，最后再把整轮状态一起收一份复盘。" : "单段练习也支持一次放进最多 4 个文件，默认先看第 1 个；如果批改服务已经连上，还能拿到转写和更细的口语反馈。"}</p>
       </div>
     </div>
   `;
@@ -6853,21 +6921,21 @@ function updateAiStatusUI() {
   const unavailableHint =
     ui.ai.statusHint ||
     "请用 server.py 启动本地代理，并设置 AI_API_KEY（或 OPENAI_API_KEY / OPENROUTER_API_KEY）";
-  const unavailableLabel = !hasAiApiSupport() ? "AI 未配置" : "AI 未连接";
+  const unavailableLabel = !hasAiApiSupport() ? "批改未配置" : "批改未连接";
 
   pairs.forEach(([chip, meta]) => {
     chip.className = "badge";
     if (!ui.ai.checked) {
-      chip.textContent = "AI 状态检测中";
-      meta.textContent = "正在尝试连接本地代理服务";
+      chip.textContent = "正在检查批改连接";
+      meta.textContent = "我在试着连上你的批改服务";
       return;
     }
 
     if (ui.ai.available) {
       chip.classList.add("badge--success");
-      chip.textContent = "AI 已连接";
-      const providerLabel = ui.ai.providerLabel || ui.ai.provider || "AI";
-      meta.textContent = `${providerLabel} · 转写 ${ui.ai.transcribeModel} · 批改 ${ui.ai.reviewModel}`;
+      chip.textContent = "批改已连上";
+      const providerLabel = ui.ai.providerLabel || ui.ai.provider || "当前模型";
+      meta.textContent = `${providerLabel} · 转写 ${ui.ai.transcribeModel} · 评估 ${ui.ai.reviewModel}`;
       updateSpeakingActionButtons();
       return;
     }
@@ -7406,7 +7474,7 @@ function renderSpeakingAnalysis(prompt, audioMetrics, transcriptMetrics, analysi
       </div>
       <div class="feedback-grid">
         <article class="feedback-card">
-          <h3>主要问题</h3>
+          <h3>这次最卡的地方</h3>
           <p>${analysis.issues.join(" ")}</p>
         </article>
         <article class="feedback-card">
@@ -7414,20 +7482,22 @@ function renderSpeakingAnalysis(prompt, audioMetrics, transcriptMetrics, analysi
           <p>${analysis.strengths.join(" ")}</p>
         </article>
         <article class="feedback-card">
-          <h3>下一轮怎么练</h3>
+          <h3>下一轮先怎么练</h3>
           <p>${analysis.nextSteps.join(" ")}</p>
         </article>
       </div>
-      <div class="material-card">
-        <h3>推荐积累素材</h3>
-        <p>优先把这些表达和展开角度练熟，下次同题型录音时尽量主动用上。</p>
-        <div class="material-strip">
-          ${analysis.materials.map((material) => `<span class="tag">${material}</span>`).join("")}
-        </div>
-        <div class="prompt-list">
-          ${prompt.angles.map((angle) => `<div class="prompt-item">${angle}</div>`).join("")}
-        </div>
-      </div>
+      ${renderDisclosureCard(
+        "这题可以顺手补的素材",
+        "把能直接拿去展开的表达和角度收在这里，不会一下铺满整个结果区。",
+        `
+          <div class="material-strip">
+            ${analysis.materials.map((material) => `<span class="tag">${material}</span>`).join("")}
+          </div>
+          <div class="prompt-list">
+            ${prompt.angles.map((angle) => `<div class="prompt-item">${angle}</div>`).join("")}
+          </div>
+        `,
+      )}
     </div>
   `;
 }
@@ -7476,11 +7546,165 @@ function renderAiSpeakingReview(prompt, localReview, aiPayload) {
     next_focus: [],
   };
   const transcriptMetrics = transcript ? analyseTranscript(transcript, localReview.audioMetrics.durationSeconds, prompt) : null;
+  const criterionDisclosure = renderDisclosureCard(
+    "四项评分拆开看",
+    "四项官方评分板块都还在，这里先折起来，想细看再展开。",
+    `${renderSpeakingCriterionPanels(review.band_breakdown, criterionAnalysis)}`,
+  );
+  const transcriptDisclosure = renderDisclosureCard(
+    "从转写里能看出的情况",
+    "这部分会告诉你节奏、衔接和用词哪里还不够自然。",
+    `
+      <div class="analysis-grid">
+        <article class="analysis-card">
+          <span>转写词数</span>
+          <strong>${transcriptMetrics?.wordCount || 0}</strong>
+          <p>基于转写文本估算</p>
+        </article>
+        <article class="analysis-card">
+          <span>filler 次数</span>
+          <strong>${transcriptMetrics?.fillerCount || 0}</strong>
+          <p>um / like / you know 等缓冲词</p>
+        </article>
+        <article class="analysis-card">
+          <span>连接词信号</span>
+          <strong>${transcriptMetrics?.connectorCount || 0}</strong>
+          <p>because / for example / however 等</p>
+        </article>
+        <article class="analysis-card">
+          <span>素材命中</span>
+          <strong>${transcriptMetrics?.materialHits || 0}</strong>
+          <p>命中当前题型建议素材的数量</p>
+        </article>
+      </div>
+      <div class="feedback-grid">
+        <article class="feedback-card">
+          <h3>转写总览</h3>
+          <p>${escapeHtml(transcriptAnalysis.summary || "这次已经拿到转写，可以继续从用词、展开和停顿去拆问题。")}</p>
+        </article>
+        <article class="feedback-card">
+          <h3>表达与节奏</h3>
+          <p>${(transcriptAnalysis.delivery_notes || []).map((item) => escapeHtml(item)).join(" ") || "当前没有额外的节奏备注。"}</p>
+        </article>
+        <article class="feedback-card">
+          <h3>语言使用</h3>
+          <p>${(transcriptAnalysis.language_notes || []).map((item) => escapeHtml(item)).join(" ") || "当前没有额外的语言备注。"}</p>
+        </article>
+      </div>
+      ${
+        (transcriptAnalysis.highlighted_snippets || []).length
+          ? `
+            <div class="prompt-list">
+              ${transcriptAnalysis.highlighted_snippets
+                .map(
+                  (item) => `
+                    <div class="prompt-item">
+                      <strong>${escapeHtml(item.snippet)}</strong>
+                      <p>${escapeHtml(item.comment)}</p>
+                    </div>
+                  `,
+                )
+                .join("")}
+            </div>
+          `
+          : ""
+      }
+      <div class="prompt-list">
+        <div class="prompt-item">
+          <strong>转写全文</strong>
+          <p>${escapeHtml(transcript || "本次未返回转写文本。")}</p>
+        </div>
+        ${(transcriptAnalysis.next_focus || [])
+          .map((item) => `<div class="prompt-item">${escapeHtml(item)}</div>`)
+          .join("")}
+      </div>
+    `,
+  );
+  const correctionDisclosure = review.corrections.length || grammarPatterns.length
+    ? renderDisclosureCard(
+        "纠错和语法提醒",
+        "如果你想精修表达，可以重点看这一栏。",
+        `
+          ${
+            review.corrections.length
+              ? `
+                <div class="correction-list">
+                  ${review.corrections
+                    .map(
+                      (correction) => `
+                        <article class="correction-item">
+                          <strong>原表达</strong>
+                          <p>${escapeHtml(correction.source)}</p>
+                          <strong>更自然的说法</strong>
+                          <p>${escapeHtml(correction.better_version)}</p>
+                          <p>${escapeHtml(correction.why)}</p>
+                        </article>
+                      `,
+                    )
+                    .join("")}
+                </div>
+              `
+              : ""
+          }
+          ${
+            grammarPatterns.length
+              ? `
+                <div class="correction-list">
+                  ${grammarPatterns
+                    .map(
+                      (pattern) => `
+                        <article class="correction-item">
+                          <strong>${escapeHtml(pattern.label)}</strong>
+                          <p>${escapeHtml(pattern.symptom)}</p>
+                          <p>${escapeHtml(pattern.advice)}</p>
+                          ${pattern.evidence ? `<p>${escapeHtml(pattern.evidence)}</p>` : ""}
+                        </article>
+                      `,
+                    )
+                    .join("")}
+                </div>
+              `
+              : ""
+          }
+        `,
+      )
+    : "";
+  const materialsDisclosure = renderDisclosureCard(
+    "下次可以直接拿来练的素材",
+    "把表达、角度和追问都放进这一栏，用的时候再展开，不会一口气出现太多信息。",
+    `
+      <div class="prompt-list">
+        ${review.recommended_materials
+          .map(
+            (material) => `
+              <div class="prompt-item">
+                <strong>${escapeHtml(material.content)}</strong>
+                <p>${escapeHtml(material.reason)}</p>
+              </div>
+            `,
+          )
+          .join("")}
+      </div>
+      <div class="prompt-list">
+        ${(materialPack.reusable_phrases || [])
+          .map((item) => `<div class="prompt-item">${escapeHtml(item)}</div>`)
+          .join("")}
+        ${(materialPack.content_hooks || [])
+          .map((item) => `<div class="prompt-item">${escapeHtml(item)}</div>`)
+          .join("")}
+      </div>
+      <div class="prompt-list">
+        ${followUps
+          .map((item) => `<div class="prompt-item">${escapeHtml(item)}</div>`)
+          .join("")}
+      </div>
+    `,
+  );
 
   return `
     <div class="analysis-shell ai-review-shell">
       <div class="badge-row">
-        <span class="badge badge--success">AI 深度批改</span>
+        <span class="badge badge--success">深度口语复盘</span>
         <span class="badge">整体预估 ${review.overall_band.toFixed(1)}</span>
         <span class="badge">转写 ${aiPayload.transcribe_model}</span>
         <span class="badge">评估 ${aiPayload.review_model}</span>
@@ -7512,174 +7736,38 @@ function renderAiSpeakingReview(prompt, localReview, aiPayload) {
           <p>基于录音转写与清晰度做的综合估计</p>
         </article>
       </div>
-      <div class="material-card">
-        <h3>雅思口语四项评分分析</h3>
-        <p>这里不只是给分数，还会把四个官方评分板块拆开说明你现在的主要问题和提升方向。</p>
-        ${renderSpeakingCriterionPanels(review.band_breakdown, criterionAnalysis)}
-      </div>
       <div class="feedback-grid">
         <article class="feedback-card">
-          <h3>AI 总评</h3>
+          <h3>整体看下来</h3>
           <p>${escapeHtml(review.summary)}</p>
         </article>
         <article class="feedback-card">
-          <h3>关键问题</h3>
+          <h3>最该先改的地方</h3>
           <p>${review.key_issues.map((item) => escapeHtml(item)).join(" ")}</p>
         </article>
         <article class="feedback-card">
-          <h3>下一轮重点</h3>
+          <h3>下一轮先盯什么</h3>
           <p>${review.improvement_actions.map((item) => escapeHtml(item)).join(" ")}</p>
         </article>
       </div>
-      <div class="material-card">
-        <h3>AI 转写分析</h3>
-        <div class="analysis-grid">
-          <article class="analysis-card">
-            <span>转写词数</span>
-            <strong>${transcriptMetrics?.wordCount || 0}</strong>
-            <p>基于 AI 转写文本估算</p>
-          </article>
-          <article class="analysis-card">
-            <span>filler 次数</span>
-            <strong>${transcriptMetrics?.fillerCount || 0}</strong>
-            <p>um / like / you know 等缓冲词</p>
-          </article>
-          <article class="analysis-card">
-            <span>连接词信号</span>
-            <strong>${transcriptMetrics?.connectorCount || 0}</strong>
-            <p>because / for example / however 等</p>
-          </article>
-          <article class="analysis-card">
-            <span>素材命中</span>
-            <strong>${transcriptMetrics?.materialHits || 0}</strong>
-            <p>命中当前题型建议素材的数量</p>
-          </article>
-        </div>
-        <div class="feedback-grid">
-          <article class="feedback-card">
-            <h3>转写总览</h3>
-            <p>${escapeHtml(transcriptAnalysis.summary || "这次已经拿到 AI 转写，可以继续从用词、展开和停顿去拆问题。")}</p>
-          </article>
-          <article class="feedback-card">
-            <h3>表达与节奏</h3>
-            <p>${(transcriptAnalysis.delivery_notes || []).map((item) => escapeHtml(item)).join(" ") || "当前没有额外的节奏备注。"}</p>
-          </article>
-          <article class="feedback-card">
-            <h3>语言使用</h3>
-            <p>${(transcriptAnalysis.language_notes || []).map((item) => escapeHtml(item)).join(" ") || "当前没有额外的语言备注。"}</p>
-          </article>
-        </div>
-        ${
-          (transcriptAnalysis.highlighted_snippets || []).length
-            ? `
-              <div class="prompt-list">
-                ${transcriptAnalysis.highlighted_snippets
-                  .map(
-                    (item) => `
-                      <div class="prompt-item">
-                        <strong>${escapeHtml(item.snippet)}</strong>
-                        <p>${escapeHtml(item.comment)}</p>
-                      </div>
-                    `,
-                  )
-                  .join("")}
-              </div>
-            `
-            : ""
-        }
-        <div class="prompt-list">
-          <div class="prompt-item">
-            <strong>AI 转写文本</strong>
-            <p>${escapeHtml(transcript || "本次未返回转写文本。")}</p>
-          </div>
-          ${(transcriptAnalysis.next_focus || [])
-            .map((item) => `<div class="prompt-item">${escapeHtml(item)}</div>`)
-            .join("")}
-        </div>
-      </div>
+      ${criterionDisclosure}
+      ${transcriptDisclosure}
       <div class="feedback-grid">
         <article class="feedback-card">
-          <h3>高频语法问题</h3>
+          <h3>容易重复犯的语法点</h3>
           <p>${grammarPatterns.length ? grammarPatterns.map((item) => `${escapeHtml(item.label)}：${escapeHtml(item.advice)}`).join(" ") : "这次没有识别出特别突出的重复语法错误。"} </p>
         </article>
         <article class="feedback-card">
-          <h3>按题型追问建议</h3>
+          <h3>顺着这题还能怎么追问</h3>
           <p>${followUps.length ? followUps.map((item) => escapeHtml(item)).join(" ") : "下次可以围绕原因、例子、对比和结果继续追问自己。"} </p>
         </article>
         <article class="feedback-card">
-          <h3>题型素材包</h3>
+          <h3>这题值得先攒的角度</h3>
           <p>${materialPack.topic_angles?.length ? materialPack.topic_angles.map((item) => escapeHtml(item)).join(" ") : "这次没有返回额外素材角度。"} </p>
         </article>
       </div>
-      <div class="correction-list">
-        ${review.corrections
-          .map(
-            (correction) => `
-              <article class="correction-item">
-                <strong>原表达</strong>
-                <p>${escapeHtml(correction.source)}</p>
-                <strong>更自然的说法</strong>
-                <p>${escapeHtml(correction.better_version)}</p>
-                <p>${escapeHtml(correction.why)}</p>
-              </article>
-            `,
-          )
-          .join("")}
-      </div>
-      ${
-        grammarPatterns.length
-          ? `
-            <div class="correction-list">
-              ${grammarPatterns
-                .map(
-                  (pattern) => `
-                    <article class="correction-item">
-                      <strong>${escapeHtml(pattern.label)}</strong>
-                      <p>${escapeHtml(pattern.symptom)}</p>
-                      <p>${escapeHtml(pattern.advice)}</p>
-                      ${pattern.evidence ? `<p>${escapeHtml(pattern.evidence)}</p>` : ""}
-                    </article>
-                  `,
-                )
-                .join("")}
-            </div>
-          `
-          : ""
-      }
-      <div class="material-card">
-        <h3>推荐积累素材</h3>
-        <div class="prompt-list">
-          ${review.recommended_materials
-            .map(
-              (material) => `
-                <div class="prompt-item">
-                  <strong>${escapeHtml(material.content)}</strong>
-                  <p>${escapeHtml(material.reason)}</p>
-                </div>
-              `,
-            )
-            .join("")}
-        </div>
-      </div>
-      <div class="material-card">
-        <h3>Part 定向素材包</h3>
-        <div class="prompt-list">
-          ${(materialPack.reusable_phrases || [])
-            .map((item) => `<div class="prompt-item">${escapeHtml(item)}</div>`)
-            .join("")}
-          ${(materialPack.content_hooks || [])
-            .map((item) => `<div class="prompt-item">${escapeHtml(item)}</div>`)
-            .join("")}
-        </div>
-      </div>
-      <div class="material-card">
-        <h3>下轮可直接练的追问</h3>
-        <div class="prompt-list">
-          ${followUps
-            .map((item) => `<div class="prompt-item">${escapeHtml(item)}</div>`)
-            .join("")}
-        </div>
-      </div>
+      ${correctionDisclosure}
+      ${materialsDisclosure}
     </div>
   `;
 }
@@ -7687,10 +7775,10 @@ function renderAiSpeakingReview(prompt, localReview, aiPayload) {
 function renderSpeakingMockTransition(partEntry, nextPart) {
   return `
     <div class="feedback feedback--success">
-      <strong>${SPEAKING_PART_LABELS[partEntry.part]} 已提交</strong>
+      <strong>${SPEAKING_PART_LABELS[partEntry.part]} 这段已经交上去了</strong>
       <p>
         这一段当前预估 ${Number(partEntry.overallBand || 0).toFixed(1)} 分，最需要先修的是“${escapeHtml(partEntry.primaryIssue)}”。
-        系统已经自动切到 ${SPEAKING_PART_LABELS[nextPart]}，现在上传下一段录音即可继续整轮模考。
+        现在已经自动切到 ${SPEAKING_PART_LABELS[nextPart]}，把下一段录音交上来就能继续往后走。
       </p>
     </div>
   `;
@@ -7706,80 +7794,39 @@ function renderSpeakingMockSummary(summaryPayload) {
   };
   const partReports = review.part_reports || [];
   const grammarPatterns = review.grammar_patterns || [];
-
-  return `
-    <div class="analysis-shell ai-review-shell mock-summary-shell">
-      <div class="badge-row">
-        <span class="badge badge--success">完整模考总评</span>
-        <span class="badge">覆盖 Part 1 / 2 / 3</span>
-        <span class="badge">整体预估 ${Number(review.overall_band || 0).toFixed(1)}</span>
-      </div>
-      <div class="analysis-grid analysis-grid--five">
-        <article class="analysis-card">
-          <span>总分预估</span>
-          <strong>${Number(review.overall_band || 0).toFixed(1)}</strong>
-          <p>按整轮口语模考综合估算</p>
-        </article>
-        <article class="analysis-card">
-          <span>流利与连贯</span>
-          <strong>${Number(review.band_breakdown?.fluency_coherence || 0).toFixed(1)}</strong>
-          <p>整轮的节奏、展开和连贯度</p>
-        </article>
-        <article class="analysis-card">
-          <span>词汇资源</span>
-          <strong>${Number(review.band_breakdown?.lexical_resource || 0).toFixed(1)}</strong>
-          <p>词汇灵活度与素材质量</p>
-        </article>
-        <article class="analysis-card">
-          <span>语法范围</span>
-          <strong>${Number(review.band_breakdown?.grammatical_range_accuracy || 0).toFixed(1)}</strong>
-          <p>句式变化与准确率</p>
-        </article>
-        <article class="analysis-card">
-          <span>发音表现</span>
-          <strong>${Number(review.band_breakdown?.pronunciation || 0).toFixed(1)}</strong>
-          <p>整体可理解度与稳定性</p>
-        </article>
-      </div>
-      <div class="material-card">
-        <h3>雅思口语四项评分总览</h3>
-        ${renderSpeakingCriterionPanels(review.band_breakdown || {}, review.criterion_analysis || {})}
-      </div>
-      <div class="feedback-grid">
-        <article class="feedback-card">
-          <h3>整轮总评</h3>
-          <p>${escapeHtml(review.summary || "")}</p>
-        </article>
-        <article class="feedback-card">
-          <h3>本轮关键问题</h3>
-          <p>${(review.key_issues || []).map((item) => escapeHtml(item)).join(" ")}</p>
-        </article>
-        <article class="feedback-card">
-          <h3>下轮训练重点</h3>
-          <p>${(review.improvement_actions || []).map((item) => escapeHtml(item)).join(" ")}</p>
-        </article>
-      </div>
-      <div class="material-card">
-        <h3>整轮转写趋势分析</h3>
-        <div class="prompt-list">
-          <div class="prompt-item">
-            <strong>流利与连贯</strong>
-            <p>${escapeHtml(transcriptOverview.fluency_pattern || "当前没有额外备注。")}</p>
-          </div>
-          <div class="prompt-item">
-            <strong>词汇资源</strong>
-            <p>${escapeHtml(transcriptOverview.vocabulary_pattern || "当前没有额外备注。")}</p>
-          </div>
-          <div class="prompt-item">
-            <strong>语法范围</strong>
-            <p>${escapeHtml(transcriptOverview.grammar_pattern || "当前没有额外备注。")}</p>
-          </div>
-          <div class="prompt-item">
-            <strong>发音表现</strong>
-            <p>${escapeHtml(transcriptOverview.pronunciation_pattern || "当前没有额外备注。")}</p>
-          </div>
+  const criterionDisclosure = renderDisclosureCard(
+    "四项评分总览",
+    "整轮四项评分还在，只是先帮你收起来，免得结果一下铺太满。",
+    `${renderSpeakingCriterionPanels(review.band_breakdown || {}, review.criterion_analysis || {})}`,
+  );
+  const transcriptDisclosure = renderDisclosureCard(
+    "整轮转写趋势",
+    "想看整轮的流利度、词汇和语法趋势时，再展开这一栏。",
+    `
+      <div class="prompt-list">
+        <div class="prompt-item">
+          <strong>流利与连贯</strong>
+          <p>${escapeHtml(transcriptOverview.fluency_pattern || "当前没有额外备注。")}</p>
+        </div>
+        <div class="prompt-item">
+          <strong>词汇资源</strong>
+          <p>${escapeHtml(transcriptOverview.vocabulary_pattern || "当前没有额外备注。")}</p>
+        </div>
+        <div class="prompt-item">
+          <strong>语法范围</strong>
+          <p>${escapeHtml(transcriptOverview.grammar_pattern || "当前没有额外备注。")}</p>
+        </div>
+        <div class="prompt-item">
+          <strong>发音表现</strong>
+          <p>${escapeHtml(transcriptOverview.pronunciation_pattern || "当前没有额外备注。")}</p>
         </div>
       </div>
+    `,
+  );
+  const reviewDisclosure = renderDisclosureCard(
+    "分段回顾和语法提醒",
+    "这栏适合回看每一段最卡的地方，也能顺手看到重复出现的语法问题。",
+    `
       <div class="correction-list">
         ${partReports
           .map(
@@ -7814,21 +7861,79 @@ function renderSpeakingMockSummary(summaryPayload) {
           `
           : ""
       }
-      <div class="material-card">
-        <h3>整轮最值得补的素材</h3>
-        <div class="prompt-list">
-          ${(review.recommended_materials || [])
-            .map(
-              (item) => `
-                <div class="prompt-item">
-                  <strong>${escapeHtml(item.content)}</strong>
-                  <p>${escapeHtml(item.reason)}</p>
-                </div>
-              `,
-            )
-            .join("")}
-        </div>
+    `,
+  );
+  const materialsDisclosure = renderDisclosureCard(
+    "整轮最值得补的素材",
+    "这栏更适合留到复盘时慢慢看，不会一上来就把结果区撑得太长。",
+    `
+      <div class="prompt-list">
+        ${(review.recommended_materials || [])
+          .map(
+            (item) => `
+              <div class="prompt-item">
+                <strong>${escapeHtml(item.content)}</strong>
+                <p>${escapeHtml(item.reason)}</p>
+              </div>
+            `,
+          )
+          .join("")}
       </div>
+    `,
+  );
+
+  return `
+    <div class="analysis-shell ai-review-shell mock-summary-shell">
+      <div class="badge-row">
+        <span class="badge badge--success">整轮口语复盘</span>
+        <span class="badge">覆盖 Part 1 / 2 / 3</span>
+        <span class="badge">整体预估 ${Number(review.overall_band || 0).toFixed(1)}</span>
+      </div>
+      <div class="analysis-grid analysis-grid--five">
+        <article class="analysis-card">
+          <span>总分预估</span>
+          <strong>${Number(review.overall_band || 0).toFixed(1)}</strong>
+          <p>按整轮口语模考综合估算</p>
+        </article>
+        <article class="analysis-card">
+          <span>流利与连贯</span>
+          <strong>${Number(review.band_breakdown?.fluency_coherence || 0).toFixed(1)}</strong>
+          <p>整轮的节奏、展开和连贯度</p>
+        </article>
+        <article class="analysis-card">
+          <span>词汇资源</span>
+          <strong>${Number(review.band_breakdown?.lexical_resource || 0).toFixed(1)}</strong>
+          <p>词汇灵活度与素材质量</p>
+        </article>
+        <article class="analysis-card">
+          <span>语法范围</span>
+          <strong>${Number(review.band_breakdown?.grammatical_range_accuracy || 0).toFixed(1)}</strong>
+          <p>句式变化与准确率</p>
+        </article>
+        <article class="analysis-card">
+          <span>发音表现</span>
+          <strong>${Number(review.band_breakdown?.pronunciation || 0).toFixed(1)}</strong>
+          <p>整体可理解度与稳定性</p>
+        </article>
+      </div>
+      <div class="feedback-grid">
+        <article class="feedback-card">
+          <h3>整轮看下来</h3>
+          <p>${escapeHtml(review.summary || "")}</p>
+        </article>
+        <article class="feedback-card">
+          <h3>这轮最该先改的地方</h3>
+          <p>${(review.key_issues || []).map((item) => escapeHtml(item)).join(" ")}</p>
+        </article>
+        <article class="feedback-card">
+          <h3>下轮先把什么练顺</h3>
+          <p>${(review.improvement_actions || []).map((item) => escapeHtml(item)).join(" ")}</p>
+        </article>
+      </div>
+      ${criterionDisclosure}
+      ${transcriptDisclosure}
+      ${reviewDisclosure}
+      ${materialsDisclosure}
     </div>
   `;
 }
