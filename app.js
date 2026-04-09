@@ -7174,6 +7174,7 @@ async function prepareSpeakingSubmission(prompt) {
   if (files.length === 1) {
     return {
       sourceFiles: files,
+      aiFiles: files,
       file: files[0],
       audioBuffer: await decodeAudio(files[0]),
       merged: false,
@@ -7204,6 +7205,7 @@ async function prepareSpeakingSubmission(prompt) {
 
   return {
     sourceFiles: files,
+    aiFiles: files,
     file: mergedFile,
     audioBuffer: mergedBuffer,
     merged: true,
@@ -8101,9 +8103,13 @@ function renderSpeakingMockSummary(summaryPayload) {
   `;
 }
 
-async function requestAiSpeakingReview(file, prompt, localReview) {
+async function requestAiSpeakingReview(submission, prompt, localReview) {
   const formData = new FormData();
-  formData.append("audio", file, file.name);
+  const audioFiles = submission?.aiFiles?.length ? submission.aiFiles : submission?.file ? [submission.file] : [];
+  audioFiles.forEach((file) => {
+    formData.append("audio", file, file.name);
+  });
+  formData.append("audio_count", String(audioFiles.length || 0));
   formData.append("part", prompt.part);
   formData.append("prompt_payload", JSON.stringify(prompt));
   formData.append("transcript_hint", localReview.transcript || "");
@@ -8226,7 +8232,7 @@ async function handleSpeakingAiAnalysis() {
     });
     renderSpeakingAnalysis(prompt, localReview.audioMetrics, localReview.transcriptMetrics, localReview.analysis);
 
-    const aiPayload = await requestAiSpeakingReview(submission.file, prompt, localReview);
+    const aiPayload = await requestAiSpeakingReview(submission, prompt, localReview);
     elements.speakingResult.insertAdjacentHTML("beforeend", renderAiSpeakingReview(prompt, localReview, aiPayload));
 
     if (isSpeakingFullMockMode()) {

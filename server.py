@@ -903,11 +903,14 @@ def parse_multipart_form_data(handler):
         filename = part.get_filename()
         payload = part.get_payload(decode=True) or b""
         if filename:
-            files[name] = {
+            file_entry = {
                 "filename": filename,
                 "content_type": part.get_content_type() or "application/octet-stream",
                 "content": payload,
             }
+            if name not in files:
+                files[name] = []
+            files[name].append(file_entry)
             continue
 
         charset = part.get_content_charset() or "utf-8"
@@ -917,6 +920,16 @@ def parse_multipart_form_data(handler):
             fields[name] = payload.decode("utf-8", errors="replace")
 
     return fields, files
+
+
+def normalize_multipart_file_entries(file_value):
+    if not file_value:
+        return []
+    if isinstance(file_value, list):
+        return [entry for entry in file_value if isinstance(entry, dict)]
+    if isinstance(file_value, dict):
+        return [file_value]
+    return []
 
 
 def normalize_tts_text(value):
@@ -2357,6 +2370,139 @@ def transcribe_audio(audio_bytes, filename, content_type, provider=None):
     return transcript
 
 
+def transcribe_audio_inputs(audio_entries, provider=None):
+    entries = normalize_multipart_file_entries(audio_entries)
+    if not entries:
+        raise ApiError("请求里缺少音频文件。", status=400)
+
+    provider = normalize_provider_name(provider)
+    model = get_provider_model(provider, "transcribe")
+    total_bytes = 0
+
+    for entry in entries:
+        audio_bytes = entry.get("content") or b""
+        if not audio_bytes:
+            raise ApiError("上传的音频文件为空。", status=400)
+        total_bytes += len(audio_bytes)
+
+    if total_bytes > MAX_AUDIO_BYTES:
+        raise ApiError("音频文件过大，请控制在 20MB 以内。", status=400)
+
+    if len(entries) == 1:
+        entry = entries[0]
+        return transcribe_audio(
+            entry.get("content") or b"",
+            entry.get("filename") or "response.webm",
+            entry.get("content_type") or "application/octet-stream",
+            provider=provider,
+        )
+
+    if provider == "openrouter":
+        content_items = [
+            {
+                "type": "text",
+                "text": (
+                    "Please transcribe these IELTS speaking test response audio clips in English. "
+                    "Treat them as one continuous response in the order provided. "
+                    "Preserve hesitations and filler words when they are audible. "
+                    "Return only the transcript text."
+                ),
+            }
+        ]
+        for entry in entries:
+            content_items.append(
+                {
+                    "type": "input_audio",
+                    "input_audio": {
+                        "data": base64.b64encode(entry.get("content") or b"").decode("ascii"),
+                        "format": get_audio_format(entry.get("filename"), entry.get("content_type")),
+                    },
+                }
+            )
+        payload = {
+            "model": model,
+            "messages": [{"role": "user", "content": content_items}],
+            "stream": False,
+        }
+        response = api_request(
+            "/chat/completions",
+            json.dumps(payload).encode("utf-8"),
+            "application/json",
+            provider=provider,
+        )
+        transcript = extract_chat_completion_text(response, provider).strip().strip('"')
+        if not transcript:
+            raise ApiError(f"{get_provider_label(provider)} 已接收音频，但没有返回可用的转写结果。", status=502)
+        return transcript
+
+    if provider == "gemini" or is_aihubmix_native_gemini_model(provider, model):
+        parts = []
+        for entry in entries:
+            resolved_content_type = (
+                entry.get("content_type")
+                or mimetypes.guess_type(entry.get("filename") or "")[0]
+                or "audio/mpeg"
+            )
+            parts.append(
+                {
+                    "inline_data": {
+                        "mime_type": resolved_content_type,
+                        "data": base64.b64encode(entry.get("content") or b"").decode("ascii"),
+                    }
+                }
+            )
+        payload = {
+            "systemInstruction": {
+                "parts": [
+                    {
+                        "text": (
+                            "Please transcribe these IELTS speaking test response audio clips in English. "
+                            "Treat them as one continuous response in the order provided. "
+                            "Preserve hesitations and filler words when they are audible. "
+                            "Return only the transcript text."
+                        )
+                    }
+                ]
+            },
+            "contents": [
+                {
+                    "role": "user",
+                    "parts": parts,
+                }
+            ],
+            "generationConfig": {
+                "temperature": 0.1,
+                "responseMimeType": "text/plain",
+            },
+        }
+        response = native_gemini_api_request(
+            f"/models/{model}:generateContent",
+            json.dumps(payload).encode("utf-8"),
+            "application/json",
+            provider=provider,
+        )
+        transcript = extract_gemini_response_text(response, provider).strip().strip('"')
+        if not transcript:
+            raise ApiError(f"{get_provider_label(provider)} 已接收音频，但没有返回可用的转写结果。", status=502)
+        return transcript
+
+    transcripts = []
+    for entry in entries:
+        transcript = transcribe_audio(
+            entry.get("content") or b"",
+            entry.get("filename") or "response.webm",
+            entry.get("content_type") or "application/octet-stream",
+            provider=provider,
+        ).strip()
+        if transcript:
+            transcripts.append(transcript)
+
+    merged_transcript = "\n".join(item for item in transcripts if item).strip()
+    if not merged_transcript:
+        raise ApiError(f"{get_provider_label(provider)} 已接收音频，但没有返回可用的转写结果。", status=502)
+    return merged_transcript
+
+
 def review_speaking(prompt_payload, transcript, transcript_hint, local_metrics, provider=None):
     provider = normalize_provider_name(provider)
     prompt_text = json.dumps(prompt_payload, ensure_ascii=False, indent=2)
@@ -2653,15 +2799,9 @@ class AppHandler(SimpleHTTPRequestHandler):
                 if "audio" not in form_files:
                     raise ApiError("请求里缺少音频文件。", status=400)
 
-                audio_field = form_files["audio"]
-                audio_bytes = audio_field["content"]
-                if not audio_bytes:
-                    raise ApiError("上传的音频文件为空。", status=400)
-                if len(audio_bytes) > MAX_AUDIO_BYTES:
-                    raise ApiError("音频文件过大，请控制在 20MB 以内。", status=400)
-
-                filename = audio_field["filename"] or "response.webm"
-                content_type = audio_field["content_type"] or mimetypes.guess_type(filename)[0] or "application/octet-stream"
+                audio_entries = normalize_multipart_file_entries(form_files["audio"])
+                if not audio_entries:
+                    raise ApiError("请求里缺少音频文件。", status=400)
                 provider = require_provider_name(
                     form_fields.get("backend") or form_fields.get("provider") or AI_PROVIDER
                 )
@@ -2670,7 +2810,7 @@ class AppHandler(SimpleHTTPRequestHandler):
                 local_metrics_raw = form_fields.get("local_metrics", "{}")
                 local_metrics = json.loads(local_metrics_raw)
 
-                transcript = transcribe_audio(audio_bytes, filename, content_type, provider=provider)
+                transcript = transcribe_audio_inputs(audio_entries, provider=provider)
                 review = review_speaking(
                     prompt_payload,
                     transcript,
