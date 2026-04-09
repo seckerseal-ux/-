@@ -6492,20 +6492,16 @@ function getSelectedSpeakingAudioFiles() {
   return Array.from(elements.speakingAudio?.files || []).slice(0, 4);
 }
 
-function getActiveSpeakingAudioIndex(part = getSelectedSpeakingPrompt()?.part) {
-  if (!isSpeakingFullMockMode()) {
-    return 0;
-  }
-  const index = getSpeakingPartIndex(part || ui.speakingMockSession.activePart || SPEAKING_PART_ORDER[0]);
-  return index >= 0 ? index : 0;
-}
-
-function getActiveSpeakingAudioFile(part = getSelectedSpeakingPrompt()?.part) {
+function getPreviewSpeakingAudioFile(part = getSelectedSpeakingPrompt()?.part) {
   const files = getSelectedSpeakingAudioFiles();
   if (!files.length) {
     return null;
   }
-  return files[getActiveSpeakingAudioIndex(part)] || null;
+  return files[0];
+}
+
+function getSpeakingFilesForCurrentPrompt(prompt = getSelectedSpeakingPrompt()) {
+  return getSelectedSpeakingAudioFiles();
 }
 
 function updateSpeakingAudioSummary(part = getSelectedSpeakingPrompt()?.part) {
@@ -6516,28 +6512,25 @@ function updateSpeakingAudioSummary(part = getSelectedSpeakingPrompt()?.part) {
   const files = getSelectedSpeakingAudioFiles();
   if (!rawCount) {
     elements.speakingAudioSummary.textContent =
-      "可一次上传最多 4 个音频文件。单段复盘默认使用第 1 个；全真三段模考会按 Part 1 / Part 2 / Part 3 自动读取前 3 个文件。";
+      "可一次上传最多 4 个音频文件。单段练习会把你选中的文件按顺序一起读取；整轮模考里每一段也都可以单独上传 1 到 4 个文件。";
     return;
   }
 
-  const activeIndex = getActiveSpeakingAudioIndex(part);
-  const activeFile = files[activeIndex];
   const ignoredCount = Math.max(rawCount - files.length, 0);
 
-  if (!activeFile) {
-    elements.speakingAudioSummary.textContent = `已选 ${rawCount} 个音频文件${ignoredCount ? `，其中后 ${ignoredCount} 个暂不使用` : ""}。当前进行到 ${SPEAKING_PART_LABELS[part] || "当前段"}，请补上这一段对应的录音。`;
+  if (!isSpeakingFullMockMode()) {
+    const fileNames = files.map((file, index) => `${index + 1}. ${file.name}`).join("；");
+    elements.speakingAudioSummary.textContent = `已选 ${rawCount} 个音频文件${ignoredCount ? `，系统会先使用前 ${files.length} 个` : ""}。单段练习提交时会按顺序一起读取${fileNames ? `：${fileNames}` : ""}；播放器先预览第 1 个文件。`;
     return;
   }
-
-  const activeLabel = isSpeakingFullMockMode()
-    ? `当前 ${SPEAKING_PART_LABELS[part] || "这一段"} 会使用第 ${activeIndex + 1} 个文件`
-    : "当前会使用第 1 个文件";
-  elements.speakingAudioSummary.textContent = `已选 ${rawCount} 个音频文件${ignoredCount ? `，系统只会使用前 ${files.length} 个` : ""}；${activeLabel}：${activeFile.name}`;
+  const partLabel = SPEAKING_PART_LABELS[part] || "当前这一段";
+  const fileNames = files.map((file, index) => `${index + 1}. ${file.name}`).join("；");
+  elements.speakingAudioSummary.textContent = `已选 ${rawCount} 个音频文件${ignoredCount ? `，系统会先使用前 ${files.length} 个` : ""}。当前 ${partLabel} 提交时会按顺序一起读取${fileNames ? `：${fileNames}` : ""}；做完这一段后，再为下一段换一组录音即可。`;
 }
 
 function syncSpeakingAudioPreview(part = getSelectedSpeakingPrompt()?.part) {
   cleanupSpeakingAudioUrl();
-  const file = getActiveSpeakingAudioFile(part);
+  const file = getPreviewSpeakingAudioFile(part);
   if (!file || !elements.speakingAudioPlayer) {
     elements.speakingAudioPlayer?.removeAttribute("src");
     elements.speakingAudioPlayer?.load();
@@ -6633,8 +6626,8 @@ function renderSpeakingSessionShell() {
     const meta = response
       ? `已完成 · Band ${Number(response.overallBand || 0).toFixed(1)}`
       : status === "active"
-        ? "当前上传这一段录音"
-        : "等待上一段完成后自动切换";
+        ? "当前上传这一段的 1-4 个录音"
+        : "等上一段交完后，再上传这一段的录音";
     return `
       <article class="mock-stage-card${modifier}">
         <span class="mock-stage-card__step">${SPEAKING_PART_LABELS[part]}</span>
@@ -6736,7 +6729,7 @@ function renderSpeakingPromptCard() {
   const baseMaterials = dedupeStrings(prompt.materials || []).slice(0, 6);
   const chunkGroups = getSpeakingChunkGroups(prompt);
   const modeHint = isSpeakingFullMockMode()
-    ? `现在这题会接在整轮模考里，做完 ${SPEAKING_PART_LABELS[prompt.part]} 就会自动切到下一段。`
+    ? `现在这题会接在整轮模考里，这一段也支持最多 4 个文件一起读取；做完 ${SPEAKING_PART_LABELS[prompt.part]} 后再继续下一段。`
     : "现在是单段练习模式，你可以只盯这一段慢慢磨。";
   elements.speakingPromptCard.innerHTML = `
     <div class="mock-shell">
@@ -6892,7 +6885,7 @@ function renderSpeakingPlaceholder() {
     <div class="study-empty">
       <div>
         <h3>${isSpeakingFullMockMode() ? "从 Part 1 开始上传录音，就能进入整轮模考" : "上传一段口语录音后就能开始分析"}</h3>
-        <p>${isSpeakingFullMockMode() ? "你可以一次放进最多 4 个音频文件。整轮模考会按 Part 1 / Part 2 / Part 3 依次读取前 3 个，最后再把整轮状态一起收一份复盘。" : "单段练习也支持一次放进最多 4 个文件，默认先看第 1 个；如果批改服务已经连上，还能拿到转写和更细的口语反馈。"}</p>
+        <p>${isSpeakingFullMockMode() ? "当前这一段也支持一次放进最多 4 个音频文件，系统会按顺序一起读取；做完这一段后，再换下一段自己的录音。整轮结束后会再把三段表现一起收成一份复盘。" : "单段练习也支持一次放进最多 4 个文件，系统会按顺序一起读取；如果批改服务已经连上，还能拿到转写和更细的口语反馈。"}</p>
       </div>
     </div>
   `;
@@ -7045,6 +7038,171 @@ async function decodeAudio(file) {
       audioContext.close();
     }
   }
+}
+
+function getOfflineAudioContextClass() {
+  return window.OfflineAudioContext || window.webkitOfflineAudioContext || null;
+}
+
+async function resampleAudioBuffer(buffer, targetSampleRate) {
+  if (buffer.sampleRate === targetSampleRate) {
+    return buffer;
+  }
+
+  const OfflineAudioContextClass = getOfflineAudioContextClass();
+  if (!OfflineAudioContextClass) {
+    throw new Error("当前浏览器暂不支持多段录音合并。");
+  }
+
+  const offlineContext = new OfflineAudioContextClass(
+    buffer.numberOfChannels,
+    Math.ceil(buffer.duration * targetSampleRate),
+    targetSampleRate,
+  );
+  const source = offlineContext.createBufferSource();
+  source.buffer = buffer;
+  source.connect(offlineContext.destination);
+  source.start(0);
+  return offlineContext.startRendering();
+}
+
+function downmixAudioBufferToMono(buffer) {
+  const monoSamples = new Float32Array(buffer.length);
+  const channelCount = Math.max(1, buffer.numberOfChannels);
+
+  for (let channel = 0; channel < channelCount; channel += 1) {
+    const channelData = buffer.getChannelData(channel);
+    for (let index = 0; index < buffer.length; index += 1) {
+      monoSamples[index] += channelData[index] / channelCount;
+    }
+  }
+
+  return monoSamples;
+}
+
+function createMonoAudioBuffer(samples, sampleRate) {
+  if (typeof AudioBuffer === "function") {
+    const buffer = new AudioBuffer({
+      length: samples.length,
+      numberOfChannels: 1,
+      sampleRate,
+    });
+    buffer.copyToChannel(samples, 0);
+    return buffer;
+  }
+
+  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContextClass) {
+    throw new Error("当前浏览器不支持音频拼接。");
+  }
+
+  const audioContext = new AudioContextClass();
+  try {
+    const buffer = audioContext.createBuffer(1, samples.length, sampleRate);
+    buffer.copyToChannel(samples, 0);
+    return buffer;
+  } finally {
+    if (audioContext.close) {
+      audioContext.close();
+    }
+  }
+}
+
+function audioBufferToWavBlob(buffer) {
+  const numberOfChannels = buffer.numberOfChannels;
+  const sampleRate = buffer.sampleRate;
+  const bytesPerSample = 2;
+  const blockAlign = numberOfChannels * bytesPerSample;
+  const dataSize = buffer.length * blockAlign;
+  const arrayBuffer = new ArrayBuffer(44 + dataSize);
+  const view = new DataView(arrayBuffer);
+
+  function writeString(offset, value) {
+    for (let index = 0; index < value.length; index += 1) {
+      view.setUint8(offset + index, value.charCodeAt(index));
+    }
+  }
+
+  writeString(0, "RIFF");
+  view.setUint32(4, 36 + dataSize, true);
+  writeString(8, "WAVE");
+  writeString(12, "fmt ");
+  view.setUint32(16, 16, true);
+  view.setUint16(20, 1, true);
+  view.setUint16(22, numberOfChannels, true);
+  view.setUint32(24, sampleRate, true);
+  view.setUint32(28, sampleRate * blockAlign, true);
+  view.setUint16(32, blockAlign, true);
+  view.setUint16(34, bytesPerSample * 8, true);
+  writeString(36, "data");
+  view.setUint32(40, dataSize, true);
+
+  let offset = 44;
+  const channelData = Array.from({ length: numberOfChannels }, (_, channel) => buffer.getChannelData(channel));
+
+  for (let index = 0; index < buffer.length; index += 1) {
+    for (let channel = 0; channel < numberOfChannels; channel += 1) {
+      const sample = Math.max(-1, Math.min(1, channelData[channel][index]));
+      view.setInt16(offset, sample < 0 ? sample * 0x8000 : sample * 0x7fff, true);
+      offset += bytesPerSample;
+    }
+  }
+
+  return new Blob([arrayBuffer], { type: "audio/wav" });
+}
+
+function buildMergedSpeakingFileName(files, part) {
+  const baseName = files
+    .map((file) => file.name.replace(/\.[^.]+$/, ""))
+    .join("-")
+    .slice(0, 80)
+    .replace(/[^a-zA-Z0-9-_]+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+  const partLabel = (part || "speaking").toLowerCase();
+  return `${baseName || partLabel || "speaking"}-merged.wav`;
+}
+
+async function prepareSpeakingSubmission(prompt) {
+  const files = getSpeakingFilesForCurrentPrompt(prompt);
+  if (!files.length) {
+    return null;
+  }
+
+  if (files.length === 1) {
+    return {
+      sourceFiles: files,
+      file: files[0],
+      audioBuffer: await decodeAudio(files[0]),
+      merged: false,
+    };
+  }
+
+  const decodedBuffers = await Promise.all(files.map((file) => decodeAudio(file)));
+  const targetSampleRate = decodedBuffers[0].sampleRate;
+  const normalizedBuffers = await Promise.all(
+    decodedBuffers.map((buffer) => resampleAudioBuffer(buffer, targetSampleRate)),
+  );
+  const monoSegments = normalizedBuffers.map((buffer) => downmixAudioBufferToMono(buffer));
+  const totalLength = monoSegments.reduce((sum, segment) => sum + segment.length, 0);
+  const mergedSamples = new Float32Array(totalLength);
+  let offset = 0;
+
+  monoSegments.forEach((segment) => {
+    mergedSamples.set(segment, offset);
+    offset += segment.length;
+  });
+
+  const mergedBuffer = createMonoAudioBuffer(mergedSamples, targetSampleRate);
+  const mergedBlob = audioBufferToWavBlob(mergedBuffer);
+  const mergedFile = new File([mergedBlob], buildMergedSpeakingFileName(files, prompt?.part), { type: "audio/wav" });
+
+  return {
+    sourceFiles: files,
+    file: mergedFile,
+    audioBuffer: mergedBuffer,
+    merged: true,
+  };
 }
 
 function analyseAudioBuffer(buffer) {
@@ -7502,8 +7660,8 @@ function renderSpeakingAnalysis(prompt, audioMetrics, transcriptMetrics, analysi
   `;
 }
 
-async function buildLocalSpeakingReview(file, prompt) {
-  const buffer = await decodeAudio(file);
+async function buildLocalSpeakingReview(file, prompt, options = {}) {
+  const buffer = options.audioBuffer || (await decodeAudio(file));
   const audioMetrics = analyseAudioBuffer(buffer);
   const transcript = elements.speakingTranscript.value.trim();
   const transcriptMetrics = transcript ? analyseTranscript(transcript, audioMetrics.durationSeconds, prompt) : null;
@@ -7985,44 +8143,40 @@ async function requestAiSpeakingMockSummary(parts) {
   return payload;
 }
 
-function getSpeakingFileForCurrentPrompt(prompt) {
-  const files = getSelectedSpeakingAudioFiles();
-  if (!files.length) {
-    return null;
-  }
-  if (!isSpeakingFullMockMode()) {
-    return files[0];
-  }
-  return files[getActiveSpeakingAudioIndex(prompt?.part)] || null;
-}
-
 function getMissingSpeakingFileHint(prompt) {
   const files = getSelectedSpeakingAudioFiles();
   if (!files.length) {
     return "先选择音频文件，再开始分析。";
   }
   if (!isSpeakingFullMockMode()) {
-    return "当前会默认使用第 1 个文件；如果想分析别的录音，请重新调整选择顺序后再试。";
+    return `你已经选了 ${files.length} 个文件，单段练习会把它们按顺序一起读取；如果只想分析其中一段，请只保留对应录音后再试。`;
   }
-  return `当前进行到 ${SPEAKING_PART_LABELS[prompt?.part] || "这一段"}，但你只准备了 ${files.length} 个文件。请补上传这一段对应的录音，或重新选择最多 4 个文件。`;
+  return `当前进行到 ${SPEAKING_PART_LABELS[prompt?.part] || "这一段"}。这一段也支持把你选中的 1 到 4 个文件按顺序一起读取；如果想换下一段的录音，等这段交完后再重新选择即可。`;
 }
 
 async function handleSpeakingLocalAnalysis() {
   const prompt = getSelectedSpeakingPrompt();
-  const file = getSpeakingFileForCurrentPrompt(prompt);
+  const sourceFiles = getSpeakingFilesForCurrentPrompt(prompt);
   if (isSpeakingFullMockMode() && ui.speakingMockSession.summary) {
     renderSpeakingMessage("warning", "这一轮模考已经完成", "如果你想开始下一轮全真模考，先点“重新开始模考”，系统会从 Part 1 重新计时。");
     return;
   }
-  if (!file) {
+  if (!sourceFiles.length) {
     renderSpeakingMessage("warning", "还没有可用录音", getMissingSpeakingFileHint(prompt));
     return;
   }
 
-  renderSpeakingLoading("正在做本地分析", "我在计算时长、停顿、发声占比，并结合题型给出节奏反馈，请稍等一下。");
+  const mergeHint =
+    sourceFiles.length > 1
+      ? `我会先把这 ${sourceFiles.length} 段录音按顺序接起来，再计算时长、停顿和发声占比。`
+      : "我在计算时长、停顿、发声占比，并结合题型给出节奏反馈，请稍等一下。";
+  renderSpeakingLoading("正在做本地分析", mergeHint);
 
   try {
-    const localReview = await buildLocalSpeakingReview(file, prompt);
+    const submission = await prepareSpeakingSubmission(prompt);
+    const localReview = await buildLocalSpeakingReview(submission.file, prompt, {
+      audioBuffer: submission.audioBuffer,
+    });
     saveSpeakingSummary(prompt, localReview.analysis);
     renderSpeakingAnalysis(prompt, localReview.audioMetrics, localReview.transcriptMetrics, localReview.analysis);
     renderCoachTips();
@@ -8034,12 +8188,12 @@ async function handleSpeakingLocalAnalysis() {
 
 async function handleSpeakingAiAnalysis() {
   const prompt = getSelectedSpeakingPrompt();
-  const file = getSpeakingFileForCurrentPrompt(prompt);
+  const sourceFiles = getSpeakingFilesForCurrentPrompt(prompt);
   if (isSpeakingFullMockMode() && ui.speakingMockSession.summary) {
     renderSpeakingMessage("warning", "这一轮模考已经完成", "请先点“重新开始模考”，再从 Part 1 继续新的一轮三段仿真训练。");
     return;
   }
-  if (!file) {
+  if (!sourceFiles.length) {
     renderSpeakingMessage("warning", "还没有可用录音", getMissingSpeakingFileHint(prompt));
     return;
   }
@@ -8053,14 +8207,21 @@ async function handleSpeakingAiAnalysis() {
     return;
   }
 
-  renderSpeakingLoading("正在进行 AI 深度批改", "我会先做本地节奏分析，再把音频发给当前 AI 后端做转写和口语评估，这会比本地分析多等一会儿。");
+  const aiMergeHint =
+    sourceFiles.length > 1
+      ? `我会先把这 ${sourceFiles.length} 段录音按顺序接起来，再送去转写和口语评估，所以会比单文件多等一会儿。`
+      : "我会先做本地节奏分析，再把音频发给当前 AI 后端做转写和口语评估，这会比本地分析多等一会儿。";
+  renderSpeakingLoading("正在进行 AI 深度批改", aiMergeHint);
 
   let localReview = null;
   try {
-    localReview = await buildLocalSpeakingReview(file, prompt);
+    const submission = await prepareSpeakingSubmission(prompt);
+    localReview = await buildLocalSpeakingReview(submission.file, prompt, {
+      audioBuffer: submission.audioBuffer,
+    });
     renderSpeakingAnalysis(prompt, localReview.audioMetrics, localReview.transcriptMetrics, localReview.analysis);
 
-    const aiPayload = await requestAiSpeakingReview(file, prompt, localReview);
+    const aiPayload = await requestAiSpeakingReview(submission.file, prompt, localReview);
     elements.speakingResult.insertAdjacentHTML("beforeend", renderAiSpeakingReview(prompt, localReview, aiPayload));
 
     if (isSpeakingFullMockMode()) {
@@ -8072,11 +8233,10 @@ async function handleSpeakingAiAnalysis() {
 
       const nextPart = getNextSpeakingPart(prompt.part);
       if (nextPart) {
-        const keepQueuedFiles = getSelectedSpeakingAudioFiles().length > getActiveSpeakingAudioIndex(nextPart);
         ui.speakingMockSession.activePart = nextPart;
         elements.speakingResult.insertAdjacentHTML("beforeend", renderSpeakingMockTransition(partEntry, nextPart));
         syncSpeakingControlsForPart(nextPart);
-        clearSpeakingInput({ keepFiles: keepQueuedFiles, previewPart: nextPart });
+        clearSpeakingInput({ previewPart: nextPart });
         renderCoachTips();
         announce(`${SPEAKING_PART_LABELS[prompt.part]} 已完成，已切换到 ${SPEAKING_PART_LABELS[nextPart]}`);
         return;
