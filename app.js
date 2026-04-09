@@ -7044,6 +7044,8 @@ function getOfflineAudioContextClass() {
   return window.OfflineAudioContext || window.webkitOfflineAudioContext || null;
 }
 
+const SPEAKING_MERGE_SAMPLE_RATE = 16000;
+
 async function resampleAudioBuffer(buffer, targetSampleRate) {
   if (buffer.sampleRate === targetSampleRate) {
     return buffer;
@@ -7179,7 +7181,7 @@ async function prepareSpeakingSubmission(prompt) {
   }
 
   const decodedBuffers = await Promise.all(files.map((file) => decodeAudio(file)));
-  const targetSampleRate = decodedBuffers[0].sampleRate;
+  const targetSampleRate = SPEAKING_MERGE_SAMPLE_RATE;
   const normalizedBuffers = await Promise.all(
     decodedBuffers.map((buffer) => resampleAudioBuffer(buffer, targetSampleRate)),
   );
@@ -7195,6 +7197,9 @@ async function prepareSpeakingSubmission(prompt) {
 
   const mergedBuffer = createMonoAudioBuffer(mergedSamples, targetSampleRate);
   const mergedBlob = audioBufferToWavBlob(mergedBuffer);
+  if (mergedBlob.size > 20 * 1024 * 1024) {
+    throw new Error("这几段录音合并后还是太大了，先删掉一两段或换更短的录音再试。");
+  }
   const mergedFile = new File([mergedBlob], buildMergedSpeakingFileName(files, prompt?.part), { type: "audio/wav" });
 
   return {
