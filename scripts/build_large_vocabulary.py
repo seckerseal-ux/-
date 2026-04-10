@@ -256,23 +256,83 @@ CATEGORY_BLOCKED_TERMS = {
     "writing": {
         "assassin",
         "assassination",
+        "accessory",
+        "apartment",
+        "cabinet",
         "criminal",
+        "costume",
+        "decoration",
+        "depot",
+        "drawer",
         "execution",
         "executioner",
+        "garment",
         "genocide",
         "genocidal",
+        "helmet",
         "homicide",
+        "host",
+        "implement",
         "kidnap",
         "kidnapping",
+        "luggage",
         "manslaughter",
         "murder",
         "murderer",
         "nonviolence",
+        "outfit",
+        "portfolio",
         "slaughter",
         "terrorism",
         "terrorist",
+        "ticket",
         "violence",
+        "wallet",
+        "wardrobe",
     },
+}
+
+WRITING_CONCRETE_CN_SNIPPETS = {
+    "附件",
+    "零件",
+    "皮夹",
+    "抽屉",
+    "橱柜",
+    "衣服",
+    "衣装",
+    "装束",
+    "衣橱",
+    "公寓",
+    "停车场",
+    "配件",
+    "行李",
+    "头盔",
+    "公文包",
+    "装饰品",
+    "门票",
+    "箱",
+    "钱包",
+}
+
+WRITING_CONCRETE_EN_SNIPPETS = {
+    "accessory",
+    "apartment",
+    "cabinet",
+    "costume",
+    "cupboard",
+    "decoration",
+    "depot",
+    "drawer",
+    "garment",
+    "helmet",
+    "luggage",
+    "outfit",
+    "portfolio",
+    "shelf",
+    "suitcase",
+    "ticket",
+    "wallet",
+    "wardrobe",
 }
 
 TERM_OVERRIDES = {
@@ -773,7 +833,7 @@ CN_KEYWORDS = {
 EN_KEYWORDS = {
     "listening": "campus service booking reservation flight hostel hotel accommodation rent ticket museum library office application deadline schedule timetable lecture seminar student form clinic transport bus train airport dormitory reception payment contract route".split(),
     "reading": "research theory evidence data analysis ecology biology archaeology psychology history experiment mechanism fossil species climate agriculture geology evolution astronomy chemistry linguistics cognitive statistics scholar academic".split(),
-    "writing": "government policy society economic education environment technology regulation investment inequality employment transport pollution urban medical crime responsibility consumer global taxation poverty resource energy public legislation development impact benefit cost".split(),
+    "writing": "government policy society economic education environment technology regulation investment inequality employment transport pollution urban medical crime responsibility consumer global taxation poverty resource energy public legislation development impact benefit cost budget welfare infrastructure subsidy housing allocation efficiency authority priority stance debate argument funding reform opportunity income expenditure".split(),
     "speaking": "family hometown friend travel hobby interest childhood routine neighbour people feeling emotion lifestyle work study daily food shopping gift place experience city festival sport movie music holiday personality".split(),
 }
 
@@ -866,6 +926,10 @@ def is_category_blocked_term(category, word, translation="", definition=""):
 
     bag = f"{word} {translation} {definition}".lower()
     if category == "writing":
+        if any(snippet in translation for snippet in WRITING_CONCRETE_CN_SNIPPETS):
+            return True
+        if any(snippet in bag for snippet in WRITING_CONCRETE_EN_SNIPPETS):
+            return True
         risk_snippets = (
             "assassin",
             "assassination",
@@ -1022,17 +1086,34 @@ def score_candidate(row, pdf_priority):
     override = TERM_OVERRIDES.get(word, {})
     override_category = override.get("category")
 
-    topic_hits = {
+    topic_hits_cn = {
         category: sum(1 for kw in CN_KEYWORDS[category] if kw in bag_cn)
-        + sum(1 for kw in EN_KEYWORDS[category] if kw in bag_en)
         for category in CN_KEYWORDS
     }
+    topic_hits_en = {
+        category: sum(1 for kw in EN_KEYWORDS[category] if kw in bag_en)
+        for category in EN_KEYWORDS
+    }
+    topic_hits = {
+        category: topic_hits_cn[category] + topic_hits_en[category]
+        for category in CN_KEYWORDS
+    }
+
+    abstract_noun_signal = row["pos"] == "n" and word.endswith(ABSTRACT_SUFFIXES)
+    formal_adjective_signal = row["pos"] == "a" and word.endswith(ABSTRACT_SUFFIXES + FORMAL_SUFFIXES)
+    writing_formal_signal = abstract_noun_signal or formal_adjective_signal
 
     scores = {key: 0.0 for key in TARGET_QUOTAS}
     scores["listening"] = topic_hits["listening"] * 8 + bonus + (3 if tags & {"cet4", "cet6"} else 0) + (2 if row["pos"] in {"n", "v"} else 0)
     scores["speaking"] = topic_hits["speaking"] * 8 + bonus + (3 if tags & {"cet4", "cet6"} else 0) + (2 if row["pos"] in {"v", "a", "r"} else 0)
     scores["reading"] = topic_hits["reading"] * 8 + (3 if tags & {"ielts", "toefl"} else 0) + (2 if row["pos"] in {"n", "a"} else 0) + (2 if word.endswith(ABSTRACT_SUFFIXES) else 0)
-    scores["writing"] = topic_hits["writing"] * 8 + (3 if tags & {"ielts", "toefl"} else 0) + (2 if row["pos"] in {"n", "a"} else 0) + (2 if word.endswith(ABSTRACT_SUFFIXES + FORMAL_SUFFIXES) else 0)
+    scores["writing"] = (
+        topic_hits_cn["writing"] * 9
+        + topic_hits_en["writing"] * 4
+        + (3 if tags & {"ielts", "toefl"} else 0)
+        + (2 if row["pos"] in {"n", "a"} else 0)
+        + (2 if writing_formal_signal else 0)
+    )
 
     for category in TARGET_QUOTAS:
         scores[category] += pdf_boosts.get(category, 0) * PDF_PRIORITY_SCALE
@@ -1058,7 +1139,7 @@ def score_candidate(row, pdf_priority):
         "listening": topic_hits["listening"] > 0 or pdf_boosts.get("listening", 0) >= 2 or (bool(tags & {"cet4", "cet6"}) and bonus >= 1.2 and row["pos"] in {"n", "v", "a"}),
         "speaking": topic_hits["speaking"] > 0 or pdf_boosts.get("speaking", 0) >= 2 or (bool(tags & {"cet4", "cet6"}) and bonus >= 1.2 and row["pos"] in {"n", "v", "a", "r"}),
         "reading": topic_hits["reading"] > 0 or pdf_boosts.get("reading", 0) >= 2 or (bool(tags & {"ielts", "toefl"}) and (word.endswith(ABSTRACT_SUFFIXES) or row["pos"] in {"n", "a"})),
-        "writing": topic_hits["writing"] > 0 or pdf_boosts.get("writing", 0) >= 2 or (bool(tags & {"ielts", "toefl", "cet6"}) and (word.endswith(ABSTRACT_SUFFIXES + FORMAL_SUFFIXES) or row["pos"] in {"n", "a"})),
+        "writing": topic_hits_cn["writing"] > 0 or pdf_boosts.get("writing", 0) >= 2 or (bool(tags & {"ielts", "toefl", "cet6"}) and writing_formal_signal),
     }
 
     if override_category:
