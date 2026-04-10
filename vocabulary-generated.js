@@ -10661,23 +10661,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-listening-murderer",
-    "category": "listening",
-    "kind": "word",
-    "term": "murderer",
-    "phonetic": "/'mә:dәrә/",
-    "partOfSpeech": "n. 名词",
-    "translation": "凶手；杀人者",
-    "note": "校园通知、注册和表格办理场景高频。",
-    "example": "If you are unsure about the form, ask the murderer at the front desk.",
-    "tags": [
-      "听力",
-      "校园听力",
-      "服务咨询",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-listening-successor",
     "category": "listening",
     "kind": "word",
@@ -16050,23 +16033,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-listening-militant",
-    "category": "listening",
-    "kind": "word",
-    "term": "militant",
-    "phonetic": "/'militәnt/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "好战的",
-    "note": "校园通知、注册和表格办理场景高频。",
-    "example": "The new arrangement seems militant, so students should read the notice carefully.",
-    "tags": [
-      "听力",
-      "校园听力",
-      "服务咨询",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-listening-graceful",
     "category": "listening",
     "kind": "word",
@@ -16144,6 +16110,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "居间的；间接的",
     "note": "校园通知、注册和表格办理场景高频。",
     "example": "Attendance at the safety session is mediate for all first-year students.",
+    "tags": [
+      "听力",
+      "校园听力",
+      "服务咨询",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-listening-orderly",
+    "category": "listening",
+    "kind": "word",
+    "term": "orderly",
+    "phonetic": "/'ɒ:dәli/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "有秩序的；整齐的",
+    "note": "校园通知、注册和表格办理场景高频。",
+    "example": "Attendance at the safety session is orderly for all first-year students.",
     "tags": [
       "听力",
       "校园听力",
@@ -17848,6 +17831,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "听力",
       "校园听力",
       "服务咨询",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-listening-bustle",
+    "category": "listening",
+    "kind": "word",
+    "term": "bustle",
+    "phonetic": "/'bʌsl/",
+    "partOfSpeech": "n. 名词",
+    "translation": "喧闹；裙撑",
+    "note": "订票、改签和路线说明场景高频。",
+    "example": "They missed the earlier bustle because of the heavy traffic.",
+    "tags": [
+      "听力",
+      "旅游交通",
+      "时间安排",
       "高频扩展"
     ]
   },
@@ -24261,6 +24261,40 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
+    "id": "bulk-reading-session",
+    "category": "reading",
+    "kind": "word",
+    "term": "session",
+    "phonetic": "/'seʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "期间；开庭期",
+    "note": "艺术、展览和文化现象类阅读高频。",
+    "example": "The passage uses session to explain how meaning is created in the artwork.",
+    "tags": [
+      "阅读",
+      "文化艺术",
+      "人文阅读",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-violence",
+    "category": "reading",
+    "kind": "word",
+    "term": "violence",
+    "phonetic": "/'vaiәlәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "猛烈；暴力",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses violence to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
     "id": "bulk-reading-remain",
     "category": "reading",
     "kind": "word",
@@ -24312,15 +24346,236 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-bustle",
+    "id": "bulk-reading-nonviolence",
     "category": "reading",
     "kind": "word",
-    "term": "bustle",
-    "phonetic": "/'bʌsl/",
+    "term": "nonviolence",
+    "phonetic": "/nɒn'vaiәlәns/",
     "partOfSpeech": "n. 名词",
-    "translation": "喧闹；裙撑",
+    "translation": "非暴力",
     "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The article refers to bustle when explaining the research method.",
+    "example": "The passage uses nonviolence to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-injury",
+    "category": "reading",
+    "kind": "word",
+    "term": "injury",
+    "phonetic": "/'indʒәri/",
+    "partOfSpeech": "n. 名词",
+    "translation": "伤害；侮辱",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The article refers to injury when explaining the research method.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-stake",
+    "category": "reading",
+    "kind": "word",
+    "term": "stake",
+    "phonetic": "/steik/",
+    "partOfSpeech": "n. 名词",
+    "translation": "桩；炮烙刑",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses stake to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-explosive",
+    "category": "reading",
+    "kind": "word",
+    "term": "explosive",
+    "phonetic": "/ik'splәusiv/",
+    "partOfSpeech": "n. 名词",
+    "translation": "炸药；爆破音",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses explosive to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-spoil",
+    "category": "reading",
+    "kind": "word",
+    "term": "spoil",
+    "phonetic": "/spɒil/",
+    "partOfSpeech": "n. 名词",
+    "translation": "战利品；赃物",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses spoil to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-bump",
+    "category": "reading",
+    "kind": "word",
+    "term": "bump",
+    "phonetic": "/bʌmp/",
+    "partOfSpeech": "n. 名词",
+    "translation": "撞击；肿块",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The article refers to bump when explaining the research method.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-cycle",
+    "category": "reading",
+    "kind": "word",
+    "term": "cycle",
+    "phonetic": "/'saikl/",
+    "partOfSpeech": "n. 名词",
+    "translation": "周期；循环",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses cycle to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-robber",
+    "category": "reading",
+    "kind": "word",
+    "term": "robber",
+    "phonetic": "/'rɒbә/",
+    "partOfSpeech": "n. 名词",
+    "translation": "强盗；盗贼",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The article refers to robber when explaining the research method.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-squash",
+    "category": "reading",
+    "kind": "word",
+    "term": "squash",
+    "phonetic": "/skwɒʃ/",
+    "partOfSpeech": "n. 名词",
+    "translation": "挤压；压碎的东西",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The article refers to squash when explaining the research method.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-raven",
+    "category": "reading",
+    "kind": "word",
+    "term": "raven",
+    "phonetic": "/'reivn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "渡鸦；掠夺",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses raven to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-neat",
+    "category": "reading",
+    "kind": "word",
+    "term": "neat",
+    "phonetic": "/ni:t/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "整洁的；巧妙的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The results show a neat difference between the two groups.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-riot",
+    "category": "reading",
+    "kind": "word",
+    "term": "riot",
+    "phonetic": "/'raiәt/",
+    "partOfSpeech": "n. 名词",
+    "translation": "暴动；喧闹",
+    "note": "艺术、展览和文化现象类阅读高频。",
+    "example": "The writer presents riot as a key feature of the exhibition.",
+    "tags": [
+      "阅读",
+      "文化艺术",
+      "人文阅读",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-criminal",
+    "category": "reading",
+    "kind": "word",
+    "term": "criminal",
+    "phonetic": "/'kriminәl/",
+    "partOfSpeech": "n. 名词",
+    "translation": "罪犯；犯人",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses criminal to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-ruinous",
+    "category": "reading",
+    "kind": "word",
+    "term": "ruinous",
+    "phonetic": "/'ruinәs/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "破坏性的；招致毁灭的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses a ruinous explanation of how the process works.",
     "tags": [
       "阅读",
       "学术阅读",
@@ -24380,23 +24635,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-pervert",
-    "category": "reading",
-    "kind": "word",
-    "term": "pervert",
-    "phonetic": "/pә:'vә:t/",
-    "partOfSpeech": "v. 动词",
-    "translation": "使堕落；使反常",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to pervert the main point.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-infirmary",
     "category": "reading",
     "kind": "word",
@@ -24406,23 +24644,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "医院；养老院",
     "note": "研究设计、实验过程和结论判断高频。",
     "example": "The passage uses infirmary to clarify the main argument.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-fester",
-    "category": "reading",
-    "kind": "word",
-    "term": "fester",
-    "phonetic": "/'festә/",
-    "partOfSpeech": "v. 动词",
-    "translation": "溃烂；生脓",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to fester the main point.",
     "tags": [
       "阅读",
       "学术阅读",
@@ -24669,23 +24890,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-dispel",
-    "category": "reading",
-    "kind": "word",
-    "term": "dispel",
-    "phonetic": "/dis'pel/",
-    "partOfSpeech": "v. 动词",
-    "translation": "驱散；驱逐",
-    "note": "艺术、展览和文化现象类阅读高频。",
-    "example": "The article explains how artists dispel familiar objects in unexpected ways.",
-    "tags": [
-      "阅读",
-      "文化艺术",
-      "人文阅读",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-treatise",
     "category": "reading",
     "kind": "word",
@@ -24729,23 +24933,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "儿童照管；儿童保育",
     "note": "研究设计、实验过程和结论判断高频。",
     "example": "The article refers to childcare when explaining the research method.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-affix",
-    "category": "reading",
-    "kind": "word",
-    "term": "affix",
-    "phonetic": "/ә'fiks/",
-    "partOfSpeech": "v. 动词",
-    "translation": "使附于；署名",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers affix the relationship between the variables.",
     "tags": [
       "阅读",
       "学术阅读",
@@ -24975,23 +25162,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-wreathe",
-    "category": "reading",
-    "kind": "word",
-    "term": "wreathe",
-    "phonetic": "/ri:ð/",
-    "partOfSpeech": "v. 动词",
-    "translation": "作成花圈；环绕",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to wreathe the main point.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-eddy",
     "category": "reading",
     "kind": "word",
@@ -25052,23 +25222,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "热线服务电话",
     "note": "研究设计、实验过程和结论判断高频。",
     "example": "The article refers to helpline when explaining the research method.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-invigilate",
-    "category": "reading",
-    "kind": "word",
-    "term": "invigilate",
-    "phonetic": "/in'vidʒileit/",
-    "partOfSpeech": "v. 动词",
-    "translation": "看守；监考",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers invigilate the relationship between the variables.",
     "tags": [
       "阅读",
       "学术阅读",
@@ -25179,23 +25332,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-reiterate",
-    "category": "reading",
-    "kind": "word",
-    "term": "reiterate",
-    "phonetic": "/ri:'itәreit/",
-    "partOfSpeech": "v. 动词",
-    "translation": "反复地说；重申",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers reiterate the relationship between the variables.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-puddle",
     "category": "reading",
     "kind": "word",
@@ -25222,23 +25358,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "仪式",
     "note": "研究设计、实验过程和结论判断高频。",
     "example": "The article refers to ceremonial when explaining the research method.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-reshape",
-    "category": "reading",
-    "kind": "word",
-    "term": "reshape",
-    "phonetic": "/ri:'ʃeip/",
-    "partOfSpeech": "v. 动词",
-    "translation": "改造；使成新的形状",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers reshape the relationship between the variables.",
     "tags": [
       "阅读",
       "学术阅读",
@@ -25396,23 +25515,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "阅读",
       "学术阅读",
       "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-disintegrate",
-    "category": "reading",
-    "kind": "word",
-    "term": "disintegrate",
-    "phonetic": "/dis'intigreit/",
-    "partOfSpeech": "v. 动词",
-    "translation": "(使)分解；(使)碎裂",
-    "note": "艺术、展览和文化现象类阅读高频。",
-    "example": "The writer uses one example to disintegrate the cultural meaning of the painting.",
-    "tags": [
-      "阅读",
-      "文化艺术",
-      "人文阅读",
       "高频扩展"
     ]
   },
@@ -25638,40 +25740,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-circumvent",
-    "category": "reading",
-    "kind": "word",
-    "term": "circumvent",
-    "phonetic": "/.sә:kәm'vent/",
-    "partOfSpeech": "v. 动词",
-    "translation": "绕行；陷害",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to circumvent the main point.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-exude",
-    "category": "reading",
-    "kind": "word",
-    "term": "exude",
-    "phonetic": "/ig'zju:d/",
-    "partOfSpeech": "v. 动词",
-    "translation": "(使)流出；(使)渗出",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers exude the relationship between the variables.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-magnesium",
     "category": "reading",
     "kind": "word",
@@ -25757,40 +25825,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-dramatize",
-    "category": "reading",
-    "kind": "word",
-    "term": "dramatize",
-    "phonetic": "/'dræmәtaiz/",
-    "partOfSpeech": "v. 动词",
-    "translation": "改编成戏剧；编写剧本",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers dramatize the relationship between the variables.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-promulgate",
-    "category": "reading",
-    "kind": "word",
-    "term": "promulgate",
-    "phonetic": "/prә'mʌlgeit/",
-    "partOfSpeech": "v. 动词",
-    "translation": "发布；公布",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers promulgate the relationship between the variables.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-evasion",
     "category": "reading",
     "kind": "word",
@@ -25868,23 +25902,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "宝石商；宝石匠",
     "note": "研究设计、实验过程和结论判断高频。",
     "example": "The passage uses jeweler to clarify the main argument.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-typify",
-    "category": "reading",
-    "kind": "word",
-    "term": "typify",
-    "phonetic": "/'tipifai/",
-    "partOfSpeech": "v. 动词",
-    "translation": "代表；象征",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers typify the relationship between the variables.",
     "tags": [
       "阅读",
       "学术阅读",
@@ -26038,23 +26055,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "企业界大亨；将军",
     "note": "研究设计、实验过程和结论判断高频。",
     "example": "The passage uses tycoon to clarify the main argument.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-crystallize",
-    "category": "reading",
-    "kind": "word",
-    "term": "crystallize",
-    "phonetic": "/'kristәlaiz/",
-    "partOfSpeech": "v. 动词",
-    "translation": "使结晶；使具体化",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to crystallize the main point.",
     "tags": [
       "阅读",
       "学术阅读",
@@ -26267,23 +26267,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-depose",
-    "category": "reading",
-    "kind": "word",
-    "term": "depose",
-    "phonetic": "/di'pәuz/",
-    "partOfSpeech": "v. 动词",
-    "translation": "免职；废黜",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers depose the relationship between the variables.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-eccentricity",
     "category": "reading",
     "kind": "word",
@@ -26420,23 +26403,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-impel",
-    "category": "reading",
-    "kind": "word",
-    "term": "impel",
-    "phonetic": "/im'pel/",
-    "partOfSpeech": "v. 动词",
-    "translation": "推动；激励",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to impel the main point.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-abolitionist",
     "category": "reading",
     "kind": "word",
@@ -26522,23 +26488,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-vaporize",
-    "category": "reading",
-    "kind": "word",
-    "term": "vaporize",
-    "phonetic": "/'veipәraiz/",
-    "partOfSpeech": "v. 动词",
-    "translation": "(使)蒸发",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to vaporize the main point.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-amplification",
     "category": "reading",
     "kind": "word",
@@ -26569,23 +26518,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "阅读",
       "学术阅读",
       "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-sequester",
-    "category": "reading",
-    "kind": "word",
-    "term": "sequester",
-    "phonetic": "/si'kwestә/",
-    "partOfSpeech": "v. 动词",
-    "translation": "使隐退；使隔绝",
-    "note": "艺术、展览和文化现象类阅读高频。",
-    "example": "The writer uses one example to sequester the cultural meaning of the painting.",
-    "tags": [
-      "阅读",
-      "文化艺术",
-      "人文阅读",
       "高频扩展"
     ]
   },
@@ -26658,57 +26590,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-incapacitate",
-    "category": "reading",
-    "kind": "word",
-    "term": "incapacitate",
-    "phonetic": "/.inkә'pæsiteit/",
-    "partOfSpeech": "v. 动词",
-    "translation": "使无能力；使无行为能力",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers incapacitate the relationship between the variables.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-revile",
-    "category": "reading",
-    "kind": "word",
-    "term": "revile",
-    "phonetic": "/ri'vail/",
-    "partOfSpeech": "v. 动词",
-    "translation": "辱骂；斥责",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers revile the relationship between the variables.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-recant",
-    "category": "reading",
-    "kind": "word",
-    "term": "recant",
-    "phonetic": "/ri'kænt/",
-    "partOfSpeech": "v. 动词",
-    "translation": "放弃",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to recant the main point.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-silica",
     "category": "reading",
     "kind": "word",
@@ -26726,23 +26607,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-pulsate",
-    "category": "reading",
-    "kind": "word",
-    "term": "pulsate",
-    "phonetic": "/'pʌlseit/",
-    "partOfSpeech": "v. 动词",
-    "translation": "搏动；悸动",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to pulsate the main point.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-icicle",
     "category": "reading",
     "kind": "word",
@@ -26752,23 +26616,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "垂冰；冰柱",
     "note": "研究设计、实验过程和结论判断高频。",
     "example": "The article refers to icicle when explaining the research method.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-demur",
-    "category": "reading",
-    "kind": "word",
-    "term": "demur",
-    "phonetic": "/di'mә:/",
-    "partOfSpeech": "v. 动词",
-    "translation": "提出异议；反对",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to demur the main point.",
     "tags": [
       "阅读",
       "学术阅读",
@@ -26879,23 +26726,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-bespeak",
-    "category": "reading",
-    "kind": "word",
-    "term": "bespeak",
-    "phonetic": "/bi'spi:k/",
-    "partOfSpeech": "v. 动词",
-    "translation": "预约；订",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to bespeak the main point.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-taxicab",
     "category": "reading",
     "kind": "word",
@@ -26998,23 +26828,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-extrude",
-    "category": "reading",
-    "kind": "word",
-    "term": "extrude",
-    "phonetic": "/ek'stru:d/",
-    "partOfSpeech": "v. 动词",
-    "translation": "挤出；压出",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers extrude the relationship between the variables.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-irreverence",
     "category": "reading",
     "kind": "word",
@@ -27024,40 +26837,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "不敬；非礼",
     "note": "研究设计、实验过程和结论判断高频。",
     "example": "The article refers to irreverence when explaining the research method.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-transact",
-    "category": "reading",
-    "kind": "word",
-    "term": "transact",
-    "phonetic": "/træn'sækt/",
-    "partOfSpeech": "v. 动词",
-    "translation": "办理；处理",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to transact the main point.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-demobilize",
-    "category": "reading",
-    "kind": "word",
-    "term": "demobilize",
-    "phonetic": "/di:'mәubilaiz/",
-    "partOfSpeech": "v. 动词",
-    "translation": "使复员；使退伍",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to demobilize the main point.",
     "tags": [
       "阅读",
       "学术阅读",
@@ -27117,23 +26896,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-cohere",
-    "category": "reading",
-    "kind": "word",
-    "term": "cohere",
-    "phonetic": "/kәu'hiә/",
-    "partOfSpeech": "v. 动词",
-    "translation": "附着；粘着",
-    "note": "艺术、展览和文化现象类阅读高频。",
-    "example": "The article explains how artists cohere familiar objects in unexpected ways.",
-    "tags": [
-      "阅读",
-      "文化艺术",
-      "人文阅读",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-falconer",
     "category": "reading",
     "kind": "word",
@@ -27177,23 +26939,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "不适合；不一致",
     "note": "研究设计、实验过程和结论判断高频。",
     "example": "The article refers to nonconformity when explaining the research method.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-equivocate",
-    "category": "reading",
-    "kind": "word",
-    "term": "equivocate",
-    "phonetic": "/i'kwivәkeit/",
-    "partOfSpeech": "v. 动词",
-    "translation": "说模棱两可的话；支吾",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers equivocate the relationship between the variables.",
     "tags": [
       "阅读",
       "学术阅读",
@@ -27372,40 +27117,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-iterate",
-    "category": "reading",
-    "kind": "word",
-    "term": "iterate",
-    "phonetic": "/'itәreit/",
-    "partOfSpeech": "v. 动词",
-    "translation": "反复说；重复",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers iterate the relationship between the variables.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-prevaricate",
-    "category": "reading",
-    "kind": "word",
-    "term": "prevaricate",
-    "phonetic": "/pri'værikeit/",
-    "partOfSpeech": "v. 动词",
-    "translation": "支吾其辞；搪塞",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers prevaricate the relationship between the variables.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-dripstone",
     "category": "reading",
     "kind": "word",
@@ -27457,40 +27168,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-recompose",
-    "category": "reading",
-    "kind": "word",
-    "term": "recompose",
-    "phonetic": "/.ri:kәm'pәuz/",
-    "partOfSpeech": "v. 动词",
-    "translation": "重组；修改",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to recompose the main point.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-reorient",
-    "category": "reading",
-    "kind": "word",
-    "term": "reorient",
-    "phonetic": "/.ri:'ɒ:rient/",
-    "partOfSpeech": "v. 动词",
-    "translation": "使适应；再调整",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to reorient the main point.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-semiliterate",
     "category": "reading",
     "kind": "word",
@@ -27500,74 +27177,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "半文盲",
     "note": "研究设计、实验过程和结论判断高频。",
     "example": "The passage uses semiliterate to clarify the main argument.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-meal",
-    "category": "reading",
-    "kind": "word",
-    "term": "meal",
-    "phonetic": "/mi:l/",
-    "partOfSpeech": "n. 名词",
-    "translation": "一餐；膳食",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The article refers to meal when explaining the research method.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-meat",
-    "category": "reading",
-    "kind": "word",
-    "term": "meat",
-    "phonetic": "/mi:t/",
-    "partOfSpeech": "n. 名词",
-    "translation": "肉；餐",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage uses meat to clarify the main argument.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-nurse",
-    "category": "reading",
-    "kind": "word",
-    "term": "nurse",
-    "phonetic": "/nә:s/",
-    "partOfSpeech": "n. 名词",
-    "translation": "护士；保姆",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The article refers to nurse when explaining the research method.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-opposition",
-    "category": "reading",
-    "kind": "word",
-    "term": "opposition",
-    "phonetic": "/.ɒpә'ziʃәn/",
-    "partOfSpeech": "n. 名词",
-    "translation": "反对；敌对",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage uses opposition to clarify the main argument.",
     "tags": [
       "阅读",
       "学术阅读",
@@ -27593,23 +27202,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-lose",
-    "category": "reading",
-    "kind": "word",
-    "term": "lose",
-    "phonetic": "/lu:z/",
-    "partOfSpeech": "v. 动词",
-    "translation": "遗失；损失",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers lose the relationship between the variables.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-milk",
     "category": "reading",
     "kind": "word",
@@ -27627,57 +27219,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-include",
-    "category": "reading",
-    "kind": "word",
-    "term": "include",
-    "phonetic": "/in'klu:d/",
-    "partOfSpeech": "v. 动词",
-    "translation": "包括；把...算入",
-    "note": "艺术、展览和文化现象类阅读高频。",
-    "example": "The writer uses one example to include the cultural meaning of the painting.",
-    "tags": [
-      "阅读",
-      "文化艺术",
-      "人文阅读",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-continue",
-    "category": "reading",
-    "kind": "word",
-    "term": "continue",
-    "phonetic": "/kәn'tinju:/",
-    "partOfSpeech": "v. 动词",
-    "translation": "继续；延续",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to continue the main point.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-real",
-    "category": "reading",
-    "kind": "word",
-    "term": "real",
-    "phonetic": "/'riәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "真的；真实的",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The results show a real difference between the two groups.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-passage",
     "category": "reading",
     "kind": "word",
@@ -27691,23 +27232,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "阅读",
       "文化艺术",
       "人文阅读",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-add",
-    "category": "reading",
-    "kind": "word",
-    "term": "add",
-    "phonetic": "/æd/",
-    "partOfSpeech": "v. 动词",
-    "translation": "增加；添加",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to add the main point.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
       "高频扩展"
     ]
   },
@@ -27738,40 +27262,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "第五；五分之一",
     "note": "研究设计、实验过程和结论判断高频。",
     "example": "The article refers to fifth when explaining the research method.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-win",
-    "category": "reading",
-    "kind": "word",
-    "term": "win",
-    "phonetic": "/win/",
-    "partOfSpeech": "v. 动词",
-    "translation": "赢得；打胜",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers win the relationship between the variables.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-consider",
-    "category": "reading",
-    "kind": "word",
-    "term": "consider",
-    "phonetic": "/kәn'sidŋ/",
-    "partOfSpeech": "v. 动词",
-    "translation": "考虑；思考",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers consider the relationship between the variables.",
     "tags": [
       "阅读",
       "学术阅读",
@@ -27831,23 +27321,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-require",
-    "category": "reading",
-    "kind": "word",
-    "term": "require",
-    "phonetic": "/ri'kwaiә/",
-    "partOfSpeech": "v. 动词",
-    "translation": "需要；命令",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The author uses one case study to require the main point.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-piano",
     "category": "reading",
     "kind": "word",
@@ -27857,23 +27330,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "钢琴",
     "note": "研究设计、实验过程和结论判断高频。",
     "example": "The article refers to piano when explaining the research method.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-explain",
-    "category": "reading",
-    "kind": "word",
-    "term": "explain",
-    "phonetic": "/ik'splein/",
-    "partOfSpeech": "v. 动词",
-    "translation": "解释；说明",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers explain the relationship between the variables.",
     "tags": [
       "阅读",
       "学术阅读",
@@ -28035,23 +27491,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-describe",
-    "category": "reading",
-    "kind": "word",
-    "term": "describe",
-    "phonetic": "/di'skraib/",
-    "partOfSpeech": "v. 动词",
-    "translation": "描述；描绘",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage helps readers describe the relationship between the variables.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-reading-judicial",
     "category": "reading",
     "kind": "word",
@@ -28082,176 +27521,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "阅读",
       "文化艺术",
       "人文阅读",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-aerial",
-    "category": "reading",
-    "kind": "word",
-    "term": "aerial",
-    "phonetic": "/'єәriәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "空中的；航空的",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage uses an aerial explanation of how the process works.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-allowance",
-    "category": "reading",
-    "kind": "word",
-    "term": "allowance",
-    "phonetic": "/ә'lauәns/",
-    "partOfSpeech": "n. 名词",
-    "translation": "津贴；零用钱",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage uses allowance to clarify the main argument.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-pedal",
-    "category": "reading",
-    "kind": "word",
-    "term": "pedal",
-    "phonetic": "/'pedl/",
-    "partOfSpeech": "n. 名词",
-    "translation": "踏板；脚蹬子",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage uses pedal to clarify the main argument.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-directory",
-    "category": "reading",
-    "kind": "word",
-    "term": "directory",
-    "phonetic": "/di'rektәri/",
-    "partOfSpeech": "n. 名词",
-    "translation": "目录；工商名录",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The article refers to directory when explaining the research method.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-hospitality",
-    "category": "reading",
-    "kind": "word",
-    "term": "hospitality",
-    "phonetic": "/.hɒspi'tæliti/",
-    "partOfSpeech": "n. 名词",
-    "translation": "款待；亲切",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The article refers to hospitality when explaining the research method.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-vengeance",
-    "category": "reading",
-    "kind": "word",
-    "term": "vengeance",
-    "phonetic": "/'vendʒәns/",
-    "partOfSpeech": "n. 名词",
-    "translation": "复仇；报仇",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The article refers to vengeance when explaining the research method.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-inaccurate",
-    "category": "reading",
-    "kind": "word",
-    "term": "inaccurate",
-    "phonetic": "/in'ækjurit/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "错误的；不准确的",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The results show an inaccurate difference between the two groups.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-perpetual",
-    "category": "reading",
-    "kind": "word",
-    "term": "perpetual",
-    "phonetic": "/pә'petʃuәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "永久的；不断的",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The results show a perpetual difference between the two groups.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-monstrous",
-    "category": "reading",
-    "kind": "word",
-    "term": "monstrous",
-    "phonetic": "/'mɒnstrәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "巨大的；畸形的",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The results show a monstrous difference between the two groups.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-magistrate",
-    "category": "reading",
-    "kind": "word",
-    "term": "magistrate",
-    "phonetic": "/'mædʒistreit/",
-    "partOfSpeech": "n. 名词",
-    "translation": "长官；法官",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The article refers to magistrate when explaining the research method.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
       "高频扩展"
     ]
   },
@@ -36552,6 +35821,737 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
+    "id": "bulk-reading-irrepressible",
+    "category": "reading",
+    "kind": "word",
+    "term": "irrepressible",
+    "phonetic": "/.iri'presәbl/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "约束不住的；抑制不住的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses an irrepressible explanation of how the process works.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-carnivorous",
+    "category": "reading",
+    "kind": "word",
+    "term": "carnivorous",
+    "phonetic": "/kɑ:'nivәrәs/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "食肉的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses a carnivorous explanation of how the process works.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-subjugation",
+    "category": "reading",
+    "kind": "word",
+    "term": "subjugation",
+    "phonetic": "/.sʌbdʒu'geiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "征服；镇压",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The article refers to subjugation when explaining the research method.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-indigestion",
+    "category": "reading",
+    "kind": "word",
+    "term": "indigestion",
+    "phonetic": "/.indi'dʒestʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "消化不良",
+    "note": "艺术、展览和文化现象类阅读高频。",
+    "example": "The passage uses indigestion to explain how meaning is created in the artwork.",
+    "tags": [
+      "阅读",
+      "文化艺术",
+      "人文阅读",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-prototypical",
+    "category": "reading",
+    "kind": "word",
+    "term": "prototypical",
+    "phonetic": "",
+    "partOfSpeech": "n. 名词",
+    "translation": "[计] 原型的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses prototypical to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-renunciation",
+    "category": "reading",
+    "kind": "word",
+    "term": "renunciation",
+    "phonetic": "/ri.nʌnsi'eiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "放弃；废弃",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The article refers to renunciation when explaining the research method.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-tortuous",
+    "category": "reading",
+    "kind": "word",
+    "term": "tortuous",
+    "phonetic": "/'tɒ:tʃuәs/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "扭曲的；弯曲的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The results show a tortuous difference between the two groups.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-circuitous",
+    "category": "reading",
+    "kind": "word",
+    "term": "circuitous",
+    "phonetic": "/sә'kju:itәs/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "迂回的；间接的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses a circuitous explanation of how the process works.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-synchronous",
+    "category": "reading",
+    "kind": "word",
+    "term": "synchronous",
+    "phonetic": "/'siŋkrәnәs/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "同时的；同步的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The results show a synchronous difference between the two groups.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-acrimonious",
+    "category": "reading",
+    "kind": "word",
+    "term": "acrimonious",
+    "phonetic": "/ækri'mәunjәs/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "尖刻的；讥讽的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The results show an acrimonious difference between the two groups.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-transcontinental",
+    "category": "reading",
+    "kind": "word",
+    "term": "transcontinental",
+    "phonetic": "/'trænzkɔnti'nentәl/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "横贯大陆的；大陆那边的",
+    "note": "艺术、展览和文化现象类阅读高频。",
+    "example": "The passage describes a transcontinental contrast between modern and traditional styles.",
+    "tags": [
+      "阅读",
+      "文化艺术",
+      "人文阅读",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-impersonation",
+    "category": "reading",
+    "kind": "word",
+    "term": "impersonation",
+    "phonetic": "/im.pә:sә'neiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "扮演；装扮",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses impersonation to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-pollination",
+    "category": "reading",
+    "kind": "word",
+    "term": "pollination",
+    "phonetic": "/.pɒli'neiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "授粉",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses pollination to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-lyricist",
+    "category": "reading",
+    "kind": "word",
+    "term": "lyricist",
+    "phonetic": "/'lirisist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "抒情诗人；歌曲作者",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses lyricist to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-ornamentation",
+    "category": "reading",
+    "kind": "word",
+    "term": "ornamentation",
+    "phonetic": "/,ɔ:nәmen'teiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "装饰；装饰术",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses ornamentation to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-fatalism",
+    "category": "reading",
+    "kind": "word",
+    "term": "fatalism",
+    "phonetic": "/'feitәlizm/",
+    "partOfSpeech": "n. 名词",
+    "translation": "宿命论",
+    "note": "历史变迁、社会结构和文化现象高频。",
+    "example": "The writer uses fatalism to explain the social change more clearly.",
+    "tags": [
+      "阅读",
+      "历史文化",
+      "社会议题",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-digression",
+    "category": "reading",
+    "kind": "word",
+    "term": "digression",
+    "phonetic": "/dai'greʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "离题；扯到枝节上",
+    "note": "艺术、展览和文化现象类阅读高频。",
+    "example": "The passage uses digression to explain how meaning is created in the artwork.",
+    "tags": [
+      "阅读",
+      "文化艺术",
+      "人文阅读",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-temperance",
+    "category": "reading",
+    "kind": "word",
+    "term": "temperance",
+    "phonetic": "/'tempәrәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "节欲；戒酒",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The article refers to temperance when explaining the research method.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-distillation",
+    "category": "reading",
+    "kind": "word",
+    "term": "distillation",
+    "phonetic": "/.disti'leiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "蒸馏",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The article refers to distillation when explaining the research method.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-solicitous",
+    "category": "reading",
+    "kind": "word",
+    "term": "solicitous",
+    "phonetic": "/sә'lisitәs/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "关心的；渴望的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The results show a solicitous difference between the two groups.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-capillary",
+    "category": "reading",
+    "kind": "word",
+    "term": "capillary",
+    "phonetic": "/kæ'pilәri/",
+    "partOfSpeech": "n. 名词",
+    "translation": "毛细管",
+    "note": "艺术、展览和文化现象类阅读高频。",
+    "example": "The writer presents capillary as a key feature of the exhibition.",
+    "tags": [
+      "阅读",
+      "文化艺术",
+      "人文阅读",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-topographical",
+    "category": "reading",
+    "kind": "word",
+    "term": "topographical",
+    "phonetic": "/,tɔpә'^ræfikәl/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "地形的；地形学的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses a topographical explanation of how the process works.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-magnificence",
+    "category": "reading",
+    "kind": "word",
+    "term": "magnificence",
+    "phonetic": "/mæg'nifisns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "富丽堂皇；华丽",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The article refers to magnificence when explaining the research method.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-incisive",
+    "category": "reading",
+    "kind": "word",
+    "term": "incisive",
+    "phonetic": "/in'saisiv/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "敏锐的；机敏的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The results show an incisive difference between the two groups.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-facilitation",
+    "category": "reading",
+    "kind": "word",
+    "term": "facilitation",
+    "phonetic": "/fә,sili'teiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "[医] 容易化；助长",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The article refers to facilitation when explaining the research method.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-arable",
+    "category": "reading",
+    "kind": "word",
+    "term": "arable",
+    "phonetic": "/'ærәbl/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "适于耕种的；可耕的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The results show an arable difference between the two groups.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-concurrence",
+    "category": "reading",
+    "kind": "word",
+    "term": "concurrence",
+    "phonetic": "/kәn'kʌrәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "赞同；意见一致",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The article refers to concurrence when explaining the research method.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-subtraction",
+    "category": "reading",
+    "kind": "word",
+    "term": "subtraction",
+    "phonetic": "/sәb'trækʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "减少",
+    "note": "艺术、展览和文化现象类阅读高频。",
+    "example": "The writer presents subtraction as a key feature of the exhibition.",
+    "tags": [
+      "阅读",
+      "文化艺术",
+      "人文阅读",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-permeable",
+    "category": "reading",
+    "kind": "word",
+    "term": "permeable",
+    "phonetic": "/'pә:miәbl/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "有渗透性的；能透过的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses a permeable explanation of how the process works.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-cubism",
+    "category": "reading",
+    "kind": "word",
+    "term": "cubism",
+    "phonetic": "/'kju:bizm/",
+    "partOfSpeech": "n. 名词",
+    "translation": "立体派",
+    "note": "艺术、展览和文化现象类阅读高频。",
+    "example": "The passage uses cubism to explain how meaning is created in the artwork.",
+    "tags": [
+      "阅读",
+      "文化艺术",
+      "人文阅读",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-figment",
+    "category": "reading",
+    "kind": "word",
+    "term": "figment",
+    "phonetic": "/'figmәnt/",
+    "partOfSpeech": "n. 名词",
+    "translation": "虚构的事",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The article refers to figment when explaining the research method.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-incredulity",
+    "category": "reading",
+    "kind": "word",
+    "term": "incredulity",
+    "phonetic": "/.inkri'dju:liti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "不轻信；怀疑",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses incredulity to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-infirmity",
+    "category": "reading",
+    "kind": "word",
+    "term": "infirmity",
+    "phonetic": "/in'fә:miti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "虚弱；病身",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The article refers to infirmity when explaining the research method.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-oration",
+    "category": "reading",
+    "kind": "word",
+    "term": "oration",
+    "phonetic": "/ɒ:'reiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "演说；致辞",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses oration to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-fecundity",
+    "category": "reading",
+    "kind": "word",
+    "term": "fecundity",
+    "phonetic": "/fi'kʌnditi/",
+    "partOfSpeech": "n. 名词",
+    "translation": "多产；丰饶",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The article refers to fecundity when explaining the research method.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-abortive",
+    "category": "reading",
+    "kind": "word",
+    "term": "abortive",
+    "phonetic": "/ә'bɒ:tiv/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "流产的；堕胎的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses an abortive explanation of how the process works.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-unpalatable",
+    "category": "reading",
+    "kind": "word",
+    "term": "unpalatable",
+    "phonetic": "/.ʌn'pælәtәbl/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "不可口的；味道差的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses an unpalatable explanation of how the process works.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-indomitable",
+    "category": "reading",
+    "kind": "word",
+    "term": "indomitable",
+    "phonetic": "/in'dɒmitәbl/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "不屈服的；不屈不挠的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The results show an indomitable difference between the two groups.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-frugality",
+    "category": "reading",
+    "kind": "word",
+    "term": "frugality",
+    "phonetic": "/fru:'gæliti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "节俭；俭省",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses frugality to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-impetuous",
+    "category": "reading",
+    "kind": "word",
+    "term": "impetuous",
+    "phonetic": "/im'petʃuәs/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "冲动的；猛烈的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The passage uses an impetuous explanation of how the process works.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-cabal",
+    "category": "reading",
+    "kind": "word",
+    "term": "cabal",
+    "phonetic": "/kә'bæl/",
+    "partOfSpeech": "n. 名词",
+    "translation": "秘密结社；(尤指政治上的)阴谋",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The article refers to cabal when explaining the research method.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-indefatigable",
+    "category": "reading",
+    "kind": "word",
+    "term": "indefatigable",
+    "phonetic": "/.indi'fætigәbl/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "不知疲倦的；有耐性的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The results show an indefatigable difference between the two groups.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-avoidable",
+    "category": "reading",
+    "kind": "word",
+    "term": "avoidable",
+    "phonetic": "/ә'vɒidәbl/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "可避免的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The results show an avoidable difference between the two groups.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
     "id": "bulk-writing-stance",
     "category": "writing",
     "kind": "word",
@@ -40615,23 +40615,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-criminal",
-    "category": "writing",
-    "kind": "word",
-    "term": "criminal",
-    "phonetic": "/'kriminәl/",
-    "partOfSpeech": "n. 名词",
-    "translation": "罪犯；犯人",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The policy debate often centres on criminal and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-addition",
     "category": "writing",
     "kind": "word",
@@ -41618,23 +41601,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-assassination",
-    "category": "writing",
-    "kind": "word",
-    "term": "assassination",
-    "phonetic": "/ә.sæsi'neiʃәn/",
-    "partOfSpeech": "n. 名词",
-    "translation": "暗杀",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The policy debate often centres on assassination and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-pharmaceutical",
     "category": "writing",
     "kind": "word",
@@ -42485,23 +42451,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-nonviolence",
-    "category": "writing",
-    "kind": "word",
-    "term": "nonviolence",
-    "phonetic": "/nɒn'vaiәlәns/",
-    "partOfSpeech": "n. 名词",
-    "translation": "非暴力",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The policy debate often centres on nonviolence and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-fermentation",
     "category": "writing",
     "kind": "word",
@@ -43250,23 +43199,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-orderly",
-    "category": "writing",
-    "kind": "word",
-    "term": "orderly",
-    "phonetic": "/'ɒ:dәli/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有秩序的；整齐的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an orderly approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-institute",
     "category": "writing",
     "kind": "word",
@@ -43463,23 +43395,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "重振旗鼓；集合",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents rally as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-riot",
-    "category": "writing",
-    "kind": "word",
-    "term": "riot",
-    "phonetic": "/'raiәt/",
-    "partOfSpeech": "n. 名词",
-    "translation": "暴动；喧闹",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer presents riot as a key issue in public policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -43990,23 +43905,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "大气；空气",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents atmosphere as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-mystery",
-    "category": "writing",
-    "kind": "word",
-    "term": "mystery",
-    "phonetic": "/'mistәri/",
-    "partOfSpeech": "n. 名词",
-    "translation": "秘密；神秘",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer presents mystery as a key issue in public policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -47823,23 +47721,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-session",
-    "category": "writing",
-    "kind": "word",
-    "term": "session",
-    "phonetic": "/'seʃәn/",
-    "partOfSpeech": "n. 名词",
-    "translation": "期间；开庭期",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The policy debate often centres on session and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-instruction",
     "category": "writing",
     "kind": "word",
@@ -49209,23 +49090,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "令人想望的；可取的",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "This is a more desirable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-explosive",
-    "category": "writing",
-    "kind": "word",
-    "term": "explosive",
-    "phonetic": "/ik'splәusiv/",
-    "partOfSpeech": "n. 名词",
-    "translation": "炸药；爆破音",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The policy debate often centres on explosive and social responsibility.",
     "tags": [
       "写作",
       "写作表达",
@@ -52175,23 +52039,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-violence",
-    "category": "writing",
-    "kind": "word",
-    "term": "violence",
-    "phonetic": "/'vaiәlәns/",
-    "partOfSpeech": "n. 名词",
-    "translation": "猛烈；暴力",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The policy debate often centres on violence and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-invisible",
     "category": "writing",
     "kind": "word",
@@ -54878,23 +54725,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-ruinous",
-    "category": "writing",
-    "kind": "word",
-    "term": "ruinous",
-    "phonetic": "/'ruinәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "破坏性的；招致毁灭的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a ruinous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-congratulation",
     "category": "writing",
     "kind": "word",
@@ -55244,6 +55074,176 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "性质的；质的",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "This is a more qualitative way to improve public services.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-aerial",
+    "category": "writing",
+    "kind": "word",
+    "term": "aerial",
+    "phonetic": "/'єәriәl/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "空中的；航空的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "This is a more aerial way to improve public services.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-allowance",
+    "category": "writing",
+    "kind": "word",
+    "term": "allowance",
+    "phonetic": "/ә'lauәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "津贴；零用钱",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents allowance as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-pedal",
+    "category": "writing",
+    "kind": "word",
+    "term": "pedal",
+    "phonetic": "/'pedl/",
+    "partOfSpeech": "n. 名词",
+    "translation": "踏板；脚蹬子",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on pedal and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-directory",
+    "category": "writing",
+    "kind": "word",
+    "term": "directory",
+    "phonetic": "/di'rektәri/",
+    "partOfSpeech": "n. 名词",
+    "translation": "目录；工商名录",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on directory and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-hospitality",
+    "category": "writing",
+    "kind": "word",
+    "term": "hospitality",
+    "phonetic": "/.hɒspi'tæliti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "款待；亲切",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on hospitality and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-vengeance",
+    "category": "writing",
+    "kind": "word",
+    "term": "vengeance",
+    "phonetic": "/'vendʒәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "复仇；报仇",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents vengeance as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-inaccurate",
+    "category": "writing",
+    "kind": "word",
+    "term": "inaccurate",
+    "phonetic": "/in'ækjurit/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "错误的；不准确的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer supports an inaccurate approach to social policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-perpetual",
+    "category": "writing",
+    "kind": "word",
+    "term": "perpetual",
+    "phonetic": "/pә'petʃuәl/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "永久的；不断的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "This is a more perpetual way to improve public services.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-monstrous",
+    "category": "writing",
+    "kind": "word",
+    "term": "monstrous",
+    "phonetic": "/'mɒnstrәs/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "巨大的；畸形的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "This is a more monstrous way to improve public services.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-magistrate",
+    "category": "writing",
+    "kind": "word",
+    "term": "magistrate",
+    "phonetic": "/'mædʒistreit/",
+    "partOfSpeech": "n. 名词",
+    "translation": "长官；法官",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on magistrate and social responsibility.",
     "tags": [
       "写作",
       "写作表达",
@@ -57717,23 +57717,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-speaking-nest",
-    "category": "speaking",
-    "kind": "word",
-    "term": "nest",
-    "phonetic": "/nest/",
-    "partOfSpeech": "n. 名词",
-    "translation": "巢；窝",
-    "note": "家乡、城市和旅行题高频。",
-    "example": "I would love to return there because the nest left a strong impression on me.",
-    "tags": [
-      "口语",
-      "地点话题",
-      "旅行生活",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-speaking-sympathy",
     "category": "speaking",
     "kind": "word",
@@ -58427,23 +58410,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "口语",
       "地点话题",
       "旅行生活",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-speaking-slaughter",
-    "category": "speaking",
-    "kind": "word",
-    "term": "slaughter",
-    "phonetic": "/'slɒ:tә/",
-    "partOfSpeech": "n. 名词",
-    "translation": "残杀；屠杀",
-    "note": "日常习惯、个人偏好和观点展开高频。",
-    "example": "People often mention slaughter when they talk about a healthy lifestyle.",
-    "tags": [
-      "口语",
-      "日常习惯",
-      "观点表达",
       "高频扩展"
     ]
   },
@@ -68614,23 +68580,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-speaking-massacre",
-    "category": "speaking",
-    "kind": "word",
-    "term": "massacre",
-    "phonetic": "/'mæsәkә/",
-    "partOfSpeech": "n. 名词",
-    "translation": "大屠杀",
-    "note": "人物、经历和感受表达高频。",
-    "example": "The story became memorable because of one small moment of massacre.",
-    "tags": [
-      "口语",
-      "口语素材",
-      "人物经历",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-speaking-devotion",
     "category": "speaking",
     "kind": "word",
@@ -69796,23 +69745,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "忧郁；悲哀",
     "note": "人物、经历和感受表达高频。",
     "example": "The story became memorable because of one small moment of melancholy.",
-    "tags": [
-      "口语",
-      "口语素材",
-      "人物经历",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-speaking-butcher",
-    "category": "speaking",
-    "kind": "word",
-    "term": "butcher",
-    "phonetic": "/'butʃә/",
-    "partOfSpeech": "n. 名词",
-    "translation": "屠夫；肉商",
-    "note": "人物、经历和感受表达高频。",
-    "example": "That experience taught me the value of butcher.",
     "tags": [
       "口语",
       "口语素材",
@@ -73094,6 +73026,74 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "发生；发生",
     "note": "人物、经历和感受表达高频。",
     "example": "That experience helped me happen my feelings more clearly.",
+    "tags": [
+      "口语",
+      "口语素材",
+      "人物经历",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-speaking-meal",
+    "category": "speaking",
+    "kind": "word",
+    "term": "meal",
+    "phonetic": "/mi:l/",
+    "partOfSpeech": "n. 名词",
+    "translation": "一餐；膳食",
+    "note": "日常习惯、个人偏好和观点展开高频。",
+    "example": "People often mention meal when they talk about a healthy lifestyle.",
+    "tags": [
+      "口语",
+      "日常习惯",
+      "观点表达",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-speaking-meat",
+    "category": "speaking",
+    "kind": "word",
+    "term": "meat",
+    "phonetic": "/mi:t/",
+    "partOfSpeech": "n. 名词",
+    "translation": "肉；餐",
+    "note": "日常习惯、个人偏好和观点展开高频。",
+    "example": "I think meat is one of the best ways to relax after work.",
+    "tags": [
+      "口语",
+      "日常习惯",
+      "观点表达",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-speaking-nurse",
+    "category": "speaking",
+    "kind": "word",
+    "term": "nurse",
+    "phonetic": "/nә:s/",
+    "partOfSpeech": "n. 名词",
+    "translation": "护士；保姆",
+    "note": "人物、经历和感受表达高频。",
+    "example": "The story became memorable because of one small moment of nurse.",
+    "tags": [
+      "口语",
+      "口语素材",
+      "人物经历",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-speaking-opposition",
+    "category": "speaking",
+    "kind": "word",
+    "term": "opposition",
+    "phonetic": "/.ɒpә'ziʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "反对；敌对",
+    "note": "人物、经历和感受表达高频。",
+    "example": "The story became memorable because of one small moment of opposition.",
     "tags": [
       "口语",
       "口语素材",

@@ -159,18 +159,34 @@ PDF_MANUAL_PRIORITY = {
 
 BLOCKED_TERMS = {
     "ammunition",
+    "assassin",
+    "assassination",
     "artillery",
     "bomber",
     "cannon",
+    "executioner",
+    "genocide",
+    "genocidal",
     "grenade",
+    "homicide",
+    "kidnap",
+    "kidnapping",
+    "manslaughter",
+    "militant",
+    "militia",
     "missile",
     "mortar",
+    "murder",
+    "murderer",
     "obituary",
     "obsequies",
     "rifle",
+    "slaughter",
     "supremacist",
     "supremacism",
     "sycophant",
+    "terrorism",
+    "terrorist",
     "torpedo",
     "truculent",
     "warhead",
@@ -179,7 +195,10 @@ BLOCKED_TERMS = {
 }
 
 BLOCKED_CN_SNIPPETS = {
+    "暗杀",
+    "谋杀",
     "火炮",
+    "刺客",
     "炮兵",
     "鱼雷",
     "弹药",
@@ -187,6 +206,12 @@ BLOCKED_CN_SNIPPETS = {
     "导弹",
     "手榴弹",
     "迫击炮",
+    "凶手",
+    "恐怖主义",
+    "绑架",
+    "处决",
+    "种族灭绝",
+    "屠杀",
     "葬礼",
     "讣告",
     "种族优越主义",
@@ -197,20 +222,57 @@ BLOCKED_CN_SNIPPETS = {
 
 BLOCKED_EN_SNIPPETS = {
     "ammunition",
+    "assassin",
+    "assassination",
     "artillery",
+    "executioner",
     "funeral",
+    "genocide",
     "grenade",
+    "homicide",
+    "kidnap",
+    "manslaughter",
+    "militant",
+    "militia",
     "missile",
     "mortar",
+    "murder",
+    "murderer",
     "obituary",
     "rifle",
+    "slaughter",
     "supremacist",
     "sycophant",
+    "terrorism",
+    "terrorist",
     "torpedo",
     "truculent",
     "warhead",
     "wanton",
     "weapon",
+}
+
+CATEGORY_BLOCKED_TERMS = {
+    "writing": {
+        "assassin",
+        "assassination",
+        "criminal",
+        "execution",
+        "executioner",
+        "genocide",
+        "genocidal",
+        "homicide",
+        "kidnap",
+        "kidnapping",
+        "manslaughter",
+        "murder",
+        "murderer",
+        "nonviolence",
+        "slaughter",
+        "terrorism",
+        "terrorist",
+        "violence",
+    },
 }
 
 TERM_OVERRIDES = {
@@ -797,6 +859,39 @@ def is_blocked_term(word, translation="", definition=""):
     return any(snippet in bag_cn for snippet in BLOCKED_CN_SNIPPETS) or any(snippet in bag_en for snippet in BLOCKED_EN_SNIPPETS)
 
 
+def is_category_blocked_term(category, word, translation="", definition=""):
+    lowered_word = (word or "").lower()
+    if lowered_word in CATEGORY_BLOCKED_TERMS.get(category, set()):
+        return True
+
+    bag = f"{word} {translation} {definition}".lower()
+    if category == "writing":
+        risk_snippets = (
+            "assassin",
+            "assassination",
+            "execution",
+            "executioner",
+            "genocide",
+            "homicide",
+            "kidnap",
+            "murder",
+            "murderer",
+            "terrorism",
+            "terrorist",
+            "violence",
+            "暗杀",
+            "谋杀",
+            "凶手",
+            "恐怖主义",
+            "绑架",
+            "处决",
+            "种族灭绝",
+            "暴力",
+        )
+        return any(snippet in bag for snippet in risk_snippets)
+    return False
+
+
 def ensure_source():
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     if SOURCE_PATH.exists() and SOURCE_PATH.stat().st_size > 10_000_000:
@@ -941,6 +1036,8 @@ def score_candidate(row, pdf_priority):
 
     for category in TARGET_QUOTAS:
         scores[category] += pdf_boosts.get(category, 0) * PDF_PRIORITY_SCALE
+        if is_category_blocked_term(category, row["word"], row["translation"], row["definition"]):
+            scores[category] -= 80
 
     if override_category:
         for category in TARGET_QUOTAS:
@@ -958,14 +1055,18 @@ def score_candidate(row, pdf_priority):
             scores["writing"] += 1.5
 
     category_eligible = {
-        "listening": topic_hits["listening"] > 0 or pdf_boosts.get("listening", 0) >= 2 or (tags & {"cet4", "cet6"} and bonus >= 1.2 and row["pos"] in {"n", "v", "a"}),
-        "speaking": topic_hits["speaking"] > 0 or pdf_boosts.get("speaking", 0) >= 2 or (tags & {"cet4", "cet6"} and bonus >= 1.2 and row["pos"] in {"n", "v", "a", "r"}),
-        "reading": topic_hits["reading"] > 0 or pdf_boosts.get("reading", 0) >= 2 or (tags & {"ielts", "toefl"} and (word.endswith(ABSTRACT_SUFFIXES) or row["pos"] in {"n", "a"})),
-        "writing": topic_hits["writing"] > 0 or pdf_boosts.get("writing", 0) >= 2 or ((tags & {"ielts", "toefl", "cet6"}) and (word.endswith(ABSTRACT_SUFFIXES + FORMAL_SUFFIXES) or row["pos"] in {"n", "a"})),
+        "listening": topic_hits["listening"] > 0 or pdf_boosts.get("listening", 0) >= 2 or (bool(tags & {"cet4", "cet6"}) and bonus >= 1.2 and row["pos"] in {"n", "v", "a"}),
+        "speaking": topic_hits["speaking"] > 0 or pdf_boosts.get("speaking", 0) >= 2 or (bool(tags & {"cet4", "cet6"}) and bonus >= 1.2 and row["pos"] in {"n", "v", "a", "r"}),
+        "reading": topic_hits["reading"] > 0 or pdf_boosts.get("reading", 0) >= 2 or (bool(tags & {"ielts", "toefl"}) and (word.endswith(ABSTRACT_SUFFIXES) or row["pos"] in {"n", "a"})),
+        "writing": topic_hits["writing"] > 0 or pdf_boosts.get("writing", 0) >= 2 or (bool(tags & {"ielts", "toefl", "cet6"}) and (word.endswith(ABSTRACT_SUFFIXES + FORMAL_SUFFIXES) or row["pos"] in {"n", "a"})),
     }
 
     if override_category:
         category_eligible = {category: category == override_category for category in TARGET_QUOTAS}
+    else:
+        for category in TARGET_QUOTAS:
+            if is_category_blocked_term(category, row["word"], row["translation"], row["definition"]):
+                category_eligible[category] = False
 
     base = (5 if "ielts" in tags else 0) + (4 if "toefl" in tags else 0) + (3 if "cet6" in tags else 0) + (2 if "cet4" in tags else 0) + bonus + sum(pdf_boosts.values()) * 0.5 + (20 if override_category else 0)
 
@@ -1024,10 +1125,24 @@ def select_candidates(candidates):
     )
 
     for category in preferred_order:
+        category_fallback = [item for item in fallback if item["eligible"].get(category)]
+        for candidate in category_fallback:
+            if len(selected[category]) >= TARGET_QUOTAS[category]:
+                break
+            if candidate["word"] in used_words:
+                continue
+            selected[category].append(candidate)
+            used_words.add(candidate["word"])
+
+        if len(selected[category]) >= TARGET_QUOTAS[category]:
+            continue
+
         for candidate in fallback:
             if len(selected[category]) >= TARGET_QUOTAS[category]:
                 break
             if candidate["word"] in used_words:
+                continue
+            if is_category_blocked_term(category, candidate["word"], candidate["translation"], candidate["definition"]):
                 continue
             selected[category].append(candidate)
             used_words.add(candidate["word"])
