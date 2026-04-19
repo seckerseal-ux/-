@@ -538,6 +538,7 @@ Do not pretend you have phoneme-level scoring. For pronunciation, infer conserva
 Keep feedback concise but actionable.
 For corrections, only rewrite phrases that are plausible improvements of what the candidate said.
 For recommended materials, prioritize reusable IELTS speaking chunks, topic ideas, or follow-up phrases that fit this exact topic family.
+For part_material_pack.reusable_phrases, return short memorisable English chunks that can be saved into a topic phrase bank; avoid single words unless they are part of a fixed collocation.
 Also extract 1-3 recurring grammar problems if they are visible, and tailor follow-up questions plus a material pack to the current Speaking part.
 Also return:
 1. criterion_analysis: separate Chinese feedback for Fluency and Coherence, Lexical Resource, Grammatical Range and Accuracy, and Pronunciation.
@@ -2566,7 +2567,7 @@ def summarize_speaking_mock(session_parts, provider=None):
 3. 给出 3 条以内的 part_reports，概括 Part 1 / 2 / 3 各自最主要的问题和下一步重点。
 4. 给出 transcript_overview，总结三段转写里反复出现的表达或节奏模式。
 5. 给出 1-3 个 grammar_patterns，聚合全轮最常见的语法问题。
-6. 给出 recommended_materials，优先推荐下次最值得背的通用素材。
+6. 给出 recommended_materials，优先推荐下次最值得背的通用素材或可直接复用的英文词块。
 """.strip()
 
     parsed = structured_json_request(

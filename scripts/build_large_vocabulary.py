@@ -254,6 +254,7 @@ BLOCKED_EN_SNIPPETS = {
 
 CATEGORY_BLOCKED_TERMS = {
     "writing": {
+        "anonymous",
         "assassin",
         "assassination",
         "accessory",
@@ -839,6 +840,80 @@ EN_KEYWORDS = {
 
 ABSTRACT_SUFFIXES = ("tion", "sion", "ment", "ity", "ance", "ence", "ism", "ist", "ology", "graphy", "ship", "tude")
 FORMAL_SUFFIXES = ("ive", "ous", "able", "ible", "al", "ary", "ory", "ate", "ify")
+WRITING_ALLOWED_ADJECTIVE_TERMS = {
+    "adequate",
+    "additional",
+    "beneficial",
+    "commercial",
+    "comparable",
+    "considerable",
+    "constructive",
+    "controversial",
+    "critical",
+    "crucial",
+    "cultural",
+    "demographic",
+    "economic",
+    "educational",
+    "effective",
+    "efficient",
+    "empirical",
+    "essential",
+    "ethical",
+    "feasible",
+    "financial",
+    "flexible",
+    "global",
+    "inclusive",
+    "industrial",
+    "inevitable",
+    "inadequate",
+    "innovative",
+    "institutional",
+    "integral",
+    "intensive",
+    "legal",
+    "legitimate",
+    "limited",
+    "long-term",
+    "main",
+    "minimal",
+    "moderate",
+    "monetary",
+    "municipal",
+    "mutual",
+    "negative",
+    "neutral",
+    "notable",
+    "official",
+    "overall",
+    "political",
+    "positive",
+    "practicable",
+    "practical",
+    "primary",
+    "productive",
+    "professional",
+    "prospective",
+    "public",
+    "pragmatic",
+    "reasonable",
+    "regional",
+    "reliable",
+    "relevant",
+    "representative",
+    "responsible",
+    "rural",
+    "salient",
+    "social",
+    "substantial",
+    "sustainable",
+    "theoretical",
+    "urban",
+    "valid",
+    "viable",
+    "vital",
+}
 
 
 def normalize_pdf_text(text):
@@ -1100,8 +1175,13 @@ def score_candidate(row, pdf_priority):
     }
 
     abstract_noun_signal = row["pos"] == "n" and word.endswith(ABSTRACT_SUFFIXES)
-    formal_adjective_signal = row["pos"] == "a" and word.endswith(ABSTRACT_SUFFIXES + FORMAL_SUFFIXES)
-    writing_formal_signal = abstract_noun_signal or formal_adjective_signal
+    writing_adjective_signal = row["pos"] == "a" and (
+        topic_hits_cn["writing"] > 0
+        or pdf_boosts.get("writing", 0) >= 2
+        or word in WRITING_ALLOWED_ADJECTIVE_TERMS
+        or override_category == "writing"
+    )
+    writing_formal_signal = abstract_noun_signal or writing_adjective_signal
 
     scores = {key: 0.0 for key in TARGET_QUOTAS}
     scores["listening"] = topic_hits["listening"] * 8 + bonus + (3 if tags & {"cet4", "cet6"} else 0) + (2 if row["pos"] in {"n", "v"} else 0)
@@ -1222,6 +1302,8 @@ def select_candidates(candidates):
             if len(selected[category]) >= TARGET_QUOTAS[category]:
                 break
             if candidate["word"] in used_words:
+                continue
+            if category == "writing" and not candidate["eligible"].get(category):
                 continue
             if is_category_blocked_term(category, candidate["word"], candidate["translation"], candidate["definition"]):
                 continue

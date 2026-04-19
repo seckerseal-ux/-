@@ -16832,6 +16832,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
+    "id": "bulk-listening-abnormal",
+    "category": "listening",
+    "kind": "word",
+    "term": "abnormal",
+    "phonetic": "/æb'nɒ:mәl/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "反常的；不规则的",
+    "note": "校园通知、注册和表格办理场景高频。",
+    "example": "Attendance at the safety session is abnormal for all first-year students.",
+    "tags": [
+      "听力",
+      "校园听力",
+      "服务咨询",
+      "高频扩展"
+    ]
+  },
+  {
     "id": "bulk-listening-indifferent",
     "category": "listening",
     "kind": "word",
@@ -17283,6 +17300,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "对话",
     "note": "校园通知、注册和表格办理场景高频。",
     "example": "Students discussed the dialogue during the orientation session.",
+    "tags": [
+      "听力",
+      "校园听力",
+      "服务咨询",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-listening-live",
+    "category": "listening",
+    "kind": "word",
+    "term": "live",
+    "phonetic": "/liv.laiv/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "活的；生动的",
+    "note": "校园通知、注册和表格办理场景高频。",
+    "example": "The new arrangement seems live, so students should read the notice carefully.",
     "tags": [
       "听力",
       "校园听力",
@@ -17814,40 +17848,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "听力",
       "校园听力",
       "服务咨询",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-listening-swirl",
-    "category": "listening",
-    "kind": "word",
-    "term": "swirl",
-    "phonetic": "/swә:l/",
-    "partOfSpeech": "n. 名词",
-    "translation": "漩涡；涡动",
-    "note": "住宿安排、设施维修和押金费用高频。",
-    "example": "Residents discussed the swirl after dinner in the common room.",
-    "tags": [
-      "听力",
-      "住宿生活",
-      "设施通知",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-listening-lender",
-    "category": "listening",
-    "kind": "word",
-    "term": "lender",
-    "phonetic": "/'lendә/",
-    "partOfSpeech": "n. 名词",
-    "translation": "出借人；贷方",
-    "note": "订票、改签和路线说明场景高频。",
-    "example": "The assistant mentioned the lender while checking the booking details.",
-    "tags": [
-      "听力",
-      "旅游交通",
-      "时间安排",
       "高频扩展"
     ]
   },
@@ -18524,23 +18524,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "细微差别",
     "note": "研究设计、实验过程和结论判断高频。",
     "example": "The article refers to nuance when explaining the research method.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-diverse",
-    "category": "reading",
-    "kind": "word",
-    "term": "diverse",
-    "phonetic": "/dai'vә:s/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不同的；变化多的",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The results show a diverse difference between the two groups.",
     "tags": [
       "阅读",
       "学术阅读",
@@ -23649,6 +23632,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
+    "id": "bulk-reading-subversive",
+    "category": "reading",
+    "kind": "word",
+    "term": "subversive",
+    "phonetic": "/sәb'vә:siv/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "从事颠覆的；破坏性的",
+    "note": "环境、资源和气候变化类阅读高频。",
+    "example": "It was a subversive change in the local climate.",
+    "tags": [
+      "阅读",
+      "环境话题",
+      "自然科学",
+      "高频扩展"
+    ]
+  },
+  {
     "id": "bulk-reading-literate",
     "category": "reading",
     "kind": "word",
@@ -24975,6 +24975,40 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
+    "id": "bulk-reading-moist",
+    "category": "reading",
+    "kind": "word",
+    "term": "moist",
+    "phonetic": "/mɒist/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "潮湿的；多雨的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The results show a moist difference between the two groups.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-vehement",
+    "category": "reading",
+    "kind": "word",
+    "term": "vehement",
+    "phonetic": "/'vi:imәnt/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "热烈的；激烈的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The results show a vehement difference between the two groups.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
     "id": "bulk-reading-nonviolence",
     "category": "reading",
     "kind": "word",
@@ -24984,6 +25018,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "非暴力",
     "note": "研究设计、实验过程和结论判断高频。",
     "example": "The passage uses nonviolence to clarify the main argument.",
+    "tags": [
+      "阅读",
+      "学术阅读",
+      "研究方法",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-reading-escapist",
+    "category": "reading",
+    "kind": "word",
+    "term": "escapist",
+    "phonetic": "/is'keipist/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "逃避现实的",
+    "note": "研究设计、实验过程和结论判断高频。",
+    "example": "The results show an escapist difference between the two groups.",
     "tags": [
       "阅读",
       "学术阅读",
@@ -36501,57 +36552,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-reading-universe",
-    "category": "reading",
-    "kind": "word",
-    "term": "universe",
-    "phonetic": "/'ju:nivә:s/",
-    "partOfSpeech": "n. 名词",
-    "translation": "宇宙；星系",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage uses universe to clarify the main argument.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-conquest",
-    "category": "reading",
-    "kind": "word",
-    "term": "conquest",
-    "phonetic": "/'kɒŋkwest/",
-    "partOfSpeech": "n. 名词",
-    "translation": "战胜；征服",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The passage uses conquest to clarify the main argument.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-reading-arrest",
-    "category": "reading",
-    "kind": "word",
-    "term": "arrest",
-    "phonetic": "/ә'rest/",
-    "partOfSpeech": "n. 名词",
-    "translation": "逮捕；监禁",
-    "note": "研究设计、实验过程和结论判断高频。",
-    "example": "The article refers to arrest when explaining the research method.",
-    "tags": [
-      "阅读",
-      "学术阅读",
-      "研究方法",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-stance",
     "category": "writing",
     "kind": "word",
@@ -36671,40 +36671,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-assertion",
-    "category": "writing",
-    "kind": "word",
-    "term": "assertion",
-    "phonetic": "/ә'sә:ʃәn/",
-    "partOfSpeech": "n. 名词",
-    "translation": "断言；主张",
-    "note": "评价观点、反驳论断类写作高频。",
-    "example": "The essay challenges the assertion that technology can solve every educational problem.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-census",
-    "category": "writing",
-    "kind": "word",
-    "term": "census",
-    "phonetic": "/'sensәs/",
-    "partOfSpeech": "n. 名词",
-    "translation": "人口普查；统计调查",
-    "note": "人口结构、公共服务和社会规划类写作高频。",
-    "example": "A regular census helps governments plan schools, transport, and healthcare more effectively.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-adolescent",
     "category": "writing",
     "kind": "word",
@@ -36731,6 +36697,40 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "显著的；突出的",
     "note": "概括关键问题、突出核心特征类写作高频。",
     "example": "One salient problem is the widening gap between urban and rural schools.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-assertion",
+    "category": "writing",
+    "kind": "word",
+    "term": "assertion",
+    "phonetic": "/ә'sә:ʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "断言；主张",
+    "note": "评价观点、反驳论断类写作高频。",
+    "example": "The essay challenges the assertion that technology can solve every educational problem.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-census",
+    "category": "writing",
+    "kind": "word",
+    "term": "census",
+    "phonetic": "/'sensәs/",
+    "partOfSpeech": "n. 名词",
+    "translation": "人口普查；统计调查",
+    "note": "人口结构、公共服务和社会规划类写作高频。",
+    "example": "A regular census helps governments plan schools, transport, and healthcare more effectively.",
     "tags": [
       "写作",
       "写作表达",
@@ -36833,6 +36833,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "作恶者；犯罪者",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on perpetrator and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-discreet",
+    "category": "writing",
+    "kind": "word",
+    "term": "discreet",
+    "phonetic": "/dis'kri:t/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "小心的；慎重的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "This is a more discreet way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -36960,6 +36977,40 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
+    "id": "bulk-writing-prone",
+    "category": "writing",
+    "kind": "word",
+    "term": "prone",
+    "phonetic": "/prәun/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "俯伏的；面向下的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer supports a prone approach to social policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-predominant",
+    "category": "writing",
+    "kind": "word",
+    "term": "predominant",
+    "phonetic": "/pri'dɒminәnt/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "占主导地位的；卓越的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer supports a predominant approach to social policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
     "id": "bulk-writing-incompatible",
     "category": "writing",
     "kind": "word",
@@ -36969,6 +37020,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "不相容的；不能并存的",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "This is a more incompatible way to improve public services.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-deficient",
+    "category": "writing",
+    "kind": "word",
+    "term": "deficient",
+    "phonetic": "/di'fiʃәnt/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "不足的；不充分的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "This is a more deficient way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -37003,6 +37071,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "司法权；审判权",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents jurisdiction as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-negligent",
+    "category": "writing",
+    "kind": "word",
+    "term": "negligent",
+    "phonetic": "/'neglidʒәnt/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "疏忽的；粗心的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "This is a more negligent way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -37054,23 +37139,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "违约；不履行责任",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The essay argues that default deserves more public support.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-discreet",
-    "category": "writing",
-    "kind": "word",
-    "term": "discreet",
-    "phonetic": "/dis'kri:t/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "小心的；慎重的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more discreet way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -37215,40 +37283,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-prone",
-    "category": "writing",
-    "kind": "word",
-    "term": "prone",
-    "phonetic": "/prәun/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "俯伏的；面向下的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a prone approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-predominant",
-    "category": "writing",
-    "kind": "word",
-    "term": "predominant",
-    "phonetic": "/pri'dɒminәnt/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "占主导地位的；卓越的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a predominant approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-exempt",
     "category": "writing",
     "kind": "word",
@@ -37334,23 +37368,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-deficient",
-    "category": "writing",
-    "kind": "word",
-    "term": "deficient",
-    "phonetic": "/di'fiʃәnt/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不足的；不充分的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more deficient way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-creditor",
     "category": "writing",
     "kind": "word",
@@ -37360,23 +37377,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "债权人",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on creditor and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-negligent",
-    "category": "writing",
-    "kind": "word",
-    "term": "negligent",
-    "phonetic": "/'neglidʒәnt/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "疏忽的；粗心的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more negligent way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -37398,6 +37398,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "写作",
       "写作表达",
       "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-economic",
+    "category": "writing",
+    "kind": "word",
+    "term": "economic",
+    "phonetic": "/.i:kә'nɒmik/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "经济上的；实用的",
+    "note": "城市发展、经济成本和环境压力类写作高频。",
+    "example": "Public transport is often a more economic option than private cars.",
+    "tags": [
+      "写作",
+      "经济城市",
+      "环境影响",
       "高频扩展"
     ]
   },
@@ -37466,6 +37483,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "写作",
       "经济城市",
       "环境影响",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-diverse",
+    "category": "writing",
+    "kind": "word",
+    "term": "diverse",
+    "phonetic": "/dai'vә:s/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "不同的；变化多的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer supports a diverse approach to social policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
       "高频扩展"
     ]
   },
@@ -37572,6 +37606,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
+    "id": "bulk-writing-catastrophic",
+    "category": "writing",
+    "kind": "word",
+    "term": "catastrophic",
+    "phonetic": "/.kætә'strɒfik/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "悲惨的；灾难的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "This is a more catastrophic way to improve public services.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
     "id": "bulk-writing-statutory",
     "category": "writing",
     "kind": "word",
@@ -37619,23 +37670,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "写作",
       "写作表达",
       "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-economic",
-    "category": "writing",
-    "kind": "word",
-    "term": "economic",
-    "phonetic": "/.i:kә'nɒmik/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "经济上的；实用的",
-    "note": "城市发展、经济成本和环境压力类写作高频。",
-    "example": "Public transport is often a more economic option than private cars.",
-    "tags": [
-      "写作",
-      "经济城市",
-      "环境影响",
       "高频扩展"
     ]
   },
@@ -37708,6 +37742,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
+    "id": "bulk-writing-needless",
+    "category": "writing",
+    "kind": "word",
+    "term": "needless",
+    "phonetic": "/'ni:dlis/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "不需要的；不必要的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "This approach seems needless in the long run.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
     "id": "bulk-writing-wealth",
     "category": "writing",
     "kind": "word",
@@ -37751,23 +37802,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "公共汽车",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on bus and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-catastrophic",
-    "category": "writing",
-    "kind": "word",
-    "term": "catastrophic",
-    "phonetic": "/.kætә'strɒfik/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "悲惨的；灾难的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more catastrophic way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -38235,23 +38269,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-needless",
-    "category": "writing",
-    "kind": "word",
-    "term": "needless",
-    "phonetic": "/'ni:dlis/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不需要的；不必要的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This approach seems needless in the long run.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-responsible",
     "category": "writing",
     "kind": "word",
@@ -38354,6 +38371,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
+    "id": "bulk-writing-upscale",
+    "category": "writing",
+    "kind": "word",
+    "term": "upscale",
+    "phonetic": "/'ʌpskeil/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "迎合高层次消费者的；质优价高的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "This is a more upscale way to improve public services.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
     "id": "bulk-writing-ambience",
     "category": "writing",
     "kind": "word",
@@ -38431,23 +38465,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "社会；社交界",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents society as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-rebellious",
-    "category": "writing",
-    "kind": "word",
-    "term": "rebellious",
-    "phonetic": "/ri'beljәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "造反的；反抗的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more rebellious way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -38788,23 +38805,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "法院；郡政府所在地",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "Governments should give greater attention to courthouse when making policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-upscale",
-    "category": "writing",
-    "kind": "word",
-    "term": "upscale",
-    "phonetic": "/'ʌpskeil/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "迎合高层次消费者的；质优价高的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more upscale way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -39357,6 +39357,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
+    "id": "bulk-writing-needy",
+    "category": "writing",
+    "kind": "word",
+    "term": "needy",
+    "phonetic": "/'ni:di/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "贫穷的；贫困的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer supports a needy approach to social policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
     "id": "bulk-writing-sanitation",
     "category": "writing",
     "kind": "word",
@@ -39387,6 +39404,40 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "写作",
       "写作表达",
       "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-gainful",
+    "category": "writing",
+    "kind": "word",
+    "term": "gainful",
+    "phonetic": "/'geinful/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "有利益的；唯利是图的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "This is a more gainful way to improve public services.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-pedagogic",
+    "category": "writing",
+    "kind": "word",
+    "term": "pedagogic",
+    "phonetic": "/.pedә'gɒdʒik/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "教育学的；教授法的",
+    "note": "教育、媒体和科技影响类写作高频。",
+    "example": "Online learning can be more pedagogic when students receive timely feedback.",
+    "tags": [
+      "写作",
+      "教育话题",
+      "科技发展",
       "高频扩展"
     ]
   },
@@ -39459,23 +39510,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-tremendous",
-    "category": "writing",
-    "kind": "word",
-    "term": "tremendous",
-    "phonetic": "/tri'mendәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "巨大的；非常的",
-    "note": "教育、媒体和科技影响类写作高频。",
-    "example": "It is a tremendous example of how technology can improve access to education.",
-    "tags": [
-      "写作",
-      "教育话题",
-      "科技发展",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-finance",
     "category": "writing",
     "kind": "word",
@@ -39506,23 +39540,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "写作",
       "写作表达",
       "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-physical",
-    "category": "writing",
-    "kind": "word",
-    "term": "physical",
-    "phonetic": "/'fizikl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "身体的；物质的",
-    "note": "城市发展、经济成本和环境压力类写作高频。",
-    "example": "Public transport is often a more physical option than private cars.",
-    "tags": [
-      "写作",
-      "经济城市",
-      "环境影响",
       "高频扩展"
     ]
   },
@@ -39680,23 +39697,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-constitutional",
-    "category": "writing",
-    "kind": "word",
-    "term": "constitutional",
-    "phonetic": "/.kɒnsti'tju:ʃәnl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "宪法的；立宪的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more constitutional way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-subsistence",
     "category": "writing",
     "kind": "word",
@@ -39723,23 +39723,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "散播；传播",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on diffusion and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-subversive",
-    "category": "writing",
-    "kind": "word",
-    "term": "subversive",
-    "phonetic": "/sәb'vә:siv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "从事颠覆的；破坏性的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more subversive way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -40105,23 +40088,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-needy",
-    "category": "writing",
-    "kind": "word",
-    "term": "needy",
-    "phonetic": "/'ni:di/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "贫穷的；贫困的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a needy approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-caste",
     "category": "writing",
     "kind": "word",
@@ -40156,36 +40122,19 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-gainful",
+    "id": "bulk-writing-guilty",
     "category": "writing",
     "kind": "word",
-    "term": "gainful",
-    "phonetic": "/'geinful/",
+    "term": "guilty",
+    "phonetic": "/'gilti/",
     "partOfSpeech": "adj. 形容词",
-    "translation": "有利益的；唯利是图的",
+    "translation": "犯罪的；有过失的",
     "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more gainful way to improve public services.",
+    "example": "The writer supports a guilty approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
       "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-pedagogic",
-    "category": "writing",
-    "kind": "word",
-    "term": "pedagogic",
-    "phonetic": "/.pedә'gɒdʒik/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "教育学的；教授法的",
-    "note": "教育、媒体和科技影响类写作高频。",
-    "example": "Online learning can be more pedagogic when students receive timely feedback.",
-    "tags": [
-      "写作",
-      "教育话题",
-      "科技发展",
       "高频扩展"
     ]
   },
@@ -40237,6 +40186,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "写作",
       "写作表达",
       "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-wasteful",
+    "category": "writing",
+    "kind": "word",
+    "term": "wasteful",
+    "phonetic": "/'weistful/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "浪费的；不经济的",
+    "note": "城市发展、经济成本和环境压力类写作高频。",
+    "example": "This solution seems wasteful for cities facing rapid population growth.",
+    "tags": [
+      "写作",
+      "经济城市",
+      "环境影响",
       "高频扩展"
     ]
   },
@@ -40445,40 +40411,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-enormous",
-    "category": "writing",
-    "kind": "word",
-    "term": "enormous",
-    "phonetic": "/i'nɒ:mәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "巨大的；庞大的",
-    "note": "教育、媒体和科技影响类写作高频。",
-    "example": "Online learning can be more enormous when students receive timely feedback.",
-    "tags": [
-      "写作",
-      "教育话题",
-      "科技发展",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-massive",
-    "category": "writing",
-    "kind": "word",
-    "term": "massive",
-    "phonetic": "/'mæsiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "大而重的；宽大的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more massive way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-priority",
     "category": "writing",
     "kind": "word",
@@ -40530,23 +40462,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-elementary",
-    "category": "writing",
-    "kind": "word",
-    "term": "elementary",
-    "phonetic": "/.eli'mentәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "初步的；基本的",
-    "note": "教育、媒体和科技影响类写作高频。",
-    "example": "Online learning can be more elementary when students receive timely feedback.",
-    "tags": [
-      "写作",
-      "教育话题",
-      "科技发展",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-stability",
     "category": "writing",
     "kind": "word",
@@ -40581,40 +40496,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-precious",
-    "category": "writing",
-    "kind": "word",
-    "term": "precious",
-    "phonetic": "/'preʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "宝贵的；珍贵的",
-    "note": "城市发展、经济成本和环境压力类写作高频。",
-    "example": "Public transport is often a more precious option than private cars.",
-    "tags": [
-      "写作",
-      "经济城市",
-      "环境影响",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-furious",
-    "category": "writing",
-    "kind": "word",
-    "term": "furious",
-    "phonetic": "/'fjuәriәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "狂怒的；激烈的",
-    "note": "城市发展、经济成本和环境压力类写作高频。",
-    "example": "It would be a furious solution for cities facing rapid population growth.",
-    "tags": [
-      "写作",
-      "经济城市",
-      "环境影响",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-collision",
     "category": "writing",
     "kind": "word",
@@ -40628,23 +40509,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "写作",
       "写作表达",
       "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-passive",
-    "category": "writing",
-    "kind": "word",
-    "term": "passive",
-    "phonetic": "/'pæsiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "消极的；被动的",
-    "note": "城市发展、经济成本和环境压力类写作高频。",
-    "example": "It would be a passive solution for cities facing rapid population growth.",
-    "tags": [
-      "写作",
-      "经济城市",
-      "环境影响",
       "高频扩展"
     ]
   },
@@ -40696,23 +40560,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "写作",
       "写作表达",
       "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-abnormal",
-    "category": "writing",
-    "kind": "word",
-    "term": "abnormal",
-    "phonetic": "/æb'nɒ:mәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "反常的；不规则的",
-    "note": "教育、媒体和科技影响类写作高频。",
-    "example": "Online learning can be more abnormal when students receive timely feedback.",
-    "tags": [
-      "写作",
-      "教育话题",
-      "科技发展",
       "高频扩展"
     ]
   },
@@ -40781,23 +40628,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "写作",
       "写作表达",
       "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-ambitious",
-    "category": "writing",
-    "kind": "word",
-    "term": "ambitious",
-    "phonetic": "/æm'biʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有野心的；抱负不凡的",
-    "note": "城市发展、经济成本和环境压力类写作高频。",
-    "example": "Public transport is often a more ambitious option than private cars.",
-    "tags": [
-      "写作",
-      "经济城市",
-      "环境影响",
       "高频扩展"
     ]
   },
@@ -40879,23 +40709,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "扰乱；不安",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents disturbance as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-segregate",
-    "category": "writing",
-    "kind": "word",
-    "term": "segregate",
-    "phonetic": "/'segrigeit/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "分离的；被隔离的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a segregate approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -41006,23 +40819,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-religious",
-    "category": "writing",
-    "kind": "word",
-    "term": "religious",
-    "phonetic": "/ri'lidʒәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "宗教性的；虔诚的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a religious approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-injection",
     "category": "writing",
     "kind": "word",
@@ -41032,23 +40828,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "注射；注射剂",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents injection as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-terrible",
-    "category": "writing",
-    "kind": "word",
-    "term": "terrible",
-    "phonetic": "/'terәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可怕的；令人恐惧的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a terrible approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -41159,23 +40938,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-prosperous",
-    "category": "writing",
-    "kind": "word",
-    "term": "prosperous",
-    "phonetic": "/'prɒspәrәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "成功的；繁盛的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a prosperous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-relaxation",
     "category": "writing",
     "kind": "word",
@@ -41210,40 +40972,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-authoritative",
-    "category": "writing",
-    "kind": "word",
-    "term": "authoritative",
-    "phonetic": "/ɒ:'θɒritәtiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "权威性的；官方的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an authoritative approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-ferocious",
-    "category": "writing",
-    "kind": "word",
-    "term": "ferocious",
-    "phonetic": "/fә'rәuʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "残忍的；凶猛的",
-    "note": "城市发展、经济成本和环境压力类写作高频。",
-    "example": "Public transport is often a more ferocious option than private cars.",
-    "tags": [
-      "写作",
-      "经济城市",
-      "环境影响",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-negligence",
     "category": "writing",
     "kind": "word",
@@ -41257,23 +40985,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "写作",
       "写作表达",
       "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-strenuous",
-    "category": "writing",
-    "kind": "word",
-    "term": "strenuous",
-    "phonetic": "/'strenjuәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "奋发的；费劲的",
-    "note": "城市发展、经济成本和环境压力类写作高频。",
-    "example": "Public transport is often a more strenuous option than private cars.",
-    "tags": [
-      "写作",
-      "经济城市",
-      "环境影响",
       "高频扩展"
     ]
   },
@@ -41304,40 +41015,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "分泌；分泌物",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on secretion and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-vehement",
-    "category": "writing",
-    "kind": "word",
-    "term": "vehement",
-    "phonetic": "/'vi:imәnt/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "热烈的；激烈的",
-    "note": "城市发展、经济成本和环境压力类写作高频。",
-    "example": "Public transport is often a more vehement option than private cars.",
-    "tags": [
-      "写作",
-      "经济城市",
-      "环境影响",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-combustible",
-    "category": "writing",
-    "kind": "word",
-    "term": "combustible",
-    "phonetic": "/kәm'bʌstibl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "易燃的；燃烧性的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more combustible way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -41414,40 +41091,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-unreliable",
-    "category": "writing",
-    "kind": "word",
-    "term": "unreliable",
-    "phonetic": "/.ʌnri'laiәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不可靠的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more unreliable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-live",
-    "category": "writing",
-    "kind": "word",
-    "term": "live",
-    "phonetic": "/liv.laiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "活的；生动的",
-    "note": "城市发展、经济成本和环境压力类写作高频。",
-    "example": "Public transport is often a more live option than private cars.",
-    "tags": [
-      "写作",
-      "经济城市",
-      "环境影响",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-rejection",
     "category": "writing",
     "kind": "word",
@@ -41499,40 +41142,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-innate",
-    "category": "writing",
-    "kind": "word",
-    "term": "innate",
-    "phonetic": "/i'neit/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "先天的；天生的",
-    "note": "教育、媒体和科技影响类写作高频。",
-    "example": "Online learning can be more innate when students receive timely feedback.",
-    "tags": [
-      "写作",
-      "教育话题",
-      "科技发展",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-viscous",
-    "category": "writing",
-    "kind": "word",
-    "term": "viscous",
-    "phonetic": "/'viskәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "粘的；粘性的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more viscous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-senate",
     "category": "writing",
     "kind": "word",
@@ -41559,23 +41168,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "片刻；瞬间",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on moment and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-guilty",
-    "category": "writing",
-    "kind": "word",
-    "term": "guilty",
-    "phonetic": "/'gilti/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "犯罪的；有过失的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a guilty approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -41618,23 +41210,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-pharmaceutical",
-    "category": "writing",
-    "kind": "word",
-    "term": "pharmaceutical",
-    "phonetic": "/,fɑ:mә'sju:tikәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "药学的；制药的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more pharmaceutical way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-probation",
     "category": "writing",
     "kind": "word",
@@ -41648,23 +41223,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "写作",
       "写作表达",
       "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-ominous",
-    "category": "writing",
-    "kind": "word",
-    "term": "ominous",
-    "phonetic": "/'ɒminәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "恶兆的；不吉利的",
-    "note": "城市发展、经济成本和环境压力类写作高频。",
-    "example": "It would be an ominous solution for cities facing rapid population growth.",
-    "tags": [
-      "写作",
-      "经济城市",
-      "环境影响",
       "高频扩展"
     ]
   },
@@ -42009,23 +41567,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-receptive",
-    "category": "writing",
-    "kind": "word",
-    "term": "receptive",
-    "phonetic": "/ri'septiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "能接纳的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a receptive approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-condemnation",
     "category": "writing",
     "kind": "word",
@@ -42128,40 +41669,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-digestive",
-    "category": "writing",
-    "kind": "word",
-    "term": "digestive",
-    "phonetic": "/di'dʒestiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "消化的；助消化的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a digestive approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-rudimentary",
-    "category": "writing",
-    "kind": "word",
-    "term": "rudimentary",
-    "phonetic": "/ru:di'mentәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "基本的；起码的",
-    "note": "城市发展、经济成本和环境压力类写作高频。",
-    "example": "It would be a rudimentary solution for cities facing rapid population growth.",
-    "tags": [
-      "写作",
-      "经济城市",
-      "环境影响",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-exertion",
     "category": "writing",
     "kind": "word",
@@ -42188,40 +41695,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "工业化；产业化",
     "note": "城市发展、经济成本和环境压力类写作高频。",
     "example": "Urban planners often discuss industrialization when they evaluate city development.",
-    "tags": [
-      "写作",
-      "经济城市",
-      "环境影响",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-raucous",
-    "category": "writing",
-    "kind": "word",
-    "term": "raucous",
-    "phonetic": "/'rɒ:kәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "沙哑的；粗声的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more raucous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-complimentary",
-    "category": "writing",
-    "kind": "word",
-    "term": "complimentary",
-    "phonetic": "/.kɒmpli'mentәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "问候的；称赞的",
-    "note": "城市发展、经济成本和环境压力类写作高频。",
-    "example": "Public transport is often a more complimentary option than private cars.",
     "tags": [
       "写作",
       "经济城市",
@@ -42315,23 +41788,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-fraternal",
-    "category": "writing",
-    "kind": "word",
-    "term": "fraternal",
-    "phonetic": "/frә'tә:nl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "兄弟的；兄弟似的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a fraternal approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-emancipation",
     "category": "writing",
     "kind": "word",
@@ -42366,23 +41822,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-congenital",
-    "category": "writing",
-    "kind": "word",
-    "term": "congenital",
-    "phonetic": "/kәn'dʒenitәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "天生的；先天的",
-    "note": "城市发展、经济成本和环境压力类写作高频。",
-    "example": "Public transport is often a more congenital option than private cars.",
-    "tags": [
-      "写作",
-      "经济城市",
-      "环境影响",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-eccentricity",
     "category": "writing",
     "kind": "word",
@@ -42396,57 +41835,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "写作",
       "经济城市",
       "环境影响",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-corrosive",
-    "category": "writing",
-    "kind": "word",
-    "term": "corrosive",
-    "phonetic": "/kә'rәusiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "腐蚀的；腐蚀性的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more corrosive way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-debatable",
-    "category": "writing",
-    "kind": "word",
-    "term": "debatable",
-    "phonetic": "/di'beitәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可争论的；成问题的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a debatable approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-inflexible",
-    "category": "writing",
-    "kind": "word",
-    "term": "inflexible",
-    "phonetic": "/in'fleksәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不屈曲的；不屈挠的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This approach seems inflexible in the long run.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
       "高频扩展"
     ]
   },
@@ -42494,40 +41882,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "开垦；教化",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents reclamation as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-fractious",
-    "category": "writing",
-    "kind": "word",
-    "term": "fractious",
-    "phonetic": "/'frækʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "易怒的；倔强的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more fractious way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-auspicious",
-    "category": "writing",
-    "kind": "word",
-    "term": "auspicious",
-    "phonetic": "/ɒ:'spiʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "吉兆的；幸运的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an auspicious approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -42587,40 +41941,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-forcible",
-    "category": "writing",
-    "kind": "word",
-    "term": "forcible",
-    "phonetic": "/'fɒ:sәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "强制的；强迫的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more forcible way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-expeditious",
-    "category": "writing",
-    "kind": "word",
-    "term": "expeditious",
-    "phonetic": "/.ekspi'diʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "迅速的；敏捷的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an expeditious approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-suburbanization",
     "category": "writing",
     "kind": "word",
@@ -42630,23 +41950,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "市郊化；郊区化",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on suburbanization and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-insubordinate",
-    "category": "writing",
-    "kind": "word",
-    "term": "insubordinate",
-    "phonetic": "/.insә'bɒ:dinәt/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不顺从的；地位不低的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more insubordinate way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -42715,40 +42018,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "不爱社交的；反社会的",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents antisocial as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-wasteful",
-    "category": "writing",
-    "kind": "word",
-    "term": "wasteful",
-    "phonetic": "/'weistful/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "浪费的；不经济的",
-    "note": "城市发展、经济成本和环境压力类写作高频。",
-    "example": "This solution seems wasteful for cities facing rapid population growth.",
-    "tags": [
-      "写作",
-      "经济城市",
-      "环境影响",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-private",
-    "category": "writing",
-    "kind": "word",
-    "term": "private",
-    "phonetic": "/'praivit/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "私人的；秘密的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a private approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -42859,23 +42128,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-previous",
-    "category": "writing",
-    "kind": "word",
-    "term": "previous",
-    "phonetic": "/'pri:viәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "早先的；前面的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more previous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-additional",
     "category": "writing",
     "kind": "word",
@@ -42927,23 +42179,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-mental",
-    "category": "writing",
-    "kind": "word",
-    "term": "mental",
-    "phonetic": "/'mentl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "心智的；精神病的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more mental way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-instrument",
     "category": "writing",
     "kind": "word",
@@ -42978,23 +42213,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-obvious",
-    "category": "writing",
-    "kind": "word",
-    "term": "obvious",
-    "phonetic": "/'ɒbviәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "明显的；明白的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more obvious way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-notion",
     "category": "writing",
     "kind": "word",
@@ -43004,23 +42222,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "概念；观念",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on notion and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-internal",
-    "category": "writing",
-    "kind": "word",
-    "term": "internal",
-    "phonetic": "/in'tә:nәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "内在的；国内的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more internal way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -43148,40 +42349,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-visual",
-    "category": "writing",
-    "kind": "word",
-    "term": "visual",
-    "phonetic": "/'viʒuәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "视觉的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more visual way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-numerous",
-    "category": "writing",
-    "kind": "word",
-    "term": "numerous",
-    "phonetic": "/'nju:mәrәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "很多的；数目众多的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more numerous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-entertainment",
     "category": "writing",
     "kind": "word",
@@ -43216,23 +42383,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-aggressive",
-    "category": "writing",
-    "kind": "word",
-    "term": "aggressive",
-    "phonetic": "/ә'gresiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "侵略的；挑畔的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an aggressive approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-assumption",
     "category": "writing",
     "kind": "word",
@@ -43250,23 +42400,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-remarkable",
-    "category": "writing",
-    "kind": "word",
-    "term": "remarkable",
-    "phonetic": "/ri'mɑ:kәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不平常的；值得注意的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more remarkable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-mutual",
     "category": "writing",
     "kind": "word",
@@ -43276,6 +42409,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "相互的；共有的",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "This is a more mutual way to improve public services.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-relevant",
+    "category": "writing",
+    "kind": "word",
+    "term": "relevant",
+    "phonetic": "/'relivәnt/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "有关联的；有关系的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "This is a more relevant way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -43352,6 +42502,23 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
+    "id": "bulk-writing-efficient",
+    "category": "writing",
+    "kind": "word",
+    "term": "efficient",
+    "phonetic": "/i'fiʃәnt/",
+    "partOfSpeech": "adj. 形容词",
+    "translation": "有效率的；能干的",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "This approach seems efficient in the long run.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
     "id": "bulk-writing-preference",
     "category": "writing",
     "kind": "word",
@@ -43403,40 +42570,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-desperate",
-    "category": "writing",
-    "kind": "word",
-    "term": "desperate",
-    "phonetic": "/'despәrәt/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不顾一切的；危急的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a desperate approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-impressive",
-    "category": "writing",
-    "kind": "word",
-    "term": "impressive",
-    "phonetic": "/im'presiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "给人深刻印象的；威严的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more impressive way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-moderate",
     "category": "writing",
     "kind": "word",
@@ -43467,23 +42600,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "写作",
       "写作表达",
       "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-secondary",
-    "category": "writing",
-    "kind": "word",
-    "term": "secondary",
-    "phonetic": "/'sekәndәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "中级的；中等的",
-    "note": "教育、媒体和科技影响类写作高频。",
-    "example": "Online learning can be more secondary when students receive timely feedback.",
-    "tags": [
-      "写作",
-      "教育话题",
-      "科技发展",
       "高频扩展"
     ]
   },
@@ -43556,40 +42672,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-virtual",
-    "category": "writing",
-    "kind": "word",
-    "term": "virtual",
-    "phonetic": "/'vә:tʃuәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "实际上起作用的；虚的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more virtual way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-exclusive",
-    "category": "writing",
-    "kind": "word",
-    "term": "exclusive",
-    "phonetic": "/ik'sklu:siv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "排外的；独占的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an exclusive approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-residence",
     "category": "writing",
     "kind": "word",
@@ -43599,40 +42681,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "住宅；居留",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents residence as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-delicate",
-    "category": "writing",
-    "kind": "word",
-    "term": "delicate",
-    "phonetic": "/'delikәt/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "细致优雅的；微妙的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a delicate approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-conscious",
-    "category": "writing",
-    "kind": "word",
-    "term": "conscious",
-    "phonetic": "/'kɒnʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有意识的；知觉的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more conscious way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -43675,23 +42723,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-generous",
-    "category": "writing",
-    "kind": "word",
-    "term": "generous",
-    "phonetic": "/'dʒenәrәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "慷慨的；有雅量的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more generous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-productive",
     "category": "writing",
     "kind": "word",
@@ -43726,23 +42757,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-ridiculous",
-    "category": "writing",
-    "kind": "word",
-    "term": "ridiculous",
-    "phonetic": "/ri'dikjulәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "荒谬的；可笑的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more ridiculous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-ambition",
     "category": "writing",
     "kind": "word",
@@ -43752,40 +42766,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "野心；志向",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on ambition and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-partial",
-    "category": "writing",
-    "kind": "word",
-    "term": "partial",
-    "phonetic": "/'pɑ:ʃәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "部分的；偏袒的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a partial approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-suspicious",
-    "category": "writing",
-    "kind": "word",
-    "term": "suspicious",
-    "phonetic": "/sә'spiʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可疑的；多疑的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a suspicious approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -43811,40 +42791,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-suitable",
-    "category": "writing",
-    "kind": "word",
-    "term": "suitable",
-    "phonetic": "/'sju:tәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "适当的；相配的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a suitable approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-loyal",
-    "category": "writing",
-    "kind": "word",
-    "term": "loyal",
-    "phonetic": "/'lɒiәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "忠诚的；忠实的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more loyal way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-convenience",
     "category": "writing",
     "kind": "word",
@@ -43854,74 +42800,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "方便；便利的事物",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on convenience and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-fatal",
-    "category": "writing",
-    "kind": "word",
-    "term": "fatal",
-    "phonetic": "/'feitәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "致命的；重大的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more fatal way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-naval",
-    "category": "writing",
-    "kind": "word",
-    "term": "naval",
-    "phonetic": "/'neivl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "海军的；军舰的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a naval approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-cautious",
-    "category": "writing",
-    "kind": "word",
-    "term": "cautious",
-    "phonetic": "/'kɒ:ʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "谨慎的；小心的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a cautious approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-desirable",
-    "category": "writing",
-    "kind": "word",
-    "term": "desirable",
-    "phonetic": "/di'zairәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "令人想望的；可取的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more desirable way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -43947,40 +42825,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-optical",
-    "category": "writing",
-    "kind": "word",
-    "term": "optical",
-    "phonetic": "/'ɒptikl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "眼睛的；视觉的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more optical way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-optional",
-    "category": "writing",
-    "kind": "word",
-    "term": "optional",
-    "phonetic": "/'ɒpʃәnl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可选择的；随意的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more optional way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-plantation",
     "category": "writing",
     "kind": "word",
@@ -43990,40 +42834,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "种植园；大农场",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on plantation and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-miserable",
-    "category": "writing",
-    "kind": "word",
-    "term": "miserable",
-    "phonetic": "/'mizәrәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "悲惨的；痛苦的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more miserable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-destructive",
-    "category": "writing",
-    "kind": "word",
-    "term": "destructive",
-    "phonetic": "/di'strʌktiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "毁灭性的；破坏的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a destructive approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -44049,91 +42859,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-sensible",
-    "category": "writing",
-    "kind": "word",
-    "term": "sensible",
-    "phonetic": "/'sensәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有感觉的；敏感的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a sensible approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-glorious",
-    "category": "writing",
-    "kind": "word",
-    "term": "glorious",
-    "phonetic": "/'glɒ:riәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "光荣的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more glorious way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-vigorous",
-    "category": "writing",
-    "kind": "word",
-    "term": "vigorous",
-    "phonetic": "/'vigәrәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "精力充沛的；元气旺盛的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a vigorous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-deliberate",
-    "category": "writing",
-    "kind": "word",
-    "term": "deliberate",
-    "phonetic": "/di'libәrәt/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "深思熟虑的；故意的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a deliberate approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-moist",
-    "category": "writing",
-    "kind": "word",
-    "term": "moist",
-    "phonetic": "/mɒist/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "潮湿的；多雨的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a moist approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-precaution",
     "category": "writing",
     "kind": "word",
@@ -44143,23 +42868,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "预防；留心",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on precaution and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-arbitrary",
-    "category": "writing",
-    "kind": "word",
-    "term": "arbitrary",
-    "phonetic": "/'ɑ:bitrәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "任意的；武断的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more arbitrary way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -44185,23 +42893,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-durable",
-    "category": "writing",
-    "kind": "word",
-    "term": "durable",
-    "phonetic": "/'djurәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "持久的；耐用的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more durable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-excursion",
     "category": "writing",
     "kind": "word",
@@ -44219,23 +42910,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-gracious",
-    "category": "writing",
-    "kind": "word",
-    "term": "gracious",
-    "phonetic": "/'greiʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "亲切的；慈善的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more gracious way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-vanity",
     "category": "writing",
     "kind": "word",
@@ -44245,23 +42919,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "虚荣心；虚无",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on vanity and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-approximate",
-    "category": "writing",
-    "kind": "word",
-    "term": "approximate",
-    "phonetic": "/ә'prɒksimәt/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "大约的；接近的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an approximate approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -44347,23 +43004,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "结合体；结合",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents coalition as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-incredible",
-    "category": "writing",
-    "kind": "word",
-    "term": "incredible",
-    "phonetic": "/in'kredәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "难以置信的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more incredible way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -44542,23 +43182,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-anonymous",
-    "category": "writing",
-    "kind": "word",
-    "term": "anonymous",
-    "phonetic": "/ә'nɒnimәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "姓氏不详的；无名的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more anonymous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-validity",
     "category": "writing",
     "kind": "word",
@@ -44593,23 +43216,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-eligible",
-    "category": "writing",
-    "kind": "word",
-    "term": "eligible",
-    "phonetic": "/'elidʒәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有资格当选的；合格的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an eligible approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-conception",
     "category": "writing",
     "kind": "word",
@@ -44627,23 +43233,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-brutal",
-    "category": "writing",
-    "kind": "word",
-    "term": "brutal",
-    "phonetic": "/'bru:tәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "残忍的；野蛮的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a brutal approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-mansion",
     "category": "writing",
     "kind": "word",
@@ -44653,23 +43242,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "大厦；宅邸",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on mansion and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-medieval",
-    "category": "writing",
-    "kind": "word",
-    "term": "medieval",
-    "phonetic": "/.medi'i:vl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "中古的；中世纪的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a medieval approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -44712,23 +43284,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-dangerous",
-    "category": "writing",
-    "kind": "word",
-    "term": "dangerous",
-    "phonetic": "/'deindʒәrәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "危险的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a dangerous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-caution",
     "category": "writing",
     "kind": "word",
@@ -44738,23 +43293,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "小心；慎重",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on caution and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-hazardous",
-    "category": "writing",
-    "kind": "word",
-    "term": "hazardous",
-    "phonetic": "/'hæzәdәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "危险的；冒险的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a hazardous approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -44797,23 +43335,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-gorgeous",
-    "category": "writing",
-    "kind": "word",
-    "term": "gorgeous",
-    "phonetic": "/'gɒ:dʒәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "华丽的；灿烂的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more gorgeous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-aspiration",
     "category": "writing",
     "kind": "word",
@@ -44823,23 +43344,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "热望；志向",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents aspiration as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-eternal",
-    "category": "writing",
-    "kind": "word",
-    "term": "eternal",
-    "phonetic": "/i'tә:nl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "永恒的；永远的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more eternal way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -44899,23 +43403,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-spatial",
-    "category": "writing",
-    "kind": "word",
-    "term": "spatial",
-    "phonetic": "/'speiʃәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "空间的；受空间条件限制的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more spatial way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-balance",
     "category": "writing",
     "kind": "word",
@@ -44967,23 +43454,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-exceptional",
-    "category": "writing",
-    "kind": "word",
-    "term": "exceptional",
-    "phonetic": "/ik'sepʃәnәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "例外的；异常的",
-    "note": "教育、媒体和科技影响类写作高频。",
-    "example": "It is an exceptional example of how technology can improve access to education.",
-    "tags": [
-      "写作",
-      "教育话题",
-      "科技发展",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-configuration",
     "category": "writing",
     "kind": "word",
@@ -44993,23 +43463,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "结构；表面配置",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on configuration and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-notorious",
-    "category": "writing",
-    "kind": "word",
-    "term": "notorious",
-    "phonetic": "/nәu'tɒ:riәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "声名狼藉的；臭名昭著的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a notorious approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -45086,23 +43539,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-rigorous",
-    "category": "writing",
-    "kind": "word",
-    "term": "rigorous",
-    "phonetic": "/'rigәrәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "严厉的；严酷的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more rigorous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-position",
     "category": "writing",
     "kind": "word",
@@ -45171,57 +43607,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-cynical",
-    "category": "writing",
-    "kind": "word",
-    "term": "cynical",
-    "phonetic": "/'sinikәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "愤世嫉俗的；讽刺的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a cynical approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-ambiguous",
-    "category": "writing",
-    "kind": "word",
-    "term": "ambiguous",
-    "phonetic": "/æm'bigjuәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不明确的；模棱两可的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an ambiguous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-infectious",
-    "category": "writing",
-    "kind": "word",
-    "term": "infectious",
-    "phonetic": "/in'fekʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有传染性的；易传染的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an infectious approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-disposition",
     "category": "writing",
     "kind": "word",
@@ -45248,23 +43633,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "忠贞；效忠",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on allegiance and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-intricate",
-    "category": "writing",
-    "kind": "word",
-    "term": "intricate",
-    "phonetic": "/'intrikit/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "复杂的；错综的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more intricate way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -45358,40 +43726,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-dubious",
-    "category": "writing",
-    "kind": "word",
-    "term": "dubious",
-    "phonetic": "/'dju:biәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可疑的；不确定的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a dubious approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-quantitative",
-    "category": "writing",
-    "kind": "word",
-    "term": "quantitative",
-    "phonetic": "/'kwɒntitәtiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "数量的；定量的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more quantitative way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-endurance",
     "category": "writing",
     "kind": "word",
@@ -45401,40 +43735,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "忍耐；忍耐力",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents endurance as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-imaginative",
-    "category": "writing",
-    "kind": "word",
-    "term": "imaginative",
-    "phonetic": "/i'mædʒinәtiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "想像的；虚构的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more imaginative way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-trivial",
-    "category": "writing",
-    "kind": "word",
-    "term": "trivial",
-    "phonetic": "/'tiviәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "琐碎的；不重要的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The policy would be more trivial if local needs were considered.",
     "tags": [
       "写作",
       "写作表达",
@@ -45494,57 +43794,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-simultaneous",
-    "category": "writing",
-    "kind": "word",
-    "term": "simultaneous",
-    "phonetic": "/.simәl'teinjәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "同时的；同时发生的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more simultaneous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-unanimous",
-    "category": "writing",
-    "kind": "word",
-    "term": "unanimous",
-    "phonetic": "/ju:'nænimәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "意见一致的；无异议的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an unanimous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-conspicuous",
-    "category": "writing",
-    "kind": "word",
-    "term": "conspicuous",
-    "phonetic": "/kәn'spikjuәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "显著的；显眼的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a conspicuous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-vicinity",
     "category": "writing",
     "kind": "word",
@@ -45562,74 +43811,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-luminous",
-    "category": "writing",
-    "kind": "word",
-    "term": "luminous",
-    "phonetic": "/'lu:minәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "发光的；明亮的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a luminous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-indicative",
-    "category": "writing",
-    "kind": "word",
-    "term": "indicative",
-    "phonetic": "/in'dikәtiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "指示的；象征的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an indicative approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-stationary",
-    "category": "writing",
-    "kind": "word",
-    "term": "stationary",
-    "phonetic": "/'steiʃ(ә)nәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不动的；静止的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a stationary approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-invaluable",
-    "category": "writing",
-    "kind": "word",
-    "term": "invaluable",
-    "phonetic": "/in'væljuәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "无价的；价值无法衡量的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an invaluable approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-notation",
     "category": "writing",
     "kind": "word",
@@ -45639,23 +43820,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "记号；符号表示法",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on notation and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-reciprocal",
-    "category": "writing",
-    "kind": "word",
-    "term": "reciprocal",
-    "phonetic": "/ri'siprәkl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "互惠的；相互的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a reciprocal approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -45698,40 +43862,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-homogeneous",
-    "category": "writing",
-    "kind": "word",
-    "term": "homogeneous",
-    "phonetic": "/.hәumә'dʒi:niәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "同种的；同质的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more homogeneous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-ingenious",
-    "category": "writing",
-    "kind": "word",
-    "term": "ingenious",
-    "phonetic": "/in'dʒi:njәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "灵敏的；精巧的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an ingenious approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-superstition",
     "category": "writing",
     "kind": "word",
@@ -45741,91 +43871,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "迷信",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on superstition and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-desolate",
-    "category": "writing",
-    "kind": "word",
-    "term": "desolate",
-    "phonetic": "/'desәlәt/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "荒凉的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more desolate way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-erroneous",
-    "category": "writing",
-    "kind": "word",
-    "term": "erroneous",
-    "phonetic": "/i'rәuniәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "错误的；不正确的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more erroneous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-permissible",
-    "category": "writing",
-    "kind": "word",
-    "term": "permissible",
-    "phonetic": "/pә'misәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可允许的；可容许程度的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a permissible approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-innumerable",
-    "category": "writing",
-    "kind": "word",
-    "term": "innumerable",
-    "phonetic": "/i'nju:mәrәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "无数的；数不清的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more innumerable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-instantaneous",
-    "category": "writing",
-    "kind": "word",
-    "term": "instantaneous",
-    "phonetic": "/.instәn'teinjәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "即时的；瞬间的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an instantaneous approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -45851,91 +43896,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-supplementary",
-    "category": "writing",
-    "kind": "word",
-    "term": "supplementary",
-    "phonetic": "/.sʌpli'mentәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "补足的；补充的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more supplementary way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-intelligible",
-    "category": "writing",
-    "kind": "word",
-    "term": "intelligible",
-    "phonetic": "/in'telidʒәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可理解的；易理解的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more intelligible way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-obstinate",
-    "category": "writing",
-    "kind": "word",
-    "term": "obstinate",
-    "phonetic": "/'ɒbstinit/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "倔强的；顽固的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more obstinate way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-decimal",
-    "category": "writing",
-    "kind": "word",
-    "term": "decimal",
-    "phonetic": "/'desimәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "十进位的；小数的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a decimal approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-traditional",
-    "category": "writing",
-    "kind": "word",
-    "term": "traditional",
-    "phonetic": "/trә'diʃәnl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "传统的；惯例的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a traditional approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-production",
     "category": "writing",
     "kind": "word",
@@ -45945,23 +43905,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "制造；生产",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on production and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-total",
-    "category": "writing",
-    "kind": "word",
-    "term": "total",
-    "phonetic": "/'tәutl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "全体的；总的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a total approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -46004,23 +43947,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-delicious",
-    "category": "writing",
-    "kind": "word",
-    "term": "delicious",
-    "phonetic": "/di'liʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "美味的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more delicious way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-beneficial",
     "category": "writing",
     "kind": "word",
@@ -46055,23 +43981,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-impossible",
-    "category": "writing",
-    "kind": "word",
-    "term": "impossible",
-    "phonetic": "/im'pɒsәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不可能的；难以置信的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an impossible approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-conclusion",
     "category": "writing",
     "kind": "word",
@@ -46081,57 +43990,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "结论；结尾",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents conclusion as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-marvelous",
-    "category": "writing",
-    "kind": "word",
-    "term": "marvelous",
-    "phonetic": "/'mɑ:vәlәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "令人惊异的；了不起的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a marvelous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-unusual",
-    "category": "writing",
-    "kind": "word",
-    "term": "unusual",
-    "phonetic": "/.ʌn'ju:ʒu:l/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不寻常的；罕见的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more unusual way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-illegal",
-    "category": "writing",
-    "kind": "word",
-    "term": "illegal",
-    "phonetic": "/i'li:gәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "违法的；不合规定的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more illegal way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -46183,40 +44041,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "存在；生存",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents existence as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-visible",
-    "category": "writing",
-    "kind": "word",
-    "term": "visible",
-    "phonetic": "/'vizәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "看得见的；明显的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more visible way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-competitive",
-    "category": "writing",
-    "kind": "word",
-    "term": "competitive",
-    "phonetic": "/kәm'petitiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "竞争的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a competitive approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -46285,40 +44109,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "所有权；物主身份",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents ownership as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-horrible",
-    "category": "writing",
-    "kind": "word",
-    "term": "horrible",
-    "phonetic": "/'hɒrәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可怕的；遭透的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more horrible way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-invisible",
-    "category": "writing",
-    "kind": "word",
-    "term": "invisible",
-    "phonetic": "/in'vizәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "看不见的；无形的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more invisible way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -46446,23 +44236,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-gradual",
-    "category": "writing",
-    "kind": "word",
-    "term": "gradual",
-    "phonetic": "/'grædʒuәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "逐渐的；渐增的",
-    "note": "教育、媒体和科技影响类写作高频。",
-    "example": "Online learning can be more gradual when students receive timely feedback.",
-    "tags": [
-      "写作",
-      "教育话题",
-      "科技发展",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-sentence",
     "category": "writing",
     "kind": "word",
@@ -46497,23 +44270,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-liable",
-    "category": "writing",
-    "kind": "word",
-    "term": "liable",
-    "phonetic": "/'laiәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有义务的；应负责的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a liable approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-nuisance",
     "category": "writing",
     "kind": "word",
@@ -46540,23 +44296,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "纯净；纯正",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents purity as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-attentive",
-    "category": "writing",
-    "kind": "word",
-    "term": "attentive",
-    "phonetic": "/ә'tentiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "注意的；留心的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an attentive approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -46684,23 +44423,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-extraordinary",
-    "category": "writing",
-    "kind": "word",
-    "term": "extraordinary",
-    "phonetic": "/ik'strɒ:dәnәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "非常的；特别的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an extraordinary approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-cooperation",
     "category": "writing",
     "kind": "word",
@@ -46727,40 +44449,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "破坏；毁灭",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents destruction as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-literary",
-    "category": "writing",
-    "kind": "word",
-    "term": "literary",
-    "phonetic": "/'litәrәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "文学的；文艺的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a literary approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-comprehensive",
-    "category": "writing",
-    "kind": "word",
-    "term": "comprehensive",
-    "phonetic": "/.kɒmpri'hensiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "广泛的；有理解力的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a comprehensive approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -46837,40 +44525,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-continuous",
-    "category": "writing",
-    "kind": "word",
-    "term": "continuous",
-    "phonetic": "/kәn'tinjuәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "连续的；继续的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a continuous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-occasional",
-    "category": "writing",
-    "kind": "word",
-    "term": "occasional",
-    "phonetic": "/ә'keiʒәnl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "偶然的；临时的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an occasional approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-wrist",
     "category": "writing",
     "kind": "word",
@@ -46888,23 +44542,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-indigenous",
-    "category": "writing",
-    "kind": "word",
-    "term": "indigenous",
-    "phonetic": "/in'didʒinәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "本土的；国产的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more indigenous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-unity",
     "category": "writing",
     "kind": "word",
@@ -46914,23 +44551,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "一致；联合",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on unity and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-anxious",
-    "category": "writing",
-    "kind": "word",
-    "term": "anxious",
-    "phonetic": "/'æŋʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "忧虑的；发愁的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more anxious way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -47058,15 +44678,15 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-logical",
+    "id": "bulk-writing-valid",
     "category": "writing",
     "kind": "word",
-    "term": "logical",
-    "phonetic": "/'lɒdʒikәl/",
+    "term": "valid",
+    "phonetic": "/'vælid/",
     "partOfSpeech": "adj. 形容词",
-    "translation": "合乎逻辑的；合理的",
+    "translation": "有确实根据的；有法律效力的",
     "note": "政府、政策和社会治理类写作高频。",
-    "example": "This approach seems logical in the long run.",
+    "example": "This is a more valid way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -47109,159 +44729,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-fortunate",
-    "category": "writing",
-    "kind": "word",
-    "term": "fortunate",
-    "phonetic": "/'fɒ:tʃәnit/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "幸运的；幸福的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more fortunate way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-contrary",
-    "category": "writing",
-    "kind": "word",
-    "term": "contrary",
-    "phonetic": "/'kɒntrәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "相反的；矛盾的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more contrary way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-dual",
-    "category": "writing",
-    "kind": "word",
-    "term": "dual",
-    "phonetic": "/'dju:әl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "双重的；双的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more dual way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-corporate",
-    "category": "writing",
-    "kind": "word",
-    "term": "corporate",
-    "phonetic": "/'kɒ:pәrit/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "社团的；合伙的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a corporate approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-predictable",
-    "category": "writing",
-    "kind": "word",
-    "term": "predictable",
-    "phonetic": "/pri'diktәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可预言的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more predictable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-respective",
-    "category": "writing",
-    "kind": "word",
-    "term": "respective",
-    "phonetic": "/ri'spektiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "分别的；各自的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more respective way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-wary",
-    "category": "writing",
-    "kind": "word",
-    "term": "wary",
-    "phonetic": "/'wєәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "谨慎的；小心的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more wary way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-outrageous",
-    "category": "writing",
-    "kind": "word",
-    "term": "outrageous",
-    "phonetic": "/aut'reidʒәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "暴虐的；极无礼的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an outrageous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-lethal",
-    "category": "writing",
-    "kind": "word",
-    "term": "lethal",
-    "phonetic": "/'li:θәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "致命的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more lethal way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-anticipation",
     "category": "writing",
     "kind": "word",
@@ -47271,23 +44738,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "预期；预料",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents anticipation as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-marital",
-    "category": "writing",
-    "kind": "word",
-    "term": "marital",
-    "phonetic": "/'mæritәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "丈夫的；婚姻的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a marital approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -47330,23 +44780,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-prestigious",
-    "category": "writing",
-    "kind": "word",
-    "term": "prestigious",
-    "phonetic": "/pre'stidʒiәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "享有声望的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more prestigious way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-difference",
     "category": "writing",
     "kind": "word",
@@ -47381,23 +44814,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-bilateral",
-    "category": "writing",
-    "kind": "word",
-    "term": "bilateral",
-    "phonetic": "/bai'lætәrәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有两边的；双边的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a bilateral approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-hardship",
     "category": "writing",
     "kind": "word",
@@ -47407,40 +44823,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "艰难；辛苦",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents hardship as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-maternal",
-    "category": "writing",
-    "kind": "word",
-    "term": "maternal",
-    "phonetic": "/mә'tә:nl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "母亲的；母系的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more maternal way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-unstable",
-    "category": "writing",
-    "kind": "word",
-    "term": "unstable",
-    "phonetic": "/.ʌn'steibl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不稳定的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more unstable way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -47500,23 +44882,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-successive",
-    "category": "writing",
-    "kind": "word",
-    "term": "successive",
-    "phonetic": "/sәk'sesiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "继承的；连续的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a successive approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-fragrance",
     "category": "writing",
     "kind": "word",
@@ -47551,23 +44916,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-satisfactory",
-    "category": "writing",
-    "kind": "word",
-    "term": "satisfactory",
-    "phonetic": "/.sætis'fæktәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "满意的；赎罪的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more satisfactory way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-denomination",
     "category": "writing",
     "kind": "word",
@@ -47577,23 +44925,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "名称；教派",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on denomination and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-perennial",
-    "category": "writing",
-    "kind": "word",
-    "term": "perennial",
-    "phonetic": "/pә'reniәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "常年的；长期的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a perennial approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -47636,40 +44967,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-humorous",
-    "category": "writing",
-    "kind": "word",
-    "term": "humorous",
-    "phonetic": "/'hju:mәrәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "富幽默感的；滑稽的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a humorous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-equitable",
-    "category": "writing",
-    "kind": "word",
-    "term": "equitable",
-    "phonetic": "/'ekwitәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "公平的；公正的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more equitable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-traction",
     "category": "writing",
     "kind": "word",
@@ -47679,40 +44976,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "曳；牵引",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents traction as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-continual",
-    "category": "writing",
-    "kind": "word",
-    "term": "continual",
-    "phonetic": "/kәn'tinjuәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "持续不断的；继续的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The policy would be more continual if local needs were considered.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-precarious",
-    "category": "writing",
-    "kind": "word",
-    "term": "precarious",
-    "phonetic": "/pri'kєәriәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不稳定的；不安的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more precarious way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -47755,74 +45018,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-unbearable",
-    "category": "writing",
-    "kind": "word",
-    "term": "unbearable",
-    "phonetic": "/.ʌn'bєәrәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "无法忍受的；承受不住的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more unbearable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-audible",
-    "category": "writing",
-    "kind": "word",
-    "term": "audible",
-    "phonetic": "/'ɒ:dәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "听得见的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an audible approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-preferable",
-    "category": "writing",
-    "kind": "word",
-    "term": "preferable",
-    "phonetic": "/'prefәrәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "更可取的；更好的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more preferable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-hilarious",
-    "category": "writing",
-    "kind": "word",
-    "term": "hilarious",
-    "phonetic": "/hi'lєәriәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "喜不自禁的；欢闹的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a hilarious approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-sanity",
     "category": "writing",
     "kind": "word",
@@ -47832,40 +45027,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "神智健全；头脑清楚",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on sanity and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-tributary",
-    "category": "writing",
-    "kind": "word",
-    "term": "tributary",
-    "phonetic": "/'tribjutәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "支流的；纳贡的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a tributary approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-victorious",
-    "category": "writing",
-    "kind": "word",
-    "term": "victorious",
-    "phonetic": "/vik'tɔ:riәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "胜利的；得胜的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more victorious way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -47891,142 +45052,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-migratory",
-    "category": "writing",
-    "kind": "word",
-    "term": "migratory",
-    "phonetic": "/'maigrәtәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "迁移的；流浪的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a migratory approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-virtuous",
-    "category": "writing",
-    "kind": "word",
-    "term": "virtuous",
-    "phonetic": "/'vә:tʃuәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "品德高尚的；公正的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more virtuous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-arduous",
-    "category": "writing",
-    "kind": "word",
-    "term": "arduous",
-    "phonetic": "/'ɑ:djuәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "费力的；努力的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an arduous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-momentous",
-    "category": "writing",
-    "kind": "word",
-    "term": "momentous",
-    "phonetic": "/mәu'mentәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "重大的；重要的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This approach seems momentous in the long run.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-colossal",
-    "category": "writing",
-    "kind": "word",
-    "term": "colossal",
-    "phonetic": "/kә'lɒsәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "巨大的；巨像似的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more colossal way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-dreary",
-    "category": "writing",
-    "kind": "word",
-    "term": "dreary",
-    "phonetic": "/'driәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "沉闷的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more dreary way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-chronological",
-    "category": "writing",
-    "kind": "word",
-    "term": "chronological",
-    "phonetic": "/, krɔnә'lɔdʒikәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "年代学的；按时间顺序的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more chronological way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-sanitary",
-    "category": "writing",
-    "kind": "word",
-    "term": "sanitary",
-    "phonetic": "/'sænitәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "卫生的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a sanitary approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-percussion",
     "category": "writing",
     "kind": "word",
@@ -48036,57 +45061,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "敲打；碰撞",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on percussion and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-ephemeral",
-    "category": "writing",
-    "kind": "word",
-    "term": "ephemeral",
-    "phonetic": "/i'femәrәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "朝生暮死的；短命的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an ephemeral approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-prodigious",
-    "category": "writing",
-    "kind": "word",
-    "term": "prodigious",
-    "phonetic": "/prәu'didʒәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "庞大的；惊人的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more prodigious way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-irritable",
-    "category": "writing",
-    "kind": "word",
-    "term": "irritable",
-    "phonetic": "/'iritәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "易怒的；急躁的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an irritable approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -48112,125 +45086,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-palatable",
-    "category": "writing",
-    "kind": "word",
-    "term": "palatable",
-    "phonetic": "/'pælәtәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "美味的；好吃的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a palatable approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-tenacious",
-    "category": "writing",
-    "kind": "word",
-    "term": "tenacious",
-    "phonetic": "/ti'neiʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "紧握的；固执的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more tenacious way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-unsatisfactory",
-    "category": "writing",
-    "kind": "word",
-    "term": "unsatisfactory",
-    "phonetic": "/'ʌn.sætis'fæktәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不令人满意的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more unsatisfactory way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-noxious",
-    "category": "writing",
-    "kind": "word",
-    "term": "noxious",
-    "phonetic": "/'nɒkʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有害的；有毒的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more noxious way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-tolerable",
-    "category": "writing",
-    "kind": "word",
-    "term": "tolerable",
-    "phonetic": "/'tɒlәrәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可容忍的；可以的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a tolerable approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-incongruous",
-    "category": "writing",
-    "kind": "word",
-    "term": "incongruous",
-    "phonetic": "/in'kɒŋgruәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不协调的；不一致的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an incongruous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-pretentious",
-    "category": "writing",
-    "kind": "word",
-    "term": "pretentious",
-    "phonetic": "/pri'tenʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "自负的；自命不凡的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a pretentious approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-posterity",
     "category": "writing",
     "kind": "word",
@@ -48240,23 +45095,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "子孙；后裔",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents posterity as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-frugal",
-    "category": "writing",
-    "kind": "word",
-    "term": "frugal",
-    "phonetic": "/'fru:gәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "节俭的；朴素的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a frugal approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -48282,40 +45120,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-genial",
-    "category": "writing",
-    "kind": "word",
-    "term": "genial",
-    "phonetic": "/'dʒi:njәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "和蔼的；亲切的",
-    "note": "教育、媒体和科技影响类写作高频。",
-    "example": "It is a genial example of how technology can improve access to education.",
-    "tags": [
-      "写作",
-      "教育话题",
-      "科技发展",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-sectional",
-    "category": "writing",
-    "kind": "word",
-    "term": "sectional",
-    "phonetic": "/'sekʃәnl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "部分的；部门的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a sectional approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-mannerism",
     "category": "writing",
     "kind": "word",
@@ -48325,23 +45129,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "矫揉造作；习性",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on mannerism and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-gaseous",
-    "category": "writing",
-    "kind": "word",
-    "term": "gaseous",
-    "phonetic": "/'gæsiәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "气体的；气态的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more gaseous way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -48367,159 +45154,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-delectable",
-    "category": "writing",
-    "kind": "word",
-    "term": "delectable",
-    "phonetic": "/di'lektәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "令人快乐的；美味的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more delectable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-malleable",
-    "category": "writing",
-    "kind": "word",
-    "term": "malleable",
-    "phonetic": "/'mæliәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有延展性的；可锻的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a malleable approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-laborious",
-    "category": "writing",
-    "kind": "word",
-    "term": "laborious",
-    "phonetic": "/lә'bɒ:riәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "艰苦的；费劲的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more laborious way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-advisable",
-    "category": "writing",
-    "kind": "word",
-    "term": "advisable",
-    "phonetic": "/әd'vaizәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "适当的；明智的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more advisable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-posthumous",
-    "category": "writing",
-    "kind": "word",
-    "term": "posthumous",
-    "phonetic": "/'pɒstjumәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "遗腹的；死后的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more posthumous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-laudable",
-    "category": "writing",
-    "kind": "word",
-    "term": "laudable",
-    "phonetic": "/'lɒ:dәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "值得赞赏的；值得佩服的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more laudable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-ponderous",
-    "category": "writing",
-    "kind": "word",
-    "term": "ponderous",
-    "phonetic": "/'pɒndәrәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "沉重的；笨重的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a ponderous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-tyrannical",
-    "category": "writing",
-    "kind": "word",
-    "term": "tyrannical",
-    "phonetic": "/tai'rænikl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "暴虐的；暴君的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more tyrannical way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-scrupulous",
-    "category": "writing",
-    "kind": "word",
-    "term": "scrupulous",
-    "phonetic": "/'skru:pjulәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "小心谨慎的；细心的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a scrupulous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-platitude",
     "category": "writing",
     "kind": "word",
@@ -48529,23 +45163,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "单调；平凡",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents platitude as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-equivocal",
-    "category": "writing",
-    "kind": "word",
-    "term": "equivocal",
-    "phonetic": "/i'kwivәkl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "意义不明确的；模棱两可的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an equivocal approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -48571,40 +45188,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-melodious",
-    "category": "writing",
-    "kind": "word",
-    "term": "melodious",
-    "phonetic": "/mә'lәudiәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "旋律美妙的；旋律优美的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a melodious approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-fallible",
-    "category": "writing",
-    "kind": "word",
-    "term": "fallible",
-    "phonetic": "/'fælәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "易错的；可能犯错的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a fallible approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-indemnity",
     "category": "writing",
     "kind": "word",
@@ -48618,23 +45201,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "写作",
       "写作表达",
       "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-fatuous",
-    "category": "writing",
-    "kind": "word",
-    "term": "fatuous",
-    "phonetic": "/'fætjuәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "发呆的；愚笨的",
-    "note": "教育、媒体和科技影响类写作高频。",
-    "example": "It is a fatuous example of how technology can improve access to education.",
-    "tags": [
-      "写作",
-      "教育话题",
-      "科技发展",
       "高频扩展"
     ]
   },
@@ -48665,23 +45231,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "阻止；妨碍",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents prevention as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-coastal",
-    "category": "writing",
-    "kind": "word",
-    "term": "coastal",
-    "phonetic": "/'kәustәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "海岸的；沿海的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more coastal way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -48741,23 +45290,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-vicious",
-    "category": "writing",
-    "kind": "word",
-    "term": "vicious",
-    "phonetic": "/'viʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "邪恶的；堕落的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a vicious approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-ambiguity",
     "category": "writing",
     "kind": "word",
@@ -48767,40 +45299,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "不明确；含糊",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on ambiguity and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-qualitative",
-    "category": "writing",
-    "kind": "word",
-    "term": "qualitative",
-    "phonetic": "/'kwɒlitәtiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "性质的；质的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more qualitative way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-aerial",
-    "category": "writing",
-    "kind": "word",
-    "term": "aerial",
-    "phonetic": "/'єәriәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "空中的；航空的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more aerial way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -48843,91 +45341,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-inaccurate",
-    "category": "writing",
-    "kind": "word",
-    "term": "inaccurate",
-    "phonetic": "/in'ækjurit/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "错误的；不准确的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an inaccurate approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-perpetual",
-    "category": "writing",
-    "kind": "word",
-    "term": "perpetual",
-    "phonetic": "/pә'petʃuәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "永久的；不断的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more perpetual way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-monstrous",
-    "category": "writing",
-    "kind": "word",
-    "term": "monstrous",
-    "phonetic": "/'mɒnstrәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "巨大的；畸形的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more monstrous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-irrespective",
-    "category": "writing",
-    "kind": "word",
-    "term": "irrespective",
-    "phonetic": "/.iri'spektiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不顾的；无关的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an irrespective approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-sceptical",
-    "category": "writing",
-    "kind": "word",
-    "term": "sceptical",
-    "phonetic": "/'skeptikl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "怀疑论的；怀疑的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a sceptical approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-violation",
     "category": "writing",
     "kind": "word",
@@ -48954,23 +45367,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "能力；性能",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on capability and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-offensive",
-    "category": "writing",
-    "kind": "word",
-    "term": "offensive",
-    "phonetic": "/ә'fensiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "令人不快的；侮辱的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more offensive way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -49013,23 +45409,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-residential",
-    "category": "writing",
-    "kind": "word",
-    "term": "residential",
-    "phonetic": "/.rezi'denʃәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "住宅的；与居住有关的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a residential approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-popularity",
     "category": "writing",
     "kind": "word",
@@ -49056,23 +45435,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "冒险故事；浪漫史",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents romance as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-several",
-    "category": "writing",
-    "kind": "word",
-    "term": "several",
-    "phonetic": "/'sevәrәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "几个的；一些的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more several way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -49115,74 +45477,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-vocal",
-    "category": "writing",
-    "kind": "word",
-    "term": "vocal",
-    "phonetic": "/'vәukl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "嗓音的；声音的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a vocal approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-distinctive",
-    "category": "writing",
-    "kind": "word",
-    "term": "distinctive",
-    "phonetic": "/di'stiŋktiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有特色的；出众的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more distinctive way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-skeptical",
-    "category": "writing",
-    "kind": "word",
-    "term": "skeptical",
-    "phonetic": "/'skeptikәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "怀疑论的；怀疑的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more skeptical way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-active",
-    "category": "writing",
-    "kind": "word",
-    "term": "active",
-    "phonetic": "/'æktiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "活跃的；起作用的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more active way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-faction",
     "category": "writing",
     "kind": "word",
@@ -49217,23 +45511,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-questionable",
-    "category": "writing",
-    "kind": "word",
-    "term": "questionable",
-    "phonetic": "/'kwestʃәnәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可疑的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more questionable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-perfection",
     "category": "writing",
     "kind": "word",
@@ -49243,23 +45520,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "完美；完成",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents perfection as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-decorative",
-    "category": "writing",
-    "kind": "word",
-    "term": "decorative",
-    "phonetic": "/'dekәreitiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "装饰性的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a decorative approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -49336,91 +45596,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-optimal",
-    "category": "writing",
-    "kind": "word",
-    "term": "optimal",
-    "phonetic": "/'ɒptimәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "最佳的；最理想的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more optimal way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-postal",
-    "category": "writing",
-    "kind": "word",
-    "term": "postal",
-    "phonetic": "/'pәustl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "邮政的；邮局的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a postal approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-provocative",
-    "category": "writing",
-    "kind": "word",
-    "term": "provocative",
-    "phonetic": "/prә'vɒkәtiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "激发感情的；挑拨的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a provocative approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-disastrous",
-    "category": "writing",
-    "kind": "word",
-    "term": "disastrous",
-    "phonetic": "/di'zɑ:strәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "损失惨重的；悲伤的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a disastrous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-contradictory",
-    "category": "writing",
-    "kind": "word",
-    "term": "contradictory",
-    "phonetic": "/.kɒntrә'diktәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "反驳的；反对的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more contradictory way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-persistence",
     "category": "writing",
     "kind": "word",
@@ -49489,40 +45664,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-spinal",
-    "category": "writing",
-    "kind": "word",
-    "term": "spinal",
-    "phonetic": "/'spainl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "针的；尖刺的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a spinal approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-peripheral",
-    "category": "writing",
-    "kind": "word",
-    "term": "peripheral",
-    "phonetic": "/pә'rifәrәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "周边的；周围的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a peripheral approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-prominence",
     "category": "writing",
     "kind": "word",
@@ -49549,23 +45690,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "变动；波动",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on fluctuation and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-luxurious",
-    "category": "writing",
-    "kind": "word",
-    "term": "luxurious",
-    "phonetic": "/lʌg'zjuәriәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "豪华的；奢侈的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more luxurious way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -49608,23 +45732,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-disproportionate",
-    "category": "writing",
-    "kind": "word",
-    "term": "disproportionate",
-    "phonetic": "/.disprә'pɒ:ʃәnit/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不成比例的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more disproportionate way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-narration",
     "category": "writing",
     "kind": "word",
@@ -49638,142 +45745,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
       "写作",
       "写作表达",
       "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-deceptive",
-    "category": "writing",
-    "kind": "word",
-    "term": "deceptive",
-    "phonetic": "/di'septiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "迷惑的；虚伪的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more deceptive way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-impartial",
-    "category": "writing",
-    "kind": "word",
-    "term": "impartial",
-    "phonetic": "/im'pɑ:ʃәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "公平的；不偏不倚的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more impartial way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-pious",
-    "category": "writing",
-    "kind": "word",
-    "term": "pious",
-    "phonetic": "/'paiәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "虔诚的；敬神的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more pious way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-inaccessible",
-    "category": "writing",
-    "kind": "word",
-    "term": "inaccessible",
-    "phonetic": "/.inæk'sesәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "难得到的；难接近的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an inaccessible approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-malicious",
-    "category": "writing",
-    "kind": "word",
-    "term": "malicious",
-    "phonetic": "/mә'liʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "怀恶意的；恶毒的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a malicious approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-symmetrical",
-    "category": "writing",
-    "kind": "word",
-    "term": "symmetrical",
-    "phonetic": "/si'metrikl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "对称的；匀称的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more symmetrical way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-sedentary",
-    "category": "writing",
-    "kind": "word",
-    "term": "sedentary",
-    "phonetic": "/'sedәntәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "久坐的；坐惯的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a sedentary approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-elliptical",
-    "category": "writing",
-    "kind": "word",
-    "term": "elliptical",
-    "phonetic": "/i'liptikәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "椭圆的",
-    "note": "城市发展、经济成本和环境压力类写作高频。",
-    "example": "Public transport is often a more elliptical option than private cars.",
-    "tags": [
-      "写作",
-      "经济城市",
-      "环境影响",
       "高频扩展"
     ]
   },
@@ -49812,23 +45783,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-spherical",
-    "category": "writing",
-    "kind": "word",
-    "term": "spherical",
-    "phonetic": "/'sferikl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "球的；球面的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more spherical way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-affluence",
     "category": "writing",
     "kind": "word",
@@ -49838,23 +45792,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "富裕；丰富",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents affluence as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-courteous",
-    "category": "writing",
-    "kind": "word",
-    "term": "courteous",
-    "phonetic": "/'kә:tjәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "彬彬有礼；谦恭的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more courteous way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -49965,23 +45902,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-contemptuous",
-    "category": "writing",
-    "kind": "word",
-    "term": "contemptuous",
-    "phonetic": "/kәn'temptʃuәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "轻蔑的；鄙视的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more contemptuous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-impurity",
     "category": "writing",
     "kind": "word",
@@ -49991,23 +45911,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "杂质；不洁",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on impurity and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-acquisitive",
-    "category": "writing",
-    "kind": "word",
-    "term": "acquisitive",
-    "phonetic": "/ә'kwizitiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "渴望获得的；贪婪的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an acquisitive approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -50067,57 +45970,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-favorable",
-    "category": "writing",
-    "kind": "word",
-    "term": "favorable",
-    "phonetic": "/'feivәrәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有利的；赞许的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more favorable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-famous",
-    "category": "writing",
-    "kind": "word",
-    "term": "famous",
-    "phonetic": "/'feimәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "出名的；极好的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more famous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-expensive",
-    "category": "writing",
-    "kind": "word",
-    "term": "expensive",
-    "phonetic": "/ik'spensiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "贵的；奢华的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more expensive way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-autobiography",
     "category": "writing",
     "kind": "word",
@@ -50161,23 +46013,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "创造；创作物",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents creation as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-infamous",
-    "category": "writing",
-    "kind": "word",
-    "term": "infamous",
-    "phonetic": "/'infәmәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "无耻的；不名誉的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an infamous approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -50288,40 +46123,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-fabulous",
-    "category": "writing",
-    "kind": "word",
-    "term": "fabulous",
-    "phonetic": "/'fæbjulәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "传说的；寓言般的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a fabulous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-credible",
-    "category": "writing",
-    "kind": "word",
-    "term": "credible",
-    "phonetic": "/'kredәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可信的；可靠的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more credible way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-distraction",
     "category": "writing",
     "kind": "word",
@@ -50373,23 +46174,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-territorial",
-    "category": "writing",
-    "kind": "word",
-    "term": "territorial",
-    "phonetic": "/.teri'tɒ:riәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "领土的；土地的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more territorial way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-adolescence",
     "category": "writing",
     "kind": "word",
@@ -50399,23 +46183,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "青春期",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on adolescence and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-martial",
-    "category": "writing",
-    "kind": "word",
-    "term": "martial",
-    "phonetic": "/'mɑ:ʃәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "战争的；军事的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a martial approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -50458,74 +46225,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-oblivious",
-    "category": "writing",
-    "kind": "word",
-    "term": "oblivious",
-    "phonetic": "/ә'bliviәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "遗忘的；健忘的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more oblivious way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-multilateral",
-    "category": "writing",
-    "kind": "word",
-    "term": "multilateral",
-    "phonetic": "/.mʌlti'lætәrәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "多边的；多国的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a multilateral approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-unilateral",
-    "category": "writing",
-    "kind": "word",
-    "term": "unilateral",
-    "phonetic": "/.ju:ni'lætәrәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "单方面的；单边的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an unilateral approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-bilingual",
-    "category": "writing",
-    "kind": "word",
-    "term": "bilingual",
-    "phonetic": "/bai'liŋgwәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "双语的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more bilingual way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-defiance",
     "category": "writing",
     "kind": "word",
@@ -50560,57 +46259,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-righteous",
-    "category": "writing",
-    "kind": "word",
-    "term": "righteous",
-    "phonetic": "/'raitʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "公正的；正义的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a righteous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-conducive",
-    "category": "writing",
-    "kind": "word",
-    "term": "conducive",
-    "phonetic": "/kәn'dju:siv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有益于...的；有助于...的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more conducive way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-ludicrous",
-    "category": "writing",
-    "kind": "word",
-    "term": "ludicrous",
-    "phonetic": "/'lu:dikrәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可笑的；滑稽的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more ludicrous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-expulsion",
     "category": "writing",
     "kind": "word",
@@ -50620,23 +46268,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "逐出；开除",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents expulsion as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-unconditional",
-    "category": "writing",
-    "kind": "word",
-    "term": "unconditional",
-    "phonetic": "/.ʌnkәn'diʃәnl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "无条件的；无限制的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more unconditional way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -50764,23 +46395,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-obnoxious",
-    "category": "writing",
-    "kind": "word",
-    "term": "obnoxious",
-    "phonetic": "/әb'nɒkʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可憎的；使人不愉快的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more obnoxious way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-paternity",
     "category": "writing",
     "kind": "word",
@@ -50790,23 +46404,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "父亲身份；父系血统",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on paternity and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-invincible",
-    "category": "writing",
-    "kind": "word",
-    "term": "invincible",
-    "phonetic": "/in'vinsәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不能征服的；无敌的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an invincible approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -50832,91 +46429,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-indelible",
-    "category": "writing",
-    "kind": "word",
-    "term": "indelible",
-    "phonetic": "/in'delibl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "难以消除的；不能拭除的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more indelible way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-departmental",
-    "category": "writing",
-    "kind": "word",
-    "term": "departmental",
-    "phonetic": "/.di:pɑ:t'mentәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "部门的；各部的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more departmental way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-nautical",
-    "category": "writing",
-    "kind": "word",
-    "term": "nautical",
-    "phonetic": "/'nɒ:tikәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "海上的；航海的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a nautical approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-pompous",
-    "category": "writing",
-    "kind": "word",
-    "term": "pompous",
-    "phonetic": "/'pɒmpәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "爱炫耀的；虚夸的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a pompous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-tertiary",
-    "category": "writing",
-    "kind": "word",
-    "term": "tertiary",
-    "phonetic": "/'tә:ʃiәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "第三的；第三位的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more tertiary way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-negation",
     "category": "writing",
     "kind": "word",
@@ -50934,91 +46446,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-perceptible",
-    "category": "writing",
-    "kind": "word",
-    "term": "perceptible",
-    "phonetic": "/pә'septibl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可察觉的；能感觉得到的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more perceptible way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-plaintive",
-    "category": "writing",
-    "kind": "word",
-    "term": "plaintive",
-    "phonetic": "/'pleintiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "悲哀的；哀伤的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a plaintive approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-alphabetical",
-    "category": "writing",
-    "kind": "word",
-    "term": "alphabetical",
-    "phonetic": "/.ælfә'betikәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "依字母顺序的；字母的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an alphabetical approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-negotiable",
-    "category": "writing",
-    "kind": "word",
-    "term": "negotiable",
-    "phonetic": "/ni'gәuʃiәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可磋商的；可转让的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a negotiable approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-fastidious",
-    "category": "writing",
-    "kind": "word",
-    "term": "fastidious",
-    "phonetic": "/fæs'tidiәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "难取悦的；挑剔的",
-    "note": "教育、媒体和科技影响类写作高频。",
-    "example": "It is a fastidious example of how technology can improve access to education.",
-    "tags": [
-      "写作",
-      "教育话题",
-      "科技发展",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-excrement",
     "category": "writing",
     "kind": "word",
@@ -51028,23 +46455,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "排泄；大便",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents excrement as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-ostensible",
-    "category": "writing",
-    "kind": "word",
-    "term": "ostensible",
-    "phonetic": "/ɒs'tensibl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "表面的；假装的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more ostensible way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -51070,40 +46480,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-navigable",
-    "category": "writing",
-    "kind": "word",
-    "term": "navigable",
-    "phonetic": "/'nævigәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可航行的；可通船的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more navigable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-magnanimous",
-    "category": "writing",
-    "kind": "word",
-    "term": "magnanimous",
-    "phonetic": "/mæg'nænimәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "宽宏大量的；有雅量的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more magnanimous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-perplexity",
     "category": "writing",
     "kind": "word",
@@ -51113,23 +46489,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "困惑；混乱状态",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on perplexity and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-mucous",
-    "category": "writing",
-    "kind": "word",
-    "term": "mucous",
-    "phonetic": "/'mju:kәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "粘液的；粘的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more mucous way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -51172,23 +46531,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-congressional",
-    "category": "writing",
-    "kind": "word",
-    "term": "congressional",
-    "phonetic": "/kәn'greʃәnl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "会议的；议会的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a congressional approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-championship",
     "category": "writing",
     "kind": "word",
@@ -51223,23 +46565,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-defensive",
-    "category": "writing",
-    "kind": "word",
-    "term": "defensive",
-    "phonetic": "/di'fensiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "防卫的；防备用的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a defensive approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-celebrity",
     "category": "writing",
     "kind": "word",
@@ -51266,57 +46591,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "修订；改善",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on amendment and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-regulatory",
-    "category": "writing",
-    "kind": "word",
-    "term": "regulatory",
-    "phonetic": "/'regjulәtәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "受控制的；统制的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a regulatory approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-tribal",
-    "category": "writing",
-    "kind": "word",
-    "term": "tribal",
-    "phonetic": "/traibl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "部落的；宗族的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more tribal way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-ideological",
-    "category": "writing",
-    "kind": "word",
-    "term": "ideological",
-    "phonetic": "/.aidiә'lɒdʒikәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "意识形态的；空想的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an ideological approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -51410,74 +46684,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-legendary",
-    "category": "writing",
-    "kind": "word",
-    "term": "legendary",
-    "phonetic": "/'ledʒәndәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "传说的；传奇中说的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a legendary approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-inappropriate",
-    "category": "writing",
-    "kind": "word",
-    "term": "inappropriate",
-    "phonetic": "/.inә'prәupriәt/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不适当的；不相称的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more inappropriate way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-architectural",
-    "category": "writing",
-    "kind": "word",
-    "term": "architectural",
-    "phonetic": "/.ɑ:ki'tektʃәrәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有关建筑的；建筑学的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more architectural way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-magical",
-    "category": "writing",
-    "kind": "word",
-    "term": "magical",
-    "phonetic": "/'mædʒikәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "魔术的；有魔力的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more magical way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-methodology",
     "category": "writing",
     "kind": "word",
@@ -51546,40 +46752,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-reproductive",
-    "category": "writing",
-    "kind": "word",
-    "term": "reproductive",
-    "phonetic": "/.ri:prә'dʌktiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "生殖的；再生的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more reproductive way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-recreational",
-    "category": "writing",
-    "kind": "word",
-    "term": "recreational",
-    "phonetic": "/.rekri'eiʃәnәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "消遣的；娱乐的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more recreational way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-exclusion",
     "category": "writing",
     "kind": "word",
@@ -51589,57 +46761,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "排除；除外",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents exclusion as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-seasonal",
-    "category": "writing",
-    "kind": "word",
-    "term": "seasonal",
-    "phonetic": "/'si:znәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "季节的；依照季节的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a seasonal approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-fictional",
-    "category": "writing",
-    "kind": "word",
-    "term": "fictional",
-    "phonetic": "/'fikʃәnl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "虚构的；编造的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more fictional way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-communal",
-    "category": "writing",
-    "kind": "word",
-    "term": "communal",
-    "phonetic": "/'kɒmjunәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "公有的；公社的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more communal way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -51699,23 +46820,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-unpredictable",
-    "category": "writing",
-    "kind": "word",
-    "term": "unpredictable",
-    "phonetic": "/.ʌnpri'diktәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不可预知的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an unpredictable approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-sensibility",
     "category": "writing",
     "kind": "word",
@@ -51725,74 +46829,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "感性；感觉",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on sensibility and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-charitable",
-    "category": "writing",
-    "kind": "word",
-    "term": "charitable",
-    "phonetic": "/'tʃæritәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "大慈大悲的；宽厚的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a charitable approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-pervasive",
-    "category": "writing",
-    "kind": "word",
-    "term": "pervasive",
-    "phonetic": "/pә'veisiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "普遍的；流行的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a pervasive approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-temporal",
-    "category": "writing",
-    "kind": "word",
-    "term": "temporal",
-    "phonetic": "/'tempәrәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "时间的；暂时的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more temporal way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-elusive",
-    "category": "writing",
-    "kind": "word",
-    "term": "elusive",
-    "phonetic": "/i'lu:siv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "难懂的；易忘的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an elusive approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -51818,23 +46854,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-planetary",
-    "category": "writing",
-    "kind": "word",
-    "term": "planetary",
-    "phonetic": "/'plænitri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "行星的；流浪的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more planetary way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-exemption",
     "category": "writing",
     "kind": "word",
@@ -51844,40 +46863,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "解除；免除",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on exemption and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-substantive",
-    "category": "writing",
-    "kind": "word",
-    "term": "substantive",
-    "phonetic": "/'sʌbstәntiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "表示实在的；有实质的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more substantive way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-dental",
-    "category": "writing",
-    "kind": "word",
-    "term": "dental",
-    "phonetic": "/'dentl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "牙齿的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a dental approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -51920,40 +46905,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-mural",
-    "category": "writing",
-    "kind": "word",
-    "term": "mural",
-    "phonetic": "/'mjuәrәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "壁的；壁上的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a mural approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-eventual",
-    "category": "writing",
-    "kind": "word",
-    "term": "eventual",
-    "phonetic": "/i'ventʃuәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "最后的；终于的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more eventual way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-insistence",
     "category": "writing",
     "kind": "word",
@@ -51963,40 +46914,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "坚持；坚决主张",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on insistence and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-nutritional",
-    "category": "writing",
-    "kind": "word",
-    "term": "nutritional",
-    "phonetic": "/nju: 'triʃәnәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "营养的；滋养的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a nutritional approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-respiratory",
-    "category": "writing",
-    "kind": "word",
-    "term": "respiratory",
-    "phonetic": "/ri'spaiәrәtәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "呼吸的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more respiratory way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -52022,23 +46939,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-culinary",
-    "category": "writing",
-    "kind": "word",
-    "term": "culinary",
-    "phonetic": "/'kʌlinәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "厨房的；烹调用的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a culinary approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-recollection",
     "category": "writing",
     "kind": "word",
@@ -52048,40 +46948,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "记忆；回想",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents recollection as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-expressive",
-    "category": "writing",
-    "kind": "word",
-    "term": "expressive",
-    "phonetic": "/ik'spresiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "表达的；富于表情的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an expressive approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-glamorous",
-    "category": "writing",
-    "kind": "word",
-    "term": "glamorous",
-    "phonetic": "/'glæmәrәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "富有魅力的；迷人的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a glamorous approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -52141,40 +47007,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-sentimental",
-    "category": "writing",
-    "kind": "word",
-    "term": "sentimental",
-    "phonetic": "/.senti'mentl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "感伤的；感情用事的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a sentimental approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-floral",
-    "category": "writing",
-    "kind": "word",
-    "term": "floral",
-    "phonetic": "/'flɒ:rәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "花似的；花的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more floral way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-variability",
     "category": "writing",
     "kind": "word",
@@ -52226,57 +47058,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-sensory",
-    "category": "writing",
-    "kind": "word",
-    "term": "sensory",
-    "phonetic": "/'sensәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "知觉的；感觉的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more sensory way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-complementary",
-    "category": "writing",
-    "kind": "word",
-    "term": "complementary",
-    "phonetic": "/.kɒmpli'mentәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "补充的；补足的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more complementary way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-supernatural",
-    "category": "writing",
-    "kind": "word",
-    "term": "supernatural",
-    "phonetic": "/.sju:pә'nætʃәrәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "超自然的；神奇的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a supernatural approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-grievance",
     "category": "writing",
     "kind": "word",
@@ -52294,23 +47075,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-persuasive",
-    "category": "writing",
-    "kind": "word",
-    "term": "persuasive",
-    "phonetic": "/pә'sweisiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有说服力的；劝诱的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more persuasive way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-antiquity",
     "category": "writing",
     "kind": "word",
@@ -52320,23 +47084,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "古老；古代",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents antiquity as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-automotive",
-    "category": "writing",
-    "kind": "word",
-    "term": "automotive",
-    "phonetic": "/.ɒ:tәu'mәutiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "汽车的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more automotive way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -52396,23 +47143,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-celestial",
-    "category": "writing",
-    "kind": "word",
-    "term": "celestial",
-    "phonetic": "/si'lestjәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "天的；天国的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more celestial way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-continuation",
     "category": "writing",
     "kind": "word",
@@ -52464,40 +47194,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-ancestral",
-    "category": "writing",
-    "kind": "word",
-    "term": "ancestral",
-    "phonetic": "/æn'sestrәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "祖先的；祖传的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more ancestral way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-factual",
-    "category": "writing",
-    "kind": "word",
-    "term": "factual",
-    "phonetic": "/'fæktʃuәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "事实的；实际的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a factual approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-obstruction",
     "category": "writing",
     "kind": "word",
@@ -52532,23 +47228,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-irresistible",
-    "category": "writing",
-    "kind": "word",
-    "term": "irresistible",
-    "phonetic": "/.iri'zistәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不可抵抗的；不能压制的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more irresistible way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-avoidance",
     "category": "writing",
     "kind": "word",
@@ -52558,40 +47237,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "避免；避开",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on avoidance and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-miraculous",
-    "category": "writing",
-    "kind": "word",
-    "term": "miraculous",
-    "phonetic": "/mi'rækjulәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "奇迹的；不可思议的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a miraculous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-gravitational",
-    "category": "writing",
-    "kind": "word",
-    "term": "gravitational",
-    "phonetic": "/.grævi'teiʃәnәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "重力的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more gravitational way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -52617,23 +47262,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-dismal",
-    "category": "writing",
-    "kind": "word",
-    "term": "dismal",
-    "phonetic": "/'dizmәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "阴沉的；凄凉的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a dismal approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-deity",
     "category": "writing",
     "kind": "word",
@@ -52643,23 +47271,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "神；神性",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents deity as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-orbital",
-    "category": "writing",
-    "kind": "word",
-    "term": "orbital",
-    "phonetic": "/'ɒ:bitәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "轨道的；眼眶的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more orbital way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -52719,142 +47330,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-botanical",
-    "category": "writing",
-    "kind": "word",
-    "term": "botanical",
-    "phonetic": "/bә'tænikәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "植物学的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more botanical way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-festive",
-    "category": "writing",
-    "kind": "word",
-    "term": "festive",
-    "phonetic": "/'festiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "庆祝的；喜庆的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more festive way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-venerable",
-    "category": "writing",
-    "kind": "word",
-    "term": "venerable",
-    "phonetic": "/'venәrәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "庄严的；值得尊敬的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more venerable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-repetitive",
-    "category": "writing",
-    "kind": "word",
-    "term": "repetitive",
-    "phonetic": "/ri'petitiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "重复的；反复性的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more repetitive way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-exemplary",
-    "category": "writing",
-    "kind": "word",
-    "term": "exemplary",
-    "phonetic": "/ig'zemplәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可仿效的；可做模范的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more exemplary way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-conglomerate",
-    "category": "writing",
-    "kind": "word",
-    "term": "conglomerate",
-    "phonetic": "/kәn'glɒmәrit/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "聚成球形的；砾岩性的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a conglomerate approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-addictive",
-    "category": "writing",
-    "kind": "word",
-    "term": "addictive",
-    "phonetic": "/ә'diktiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "上瘾的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an addictive approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-anecdotal",
-    "category": "writing",
-    "kind": "word",
-    "term": "anecdotal",
-    "phonetic": "/,ænek'dәutl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "轶事的；爱谈奇闻轶事的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more anecdotal way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-brilliance",
     "category": "writing",
     "kind": "word",
@@ -52864,23 +47339,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "卓越；光辉",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents brilliance as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-predictive",
-    "category": "writing",
-    "kind": "word",
-    "term": "predictive",
-    "phonetic": "/pri'diktiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "预言性的；成为前兆的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a predictive approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -52923,40 +47381,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-admirable",
-    "category": "writing",
-    "kind": "word",
-    "term": "admirable",
-    "phonetic": "/'ædmәrәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可钦佩的；极好的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more admirable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-identifiable",
-    "category": "writing",
-    "kind": "word",
-    "term": "identifiable",
-    "phonetic": "/ai'dentifaiәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可辨认的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more identifiable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-impediment",
     "category": "writing",
     "kind": "word",
@@ -52991,23 +47415,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-viral",
-    "category": "writing",
-    "kind": "word",
-    "term": "viral",
-    "phonetic": "/'vairәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "病毒的；病毒引起的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a viral approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-refinement",
     "category": "writing",
     "kind": "word",
@@ -53017,40 +47424,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "精致；高尚",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on refinement and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-improbable",
-    "category": "writing",
-    "kind": "word",
-    "term": "improbable",
-    "phonetic": "/im'prɒbәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不大可能的；不象发生的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more improbable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-synonymous",
-    "category": "writing",
-    "kind": "word",
-    "term": "synonymous",
-    "phonetic": "/si'nɒnimәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "同义词的；同义的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more synonymous way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -53178,57 +47551,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-auditory",
-    "category": "writing",
-    "kind": "word",
-    "term": "auditory",
-    "phonetic": "/'ɒ:ditәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "听觉的；听觉器官的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an auditory approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-adventurous",
-    "category": "writing",
-    "kind": "word",
-    "term": "adventurous",
-    "phonetic": "/әd'ventʃәrәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "喜欢冒险的；有进取心的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an adventurous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-hideous",
-    "category": "writing",
-    "kind": "word",
-    "term": "hideous",
-    "phonetic": "/'hidiәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "丑恶的；可憎的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more hideous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-professionalism",
     "category": "writing",
     "kind": "word",
@@ -53238,91 +47560,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "职业特性；专业技巧",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents professionalism as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-treacherous",
-    "category": "writing",
-    "kind": "word",
-    "term": "treacherous",
-    "phonetic": "/'tretʃәrәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不可信任的；危险的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more treacherous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-mythical",
-    "category": "writing",
-    "kind": "word",
-    "term": "mythical",
-    "phonetic": "/'miθikә l/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "神话的；存在于神话中的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a mythical approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-involuntary",
-    "category": "writing",
-    "kind": "word",
-    "term": "involuntary",
-    "phonetic": "/in'vɒlәntәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "自然而然的；无意识的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more involuntary way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-tenuous",
-    "category": "writing",
-    "kind": "word",
-    "term": "tenuous",
-    "phonetic": "/'tenjuәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "稀薄的；微细的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a tenuous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-pedagogical",
-    "category": "writing",
-    "kind": "word",
-    "term": "pedagogical",
-    "phonetic": "/pedә'^ɔdʒikәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "教师的；教学法的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more pedagogical way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -53416,40 +47653,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-contagious",
-    "category": "writing",
-    "kind": "word",
-    "term": "contagious",
-    "phonetic": "/kәn'teidʒәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "触染性的；会蔓延的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more contagious way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-autobiographical",
-    "category": "writing",
-    "kind": "word",
-    "term": "autobiographical",
-    "phonetic": "/ɔ:tәjbaiә'^ræfik(ә)l/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "自传的；自传体的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an autobiographical approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-retribution",
     "category": "writing",
     "kind": "word",
@@ -53476,40 +47679,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "全体；总数",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on totality and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-incomprehensible",
-    "category": "writing",
-    "kind": "word",
-    "term": "incomprehensible",
-    "phonetic": "/in.kɒmpri'hensәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不能理解的；费解的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more incomprehensible way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-primal",
-    "category": "writing",
-    "kind": "word",
-    "term": "primal",
-    "phonetic": "/'praiml/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "主要的；最初的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a primal approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -53586,125 +47755,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-compulsive",
-    "category": "writing",
-    "kind": "word",
-    "term": "compulsive",
-    "phonetic": "/kәm'pʌlsiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "强制的；强迫的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a compulsive approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-postoperative",
-    "category": "writing",
-    "kind": "word",
-    "term": "postoperative",
-    "phonetic": "/pәust'ɒpәrәtiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "手术后的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a postoperative approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-illegitimate",
-    "category": "writing",
-    "kind": "word",
-    "term": "illegitimate",
-    "phonetic": "/.ili'dʒitimәt/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不法的；私生的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more illegitimate way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-impersonal",
-    "category": "writing",
-    "kind": "word",
-    "term": "impersonal",
-    "phonetic": "/im'pә:sәnәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "客观的；和个人无关的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an impersonal approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-unimaginable",
-    "category": "writing",
-    "kind": "word",
-    "term": "unimaginable",
-    "phonetic": "/.ʌni'mædʒinәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不能想象的；不可思议的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more unimaginable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-diagonal",
-    "category": "writing",
-    "kind": "word",
-    "term": "diagonal",
-    "phonetic": "/dai'ægәnl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "对角线的；斜的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a diagonal approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-affectionate",
-    "category": "writing",
-    "kind": "word",
-    "term": "affectionate",
-    "phonetic": "/ә'fekʃәnәt/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "深情的；充满情爱的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an affectionate approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-utterance",
     "category": "writing",
     "kind": "word",
@@ -53739,40 +47789,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-unfavorable",
-    "category": "writing",
-    "kind": "word",
-    "term": "unfavorable",
-    "phonetic": "/.ʌn'feivәrәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不宜的；不顺利的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more unfavorable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-joyous",
-    "category": "writing",
-    "kind": "word",
-    "term": "joyous",
-    "phonetic": "/'dʒɒiәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "快乐的；高兴的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a joyous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-originality",
     "category": "writing",
     "kind": "word",
@@ -53799,23 +47815,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "并排；并置",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents juxtaposition as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-irreversible",
-    "category": "writing",
-    "kind": "word",
-    "term": "irreversible",
-    "phonetic": "/,iri'vә:sәbl,-sib-/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不可逆的；不可改变的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an irreversible approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -53909,57 +47908,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-perilous",
-    "category": "writing",
-    "kind": "word",
-    "term": "perilous",
-    "phonetic": "/'perilәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "危险的；濒临毁灭的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a perilous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-impeccable",
-    "category": "writing",
-    "kind": "word",
-    "term": "impeccable",
-    "phonetic": "/im'pekәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "无懈可击的；勿容置疑的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more impeccable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-cohesive",
-    "category": "writing",
-    "kind": "word",
-    "term": "cohesive",
-    "phonetic": "/kәu'hi:siv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "黏合在一起的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a cohesive approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-computation",
     "category": "writing",
     "kind": "word",
@@ -53969,91 +47917,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "计算；计数",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents computation as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-discernible",
-    "category": "writing",
-    "kind": "word",
-    "term": "discernible",
-    "phonetic": "/di's\\\\\\\\:nәbl,-'z\\\\\\\\:-/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "看得清的；可看出的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a discernible approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-primordial",
-    "category": "writing",
-    "kind": "word",
-    "term": "primordial",
-    "phonetic": "/prai'mɒ:diәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "原始的；自原始时代的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a primordial approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-heterogeneous",
-    "category": "writing",
-    "kind": "word",
-    "term": "heterogeneous",
-    "phonetic": "/.hetәrәu'dʒi:njәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "异种的；异质的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a heterogeneous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-inconceivable",
-    "category": "writing",
-    "kind": "word",
-    "term": "inconceivable",
-    "phonetic": "/.inkәn'si:vәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不能想象的；想不到的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an inconceivable approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-nocturnal",
-    "category": "writing",
-    "kind": "word",
-    "term": "nocturnal",
-    "phonetic": "/nɒk'tә:nәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "夜的；夜曲的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more nocturnal way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -54096,23 +47959,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-populous",
-    "category": "writing",
-    "kind": "word",
-    "term": "populous",
-    "phonetic": "/'pɒpjulәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "人口多的；人口稠密的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more populous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-perseverance",
     "category": "writing",
     "kind": "word",
@@ -54147,74 +47993,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-penal",
-    "category": "writing",
-    "kind": "word",
-    "term": "penal",
-    "phonetic": "/'pi:nl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有关处罚的；刑的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more penal way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-glacial",
-    "category": "writing",
-    "kind": "word",
-    "term": "glacial",
-    "phonetic": "/'gleiʃәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "冰的；冰川的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more glacial way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-inconclusive",
-    "category": "writing",
-    "kind": "word",
-    "term": "inconclusive",
-    "phonetic": "/.inkәn'klu:siv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "非决定性的；无效果的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an inconclusive approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-compensatory",
-    "category": "writing",
-    "kind": "word",
-    "term": "compensatory",
-    "phonetic": "/kәm'pensәtәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "赔偿的；补偿的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more compensatory way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-credence",
     "category": "writing",
     "kind": "word",
@@ -54241,57 +48019,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "实际性；实用性",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on practicality and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-sculptural",
-    "category": "writing",
-    "kind": "word",
-    "term": "sculptural",
-    "phonetic": "/'skʌlptʃәrәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "雕刻的；雕刻般的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more sculptural way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-instinctive",
-    "category": "writing",
-    "kind": "word",
-    "term": "instinctive",
-    "phonetic": "/in'stiŋktiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "本能的；天生的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more instinctive way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-hospitable",
-    "category": "writing",
-    "kind": "word",
-    "term": "hospitable",
-    "phonetic": "/'hɒspitәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "好客的；招待周到的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more hospitable way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -54351,23 +48078,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-sumptuous",
-    "category": "writing",
-    "kind": "word",
-    "term": "sumptuous",
-    "phonetic": "/'sʌmptʃuәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "奢侈的；华丽的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more sumptuous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-austerity",
     "category": "writing",
     "kind": "word",
@@ -54385,40 +48095,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-comical",
-    "category": "writing",
-    "kind": "word",
-    "term": "comical",
-    "phonetic": "/'kɒmikәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "好笑的；滑稽的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more comical way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-methodical",
-    "category": "writing",
-    "kind": "word",
-    "term": "methodical",
-    "phonetic": "/mi'θɒdikl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "有方法的；有系统的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a methodical approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-agility",
     "category": "writing",
     "kind": "word",
@@ -54428,23 +48104,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "敏捷；灵活",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The policy debate often centres on agility and social responsibility.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-categorical",
-    "category": "writing",
-    "kind": "word",
-    "term": "categorical",
-    "phonetic": "/.kæti'gɒrikl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "范畴的；绝对的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a categorical approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -54479,23 +48138,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "故障；失灵",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents malfunction as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-adaptable",
-    "category": "writing",
-    "kind": "word",
-    "term": "adaptable",
-    "phonetic": "/ә'dæptәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "能适应的；适合的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an adaptable approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -54555,74 +48197,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-impervious",
-    "category": "writing",
-    "kind": "word",
-    "term": "impervious",
-    "phonetic": "/im'pә:viәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "透不过的；不易损坏的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more impervious way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-perceptive",
-    "category": "writing",
-    "kind": "word",
-    "term": "perceptive",
-    "phonetic": "/pә'septiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "知觉的；有知觉力的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a perceptive approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-neoclassical",
-    "category": "writing",
-    "kind": "word",
-    "term": "neoclassical",
-    "phonetic": "/'ni:әuklæsikәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "新古典主义的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more neoclassical way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-detectable",
-    "category": "writing",
-    "kind": "word",
-    "term": "detectable",
-    "phonetic": "/di'tektәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可察觉的；易发现的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more detectable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-entanglement",
     "category": "writing",
     "kind": "word",
@@ -54632,40 +48206,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "纠缠；卷入",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents entanglement as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-ineligible",
-    "category": "writing",
-    "kind": "word",
-    "term": "ineligible",
-    "phonetic": "/in'elidʒәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "无被选任资格的；不适任的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an ineligible approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-conciliatory",
-    "category": "writing",
-    "kind": "word",
-    "term": "conciliatory",
-    "phonetic": "/kәn'siliәtәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "安抚的；和好的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a conciliatory approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -54691,57 +48231,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-sensuous",
-    "category": "writing",
-    "kind": "word",
-    "term": "sensuous",
-    "phonetic": "/'senʃuәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "感觉上的；使感官以快感的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more sensuous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-cursory",
-    "category": "writing",
-    "kind": "word",
-    "term": "cursory",
-    "phonetic": "/'kә:sәri/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "匆匆忙忙的；草率的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more cursory way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-contiguous",
-    "category": "writing",
-    "kind": "word",
-    "term": "contiguous",
-    "phonetic": "/kәn'tigjuәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "邻近的；接近的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more contiguous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-enormity",
     "category": "writing",
     "kind": "word",
@@ -54759,23 +48248,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-amenable",
-    "category": "writing",
-    "kind": "word",
-    "term": "amenable",
-    "phonetic": "/ә'mi:nәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "服从的；会接纳的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more amenable way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-preponderance",
     "category": "writing",
     "kind": "word",
@@ -54785,57 +48257,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "优势；多数",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents preponderance as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-repulsive",
-    "category": "writing",
-    "kind": "word",
-    "term": "repulsive",
-    "phonetic": "/ri'pʌlsiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "排斥的；可恶的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a repulsive approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-amiable",
-    "category": "writing",
-    "kind": "word",
-    "term": "amiable",
-    "phonetic": "/'eimjәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "亲切的；和蔼可亲的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an amiable approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-insurmountable",
-    "category": "writing",
-    "kind": "word",
-    "term": "insurmountable",
-    "phonetic": "/.insә'mauntәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "难以克服的；不能超越的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an insurmountable approach to social policy.",
     "tags": [
       "写作",
       "写作表达",
@@ -54895,40 +48316,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-congenial",
-    "category": "writing",
-    "kind": "word",
-    "term": "congenial",
-    "phonetic": "/kәn'dʒi:njәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "协调的；一致的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more congenial way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-fanatical",
-    "category": "writing",
-    "kind": "word",
-    "term": "fanatical",
-    "phonetic": "/fә'nætikәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "狂热的；盲信的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a fanatical approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-indignity",
     "category": "writing",
     "kind": "word",
@@ -54963,57 +48350,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-despicable",
-    "category": "writing",
-    "kind": "word",
-    "term": "despicable",
-    "phonetic": "/'despikәbl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "可鄙的；卑劣的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a despicable approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-feudal",
-    "category": "writing",
-    "kind": "word",
-    "term": "feudal",
-    "phonetic": "/'fju:dәl/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "封建制度的；封地的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more feudal way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-inanimate",
-    "category": "writing",
-    "kind": "word",
-    "term": "inanimate",
-    "phonetic": "/in'ænimәt/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "失去知觉的；没生命的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an inanimate approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-collusion",
     "category": "writing",
     "kind": "word",
@@ -55031,40 +48367,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-illustrious",
-    "category": "writing",
-    "kind": "word",
-    "term": "illustrious",
-    "phonetic": "/i'lʌstriәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "著名的；辉煌的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more illustrious way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-evasive",
-    "category": "writing",
-    "kind": "word",
-    "term": "evasive",
-    "phonetic": "/i'veisiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "逃避的；回避的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an evasive approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
     "id": "bulk-writing-seclusion",
     "category": "writing",
     "kind": "word",
@@ -55074,108 +48376,6 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     "translation": "隔离；隐退",
     "note": "政府、政策和社会治理类写作高频。",
     "example": "The writer presents seclusion as a key issue in public policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-unscrupulous",
-    "category": "writing",
-    "kind": "word",
-    "term": "unscrupulous",
-    "phonetic": "/.ʌn'skru:pjulәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "无道德原则的；不审慎的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an unscrupulous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-gratuitous",
-    "category": "writing",
-    "kind": "word",
-    "term": "gratuitous",
-    "phonetic": "/grә'tju:itәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "免费的；无理由的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a gratuitous approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-anomalous",
-    "category": "writing",
-    "kind": "word",
-    "term": "anomalous",
-    "phonetic": "/ә'nɒmәlәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "不规则的；反常的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more anomalous way to improve public services.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-judicious",
-    "category": "writing",
-    "kind": "word",
-    "term": "judicious",
-    "phonetic": "/dʒu:'diʃәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "头脑精明的；贤明的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a judicious approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-satirical",
-    "category": "writing",
-    "kind": "word",
-    "term": "satirical",
-    "phonetic": "/sә'tirik(ә)l/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "讽刺的；讥讽的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports a satirical approach to social policy.",
-    "tags": [
-      "写作",
-      "写作表达",
-      "政策社会",
-      "高频扩展"
-    ]
-  },
-  {
-    "id": "bulk-writing-precipitous",
-    "category": "writing",
-    "kind": "word",
-    "term": "precipitous",
-    "phonetic": "/pri'sipitәs/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "陡峭的；轻率的",
-    "note": "政府、政策和社会治理类写作高频。",
-    "example": "This is a more precipitous way to improve public services.",
     "tags": [
       "写作",
       "写作表达",
@@ -55235,15 +48435,4401 @@ window.__LEXICON_LARGE_VOCABULARY__ = [
     ]
   },
   {
-    "id": "bulk-writing-inquisitive",
+    "id": "bulk-writing-fortitude",
     "category": "writing",
     "kind": "word",
-    "term": "inquisitive",
-    "phonetic": "/in'kwizәtiv/",
-    "partOfSpeech": "adj. 形容词",
-    "translation": "好问的；想知道的",
+    "term": "fortitude",
+    "phonetic": "/'fɒ:titju:d/",
+    "partOfSpeech": "n. 名词",
+    "translation": "刚毅；坚毅",
     "note": "政府、政策和社会治理类写作高频。",
-    "example": "The writer supports an inquisitive approach to social policy.",
+    "example": "The policy debate often centres on fortitude and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-aggregation",
+    "category": "writing",
+    "kind": "word",
+    "term": "aggregation",
+    "phonetic": "/ægri'geiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "集合；聚合",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents aggregation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-protectionist",
+    "category": "writing",
+    "kind": "word",
+    "term": "protectionist",
+    "phonetic": "/prә'tekʃәnist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "贸易保护主义者",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on protectionist and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-luminosity",
+    "category": "writing",
+    "kind": "word",
+    "term": "luminosity",
+    "phonetic": "/.lu:mi'nɒsiti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "光明；光辉",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on luminosity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-intoxication",
+    "category": "writing",
+    "kind": "word",
+    "term": "intoxication",
+    "phonetic": "/in.tɒksi'keiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "使醉；沉醉状态",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on intoxication and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-decadence",
+    "category": "writing",
+    "kind": "word",
+    "term": "decadence",
+    "phonetic": "/'dekәdәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "颓废",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents decadence as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-supplementation",
+    "category": "writing",
+    "kind": "word",
+    "term": "supplementation",
+    "phonetic": "/,sʌplimen'teiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "增补；补足",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents supplementation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-reticence",
+    "category": "writing",
+    "kind": "word",
+    "term": "reticence",
+    "phonetic": "/'retisns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "无言；沉默",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on reticence and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-embellishment",
+    "category": "writing",
+    "kind": "word",
+    "term": "embellishment",
+    "phonetic": "/im'beliʃmәnt/",
+    "partOfSpeech": "n. 名词",
+    "translation": "装饰；润色",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents embellishment as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-proclivity",
+    "category": "writing",
+    "kind": "word",
+    "term": "proclivity",
+    "phonetic": "/prә'kliviti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "倾向；癖性",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents proclivity as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-dilution",
+    "category": "writing",
+    "kind": "word",
+    "term": "dilution",
+    "phonetic": "/dai'lju:ʃәn, di'l-/",
+    "partOfSpeech": "n. 名词",
+    "translation": "冲淡；淡度",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on dilution and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-fanaticism",
+    "category": "writing",
+    "kind": "word",
+    "term": "fanaticism",
+    "phonetic": "/fә'nætisizm/",
+    "partOfSpeech": "n. 名词",
+    "translation": "狂热；入迷",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on fanaticism and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-unanimity",
+    "category": "writing",
+    "kind": "word",
+    "term": "unanimity",
+    "phonetic": "/.ju:nә'nimiti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "无异议；同意",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents unanimity as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-vulgarity",
+    "category": "writing",
+    "kind": "word",
+    "term": "vulgarity",
+    "phonetic": "/vʌl'gæriti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "粗俗；粗鄙",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on vulgarity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-atheism",
+    "category": "writing",
+    "kind": "word",
+    "term": "atheism",
+    "phonetic": "/'eiθiizm/",
+    "partOfSpeech": "n. 名词",
+    "translation": "无神论",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents atheism as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-hibernation",
+    "category": "writing",
+    "kind": "word",
+    "term": "hibernation",
+    "phonetic": "/.haibә'neiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "过冬；冬眠",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on hibernation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-diction",
+    "category": "writing",
+    "kind": "word",
+    "term": "diction",
+    "phonetic": "/'dikʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "措辞；发音",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents diction as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-incongruity",
+    "category": "writing",
+    "kind": "word",
+    "term": "incongruity",
+    "phonetic": "/.inkɒŋ'gru:iti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "不协调；不一致",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on incongruity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-eminence",
+    "category": "writing",
+    "kind": "word",
+    "term": "eminence",
+    "phonetic": "/'eminәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "显赫；名家",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents eminence as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-heredity",
+    "category": "writing",
+    "kind": "word",
+    "term": "heredity",
+    "phonetic": "/hi'rediti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "遗传；形质遗传",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents heredity as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-subsection",
+    "category": "writing",
+    "kind": "word",
+    "term": "subsection",
+    "phonetic": "/'sʌb.sekʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "分部；分区",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on subsection and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-cellist",
+    "category": "writing",
+    "kind": "word",
+    "term": "cellist",
+    "phonetic": "/'tʃelist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "大提琴演奏家",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents cellist as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-subjugation",
+    "category": "writing",
+    "kind": "word",
+    "term": "subjugation",
+    "phonetic": "/.sʌbdʒu'geiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "征服；镇压",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents subjugation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-indigestion",
+    "category": "writing",
+    "kind": "word",
+    "term": "indigestion",
+    "phonetic": "/.indi'dʒestʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "消化不良",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents indigestion as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-renunciation",
+    "category": "writing",
+    "kind": "word",
+    "term": "renunciation",
+    "phonetic": "/ri.nʌnsi'eiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "放弃；废弃",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents renunciation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-impersonation",
+    "category": "writing",
+    "kind": "word",
+    "term": "impersonation",
+    "phonetic": "/im.pә:sә'neiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "扮演；装扮",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on impersonation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-pollination",
+    "category": "writing",
+    "kind": "word",
+    "term": "pollination",
+    "phonetic": "/.pɒli'neiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "授粉",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on pollination and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-lyricist",
+    "category": "writing",
+    "kind": "word",
+    "term": "lyricist",
+    "phonetic": "/'lirisist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "抒情诗人；歌曲作者",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on lyricist and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-fatalism",
+    "category": "writing",
+    "kind": "word",
+    "term": "fatalism",
+    "phonetic": "/'feitәlizm/",
+    "partOfSpeech": "n. 名词",
+    "translation": "宿命论",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents fatalism as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-digression",
+    "category": "writing",
+    "kind": "word",
+    "term": "digression",
+    "phonetic": "/dai'greʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "离题；扯到枝节上",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents digression as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-temperance",
+    "category": "writing",
+    "kind": "word",
+    "term": "temperance",
+    "phonetic": "/'tempәrәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "节欲；戒酒",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on temperance and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-distillation",
+    "category": "writing",
+    "kind": "word",
+    "term": "distillation",
+    "phonetic": "/.disti'leiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "蒸馏",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents distillation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-magnificence",
+    "category": "writing",
+    "kind": "word",
+    "term": "magnificence",
+    "phonetic": "/mæg'nifisns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "富丽堂皇；华丽",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on magnificence and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-facilitation",
+    "category": "writing",
+    "kind": "word",
+    "term": "facilitation",
+    "phonetic": "/fә,sili'teiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "[医] 容易化；助长",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on facilitation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-subtraction",
+    "category": "writing",
+    "kind": "word",
+    "term": "subtraction",
+    "phonetic": "/sәb'trækʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "减少",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents subtraction as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-cubism",
+    "category": "writing",
+    "kind": "word",
+    "term": "cubism",
+    "phonetic": "/'kju:bizm/",
+    "partOfSpeech": "n. 名词",
+    "translation": "立体派",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on cubism and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-figment",
+    "category": "writing",
+    "kind": "word",
+    "term": "figment",
+    "phonetic": "/'figmәnt/",
+    "partOfSpeech": "n. 名词",
+    "translation": "虚构的事",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents figment as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-incredulity",
+    "category": "writing",
+    "kind": "word",
+    "term": "incredulity",
+    "phonetic": "/.inkri'dju:liti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "不轻信；怀疑",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on incredulity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-infirmity",
+    "category": "writing",
+    "kind": "word",
+    "term": "infirmity",
+    "phonetic": "/in'fә:miti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "虚弱；病身",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents infirmity as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-fecundity",
+    "category": "writing",
+    "kind": "word",
+    "term": "fecundity",
+    "phonetic": "/fi'kʌnditi/",
+    "partOfSpeech": "n. 名词",
+    "translation": "多产；丰饶",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on fecundity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-frugality",
+    "category": "writing",
+    "kind": "word",
+    "term": "frugality",
+    "phonetic": "/fru:'gæliti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "节俭；俭省",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on frugality and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-satirist",
+    "category": "writing",
+    "kind": "word",
+    "term": "satirist",
+    "phonetic": "/'sætәrist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "讽刺作者；爱挖苦的人",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on satirist and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-optometrist",
+    "category": "writing",
+    "kind": "word",
+    "term": "optometrist",
+    "phonetic": "/ɒp'tɒmitrist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "验光师；配镜师",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on optometrist and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-immobility",
+    "category": "writing",
+    "kind": "word",
+    "term": "immobility",
+    "phonetic": "/.imәu'biliti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "不动性；不动",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on immobility and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-pestilence",
+    "category": "writing",
+    "kind": "word",
+    "term": "pestilence",
+    "phonetic": "/'pestilәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "瘟疫；散布毒害的事物",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents pestilence as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-depredation",
+    "category": "writing",
+    "kind": "word",
+    "term": "depredation",
+    "phonetic": "/.depri'deiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "掠夺；破坏",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents depredation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-hilarity",
+    "category": "writing",
+    "kind": "word",
+    "term": "hilarity",
+    "phonetic": "/hi'læriti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "欢喜；高兴",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on hilarity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-desalination",
+    "category": "writing",
+    "kind": "word",
+    "term": "desalination",
+    "phonetic": "/di:,sæli'neiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "[化] 脱盐",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on desalination and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-alternation",
+    "category": "writing",
+    "kind": "word",
+    "term": "alternation",
+    "phonetic": "/.ɒ:ltә'neiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "交互；轮流",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on alternation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-refraction",
+    "category": "writing",
+    "kind": "word",
+    "term": "refraction",
+    "phonetic": "/ri'frækʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "折光；折射",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on refraction and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-frivolity",
+    "category": "writing",
+    "kind": "word",
+    "term": "frivolity",
+    "phonetic": "/fri'vɒliti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "轻薄；轻率",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on frivolity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-avocation",
+    "category": "writing",
+    "kind": "word",
+    "term": "avocation",
+    "phonetic": "/.ævәu'keiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "副业；嗜好",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on avocation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-gravitation",
+    "category": "writing",
+    "kind": "word",
+    "term": "gravitation",
+    "phonetic": "/.grævi'teiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "引力；重力",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on gravitation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-gyration",
+    "category": "writing",
+    "kind": "word",
+    "term": "gyration",
+    "phonetic": "/dʒai'reiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "旋回；回转",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on gyration and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-eclecticism",
+    "category": "writing",
+    "kind": "word",
+    "term": "eclecticism",
+    "phonetic": "/ek'lektisizm/",
+    "partOfSpeech": "n. 名词",
+    "translation": "折衷派；折衷主义",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on eclecticism and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-gentility",
+    "category": "writing",
+    "kind": "word",
+    "term": "gentility",
+    "phonetic": "/dʒen'tiliti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "出身高贵；绅士们",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on gentility and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-subjection",
+    "category": "writing",
+    "kind": "word",
+    "term": "subjection",
+    "phonetic": "/sәb'dʒekʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "征服；服从",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on subjection and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-comity",
+    "category": "writing",
+    "kind": "word",
+    "term": "comity",
+    "phonetic": "/'kɒmiti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "礼貌；礼让",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on comity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-survivability",
+    "category": "writing",
+    "kind": "word",
+    "term": "survivability",
+    "phonetic": "/ˌsəvɚɪvə'bɪlɪtɪ/",
+    "partOfSpeech": "n. 名词",
+    "translation": "残存性；生存性",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on survivability and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-probity",
+    "category": "writing",
+    "kind": "word",
+    "term": "probity",
+    "phonetic": "/'prәubәti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "诚实；正直",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on probity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-alliteration",
+    "category": "writing",
+    "kind": "word",
+    "term": "alliteration",
+    "phonetic": "/ә.litә'reiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "头韵",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on alliteration and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-compaction",
+    "category": "writing",
+    "kind": "word",
+    "term": "compaction",
+    "phonetic": "/kәm'pækʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "[计] 压缩；浓缩",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents compaction as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-cession",
+    "category": "writing",
+    "kind": "word",
+    "term": "cession",
+    "phonetic": "/'seʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "割让；转让",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents cession as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-vacillation",
+    "category": "writing",
+    "kind": "word",
+    "term": "vacillation",
+    "phonetic": "/.væsi'leiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "游移不定；踌躇",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on vacillation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-ablution",
+    "category": "writing",
+    "kind": "word",
+    "term": "ablution",
+    "phonetic": "/ә'blu:ʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "洗澡；洗礼",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents ablution as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-provincialism",
+    "category": "writing",
+    "kind": "word",
+    "term": "provincialism",
+    "phonetic": "/prә'vinʃәlizm/",
+    "partOfSpeech": "n. 名词",
+    "translation": "乡下习气；方言",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents provincialism as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-regimentation",
+    "category": "writing",
+    "kind": "word",
+    "term": "regimentation",
+    "phonetic": "/.redʒimen'teiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "团的编制；系统化",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents regimentation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-cognizance",
+    "category": "writing",
+    "kind": "word",
+    "term": "cognizance",
+    "phonetic": "/'kɒgnizәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "认识；察知",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents cognizance as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-connivance",
+    "category": "writing",
+    "kind": "word",
+    "term": "connivance",
+    "phonetic": "/kә'naivәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "默许；纵容",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents connivance as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-careerism",
+    "category": "writing",
+    "kind": "word",
+    "term": "careerism",
+    "phonetic": "/kә'riәrizm/",
+    "partOfSpeech": "n. 名词",
+    "translation": "野心；追求名利",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents careerism as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-impracticality",
+    "category": "writing",
+    "kind": "word",
+    "term": "impracticality",
+    "phonetic": "/im,prækti'kæliti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "不切实际；办不到",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents impracticality as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-balloonist",
+    "category": "writing",
+    "kind": "word",
+    "term": "balloonist",
+    "phonetic": "/bә'lu:nist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "驾驶/操纵气球的人",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on balloonist and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-atomization",
+    "category": "writing",
+    "kind": "word",
+    "term": "atomization",
+    "phonetic": "/.ætәumai'zeiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "粉碎；以原子弹轰炸",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents atomization as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-vaporization",
+    "category": "writing",
+    "kind": "word",
+    "term": "vaporization",
+    "phonetic": "/.veipәrai'zeiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "蒸发；汽化",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents vaporization as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-theist",
+    "category": "writing",
+    "kind": "word",
+    "term": "theist",
+    "phonetic": "/'θi:ist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "有神论者；一神论者",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on theist and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-congruity",
+    "category": "writing",
+    "kind": "word",
+    "term": "congruity",
+    "phonetic": "/kәŋ'gru:iti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "适合；一致",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on congruity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-declivity",
+    "category": "writing",
+    "kind": "word",
+    "term": "declivity",
+    "phonetic": "/di'kliviti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "倾斜；下坡",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on declivity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-malediction",
+    "category": "writing",
+    "kind": "word",
+    "term": "malediction",
+    "phonetic": "/.mæli'dikʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "咒；坏话",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on malediction and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-detraction",
+    "category": "writing",
+    "kind": "word",
+    "term": "detraction",
+    "phonetic": "/di'trækʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "转移；缩小",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on detraction and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-garrulity",
+    "category": "writing",
+    "kind": "word",
+    "term": "garrulity",
+    "phonetic": "/gæ'ru:liti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "饶舌；多嘴",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on garrulity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-indiscrimination",
+    "category": "writing",
+    "kind": "word",
+    "term": "indiscrimination",
+    "phonetic": "/'indis,krimi'neiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "无差别；不加区别的事物(行为)",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on indiscrimination and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-oversecretion",
+    "category": "writing",
+    "kind": "word",
+    "term": "oversecretion",
+    "phonetic": "/əʊvəsek'ri:ʃən/",
+    "partOfSpeech": "n. 名词",
+    "translation": "[医] 分泌过多",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents oversecretion as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-vitalist",
+    "category": "writing",
+    "kind": "word",
+    "term": "vitalist",
+    "phonetic": "/'vaitlist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "生机论者；活力论者",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents vitalist as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-situation",
+    "category": "writing",
+    "kind": "word",
+    "term": "situation",
+    "phonetic": "/.sitju'eiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "情形；境遇",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents situation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-explanation",
+    "category": "writing",
+    "kind": "word",
+    "term": "explanation",
+    "phonetic": "/.eksplә'neiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "解释；说明",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on explanation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-foundation",
+    "category": "writing",
+    "kind": "word",
+    "term": "foundation",
+    "phonetic": "/faun'deiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "基础；根据",
+    "note": "教育、媒体和科技影响类写作高频。",
+    "example": "Teachers often discuss foundation when they compare old and new learning methods.",
+    "tags": [
+      "写作",
+      "教育话题",
+      "科技发展",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-concentration",
+    "category": "writing",
+    "kind": "word",
+    "term": "concentration",
+    "phonetic": "/.kɒnsәn'treiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "集中；专心",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents concentration as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-intensity",
+    "category": "writing",
+    "kind": "word",
+    "term": "intensity",
+    "phonetic": "/in'tensәti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "强烈；紧张",
+    "note": "城市发展、经济成本和环境压力类写作高频。",
+    "example": "Urban planners often discuss intensity when they evaluate city development.",
+    "tags": [
+      "写作",
+      "经济城市",
+      "环境影响",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-maturity",
+    "category": "writing",
+    "kind": "word",
+    "term": "maturity",
+    "phonetic": "/mә'tjuәriti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "成熟；完备",
+    "note": "城市发展、经济成本和环境压力类写作高频。",
+    "example": "Urban planners often discuss maturity when they evaluate city development.",
+    "tags": [
+      "写作",
+      "经济城市",
+      "环境影响",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-deviation",
+    "category": "writing",
+    "kind": "word",
+    "term": "deviation",
+    "phonetic": "/.di:vi'eiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "背离",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents deviation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-humiliation",
+    "category": "writing",
+    "kind": "word",
+    "term": "humiliation",
+    "phonetic": "/hju:.mili'eiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "耻辱；丢脸",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents humiliation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-maturation",
+    "category": "writing",
+    "kind": "word",
+    "term": "maturation",
+    "phonetic": "/.mætʃu'reiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "化脓；成熟",
+    "note": "城市发展、经济成本和环境压力类写作高频。",
+    "example": "Urban planners often discuss maturation when they evaluate city development.",
+    "tags": [
+      "写作",
+      "经济城市",
+      "环境影响",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-normalization",
+    "category": "writing",
+    "kind": "word",
+    "term": "normalization",
+    "phonetic": "/.nɒ:mәlai'zeiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "常态化；正常化",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on normalization and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-fission",
+    "category": "writing",
+    "kind": "word",
+    "term": "fission",
+    "phonetic": "/'fiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "裂开；分裂",
+    "note": "城市发展、经济成本和环境压力类写作高频。",
+    "example": "Urban planners often discuss fission when they evaluate city development.",
+    "tags": [
+      "写作",
+      "经济城市",
+      "环境影响",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-glance",
+    "category": "writing",
+    "kind": "word",
+    "term": "glance",
+    "phonetic": "/'glɑ:ns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "一瞥；闪光",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on glance and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-specialist",
+    "category": "writing",
+    "kind": "word",
+    "term": "specialist",
+    "phonetic": "/'speiʃәlist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "专门医师；专家",
+    "note": "教育、媒体和科技影响类写作高频。",
+    "example": "Teachers often discuss specialist when they compare old and new learning methods.",
+    "tags": [
+      "写作",
+      "教育话题",
+      "科技发展",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-fence",
+    "category": "writing",
+    "kind": "word",
+    "term": "fence",
+    "phonetic": "/fens/",
+    "partOfSpeech": "n. 名词",
+    "translation": "围墙；栅栏",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on fence and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-punishment",
+    "category": "writing",
+    "kind": "word",
+    "term": "punishment",
+    "phonetic": "/'pʌniʃmәnt/",
+    "partOfSpeech": "n. 名词",
+    "translation": "处罚；刑罚",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents punishment as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-separation",
+    "category": "writing",
+    "kind": "word",
+    "term": "separation",
+    "phonetic": "/.sepә'reiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "分离；分居",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents separation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-invitation",
+    "category": "writing",
+    "kind": "word",
+    "term": "invitation",
+    "phonetic": "/.invi'teiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "邀请；请柬",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents invitation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-installation",
+    "category": "writing",
+    "kind": "word",
+    "term": "installation",
+    "phonetic": "/.instә'leiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "安装；装置",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on installation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-probability",
+    "category": "writing",
+    "kind": "word",
+    "term": "probability",
+    "phonetic": "/.prɒbә'biliti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "可能性；或然率",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on probability and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-communist",
+    "category": "writing",
+    "kind": "word",
+    "term": "communist",
+    "phonetic": "/'kɒmjunist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "共产主义者；共产党员",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents communist as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-delegation",
+    "category": "writing",
+    "kind": "word",
+    "term": "delegation",
+    "phonetic": "/.deli'geiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "代表团；派遣代表团",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on delegation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-detection",
+    "category": "writing",
+    "kind": "word",
+    "term": "detection",
+    "phonetic": "/di'tekʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "发现；察觉",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents detection as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-liberation",
+    "category": "writing",
+    "kind": "word",
+    "term": "liberation",
+    "phonetic": "/.libә'reiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "释放；解放",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on liberation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-accordance",
+    "category": "writing",
+    "kind": "word",
+    "term": "accordance",
+    "phonetic": "/ә'kɒ:dәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "一致；和谐",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on accordance and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-interruption",
+    "category": "writing",
+    "kind": "word",
+    "term": "interruption",
+    "phonetic": "/.intә'rʌpʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "打扰；中断",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents interruption as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-pronunciation",
+    "category": "writing",
+    "kind": "word",
+    "term": "pronunciation",
+    "phonetic": "/prәu.nʌnsi'eiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "发音；读法",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on pronunciation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-radioactivity",
+    "category": "writing",
+    "kind": "word",
+    "term": "radioactivity",
+    "phonetic": "/.reidiәuæk'tiviti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "放射性",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on radioactivity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-typist",
+    "category": "writing",
+    "kind": "word",
+    "term": "typist",
+    "phonetic": "/'taipist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "打字员",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents typist as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-evaluation",
+    "category": "writing",
+    "kind": "word",
+    "term": "evaluation",
+    "phonetic": "/i.vælju'eiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "评估；估价",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on evaluation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-correlation",
+    "category": "writing",
+    "kind": "word",
+    "term": "correlation",
+    "phonetic": "/.kɒrә'leiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "相互关系；相关",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on correlation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-promotion",
+    "category": "writing",
+    "kind": "word",
+    "term": "promotion",
+    "phonetic": "/prәu'mәuʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "晋级；创建",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents promotion as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-confrontation",
+    "category": "writing",
+    "kind": "word",
+    "term": "confrontation",
+    "phonetic": "/.kɔnfrʌn'teiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "对抗；对质",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents confrontation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-similarity",
+    "category": "writing",
+    "kind": "word",
+    "term": "similarity",
+    "phonetic": "/.simi'læriti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "类似；类似处",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents similarity as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-completion",
+    "category": "writing",
+    "kind": "word",
+    "term": "completion",
+    "phonetic": "/kәm'pli:ʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "完成",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on completion and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-salvation",
+    "category": "writing",
+    "kind": "word",
+    "term": "salvation",
+    "phonetic": "/sæl'veiʃә/",
+    "partOfSpeech": "n. 名词",
+    "translation": "拯救；救助",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents salvation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-modification",
+    "category": "writing",
+    "kind": "word",
+    "term": "modification",
+    "phonetic": "/.mɒdifi'keiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "修正；修饰",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents modification as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-disappearance",
+    "category": "writing",
+    "kind": "word",
+    "term": "disappearance",
+    "phonetic": "/.disә'piәrәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "看不见；失踪",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on disappearance and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-retention",
+    "category": "writing",
+    "kind": "word",
+    "term": "retention",
+    "phonetic": "/ri'tenʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "保持；留置",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents retention as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-prohibition",
+    "category": "writing",
+    "kind": "word",
+    "term": "prohibition",
+    "phonetic": "/.prәuhi'biʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "禁令；禁止",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents prohibition as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-instability",
+    "category": "writing",
+    "kind": "word",
+    "term": "instability",
+    "phonetic": "/.instә'biliti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "不安定；不稳定",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on instability and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-prevalence",
+    "category": "writing",
+    "kind": "word",
+    "term": "prevalence",
+    "phonetic": "/'prevәlәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "普遍；流行",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on prevalence and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-superiority",
+    "category": "writing",
+    "kind": "word",
+    "term": "superiority",
+    "phonetic": "/sju:.piәri'ɒriti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "优越；高傲",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on superiority and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-generosity",
+    "category": "writing",
+    "kind": "word",
+    "term": "generosity",
+    "phonetic": "/.dʒenә'rɒsiti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "慷慨；宽大",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents generosity as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-persuasion",
+    "category": "writing",
+    "kind": "word",
+    "term": "persuasion",
+    "phonetic": "/pә'sweiʒәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "说服；信念",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents persuasion as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-colonist",
+    "category": "writing",
+    "kind": "word",
+    "term": "colonist",
+    "phonetic": "/'kɒlәnist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "殖民地居民；移民",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents colonist as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-extraction",
+    "category": "writing",
+    "kind": "word",
+    "term": "extraction",
+    "phonetic": "/ik'strækʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "抽出；取出",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on extraction and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-recurrence",
+    "category": "writing",
+    "kind": "word",
+    "term": "recurrence",
+    "phonetic": "/ri'kʌrәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "再现；再发生",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on recurrence and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-penetration",
+    "category": "writing",
+    "kind": "word",
+    "term": "penetration",
+    "phonetic": "/.peni'treiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "穿透；渗透",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on penetration and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-infinity",
+    "category": "writing",
+    "kind": "word",
+    "term": "infinity",
+    "phonetic": "/in'finiti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "无限大；无限",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents infinity as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-masculinity",
+    "category": "writing",
+    "kind": "word",
+    "term": "masculinity",
+    "phonetic": "/.mæskju'liniti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "男子气；刚毅",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on masculinity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-maternity",
+    "category": "writing",
+    "kind": "word",
+    "term": "maternity",
+    "phonetic": "/mә'tә:niti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "母性；怀孕",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on maternity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-ingenuity",
+    "category": "writing",
+    "kind": "word",
+    "term": "ingenuity",
+    "phonetic": "/.indʒi'nju:iti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "心灵手巧；精巧",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on ingenuity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-deportation",
+    "category": "writing",
+    "kind": "word",
+    "term": "deportation",
+    "phonetic": "/.di:pɒ:'teiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "驱逐出境；放逐",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents deportation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-regularity",
+    "category": "writing",
+    "kind": "word",
+    "term": "regularity",
+    "phonetic": "/.regju'læriti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "规则性；匀整",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents regularity as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-irregularity",
+    "category": "writing",
+    "kind": "word",
+    "term": "irregularity",
+    "phonetic": "/i.regju'læriti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "不规则；例外",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents irregularity as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-prism",
+    "category": "writing",
+    "kind": "word",
+    "term": "prism",
+    "phonetic": "/'prizm/",
+    "partOfSpeech": "n. 名词",
+    "translation": "棱镜；棱柱",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on prism and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-saturation",
+    "category": "writing",
+    "kind": "word",
+    "term": "saturation",
+    "phonetic": "/.sætʃә'reiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "饱和；渗透",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on saturation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-exclamation",
+    "category": "writing",
+    "kind": "word",
+    "term": "exclamation",
+    "phonetic": "/.eksklә'meiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "惊呼；激烈言词",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents exclamation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-disobedience",
+    "category": "writing",
+    "kind": "word",
+    "term": "disobedience",
+    "phonetic": "/.disә'bi:djәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "不服从；不孝",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents disobedience as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-propagation",
+    "category": "writing",
+    "kind": "word",
+    "term": "propagation",
+    "phonetic": "/.prɒpә'geiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "增殖；繁殖",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on propagation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-multiplication",
+    "category": "writing",
+    "kind": "word",
+    "term": "multiplication",
+    "phonetic": "/.mʌltipli'keiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "乘法；增加",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on multiplication and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-intonation",
+    "category": "writing",
+    "kind": "word",
+    "term": "intonation",
+    "phonetic": "/.intәu'neiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "朗诵；语调",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents intonation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-polarity",
+    "category": "writing",
+    "kind": "word",
+    "term": "polarity",
+    "phonetic": "/pәu'læriti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "极性；截然相反",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on polarity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-hindrance",
+    "category": "writing",
+    "kind": "word",
+    "term": "hindrance",
+    "phonetic": "/'hindrәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "妨害；障碍",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents hindrance as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-deflection",
+    "category": "writing",
+    "kind": "word",
+    "term": "deflection",
+    "phonetic": "/di'flekʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "歪斜；偏",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on deflection and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-rapidity",
+    "category": "writing",
+    "kind": "word",
+    "term": "rapidity",
+    "phonetic": "/rә'piditi/",
+    "partOfSpeech": "n. 名词",
+    "translation": "迅速；急速",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents rapidity as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-lamentation",
+    "category": "writing",
+    "kind": "word",
+    "term": "lamentation",
+    "phonetic": "/.læmәn'teiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "悲叹；哀悼",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents lamentation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-capacitance",
+    "category": "writing",
+    "kind": "word",
+    "term": "capacitance",
+    "phonetic": "/kә'pæsitәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "电容",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on capacitance and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-amenity",
+    "category": "writing",
+    "kind": "word",
+    "term": "amenity",
+    "phonetic": "/ә'mi:niti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "便利设施；适意",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents amenity as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-mutation",
+    "category": "writing",
+    "kind": "word",
+    "term": "mutation",
+    "phonetic": "/mju:'teiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "变化；突变",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on mutation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-presumption",
+    "category": "writing",
+    "kind": "word",
+    "term": "presumption",
+    "phonetic": "/pri'zʌmpʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "专横；放肆",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on presumption and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-audition",
+    "category": "writing",
+    "kind": "word",
+    "term": "audition",
+    "phonetic": "/ɒ:'diʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "听；听力",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents audition as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-receptionist",
+    "category": "writing",
+    "kind": "word",
+    "term": "receptionist",
+    "phonetic": "/ri'sepʃәnist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "接待员",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents receptionist as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-aptitude",
+    "category": "writing",
+    "kind": "word",
+    "term": "aptitude",
+    "phonetic": "/'æptitju:d/",
+    "partOfSpeech": "n. 名词",
+    "translation": "资质；才能",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on aptitude and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-semblance",
+    "category": "writing",
+    "kind": "word",
+    "term": "semblance",
+    "phonetic": "/'semblәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "外表；伪装",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on semblance and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-observance",
+    "category": "writing",
+    "kind": "word",
+    "term": "observance",
+    "phonetic": "/әb'zә:vәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "观察；遵守",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents observance as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-federation",
+    "category": "writing",
+    "kind": "word",
+    "term": "federation",
+    "phonetic": "/fedә'reiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "联邦；联合",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on federation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-resilience",
+    "category": "writing",
+    "kind": "word",
+    "term": "resilience",
+    "phonetic": "/ri'ziliәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "弹回；有弹力",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents resilience as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-remittance",
+    "category": "writing",
+    "kind": "word",
+    "term": "remittance",
+    "phonetic": "/ri'mitns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "汇款",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents remittance as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-gratuity",
+    "category": "writing",
+    "kind": "word",
+    "term": "gratuity",
+    "phonetic": "/grә'tju:iti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "小费；赠物",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents gratuity as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-stimulation",
+    "category": "writing",
+    "kind": "word",
+    "term": "stimulation",
+    "phonetic": "/.stimju'leiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "刺激；激励",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on stimulation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-intrusion",
+    "category": "writing",
+    "kind": "word",
+    "term": "intrusion",
+    "phonetic": "/in'tru:ʒәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "闯入；侵扰",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents intrusion as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-adherence",
+    "category": "writing",
+    "kind": "word",
+    "term": "adherence",
+    "phonetic": "/әd'hiәrәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "依附；固执",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents adherence as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-termination",
+    "category": "writing",
+    "kind": "word",
+    "term": "termination",
+    "phonetic": "/.tә:mi'neiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "终止；结束",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on termination and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-reverence",
+    "category": "writing",
+    "kind": "word",
+    "term": "reverence",
+    "phonetic": "/'revәrәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "尊敬；敬重",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents reverence as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-rendition",
+    "category": "writing",
+    "kind": "word",
+    "term": "rendition",
+    "phonetic": "/ren'diʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "译文；施舍",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on rendition and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-confinement",
+    "category": "writing",
+    "kind": "word",
+    "term": "confinement",
+    "phonetic": "/kәn'fainmәnt/",
+    "partOfSpeech": "n. 名词",
+    "translation": "限制；被禁闭",
+    "note": "教育、媒体和科技影响类写作高频。",
+    "example": "The essay presents confinement as a major influence on modern education.",
+    "tags": [
+      "写作",
+      "教育话题",
+      "科技发展",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-precipitation",
+    "category": "writing",
+    "kind": "word",
+    "term": "precipitation",
+    "phonetic": "/pri.sipi'teiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "坠落；沉淀",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents precipitation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-cadence",
+    "category": "writing",
+    "kind": "word",
+    "term": "cadence",
+    "phonetic": "/'keidns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "韵律；抑扬",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents cadence as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-civility",
+    "category": "writing",
+    "kind": "word",
+    "term": "civility",
+    "phonetic": "/si'viliti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "礼貌；礼仪",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents civility as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-evasion",
+    "category": "writing",
+    "kind": "word",
+    "term": "evasion",
+    "phonetic": "/i'veiʒәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "逃避；藉口",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on evasion and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-uniformity",
+    "category": "writing",
+    "kind": "word",
+    "term": "uniformity",
+    "phonetic": "/.ju:ni'fɒ:mәti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "无差异；同样",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents uniformity as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-soloist",
+    "category": "writing",
+    "kind": "word",
+    "term": "soloist",
+    "phonetic": "/'sәulәuist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "独奏者；独唱者",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on soloist and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-divergence",
+    "category": "writing",
+    "kind": "word",
+    "term": "divergence",
+    "phonetic": "/dai'vә:dʒәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "分歧",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on divergence and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-spontaneity",
+    "category": "writing",
+    "kind": "word",
+    "term": "spontaneity",
+    "phonetic": "/.spɒntә'ni:iti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "自然发生；自生",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on spontaneity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-invocation",
+    "category": "writing",
+    "kind": "word",
+    "term": "invocation",
+    "phonetic": "/.invәu'keiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "祈祷；符咒",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents invocation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-purification",
+    "category": "writing",
+    "kind": "word",
+    "term": "purification",
+    "phonetic": "/.pjurifi'keiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "纯化；提纯",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents purification as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-antagonist",
+    "category": "writing",
+    "kind": "word",
+    "term": "antagonist",
+    "phonetic": "/æn'tægәnist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "敌手；对手",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents antagonist as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-stipulation",
+    "category": "writing",
+    "kind": "word",
+    "term": "stipulation",
+    "phonetic": "/.stipju'leiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "约束；约定",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents stipulation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-amplification",
+    "category": "writing",
+    "kind": "word",
+    "term": "amplification",
+    "phonetic": "/.æmplifi'keiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "扩大；放大",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents amplification as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-schism",
+    "category": "writing",
+    "kind": "word",
+    "term": "schism",
+    "phonetic": "/'sizm/",
+    "partOfSpeech": "n. 名词",
+    "translation": "分裂；分立",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents schism as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-lubrication",
+    "category": "writing",
+    "kind": "word",
+    "term": "lubrication",
+    "phonetic": "/,lu:bri'keiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "润滑；注油",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents lubrication as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-reinterpretation",
+    "category": "writing",
+    "kind": "word",
+    "term": "reinterpretation",
+    "phonetic": "/ˌri:ɪnˌtɜ:prɪ'teɪʃn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "重新解释；纠正性说明",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents reinterpretation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-delineation",
+    "category": "writing",
+    "kind": "word",
+    "term": "delineation",
+    "phonetic": "/di.lini'eiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "画轮廓；略图",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on delineation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-potentiality",
+    "category": "writing",
+    "kind": "word",
+    "term": "potentiality",
+    "phonetic": "/pәu.tenʃi'æliti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "潜在性；可能性",
+    "note": "城市发展、经济成本和环境压力类写作高频。",
+    "example": "The essay links potentiality to traffic, housing, and energy use.",
+    "tags": [
+      "写作",
+      "经济城市",
+      "环境影响",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-irreverence",
+    "category": "writing",
+    "kind": "word",
+    "term": "irreverence",
+    "phonetic": "/i'revәrәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "不敬；非礼",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on irreverence and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-aspersion",
+    "category": "writing",
+    "kind": "word",
+    "term": "aspersion",
+    "phonetic": "/ә'spә:ʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "诽谤；中伤",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on aspersion and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-crystallization",
+    "category": "writing",
+    "kind": "word",
+    "term": "crystallization",
+    "phonetic": "/'kristәlai'zeiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "结晶；定形",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents crystallization as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-nonconformity",
+    "category": "writing",
+    "kind": "word",
+    "term": "nonconformity",
+    "phonetic": "/.nɒnkәn'fɒ:miti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "不适合；不一致",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents nonconformity as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-nonconformist",
+    "category": "writing",
+    "kind": "word",
+    "term": "nonconformist",
+    "phonetic": "/'nɔnkәn'fɔmist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "不相信英国国教的人；不符合通常准则的人",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on nonconformist and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-colloquialism",
+    "category": "writing",
+    "kind": "word",
+    "term": "colloquialism",
+    "phonetic": "/kә'lәjkwiәliz(ә)m/",
+    "partOfSpeech": "n. 名词",
+    "translation": "口语；口语用法",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents colloquialism as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-continence",
+    "category": "writing",
+    "kind": "word",
+    "term": "continence",
+    "phonetic": "/'kɒntinәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "自制",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents continence as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-coalescence",
+    "category": "writing",
+    "kind": "word",
+    "term": "coalescence",
+    "phonetic": "/.kәuә'lesns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "联合；结合",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents coalescence as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-proprietorship",
+    "category": "writing",
+    "kind": "word",
+    "term": "proprietorship",
+    "phonetic": "/prә'praiәtәʃip/",
+    "partOfSpeech": "n. 名词",
+    "translation": "所有权",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on proprietorship and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-sentimentalism",
+    "category": "writing",
+    "kind": "word",
+    "term": "sentimentalism",
+    "phonetic": "/,senti'mentəlizəm/",
+    "partOfSpeech": "n. 名词",
+    "translation": "感伤主义",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on sentimentalism and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-galvanization",
+    "category": "writing",
+    "kind": "word",
+    "term": "galvanization",
+    "phonetic": "/.gælvәnai'zeiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "通电；镀锌",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents galvanization as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-petrifaction",
+    "category": "writing",
+    "kind": "word",
+    "term": "petrifaction",
+    "phonetic": "/.petri'fækʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "使变成石头；石化",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents petrifaction as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-agreement",
+    "category": "writing",
+    "kind": "word",
+    "term": "agreement",
+    "phonetic": "/ә'gri:mәnt/",
+    "partOfSpeech": "n. 名词",
+    "translation": "同意；合约",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on agreement and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-opposition",
+    "category": "writing",
+    "kind": "word",
+    "term": "opposition",
+    "phonetic": "/.ɒpә'ziʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "反对；敌对",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents opposition as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-tournament",
+    "category": "writing",
+    "kind": "word",
+    "term": "tournament",
+    "phonetic": "/'tә:nәmәnt/",
+    "partOfSpeech": "n. 名词",
+    "translation": "比赛；竞赛",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents tournament as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-equity",
+    "category": "writing",
+    "kind": "word",
+    "term": "equity",
+    "phonetic": "/'ekwiti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "公平；公正",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on equity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-placement",
+    "category": "writing",
+    "kind": "word",
+    "term": "placement",
+    "phonetic": "/'pleismәnt/",
+    "partOfSpeech": "n. 名词",
+    "translation": "放置；布置",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents placement as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-disappointment",
+    "category": "writing",
+    "kind": "word",
+    "term": "disappointment",
+    "phonetic": "/.disә'pɒintmәnt/",
+    "partOfSpeech": "n. 名词",
+    "translation": "失望",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents disappointment as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-harassment",
+    "category": "writing",
+    "kind": "word",
+    "term": "harassment",
+    "phonetic": "/'hærәsmәnt/",
+    "partOfSpeech": "n. 名词",
+    "translation": "困扰；烦扰",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents harassment as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-protagonist",
+    "category": "writing",
+    "kind": "word",
+    "term": "protagonist",
+    "phonetic": "/prәu'tægәnist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "主人公；主角",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents protagonist as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-mythology",
+    "category": "writing",
+    "kind": "word",
+    "term": "mythology",
+    "phonetic": "/mi'θɒlәdʒi/",
+    "partOfSpeech": "n. 名词",
+    "translation": "神话",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on mythology and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-malnutrition",
+    "category": "writing",
+    "kind": "word",
+    "term": "malnutrition",
+    "phonetic": "/.mælnju:'triʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "营养失调；营养不良",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on malnutrition and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-timidity",
+    "category": "writing",
+    "kind": "word",
+    "term": "timidity",
+    "phonetic": "/ti'miditi/",
+    "partOfSpeech": "n. 名词",
+    "translation": "胆小；胆怯",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on timidity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-predisposition",
+    "category": "writing",
+    "kind": "word",
+    "term": "predisposition",
+    "phonetic": "/pri:,dispә'ziʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "爱好；素质",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents predisposition as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-photojournalism",
+    "category": "writing",
+    "kind": "word",
+    "term": "photojournalism",
+    "phonetic": "/,fәutәu'dʒә:nәlizm/",
+    "partOfSpeech": "n. 名词",
+    "translation": "摄影新闻工作；摄影报道",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on photojournalism and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-indifference",
+    "category": "writing",
+    "kind": "word",
+    "term": "indifference",
+    "phonetic": "/in'difәrәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "不重视；无兴趣",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents indifference as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-submission",
+    "category": "writing",
+    "kind": "word",
+    "term": "submission",
+    "phonetic": "/sәb'miʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "屈服；服从",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents submission as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-solitude",
+    "category": "writing",
+    "kind": "word",
+    "term": "solitude",
+    "phonetic": "/'sɒlitju:d/",
+    "partOfSpeech": "n. 名词",
+    "translation": "孤独；单独",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents solitude as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-insulation",
+    "category": "writing",
+    "kind": "word",
+    "term": "insulation",
+    "phonetic": "/.insju'leiʃәn. 'insә-/",
+    "partOfSpeech": "n. 名词",
+    "translation": "绝缘；隔离",
+    "note": "城市发展、经济成本和环境压力类写作高频。",
+    "example": "The essay links insulation to traffic, housing, and energy use.",
+    "tags": [
+      "写作",
+      "经济城市",
+      "环境影响",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-sophistication",
+    "category": "writing",
+    "kind": "word",
+    "term": "sophistication",
+    "phonetic": "/sә.fisti'keiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "诡辩；老于世故",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on sophistication and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-devastation",
+    "category": "writing",
+    "kind": "word",
+    "term": "devastation",
+    "phonetic": "/.devә'steiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "毁坏",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents devastation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-elegance",
+    "category": "writing",
+    "kind": "word",
+    "term": "elegance",
+    "phonetic": "/'eligәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "高雅；典雅",
+    "note": "城市发展、经济成本和环境压力类写作高频。",
+    "example": "The essay links elegance to traffic, housing, and energy use.",
+    "tags": [
+      "写作",
+      "经济城市",
+      "环境影响",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-amazement",
+    "category": "writing",
+    "kind": "word",
+    "term": "amazement",
+    "phonetic": "/ә'meizmәnt/",
+    "partOfSpeech": "n. 名词",
+    "translation": "惊愕；惊异",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents amazement as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-humility",
+    "category": "writing",
+    "kind": "word",
+    "term": "humility",
+    "phonetic": "/hju:'militi/",
+    "partOfSpeech": "n. 名词",
+    "translation": "谦逊；谦虚",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents humility as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-intimidation",
+    "category": "writing",
+    "kind": "word",
+    "term": "intimidation",
+    "phonetic": "/in,timi'deiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "恐吓；威胁",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on intimidation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-propensity",
+    "category": "writing",
+    "kind": "word",
+    "term": "propensity",
+    "phonetic": "/prә'pensәti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "倾向；爱好",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on propensity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-accompaniment",
+    "category": "writing",
+    "kind": "word",
+    "term": "accompaniment",
+    "phonetic": "/ә'kʌmpәnimәnt/",
+    "partOfSpeech": "n. 名词",
+    "translation": "伴随物；附加物",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on accompaniment and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-animosity",
+    "category": "writing",
+    "kind": "word",
+    "term": "animosity",
+    "phonetic": "/.æni'mɒsiti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "仇恨；憎恶",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on animosity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-serenity",
+    "category": "writing",
+    "kind": "word",
+    "term": "serenity",
+    "phonetic": "/si'reniti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "宁静；沉着",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents serenity as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-topography",
+    "category": "writing",
+    "kind": "word",
+    "term": "topography",
+    "phonetic": "/tә'pɒgrәfi/",
+    "partOfSpeech": "n. 名词",
+    "translation": "地志；地形学",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents topography as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-confluence",
+    "category": "writing",
+    "kind": "word",
+    "term": "confluence",
+    "phonetic": "/'kɒnfluәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "合流；合流点",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on confluence and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-abolition",
+    "category": "writing",
+    "kind": "word",
+    "term": "abolition",
+    "phonetic": "/.æbәu'liʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "废除；废奴运动",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on abolition and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-elasticity",
+    "category": "writing",
+    "kind": "word",
+    "term": "elasticity",
+    "phonetic": "/i.læs'tisiti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "弹力；弹性",
+    "note": "城市发展、经济成本和环境压力类写作高频。",
+    "example": "The essay links elasticity to traffic, housing, and energy use.",
+    "tags": [
+      "写作",
+      "经济城市",
+      "环境影响",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-choreography",
+    "category": "writing",
+    "kind": "word",
+    "term": "choreography",
+    "phonetic": "/.kɒriә'ɒgræfi/",
+    "partOfSpeech": "n. 名词",
+    "translation": "舞蹈艺术；舞台舞蹈",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents choreography as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-trepidation",
+    "category": "writing",
+    "kind": "word",
+    "term": "trepidation",
+    "phonetic": "/.trepi'deiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "恐惧；惊惶",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on trepidation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-refrigeration",
+    "category": "writing",
+    "kind": "word",
+    "term": "refrigeration",
+    "phonetic": "/ri.fridʒә'reiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "冷却；冷藏",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on refrigeration and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-paucity",
+    "category": "writing",
+    "kind": "word",
+    "term": "paucity",
+    "phonetic": "/'pɒ:sәti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "少数；少量",
+    "note": "城市发展、经济成本和环境压力类写作高频。",
+    "example": "The essay links paucity to traffic, housing, and energy use.",
+    "tags": [
+      "写作",
+      "经济城市",
+      "环境影响",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-enmity",
+    "category": "writing",
+    "kind": "word",
+    "term": "enmity",
+    "phonetic": "/'enmәti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "敌意；憎恨",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on enmity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-acidity",
+    "category": "writing",
+    "kind": "word",
+    "term": "acidity",
+    "phonetic": "/ә'siditi/",
+    "partOfSpeech": "n. 名词",
+    "translation": "酸性",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on acidity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-elation",
+    "category": "writing",
+    "kind": "word",
+    "term": "elation",
+    "phonetic": "/i'leiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "得意洋洋；兴高采烈",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents elation as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-veracity",
+    "category": "writing",
+    "kind": "word",
+    "term": "veracity",
+    "phonetic": "/vә'ræsiti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "说话老实；老实",
+    "note": "城市发展、经济成本和环境压力类写作高频。",
+    "example": "Urban planners often discuss veracity when they evaluate city development.",
+    "tags": [
+      "写作",
+      "经济城市",
+      "环境影响",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-salinity",
+    "category": "writing",
+    "kind": "word",
+    "term": "salinity",
+    "phonetic": "/sә'liniti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "盐性；盐度",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on salinity and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-plagiarism",
+    "category": "writing",
+    "kind": "word",
+    "term": "plagiarism",
+    "phonetic": "/'pleidʒiәrizm/",
+    "partOfSpeech": "n. 名词",
+    "translation": "剽窃；抄袭",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents plagiarism as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-absenteeism",
+    "category": "writing",
+    "kind": "word",
+    "term": "absenteeism",
+    "phonetic": "/æbsәn'ti:iz(ә)m/",
+    "partOfSpeech": "n. 名词",
+    "translation": "经常无故缺席；旷职",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on absenteeism and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-dissension",
+    "category": "writing",
+    "kind": "word",
+    "term": "dissension",
+    "phonetic": "/di'senʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "意见不合；纠纷",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on dissension and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-veneration",
+    "category": "writing",
+    "kind": "word",
+    "term": "veneration",
+    "phonetic": "/.venә'reiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "尊敬；崇敬",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on veneration and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-instrumentalist",
+    "category": "writing",
+    "kind": "word",
+    "term": "instrumentalist",
+    "phonetic": "/.instru'mentәlist. instrә-/",
+    "partOfSpeech": "n. 名词",
+    "translation": "工具主义者；乐器演奏家",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents instrumentalist as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-conductivity",
+    "category": "writing",
+    "kind": "word",
+    "term": "conductivity",
+    "phonetic": "/.kɒndʌk'tiviti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "导电率；传导率",
+    "note": "城市发展、经济成本和环境压力类写作高频。",
+    "example": "The essay links conductivity to traffic, housing, and energy use.",
+    "tags": [
+      "写作",
+      "经济城市",
+      "环境影响",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-locomotion",
+    "category": "writing",
+    "kind": "word",
+    "term": "locomotion",
+    "phonetic": "/.lәukә'mәuʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "运动；移动",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents locomotion as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-levity",
+    "category": "writing",
+    "kind": "word",
+    "term": "levity",
+    "phonetic": "/'levәti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "轻率；轻浮",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents levity as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-projectionist",
+    "category": "writing",
+    "kind": "word",
+    "term": "projectionist",
+    "phonetic": "/prә'dʒekʃәnist/",
+    "partOfSpeech": "n. 名词",
+    "translation": "放映员；电视技师",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents projectionist as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-malleability",
+    "category": "writing",
+    "kind": "word",
+    "term": "malleability",
+    "phonetic": "/.mæliә'biliti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "可展性；可锻性",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents malleability as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-vivacity",
+    "category": "writing",
+    "kind": "word",
+    "term": "vivacity",
+    "phonetic": "/vi'væsiti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "快活；活泼",
+    "note": "城市发展、经济成本和环境压力类写作高频。",
+    "example": "The essay links vivacity to traffic, housing, and energy use.",
+    "tags": [
+      "写作",
+      "经济城市",
+      "环境影响",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-symbology",
+    "category": "writing",
+    "kind": "word",
+    "term": "symbology",
+    "phonetic": "/sim'bɒlәdʒi/",
+    "partOfSpeech": "n. 名词",
+    "translation": "符号学；符号使用",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on symbology and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-nutriment",
+    "category": "writing",
+    "kind": "word",
+    "term": "nutriment",
+    "phonetic": "/'nju:trimәnt/",
+    "partOfSpeech": "n. 名词",
+    "translation": "营养物；食物",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents nutriment as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-sapience",
+    "category": "writing",
+    "kind": "word",
+    "term": "sapience",
+    "phonetic": "/'seipjәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "象有学识；装聪明",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents sapience as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-reality",
+    "category": "writing",
+    "kind": "word",
+    "term": "reality",
+    "phonetic": "/ri'æliti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "实在；事实",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on reality and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-relation",
+    "category": "writing",
+    "kind": "word",
+    "term": "relation",
+    "phonetic": "/ri'leiʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "关系；联系",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The policy debate often centres on relation and social responsibility.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-possibility",
+    "category": "writing",
+    "kind": "word",
+    "term": "possibility",
+    "phonetic": "/.pɒsә'biliti/",
+    "partOfSpeech": "n. 名词",
+    "translation": "可能性；可能的事",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents possibility as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-tradition",
+    "category": "writing",
+    "kind": "word",
+    "term": "tradition",
+    "phonetic": "/trә'diʃәn/",
+    "partOfSpeech": "n. 名词",
+    "translation": "传说；传统",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents tradition as a key issue in public policy.",
+    "tags": [
+      "写作",
+      "写作表达",
+      "政策社会",
+      "高频扩展"
+    ]
+  },
+  {
+    "id": "bulk-writing-importance",
+    "category": "writing",
+    "kind": "word",
+    "term": "importance",
+    "phonetic": "/im'pɒ:tәns/",
+    "partOfSpeech": "n. 名词",
+    "translation": "重要；重要性",
+    "note": "政府、政策和社会治理类写作高频。",
+    "example": "The writer presents importance as a key issue in public policy.",
     "tags": [
       "写作",
       "写作表达",

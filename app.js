@@ -1,6 +1,7 @@
 const MINUTE = 60 * 1000;
 const HOUR = 60 * MINUTE;
 const DAY = 24 * HOUR;
+const MIN_REVIEW_GAP = 1 * DAY;
 const LOCAL_PROXY_ORIGIN = "http://127.0.0.1:8000";
 const STORAGE_KEY = "ielts-lexicon-sprint-state-v1";
 const CLOUD_SYNC_STORAGE_KEY = "ielts-lexicon-sprint-cloud-sync-v1";
@@ -27,6 +28,60 @@ const DEFAULT_RUNTIME_CONFIG = Object.freeze({
 
 function normalizeBaseUrl(value) {
   return String(value || "").trim().replace(/\/+$/, "");
+}
+
+function normalizeProgressEntry(entry = {}) {
+  const normalized = {
+    stage: -1,
+    nextReviewAt: null,
+    lastStudiedAt: null,
+    reviews: 0,
+    correct: 0,
+    lapses: 0,
+    firstSeenAt: null,
+    lastRating: null,
+    lastSource: null,
+    ...(entry || {}),
+  };
+  const anchor = Number(normalized.lastStudiedAt || normalized.firstSeenAt || 0) || 0;
+  const nextReviewAt = Number(normalized.nextReviewAt || 0) || 0;
+  if (anchor && nextReviewAt && nextReviewAt < anchor + MIN_REVIEW_GAP) {
+    normalized.nextReviewAt = anchor + MIN_REVIEW_GAP;
+  }
+  return normalized;
+}
+
+function normalizeSpeakingPhraseBank(input = {}) {
+  return Object.fromEntries(
+    Object.entries(input || {})
+      .map(([topicId, topic]) => {
+        const phrases = Array.isArray(topic?.phrases)
+          ? topic.phrases
+              .map((item) => ({
+                text: String(item?.text || "").trim(),
+                reason: String(item?.reason || "").trim(),
+                source: String(item?.source || "").trim(),
+                count: Math.max(1, Number(item?.count || 1)),
+                lastSeenAt: Number(item?.lastSeenAt || topic?.updatedAt || 0) || 0,
+              }))
+              .filter((item) => item.text)
+              .slice(0, 12)
+          : [];
+
+        return [
+          topicId,
+          {
+            topicId,
+            topicTitle: String(topic?.topicTitle || topicId || "口语话题").trim(),
+            part: String(topic?.part || "").trim(),
+            updatedAt: Number(topic?.updatedAt || 0) || 0,
+            phrases,
+          },
+        ];
+      })
+      .filter(([, topic]) => topic.phrases.length)
+      .slice(0, 18)
+  );
 }
 
 function readRuntimeConfig() {
@@ -71,9 +126,9 @@ const CATEGORY_META = {
 };
 
 const REVIEW_SCHEMES = {
-  standard: [10 * MINUTE, 1 * DAY, 2 * DAY, 4 * DAY, 7 * DAY, 15 * DAY, 30 * DAY],
-  sprint: [10 * MINUTE, 12 * HOUR, 1 * DAY, 3 * DAY, 5 * DAY, 10 * DAY, 21 * DAY],
-  steady: [10 * MINUTE, 1 * DAY, 3 * DAY, 7 * DAY, 14 * DAY, 30 * DAY, 45 * DAY],
+  standard: [1 * DAY, 2 * DAY, 4 * DAY, 7 * DAY, 15 * DAY, 30 * DAY, 45 * DAY],
+  sprint: [1 * DAY, 2 * DAY, 3 * DAY, 5 * DAY, 10 * DAY, 21 * DAY, 35 * DAY],
+  steady: [1 * DAY, 3 * DAY, 7 * DAY, 14 * DAY, 30 * DAY, 45 * DAY, 60 * DAY],
 };
 
 const SUPPORT_MATERIALS = {
@@ -2300,6 +2355,7 @@ const DEFAULT_STATE = {
   speakingHistory: [],
   speakingArchive: [],
   speakingMockArchive: [],
+  speakingPhraseBank: {},
   writingDraft: {
     task: "task2",
     promptId: "writing-task2-transport",
@@ -2398,6 +2454,8 @@ const elements = {
   speakingMetrics: document.querySelector("#speaking-metrics"),
   speakingGrammarChip: document.querySelector("#speaking-grammar-chip"),
   speakingGrammarList: document.querySelector("#speaking-grammar-list"),
+  speakingPhraseChip: document.querySelector("#speaking-phrase-chip"),
+  speakingPhraseBank: document.querySelector("#speaking-phrase-bank"),
   speakingHistoryChip: document.querySelector("#speaking-history-chip"),
   speakingHistoryList: document.querySelector("#speaking-history-list"),
   liveRegion: document.querySelector("#live-region"),
@@ -2723,11 +2781,14 @@ function normalizeState(parsed = {}, options = {}) {
       updatedAt: inferredUpdatedAt,
     },
     settings: { ...DEFAULT_STATE.settings, ...(input.settings || {}) },
-    progress: input.progress || {},
+    progress: Object.fromEntries(
+      Object.entries(input.progress || {}).map(([itemId, entry]) => [itemId, normalizeProgressEntry(entry)])
+    ),
     logs: input.logs || {},
     speakingHistory: Array.isArray(input.speakingHistory) ? input.speakingHistory.slice(0, 6) : [],
     speakingArchive: Array.isArray(input.speakingArchive) ? input.speakingArchive.slice(0, 18) : [],
     speakingMockArchive: Array.isArray(input.speakingMockArchive) ? input.speakingMockArchive.slice(0, 12) : [],
+    speakingPhraseBank: normalizeSpeakingPhraseBank(input.speakingPhraseBank),
     writingDraft: { ...DEFAULT_STATE.writingDraft, ...(input.writingDraft || {}) },
     writingArchive: Array.isArray(input.writingArchive) ? input.writingArchive.slice(0, 18) : [],
   };
@@ -4201,6 +4262,114 @@ function getSpeakingPerformanceEntries() {
   return [...mockEntries, ...singleEntries].sort((left, right) => (right.timestamp || 0) - (left.timestamp || 0));
 }
 
+function getSpeakingPhraseBankTopics() {
+  return Object.values(normalizeSpeakingPhraseBank(state.speakingPhraseBank || {})).sort(
+    (left, right) => (right.updatedAt || 0) - (left.updatedAt || 0),
+  );
+}
+
+function createSpeakingPhraseTopicId(topicTitle, part) {
+  const normalized = normalizeAnswer(`${part || "speaking"} ${topicTitle || "topic"}`) || "speaking-topic";
+  return normalized.slice(0, 80).replace(/\s+/g, "-");
+}
+
+function normaliseSpeakingPhraseCandidate(value, reason = "", source = "") {
+  const text = String(value || "").trim().replace(/\s+/g, " ");
+  if (!text || !/[a-z]/i.test(text) || text.length < 4 || text.length > 120) {
+    return null;
+  }
+  return {
+    text,
+    reason: String(reason || "").trim(),
+    source: String(source || "AI 批改").trim(),
+  };
+}
+
+function collectSpeakingPhraseCandidates(reviewLike = {}) {
+  const candidates = [];
+  (reviewLike.recommendedMaterials || []).forEach((item) => {
+    const candidate = normaliseSpeakingPhraseCandidate(
+      typeof item === "string" ? item : item?.content,
+      typeof item === "string" ? "" : item?.reason,
+      "推荐素材",
+    );
+    if (candidate) {
+      candidates.push(candidate);
+    }
+  });
+
+  const pack = reviewLike.partMaterialPack || {};
+  (pack.reusable_phrases || []).forEach((item) => {
+    const candidate = normaliseSpeakingPhraseCandidate(item, "这道题可以直接复用的表达。", "话题词块");
+    if (candidate) {
+      candidates.push(candidate);
+    }
+  });
+  (pack.content_hooks || []).forEach((item) => {
+    const candidate = normaliseSpeakingPhraseCandidate(item, "适合用来展开原因、细节或例子的句子钩子。", "内容钩子");
+    if (candidate) {
+      candidates.push(candidate);
+    }
+  });
+
+  const seen = new Set();
+  return candidates
+    .filter((item) => {
+      const key = item.text.toLowerCase();
+      if (seen.has(key)) {
+        return false;
+      }
+      seen.add(key);
+      return true;
+    })
+    .slice(0, 10);
+}
+
+function recordSpeakingPhraseAccumulation(topicInfo, reviewLike) {
+  const candidates = collectSpeakingPhraseCandidates(reviewLike);
+  if (!candidates.length) {
+    return;
+  }
+
+  const now = Date.now();
+  const topicTitle = topicInfo?.topicTitle || "口语话题";
+  const part = topicInfo?.part || "";
+  const topicId = topicInfo?.topicId || createSpeakingPhraseTopicId(topicTitle, part);
+  const current = normalizeSpeakingPhraseBank(state.speakingPhraseBank || {})[topicId] || {
+    topicId,
+    topicTitle,
+    part,
+    updatedAt: 0,
+    phrases: [],
+  };
+  const phraseMap = new Map(current.phrases.map((item) => [item.text.toLowerCase(), item]));
+
+  candidates.forEach((item) => {
+    const key = item.text.toLowerCase();
+    const existing = phraseMap.get(key);
+    phraseMap.set(key, {
+      text: item.text,
+      reason: item.reason || existing?.reason || "",
+      source: item.source || existing?.source || "AI 批改",
+      count: (existing?.count || 0) + 1,
+      lastSeenAt: now,
+    });
+  });
+
+  state.speakingPhraseBank = {
+    ...(state.speakingPhraseBank || {}),
+    [topicId]: {
+      topicId,
+      topicTitle,
+      part,
+      updatedAt: now,
+      phrases: [...phraseMap.values()]
+        .sort((left, right) => (right.lastSeenAt || 0) - (left.lastSeenAt || 0) || (right.count || 0) - (left.count || 0))
+        .slice(0, 12),
+    },
+  };
+}
+
 function getLatestSpeakingPerformanceEntry() {
   return getSpeakingPerformanceEntries()[0] || null;
 }
@@ -4378,6 +4547,8 @@ function applyReviewResult(itemId, rating, source) {
     dueIn = intervals[nextStage];
     progress.correct += 1;
   }
+
+  dueIn = Math.max(dueIn, MIN_REVIEW_GAP);
 
   if (wasNew) {
     progress.firstSeenAt = now;
@@ -5018,8 +5189,61 @@ function quickAddSingleItem(itemId) {
   }
 }
 
+function renderSpeakingPhraseBank() {
+  if (!elements.speakingPhraseChip || !elements.speakingPhraseBank) {
+    return;
+  }
+
+  const topics = getSpeakingPhraseBankTopics();
+  const phraseCount = topics.reduce((count, topic) => count + (topic.phrases?.length || 0), 0);
+  elements.speakingPhraseChip.textContent = `${topics.length} 组话题`;
+
+  if (!topics.length) {
+    elements.speakingPhraseBank.innerHTML = `
+      <div class="study-empty">
+        <div>
+          <h3>还没有沉淀词块</h3>
+          <p>完成 AI 口语批改后，适合复用的表达会按题目话题自动收在这里。</p>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  elements.speakingPhraseChip.textContent = `${topics.length} 组 / ${phraseCount} 条`;
+  elements.speakingPhraseBank.innerHTML = topics.slice(0, 8).map((topic) => {
+    const partLabel = SPEAKING_PART_LABELS[topic.part] || "口语";
+    const phrases = (topic.phrases || []).slice(0, 6);
+    return `
+      <article class="phrase-topic-card">
+        <div class="history-card__head">
+          <div>
+            <strong>${escapeHtml(topic.topicTitle)}</strong>
+            <p>${escapeHtml(partLabel)} · 最近 ${formatCalendarDate(topic.updatedAt)}</p>
+          </div>
+          <span class="badge">${phrases.length} 条</span>
+        </div>
+        <div class="phrase-topic-card__list">
+          ${phrases
+            .map(
+              (item) => `
+                <div class="phrase-chip">
+                  <strong>${escapeHtml(item.text)}</strong>
+                  <span>${escapeHtml(item.source || "AI 批改")}${item.count > 1 ? ` · 出现 ${item.count} 次` : ""}</span>
+                  ${item.reason ? `<p>${escapeHtml(item.reason)}</p>` : ""}
+                </div>
+              `,
+            )
+            .join("")}
+        </div>
+      </article>
+    `;
+  }).join("");
+}
+
 function renderSpeakingProgress() {
   const entries = getSpeakingPerformanceEntries();
+  renderSpeakingPhraseBank();
 
   if (!entries.length) {
     elements.speakingMetrics.innerHTML = `
@@ -7500,6 +7724,10 @@ function buildAiSpeakingArchiveEntry(prompt, localReview, aiPayload) {
 
 function saveAiSpeakingArchive(prompt, localReview, aiPayload) {
   const archiveEntry = buildAiSpeakingArchiveEntry(prompt, localReview, aiPayload);
+  recordSpeakingPhraseAccumulation(
+    { topicId: prompt.id, topicTitle: prompt.title, part: prompt.part },
+    archiveEntry,
+  );
   state.speakingArchive = [archiveEntry, ...getSpeakingArchive()].slice(0, 18);
   state.speakingHistory = [
     {
@@ -7589,6 +7817,10 @@ function buildAiSpeakingMockArchiveEntry(summaryPayload) {
 
 function saveAiSpeakingMockArchive(summaryPayload) {
   const archiveEntry = buildAiSpeakingMockArchiveEntry(summaryPayload);
+  recordSpeakingPhraseAccumulation(
+    { topicId: "full-mock-summary", topicTitle: "整轮模考", part: "mock" },
+    archiveEntry,
+  );
   state.speakingMockArchive = [archiveEntry, ...getSpeakingMockArchive()].slice(0, 12);
   state.speakingHistory = [
     {
@@ -8237,6 +8469,10 @@ async function handleSpeakingAiAnalysis() {
 
     if (isSpeakingFullMockMode()) {
       const partEntry = buildSpeakingMockPartEntry(prompt, localReview, aiPayload);
+      recordSpeakingPhraseAccumulation(
+        { topicId: prompt.id, topicTitle: prompt.title, part: prompt.part },
+        partEntry,
+      );
       if (!ui.speakingMockSession.startedAt) {
         ui.speakingMockSession.startedAt = Date.now();
       }
@@ -8249,6 +8485,8 @@ async function handleSpeakingAiAnalysis() {
         syncSpeakingControlsForPart(nextPart);
         clearSpeakingInput({ previewPart: nextPart });
         renderCoachTips();
+        renderSpeakingProgress();
+        saveState();
         announce(`${SPEAKING_PART_LABELS[prompt.part]} 已完成，已切换到 ${SPEAKING_PART_LABELS[nextPart]}`);
         return;
       }

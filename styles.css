@@ -107,8 +107,39 @@ body {
 
 .panel + .panel,
 .panel + .layout-grid,
-.layout-grid + .panel {
+.layout-grid + .panel,
+.panel + .speaking-workspace,
+.speaking-workspace + .panel {
   margin-top: 20px;
+}
+
+.speaking-workspace {
+  display: grid;
+  align-items: start;
+  gap: 20px;
+  grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+}
+
+.speaking-workspace > .panel {
+  min-width: 0;
+}
+
+.speaking-workspace #speaking-progress {
+  position: sticky;
+  top: 18px;
+}
+
+.speaking-workspace #speaking-progress .metric-grid,
+.speaking-workspace #speaking-progress .speaking-progress-grid {
+  grid-template-columns: 1fr;
+}
+
+.speaking-workspace #speaking-progress .section-head {
+  flex-direction: column;
+}
+
+.speaking-workspace #speaking-progress .section-head__hint {
+  max-width: none;
 }
 
 .hero {
@@ -870,6 +901,44 @@ textarea {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.phrase-bank {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.phrase-topic-card {
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(31, 41, 55, 0.08);
+}
+
+.phrase-topic-card__list {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.phrase-chip {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(245, 238, 228, 0.74);
+  border: 1px solid rgba(31, 41, 55, 0.06);
+}
+
+.phrase-chip strong {
+  font-size: 0.98rem;
+}
+
+.phrase-chip span,
+.phrase-chip p {
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+}
+
 .mock-card {
   padding: 22px;
   border-radius: 24px;
@@ -1306,9 +1375,14 @@ audio {
 @media (max-width: 1180px) {
   .layout-grid,
   .hero,
+  .speaking-workspace,
   .mock-grid,
   .speaking-progress-grid {
     grid-template-columns: 1fr;
+  }
+
+  .speaking-workspace #speaking-progress {
+    position: static;
   }
 
   .mock-card--upload {

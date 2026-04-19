@@ -181,100 +181,109 @@
             <div class="study-card study-card--spelling" id="spelling-card"></div>
           </section>
 
-          <section class="panel" id="speaking-mock">
-            <div class="section-head">
-              <div>
-                <p class="eyebrow">口语模考辅助</p>
-                <h2>按 Part 1 / 2 / 3 连续上传录音，做整轮仿真模考</h2>
+          <div class="speaking-workspace">
+            <section class="panel" id="speaking-mock">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">口语模考辅助</p>
+                  <h2>按 Part 1 / 2 / 3 连续上传录音，做整轮仿真模考</h2>
+                </div>
+                <p class="section-head__hint">
+                  参考官方结构：整个口语考试约 11-14 分钟，其中 Part 1 约 4-5 分钟，Part 2 含 1 分钟准备和 1-2 分钟陈述，Part 3 约 4-5 分钟。现在支持单段复盘，也支持提交完 Part 1 后自动进入 Part 2、Part 3 的整轮仿真训练。
+                </p>
               </div>
-              <p class="section-head__hint">
-                参考官方结构：整个口语考试约 11-14 分钟，其中 Part 1 约 4-5 分钟，Part 2 含 1 分钟准备和 1-2 分钟陈述，Part 3 约 4-5 分钟。现在支持单段复盘，也支持提交完 Part 1 后自动进入 Part 2、Part 3 的整轮仿真训练。
-              </p>
-            </div>
-            <div class="toolbar">
-              <label>
-                训练模式
-                <select id="speaking-mode">
-                  <option value="full">全真三段模考</option>
-                  <option value="single">单段复盘</option>
-                </select>
-              </label>
-              <label>
-                题型
-                <select id="speaking-part">
-                  <option value="part1">Part 1: 日常问答</option>
-                  <option value="part2">Part 2: Cue Card</option>
-                  <option value="part3">Part 3: 深入讨论</option>
-                </select>
-              </label>
-              <label>
-                题目
-                <select id="speaking-prompt"></select>
-              </label>
-            </div>
-            <div id="speaking-session-shell"></div>
-            <div class="mock-grid">
-              <article class="mock-card" id="speaking-prompt-card"></article>
-              <article class="mock-card mock-card--upload">
-                <div class="badge-row">
-                  <span class="badge" id="ai-status-chip">批改连接检测中</span>
-                  <span class="badge" id="ai-model-meta">连上后就能直接做转写、评分和逐条反馈</span>
-                </div>
-                <label class="upload-field">
-                  上传录音文件（最多 4 个）
-                  <input id="speaking-audio" type="file" accept="audio/*" multiple />
+              <div class="toolbar">
+                <label>
+                  训练模式
+                  <select id="speaking-mode">
+                    <option value="full">全真三段模考</option>
+                    <option value="single">单段复盘</option>
+                  </select>
                 </label>
-                <p class="micro-copy" id="speaking-audio-summary">
-                  可一次上传最多 4 个音频文件。单段练习会把你选中的文件按顺序一起读取；整轮模考里每一段也都可以单独上传 1 到 4 个文件。
-                </p>
-                <audio id="speaking-audio-player" controls preload="metadata"></audio>
-                <label class="field-block" for="speaking-transcript">
-                  可选转写文本
-                  <textarea
-                    id="speaking-transcript"
-                    class="support-box"
-                    placeholder="如果你手动补一份转写，系统就能进一步分析 filler、词汇丰富度和素材短板。"
-                  ></textarea>
+                <label>
+                  题型
+                  <select id="speaking-part">
+                    <option value="part1">Part 1: 日常问答</option>
+                    <option value="part2">Part 2: Cue Card</option>
+                    <option value="part3">Part 3: 深入讨论</option>
+                  </select>
                 </label>
-                <div class="inline-actions">
-                  <button class="button button--ghost" id="speaking-analyze-local" type="button">本地分析</button>
-                  <button class="button button--primary" id="speaking-analyze-ai" type="button">开始深度批改</button>
-                  <button class="button button--subtle" id="speaking-reset-mock" type="button">重新开始模考</button>
-                </div>
-                <p class="micro-copy">
-                  做整轮模考时，每提交一段都会先拿到这段的转写、四项评分和下一步建议，然后再自动切到下一部分。第三段结束后，会把整轮表现一起收成一份总复盘。
-                </p>
-              </article>
-            </div>
-            <div class="result-panel" id="speaking-result"></div>
-          </section>
+                <label>
+                  题目
+                  <select id="speaking-prompt"></select>
+                </label>
+              </div>
+              <div id="speaking-session-shell"></div>
+              <div class="mock-grid">
+                <article class="mock-card" id="speaking-prompt-card"></article>
+                <article class="mock-card mock-card--upload">
+                  <div class="badge-row">
+                    <span class="badge" id="ai-status-chip">批改连接检测中</span>
+                    <span class="badge" id="ai-model-meta">连上后就能直接做转写、评分和逐条反馈</span>
+                  </div>
+                  <label class="upload-field">
+                    上传录音文件（最多 4 个）
+                    <input id="speaking-audio" type="file" accept="audio/*" multiple />
+                  </label>
+                  <p class="micro-copy" id="speaking-audio-summary">
+                    可一次上传最多 4 个音频文件。单段练习会把你选中的文件按顺序一起读取；整轮模考里每一段也都可以单独上传 1 到 4 个文件。
+                  </p>
+                  <audio id="speaking-audio-player" controls preload="metadata"></audio>
+                  <label class="field-block" for="speaking-transcript">
+                    可选转写文本
+                    <textarea
+                      id="speaking-transcript"
+                      class="support-box"
+                      placeholder="如果你手动补一份转写，系统就能进一步分析 filler、词汇丰富度和素材短板。"
+                    ></textarea>
+                  </label>
+                  <div class="inline-actions">
+                    <button class="button button--ghost" id="speaking-analyze-local" type="button">本地分析</button>
+                    <button class="button button--primary" id="speaking-analyze-ai" type="button">开始深度批改</button>
+                    <button class="button button--subtle" id="speaking-reset-mock" type="button">重新开始模考</button>
+                  </div>
+                  <p class="micro-copy">
+                    做整轮模考时，每提交一段都会先拿到这段的转写、四项评分和下一步建议，然后再自动切到下一部分。第三段结束后，会把整轮表现一起收成一份总复盘。
+                  </p>
+                </article>
+              </div>
+              <div class="result-panel" id="speaking-result"></div>
+            </section>
 
-          <section class="panel" id="speaking-progress">
-            <div class="section-head">
-              <div>
-                <p class="eyebrow">口语提分轨迹</p>
-                <h2>把每次口语练习慢慢攒成自己的提分轨迹</h2>
-              </div>
-              <p class="section-head__hint">这里会帮你慢慢看出重复犯的毛病、最近的状态波动，以及眼下最该补的那一项。</p>
-            </div>
-            <div class="metric-grid" id="speaking-metrics"></div>
-            <div class="speaking-progress-grid">
-              <div class="due-panel">
-                <div class="due-panel__head">
-                  <h3>高频语法问题</h3>
-                  <span class="chip" id="speaking-grammar-chip">0 个模式</span>
+            <section class="panel" id="speaking-progress">
+              <div class="section-head">
+                <div>
+                  <p class="eyebrow">口语提分轨迹</p>
+                  <h2>把每次口语练习慢慢攒成自己的提分轨迹</h2>
                 </div>
-                <div class="grammar-list" id="speaking-grammar-list"></div>
+                <p class="section-head__hint">这里会帮你慢慢看出重复犯的毛病、最近的状态波动，以及眼下最该补的那一项。</p>
               </div>
-              <div class="due-panel">
-                <div class="due-panel__head">
-                  <h3>最近 AI 模考记录</h3>
-                  <span class="chip" id="speaking-history-chip">0 次批改</span>
+              <div class="metric-grid" id="speaking-metrics"></div>
+              <div class="speaking-progress-grid">
+                <div class="due-panel">
+                  <div class="due-panel__head">
+                    <h3>高频语法问题</h3>
+                    <span class="chip" id="speaking-grammar-chip">0 个模式</span>
+                  </div>
+                  <div class="grammar-list" id="speaking-grammar-list"></div>
                 </div>
-                <div class="review-log" id="speaking-history-list"></div>
+                <div class="due-panel">
+                  <div class="due-panel__head">
+                    <h3>词块积累</h3>
+                    <span class="chip" id="speaking-phrase-chip">0 组话题</span>
+                  </div>
+                  <div class="phrase-bank" id="speaking-phrase-bank"></div>
+                </div>
+                <div class="due-panel">
+                  <div class="due-panel__head">
+                    <h3>最近 AI 模考记录</h3>
+                    <span class="chip" id="speaking-history-chip">0 次批改</span>
+                  </div>
+                  <div class="review-log" id="speaking-history-list"></div>
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
 
           <section class="panel" id="review">
             <div class="section-head">
