@@ -117,7 +117,7 @@ body {
   display: grid;
   align-items: start;
   gap: 20px;
-  grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+  grid-template-columns: minmax(0, 1.2fr) minmax(340px, 0.8fr);
 }
 
 .speaking-workspace > .panel {
@@ -138,6 +138,11 @@ body {
   flex-direction: column;
 }
 
+.speaking-workspace #speaking-mock .section-head {
+  flex-direction: column;
+}
+
+.speaking-workspace #speaking-mock .section-head__hint,
 .speaking-workspace #speaking-progress .section-head__hint {
   max-width: none;
 }
@@ -529,7 +534,7 @@ textarea {
 
 .layout-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(320px, 0.86fr);
+  grid-template-columns: minmax(0, 2.35fr) minmax(260px, 0.65fr);
   gap: 20px;
   margin-top: 20px;
 }
