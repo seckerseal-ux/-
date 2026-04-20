@@ -122,6 +122,29 @@ DEFAULT_PROVIDER_MODELS = {
         "writing": "gemini-2.5-flash-lite",
     },
 }
+PROVIDER_MODEL_ENV_NAMES = {
+    "openai": {
+        "transcribe": "OPENAI_TRANSCRIBE_MODEL",
+        "review": "OPENAI_REVIEW_MODEL",
+        "writing": "OPENAI_WRITING_REVIEW_MODEL",
+    },
+    "openrouter": {
+        "transcribe": "OPENROUTER_TRANSCRIBE_MODEL",
+        "review": "OPENROUTER_REVIEW_MODEL",
+        "writing": "OPENROUTER_WRITING_REVIEW_MODEL",
+    },
+    "gemini": {
+        "transcribe": "GEMINI_TRANSCRIBE_MODEL",
+        "review": "GEMINI_REVIEW_MODEL",
+        "writing": "GEMINI_WRITING_REVIEW_MODEL",
+    },
+}
+LEGACY_MODEL_ENV_NAMES = {
+    "transcribe": "AI_TRANSCRIBE_MODEL",
+    "review": "AI_REVIEW_MODEL",
+    "writing": "AI_WRITING_REVIEW_MODEL",
+}
+RETRYABLE_AI_STATUS_CODES = {404, 429, 500, 502, 503, 504}
 OPENROUTER_FREE_MODEL_ROUTER = DEFAULT_PROVIDER_MODELS["openrouter"]["writing"]
 DEFAULT_OPENROUTER_FREE_WRITING_PRIORITY = (
     "google/gemma-3-27b-it:free",
@@ -659,43 +682,47 @@ def get_provider_base_url(provider=None):
     )
 
 
+def split_model_names(value):
+    return tuple(item.strip() for item in str(value or "").split(",") if item.strip())
+
+
+def dedupe_model_names(values):
+    seen = set()
+    ordered = []
+    for value in values:
+        model = str(value or "").strip()
+        if not model or model in seen:
+            continue
+        seen.add(model)
+        ordered.append(model)
+    return tuple(ordered)
+
+
+def get_configured_model_candidates(provider, capability):
+    provider = normalize_provider_name(provider)
+    capability = str(capability or "").strip().lower()
+    candidates = []
+
+    provider_env = PROVIDER_MODEL_ENV_NAMES.get(provider, {}).get(capability)
+    if provider_env:
+        candidates.extend(split_model_names(os.getenv(provider_env, "")))
+
+    legacy_env = LEGACY_MODEL_ENV_NAMES.get(capability)
+    if legacy_env and AI_PROVIDER == provider:
+        candidates.extend(split_model_names(os.getenv(legacy_env, "")))
+
+    return dedupe_model_names(
+        finalize_provider_model(provider, capability, candidate)
+        for candidate in candidates
+    )
+
+
 def get_provider_model(provider, capability):
     provider = normalize_provider_name(provider)
     capability = str(capability or "").strip().lower()
-    env_name_map = {
-        "openai": {
-            "transcribe": "OPENAI_TRANSCRIBE_MODEL",
-            "review": "OPENAI_REVIEW_MODEL",
-            "writing": "OPENAI_WRITING_REVIEW_MODEL",
-        },
-        "openrouter": {
-            "transcribe": "OPENROUTER_TRANSCRIBE_MODEL",
-            "review": "OPENROUTER_REVIEW_MODEL",
-            "writing": "OPENROUTER_WRITING_REVIEW_MODEL",
-        },
-        "gemini": {
-            "transcribe": "GEMINI_TRANSCRIBE_MODEL",
-            "review": "GEMINI_REVIEW_MODEL",
-            "writing": "GEMINI_WRITING_REVIEW_MODEL",
-        },
-    }
-    legacy_env_name_map = {
-        "transcribe": "AI_TRANSCRIBE_MODEL",
-        "review": "AI_REVIEW_MODEL",
-        "writing": "AI_WRITING_REVIEW_MODEL",
-    }
-
-    provider_env = env_name_map.get(provider, {}).get(capability)
-    if provider_env:
-        configured = os.getenv(provider_env, "").strip()
-        if configured:
-            return finalize_provider_model(provider, capability, configured)
-
-    legacy_env = legacy_env_name_map.get(capability)
-    if legacy_env and AI_PROVIDER == provider:
-        configured = os.getenv(legacy_env, "").strip()
-        if configured:
-            return finalize_provider_model(provider, capability, configured)
+    configured_candidates = get_configured_model_candidates(provider, capability)
+    if configured_candidates:
+        return configured_candidates[0]
 
     return finalize_provider_model(provider, capability, DEFAULT_PROVIDER_MODELS[provider][capability])
 
@@ -758,6 +785,9 @@ def get_provider_model_candidates(provider, capability):
     capability = str(capability or "").strip().lower()
     if provider == "openrouter" and capability == "writing" and should_force_openrouter_free_model():
         return get_openrouter_writing_model_priority()
+    configured_candidates = get_configured_model_candidates(provider, capability)
+    if configured_candidates:
+        return configured_candidates
     if provider == "gemini":
         configured = get_gemini_model_priority(capability)
         if configured:
@@ -778,6 +808,40 @@ def get_provider_label(provider=None):
     return "OpenAI"
 
 
+def is_retryable_ai_error(error):
+    return getattr(error, "status", None) in RETRYABLE_AI_STATUS_CODES
+
+
+def compact_upstream_message(message, limit=260):
+    text = re.sub(r"\s+", " ", str(message or "")).strip()
+    if len(text) <= limit:
+        return text
+    return text[: limit - 1].rstrip() + "..."
+
+
+def format_provider_error_message(provider, message, status):
+    provider = normalize_provider_name(provider)
+    label = get_provider_label(provider)
+    compact_message = compact_upstream_message(message)
+    lower_message = compact_message.lower()
+
+    if status == 429 or "resource exhausted" in lower_message or "rate limit" in lower_message or "quota" in lower_message:
+        return (
+            f"{label} 当前模型额度或资源池暂时用完了。可以等几分钟再试；"
+            "如果频繁出现，建议在 Render 的模型环境变量里换成有额度的模型，"
+            "或用英文逗号配置备用模型。"
+            f"原始错误：{compact_message}"
+        )
+
+    if status in {500, 502, 503, 504}:
+        return (
+            f"{label} 上游服务这次没有稳定返回，稍后重试通常就能恢复。"
+            f"原始错误：{compact_message}"
+        )
+
+    return f"{label} 接口返回错误：{compact_message}"
+
+
 def get_provider_status(provider):
     provider = normalize_provider_name(provider)
     return {
@@ -788,6 +852,9 @@ def get_provider_status(provider):
         "transcribe_model": get_provider_model(provider, "transcribe"),
         "review_model": get_provider_model(provider, "review"),
         "writing_review_model": get_provider_model(provider, "writing"),
+        "transcribe_model_candidates": get_provider_model_candidates(provider, "transcribe"),
+        "review_model_candidates": get_provider_model_candidates(provider, "review"),
+        "writing_review_model_candidates": get_provider_model_candidates(provider, "writing"),
     }
 
 
@@ -1844,7 +1911,7 @@ def api_request(path, data, content_type, method="POST", extra_headers=None, pro
             message = payload.get("error", {}).get("message") or detail
         except json.JSONDecodeError:
             message = detail
-        raise ApiError(f"{get_provider_label(provider)} 接口返回错误：{message}", status=error.code) from error
+        raise ApiError(format_provider_error_message(provider, message, error.code), status=error.code) from error
     except urllib.error.URLError as error:
         raise ApiError(f"无法连接 {get_provider_label(provider)} 接口：{error.reason}", status=502) from error
 
@@ -1888,7 +1955,7 @@ def native_gemini_api_request(path, data, content_type, method="POST", extra_hea
                 message = detail
         except json.JSONDecodeError:
             message = detail
-        raise ApiError(f"{get_provider_label(provider)} 接口返回错误：{message}", status=error.code) from error
+        raise ApiError(format_provider_error_message(provider, message, error.code), status=error.code) from error
     except urllib.error.URLError as error:
         raise ApiError(f"无法连接 {get_provider_label(provider)} 接口：{error.reason}", status=502) from error
 
@@ -2082,7 +2149,7 @@ def structured_json_request(model, instructions, user_input, schema_name, schema
                 return parse_json_text_response(extract_chat_completion_text(response, provider), provider)
             except ApiError as error:
                 last_error = error
-                if error.status not in {404, 429, 500, 502, 503, 504}:
+                if not is_retryable_ai_error(error):
                     raise
         if last_error:
             raise last_error
@@ -2104,7 +2171,7 @@ def structured_json_request(model, instructions, user_input, schema_name, schema
                 )
             except ApiError as error:
                 last_error = error
-                if error.status not in {404, 429, 500, 502, 503, 504}:
+                if not is_retryable_ai_error(error):
                     raise
         if last_error:
             raise last_error
@@ -2258,9 +2325,8 @@ def clamp_mock_summary_payload(payload):
     return payload
 
 
-def transcribe_audio(audio_bytes, filename, content_type, provider=None):
+def transcribe_audio_with_model(audio_bytes, filename, content_type, provider, model):
     provider = normalize_provider_name(provider)
-    model = get_provider_model(provider, "transcribe")
     if provider == "openrouter":
         payload = {
             "model": model,
@@ -2371,31 +2437,38 @@ def transcribe_audio(audio_bytes, filename, content_type, provider=None):
     return transcript
 
 
-def transcribe_audio_inputs(audio_entries, provider=None):
-    entries = normalize_multipart_file_entries(audio_entries)
-    if not entries:
-        raise ApiError("请求里缺少音频文件。", status=400)
-
+def transcribe_audio(audio_bytes, filename, content_type, provider=None):
     provider = normalize_provider_name(provider)
-    model = get_provider_model(provider, "transcribe")
-    total_bytes = 0
+    last_error = None
 
-    for entry in entries:
-        audio_bytes = entry.get("content") or b""
-        if not audio_bytes:
-            raise ApiError("上传的音频文件为空。", status=400)
-        total_bytes += len(audio_bytes)
+    for candidate_model in get_provider_model_candidates(provider, "transcribe"):
+        try:
+            return transcribe_audio_with_model(
+                audio_bytes,
+                filename,
+                content_type,
+                provider,
+                candidate_model,
+            )
+        except ApiError as error:
+            last_error = error
+            if not is_retryable_ai_error(error):
+                raise
 
-    if total_bytes > MAX_AUDIO_BYTES:
-        raise ApiError("音频文件过大，请控制在 20MB 以内。", status=400)
+    if last_error:
+        raise last_error
+    raise ApiError(f"{get_provider_label(provider)} 当前不可用，请稍后再试。", status=503)
 
+
+def transcribe_audio_entries_with_model(entries, provider, model):
     if len(entries) == 1:
         entry = entries[0]
-        return transcribe_audio(
+        return transcribe_audio_with_model(
             entry.get("content") or b"",
             entry.get("filename") or "response.webm",
             entry.get("content_type") or "application/octet-stream",
-            provider=provider,
+            provider,
+            model,
         )
 
     if provider == "openrouter":
@@ -2489,11 +2562,12 @@ def transcribe_audio_inputs(audio_entries, provider=None):
 
     transcripts = []
     for entry in entries:
-        transcript = transcribe_audio(
+        transcript = transcribe_audio_with_model(
             entry.get("content") or b"",
             entry.get("filename") or "response.webm",
             entry.get("content_type") or "application/octet-stream",
-            provider=provider,
+            provider,
+            model,
         ).strip()
         if transcript:
             transcripts.append(transcript)
@@ -2502,6 +2576,37 @@ def transcribe_audio_inputs(audio_entries, provider=None):
     if not merged_transcript:
         raise ApiError(f"{get_provider_label(provider)} 已接收音频，但没有返回可用的转写结果。", status=502)
     return merged_transcript
+
+
+def transcribe_audio_inputs(audio_entries, provider=None):
+    entries = normalize_multipart_file_entries(audio_entries)
+    if not entries:
+        raise ApiError("请求里缺少音频文件。", status=400)
+
+    provider = normalize_provider_name(provider)
+    total_bytes = 0
+
+    for entry in entries:
+        audio_bytes = entry.get("content") or b""
+        if not audio_bytes:
+            raise ApiError("上传的音频文件为空。", status=400)
+        total_bytes += len(audio_bytes)
+
+    if total_bytes > MAX_AUDIO_BYTES:
+        raise ApiError("音频文件过大，请控制在 20MB 以内。", status=400)
+
+    last_error = None
+    for candidate_model in get_provider_model_candidates(provider, "transcribe"):
+        try:
+            return transcribe_audio_entries_with_model(entries, provider, candidate_model)
+        except ApiError as error:
+            last_error = error
+            if not is_retryable_ai_error(error):
+                raise
+
+    if last_error:
+        raise last_error
+    raise ApiError(f"{get_provider_label(provider)} 当前不可用，请稍后再试。", status=503)
 
 
 def review_speaking(prompt_payload, transcript, transcript_hint, local_metrics, provider=None):

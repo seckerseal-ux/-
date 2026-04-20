@@ -90,6 +90,14 @@ export OPENAI_WRITING_REVIEW_MODEL="gemini-3-flash-preview-free"
 python3 server.py
 ```
 
+如果免费模型经常提示 `Resource exhausted` 或 429，可以把同一项写成逗号分隔的候选模型，后端会按顺序尝试：
+
+```bash
+export OPENAI_TRANSCRIBE_MODEL="gemini-3-flash-preview-free,你的备用转写模型"
+export OPENAI_REVIEW_MODEL="gemini-3-flash-preview-free,你的备用批改模型"
+export OPENAI_WRITING_REVIEW_MODEL="gemini-3-flash-preview-free,你的备用写作模型"
+```
+
 ### 方式 D：把配置写到 `.env`
 
 可以在 [server.py](/Users/shyn/Documents/Playground/lexicon-sprint/server.py) 同目录新建 `.env`，例如：
@@ -214,6 +222,7 @@ python3 server.py
 - AiHubMix 兼容变量：`AIHUBMIX_BASE_URL`
 - Gemini 专用变量：`GEMINI_TRANSCRIBE_MODEL`、`GEMINI_REVIEW_MODEL`、`GEMINI_WRITING_REVIEW_MODEL`
 - Gemini 速度优先候选：`GEMINI_TRANSCRIBE_MODEL_PRIORITY`、`GEMINI_REVIEW_MODEL_PRIORITY`、`GEMINI_WRITING_MODEL_PRIORITY`
+- OpenAI/AiHubMix 兼容模型也支持逗号分隔候选，例如 `OPENAI_REVIEW_MODEL=模型A,模型B`
 
 如果你不额外设置：
 
