@@ -1588,7 +1588,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-01-an-ideal-and-perfect-place-where-you",
       "part": "part2",
-      "title": "理想空间",
+      "title": "Describe an ideal and perfect place where you would like to stay (e.g. a house, an apartment)",
+      "topicTitle": "理想空间",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where it would be",
@@ -1619,7 +1620,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-02-someone-else-s-room-you-enjoy-spendi",
       "part": "part2",
-      "title": "别人的房间",
+      "title": "Describe someone else's room you enjoy spending time in",
+      "topicTitle": "别人的房间",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When you visited there",
@@ -1650,7 +1652,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-03-a-quiet-place-you-like-to-go",
       "part": "part2",
-      "title": "一个你喜欢的僻静之处",
+      "title": "Describe a quiet place you like to go",
+      "topicTitle": "一个你喜欢的僻静之处",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where it is",
@@ -1681,7 +1684,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-04-a-person-who-helps-to-protect-the-en",
       "part": "part2",
-      "title": "环保人士",
+      "title": "Describe a person who helps to protect the environment",
+      "topicTitle": "环保人士",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who this person is",
@@ -1711,7 +1715,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-05-an-energetic-person-that-you-know",
       "part": "part2",
-      "title": "一个精力充沛的人",
+      "title": "Describe an energetic person that you know",
+      "topicTitle": "一个精力充沛的人",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who this person is",
@@ -1741,7 +1746,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-06-someone-you-like-to-spend-time-with",
       "part": "part2",
-      "title": "喜欢和他待在一起的人",
+      "title": "Describe someone you like to spend time with",
+      "topicTitle": "喜欢和他待在一起的人",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who this person is",
@@ -1771,7 +1777,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-07-an-interesting-discussion-you-had-wi",
       "part": "part2",
-      "title": "和朋友进行的有趣讨论",
+      "title": "Describe an interesting discussion you had with your friend",
+      "topicTitle": "和朋友进行的有趣讨论",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What the discussion was about",
@@ -1800,7 +1807,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-08-an-important-decision-that-you-made",
       "part": "part2",
-      "title": "一个你做的重要决定",
+      "title": "Describe an important decision that you made",
+      "topicTitle": "一个你做的重要决定",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What the decision was",
@@ -1830,7 +1838,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-09-a-time-you-made-a-promise-to-someone",
       "part": "part2",
-      "title": "许下的承诺",
+      "title": "Describe a time you made a promise to someone",
+      "topicTitle": "许下的承诺",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What the promise was To whom you made it",
@@ -1859,7 +1868,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-10-a-time-when-you-missed-or-were-late-",
       "part": "part2",
-      "title": "迟到",
+      "title": "Describe a time when you missed or were late for an important meeting/event",
+      "topicTitle": "迟到",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When it happened",
@@ -1889,7 +1899,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-11-a-kind-of-foreign-food-you-like-and-",
       "part": "part2",
-      "title": "外国食物",
+      "title": "Describe a kind of foreign food you like and you have had",
+      "topicTitle": "外国食物",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is",
@@ -1919,7 +1930,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-12-one-of-your-grandparents-jobs",
       "part": "part2",
-      "title": "祖辈的工作",
+      "title": "Describe one of your grandparents’ jobs",
+      "topicTitle": "祖辈的工作",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
@@ -1949,7 +1961,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-13-a-place-you-visited-and-enjoyed-in-t",
       "part": "part2",
-      "title": "喜欢的乡村地点",
+      "title": "Describe a place you visited and enjoyed in the countryside",
+      "topicTitle": "喜欢的乡村地点",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where it was in the countryside",
@@ -1978,7 +1991,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-14-a-shop-store-you-enjoy-visiting",
       "part": "part2",
-      "title": "商店",
+      "title": "Describe a shop/store you enjoy visiting",
+      "topicTitle": "商店",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What the shop’s name is",
@@ -2008,7 +2022,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-15-a-city-that-you-have-been-to-and-wou",
       "part": "part2",
-      "title": "想再去一次的城市",
+      "title": "Describe a city that you have been to and would like to visit again",
+      "topicTitle": "想再去一次的城市",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When you visited it",
@@ -2038,7 +2053,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-16-a-place-in-your-country-or-part-of-y",
       "part": "part2",
-      "title": "向游客们推荐的本国旅游地",
+      "title": "Describe a place in your country or part of your country that you would like to recommend to visitors/travelers",
+      "topicTitle": "向游客们推荐的本国旅游地",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is",
@@ -2068,7 +2084,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-17-a-place-where-you-saw-animals",
       "part": "part2",
-      "title": "看到过动物的地方",
+      "title": "Describe a place where you saw animals",
+      "topicTitle": "看到过动物的地方",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When you went there",
@@ -2098,7 +2115,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-18-the-home-of-someone-you-know-well-an",
       "part": "part2",
-      "title": "经常拜访的熟人之家",
+      "title": "Describe the home of someone you know well and that you often visit",
+      "topicTitle": "经常拜访的熟人之家",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Whose home it is",
@@ -2128,7 +2146,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-19-an-unusual-but-interesting-building-",
       "part": "part2",
-      "title": "想参观的不寻常且有趣的建筑",
+      "title": "Describe an unusual but interesting building you would like to visit",
+      "topicTitle": "想参观的不寻常且有趣的建筑",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where it is",
@@ -2158,7 +2177,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-20-a-noisy-place-you-have-been-to",
       "part": "part2",
-      "title": "很吵的地方",
+      "title": "Describe a noisy place you have been to",
+      "topicTitle": "很吵的地方",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where it is",
@@ -2188,7 +2208,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-21-your-favorite-place-in-your-house-wh",
       "part": "part2",
-      "title": "家里放松的地方",
+      "title": "Describe your favorite place in your house where you can relax",
+      "topicTitle": "家里放松的地方",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where it is",
@@ -2218,7 +2239,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-22-a-person-s-house-apartment-that-you-",
       "part": "part2",
-      "title": "别人家的好房子",
+      "title": "Describe a person’s house/apartment that you think is very good",
+      "topicTitle": "别人家的好房子",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who this person is",
@@ -2248,7 +2270,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-23-a-popular-place-for-sports-e-g-a-sta",
       "part": "part2",
-      "title": "受欢迎的运动场所",
+      "title": "Describe a popular place for sports (e.g. a stadium) that you’ve been to",
+      "topicTitle": "受欢迎的运动场所",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where it is",
@@ -2278,7 +2301,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-24-a-person-you-have-met-who-you-want-t",
       "part": "part2",
-      "title": "想要一起学习/工作的人",
+      "title": "Describe a person you have met who you want to work/study with",
+      "topicTitle": "想要一起学习/工作的人",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who this person is",
@@ -2308,7 +2332,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-25-a-person-who-shows-his-her-feelings-",
       "part": "part2",
-      "title": "情绪外露的人",
+      "title": "Describe a person who shows his/her feelings very openly",
+      "topicTitle": "情绪外露的人",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she is",
@@ -2338,7 +2363,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-26-a-famous-person-you-would-like-to-me",
       "part": "part2",
-      "title": "想见的名人",
+      "title": "Describe a famous person you would like to meet",
+      "topicTitle": "想见的名人",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she is",
@@ -2367,7 +2393,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-27-a-singer-you-like",
       "part": "part2",
-      "title": "喜欢的歌手",
+      "title": "Describe a singer you like",
+      "topicTitle": "喜欢的歌手",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she is",
@@ -2397,7 +2424,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-28-a-person-who-you-think-wears-unusual",
       "part": "part2",
-      "title": "穿着不寻常的人",
+      "title": "Describe a person who you think wears unusual clothes",
+      "topicTitle": "穿着不寻常的人",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who this person is",
@@ -2427,7 +2455,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-29-a-person-from-a-different-cultural-b",
       "part": "part2",
-      "title": "愿意相处的不同文化背景的人",
+      "title": "Describe a person from a different cultural background with whom you enjoy spending time",
+      "topicTitle": "愿意相处的不同文化背景的人",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she is",
@@ -2456,7 +2485,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-30-a-friend-from-your-childhood",
       "part": "part2",
-      "title": "发小",
+      "title": "Describe a friend from your childhood",
+      "topicTitle": "发小",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she is",
@@ -2486,7 +2516,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-31-a-person-who-inspired-you-to-do-some",
       "part": "part2",
-      "title": "激励你做有趣事情的人",
+      "title": "Describe a person who inspired you to do something interesting",
+      "topicTitle": "激励你做有趣事情的人",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she is",
@@ -2516,7 +2547,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-32-a-time-when-you-saw-children-behave-",
       "part": "part2",
-      "title": "熊孩子",
+      "title": "Describe a time when you saw children behave badly in public",
+      "topicTitle": "熊孩子",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where it was",
@@ -2546,7 +2578,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-33-a-time-when-a-person-persuaded-you-t",
       "part": "part2",
-      "title": "劝你的人",
+      "title": "Describe a time when a person persuaded you to do something and you were happy about that",
+      "topicTitle": "劝你的人",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she was When/where it happened",
@@ -2575,7 +2608,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-34-a-person-you-disliked-at-first-but-e",
       "part": "part2",
-      "title": "由不喜欢到喜欢的朋友",
+      "title": "Describe a person you disliked at first but ended up being friends with",
+      "topicTitle": "由不喜欢到喜欢的朋友",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she is",
@@ -2605,7 +2639,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-35-a-friend-of-yours-who-is-well-dresse",
       "part": "part2",
-      "title": "会穿搭的朋友",
+      "title": "Describe a friend of yours who is well-dressed and is good at dressing up",
+      "topicTitle": "会穿搭的朋友",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who he/she is",
@@ -2635,7 +2670,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-36-an-intelligent-person-you-know",
       "part": "part2",
-      "title": "聪明的人",
+      "title": "Describe an intelligent person you know",
+      "topicTitle": "聪明的人",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who this person is",
@@ -2665,7 +2701,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-37-a-person-you-know-who-loves-to-grow-",
       "part": "part2",
-      "title": "养花/种菜的人",
+      "title": "Describe a person you know who loves to grow plants (e.g. vegetables / fruits / flowers etc.)",
+      "topicTitle": "养花/种菜的人",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who this person is",
@@ -2695,7 +2732,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-38-an-interesting-decision-that-you-and",
       "part": "part2",
-      "title": "与朋友做的有趣决定",
+      "title": "Describe an interesting decision that you and your friend made together",
+      "topicTitle": "与朋友做的有趣决定",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When and why you made the decision",
@@ -2725,7 +2763,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-39-a-time-when-you-received-money-as-a-",
       "part": "part2",
-      "title": "收钱作礼物",
+      "title": "Describe a time when you received money as a gift",
+      "topicTitle": "收钱作礼物",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When it happened",
@@ -2755,7 +2794,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-40-a-disagreement-you-had-with-someone",
       "part": "part2",
-      "title": "和别人的争论",
+      "title": "Describe a disagreement you had with someone",
+      "topicTitle": "和别人的争论",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who you had the disagreement with",
@@ -2785,7 +2825,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-41-a-time-when-you-and-some-other-peopl",
       "part": "part2",
-      "title": "和他人一起计划活动",
+      "title": "Describe a time when you and some other people made a plan to do an activity",
+      "topicTitle": "和他人一起计划活动",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
@@ -2815,7 +2856,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-42-an-impressive-and-interesting-conver",
       "part": "part2",
-      "title": "有趣且印象深的谈话",
+      "title": "Describe an impressive and interesting conversation you had that you remember well",
+      "topicTitle": "有趣且印象深的谈话",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who you talked to",
@@ -2845,7 +2887,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-43-an-impressive-english-lesson-you-had",
       "part": "part2",
-      "title": "印象深刻的英语课",
+      "title": "Describe an impressive English lesson you had and enjoyed",
+      "topicTitle": "印象深刻的英语课",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was about",
@@ -2874,7 +2917,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-44-a-time-when-you-had-to-share-somethi",
       "part": "part2",
-      "title": "分享时刻",
+      "title": "Describe a time when you had to share something with others",
+      "topicTitle": "分享时刻",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
@@ -2905,7 +2949,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-45-a-goal-you-set-that-you-tried-your-b",
       "part": "part2",
-      "title": "努力尝试并实现的目标",
+      "title": "Describe a goal you set that you tried your best to achieve",
+      "topicTitle": "努力尝试并实现的目标",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
@@ -2934,7 +2979,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-46-an-argument-two-of-your-friends-had",
       "part": "part2",
-      "title": "朋友们的争吵",
+      "title": "Describe an argument two of your friends had",
+      "topicTitle": "朋友们的争吵",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When it happened",
@@ -2963,7 +3009,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-47-a-time-when-you-forgot-missed-an-app",
       "part": "part2",
-      "title": "失约的事",
+      "title": "Describe a time when you forgot/missed an appointment",
+      "topicTitle": "失约的事",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What the appointment was for",
@@ -2993,7 +3040,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-48-a-time-when-you-saw-a-lot-of-plastic",
       "part": "part2",
-      "title": "看到很多塑料垃圾的时刻",
+      "title": "Describe a time when you saw a lot of plastic waste (e.g. in a park, on the beach, etc.)",
+      "topicTitle": "看到很多塑料垃圾的时刻",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where and when you saw the plastic waste",
@@ -3023,7 +3071,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-49-a-problem-you-had-while-shopping-onl",
       "part": "part2",
-      "title": "在商店购物时遇到的问题",
+      "title": "Describe a problem you had while shopping online or in a store",
+      "topicTitle": "在商店购物时遇到的问题",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When it happened",
@@ -3053,7 +3102,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-50-a-sports-competition-you-watched",
       "part": "part2",
-      "title": "看过的体育赛事",
+      "title": "Describe a sports competition you watched",
+      "topicTitle": "看过的体育赛事",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was When/where you watched it",
@@ -3082,7 +3132,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-51-a-sports-event-that-you-would-like-t",
       "part": "part2",
-      "title": "一场想要成为观众观看的体育赛事",
+      "title": "Describe a sports event that you would like to attend as part of the audience",
+      "topicTitle": "一场想要成为观众观看的体育赛事",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is",
@@ -3112,7 +3163,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-52-a-time-when-you-were-praised-for-som",
       "part": "part2",
-      "title": "被表扬的时刻",
+      "title": "Describe a time when you were praised for something you did",
+      "topicTitle": "被表扬的时刻",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When it happened",
@@ -3142,7 +3194,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-53-a-time-when-you-needed-to-search-for",
       "part": "part2",
-      "title": "检索信息",
+      "title": "Describe a time when you needed to search for information",
+      "topicTitle": "检索信息",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What information you needed to search for",
@@ -3172,7 +3225,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-54-your-first-day-at-school-that-you-re",
       "part": "part2",
-      "title": "开学第一天",
+      "title": "Describe your first day at school that you remember",
+      "topicTitle": "开学第一天",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where the school was",
@@ -3201,7 +3255,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-55-something-that-you-did-with-someone-",
       "part": "part2",
-      "title": "和别人一起做的事情",
+      "title": "Describe something that you did with someone/a group of people",
+      "topicTitle": "和别人一起做的事情",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
@@ -3231,7 +3286,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-56-an-article-on-health-you-read-in-a-m",
       "part": "part2",
-      "title": "健康文章",
+      "title": "Describe an article on health you read in a magazine or on the Internet",
+      "topicTitle": "健康文章",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
@@ -3260,7 +3316,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-57-an-important-thing-you-learned-not-a",
       "part": "part2",
-      "title": "校外学到的重要事情",
+      "title": "Describe an important thing you learned (not at school or college)",
+      "topicTitle": "校外学到的重要事情",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
@@ -3290,7 +3347,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-58-a-skill-that-you-think-you-can-teach",
       "part": "part2",
-      "title": "可以教给别人的技能",
+      "title": "Describe a skill that you think you can teach other people",
+      "topicTitle": "可以教给别人的技能",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is",
@@ -3320,7 +3378,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-59-an-object-that-you-think-is-beautifu",
       "part": "part2",
-      "title": "漂亮物品",
+      "title": "Describe an object that you think is beautiful",
+      "topicTitle": "漂亮物品",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is",
@@ -3350,7 +3409,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-60-a-movie-you-watched-recently-and-wou",
       "part": "part2",
-      "title": "想再看的电影",
+      "title": "Describe a movie you watched recently and would like to watch again",
+      "topicTitle": "想再看的电影",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What type of movie it was",
@@ -3380,7 +3440,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-61-a-photo-you-took-that-you-are-proud-",
       "part": "part2",
-      "title": "让你自豪的照片",
+      "title": "Describe a photo you took that you are proud of",
+      "topicTitle": "让你自豪的照片",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When you took it",
@@ -3410,7 +3471,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-62-a-beautiful-sky-you-enjoyed-seeing",
       "part": "part2",
-      "title": "美丽天空",
+      "title": "Describe a beautiful sky you enjoyed seeing",
+      "topicTitle": "美丽天空",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Where you saw it",
@@ -3439,7 +3501,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-63-an-advertisement-you-have-seen-that-",
       "part": "part2",
-      "title": "有名产品的广告",
+      "title": "Describe an advertisement you have seen that introduced a well-known product",
+      "topicTitle": "有名产品的广告",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When and where you saw the advertisement",
@@ -3469,7 +3532,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-64-a-time-you-made-a-decision-to-wait-f",
       "part": "part2",
-      "title": "决定等待",
+      "title": "Describe a time you made a decision to wait for something",
+      "topicTitle": "决定等待",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When it happened",
@@ -3499,7 +3563,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-65-a-difficult-thing-you-did-and-succee",
       "part": "part2",
-      "title": "克服困难获得成功的事",
+      "title": "Describe a difficult thing you did and succeeded",
+      "topicTitle": "克服困难获得成功的事",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
@@ -3529,7 +3594,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-66-a-story-or-novel-you-have-read-that-",
       "part": "part2",
-      "title": "读过的有趣的故事/小说",
+      "title": "Describe a story or novel you have read that you found interesting",
+      "topicTitle": "读过的有趣的故事/小说",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "When you read it",
@@ -3559,7 +3625,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-67-a-film-that-made-you-laugh",
       "part": "part2",
-      "title": "看过的搞笑电影",
+      "title": "Describe a film that made you laugh",
+      "topicTitle": "看过的搞笑电影",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is",
@@ -3589,7 +3656,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-68-a-program-you-like-to-watch",
       "part": "part2",
-      "title": "喜欢的节目",
+      "title": "Describe a program you like to watch",
+      "topicTitle": "喜欢的节目",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is",
@@ -3619,7 +3687,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-69-an-outdoor-sport-you-would-like-to-d",
       "part": "part2",
-      "title": "想要尝试的户外运动",
+      "title": "Describe an outdoor sport you would like to do",
+      "topicTitle": "想要尝试的户外运动",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is When/where you would like to do it With whom you would like to do it",
@@ -3647,7 +3716,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-70-a-photo-that-you-enjoy-looking-at",
       "part": "part2",
-      "title": "喜欢的照片",
+      "title": "Describe a photo that you enjoy looking at",
+      "topicTitle": "喜欢的照片",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "Who took it",
@@ -3677,7 +3747,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-71-a-time-when-someone-gave-you-somethi",
       "part": "part2",
-      "title": "收到想要的物品",
+      "title": "Describe a time when someone gave you something that you really wanted",
+      "topicTitle": "收到想要的物品",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it was",
@@ -3707,7 +3778,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-72-a-website-you-often-visit",
       "part": "part2",
-      "title": "常用的网站",
+      "title": "Describe a website you often visit",
+      "topicTitle": "常用的网站",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is about",
@@ -3737,7 +3809,8 @@ window.__LEXICON_SPEAKING_BANK__ = {
     {
       "id": "pdf-part2-73-a-website-that-sells-second-hand-ite",
       "part": "part2",
-      "title": "二手物品网站",
+      "title": "Describe a website that sells second-hand items",
+      "topicTitle": "二手物品网站",
       "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
       "questions": [
         "What it is",
@@ -3770,6 +3843,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-01-topic",
       "part": "part3",
       "title": "理想空间 · 深挖讨论",
+      "topicTitle": "理想空间",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What are apartments like in your country?",
@@ -3801,6 +3875,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-02-topic",
       "part": "part3",
       "title": "别人的房间 · 深挖讨论",
+      "topicTitle": "别人的房间",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you like to invite your friends to your home?",
@@ -3832,6 +3907,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-03-topic",
       "part": "part3",
       "title": "一个你喜欢的僻静之处 · 深挖讨论",
+      "topicTitle": "一个你喜欢的僻静之处",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Is it easy to find quiet places in your country?",
@@ -3863,6 +3939,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-04-topic",
       "part": "part3",
       "title": "环保人士 · 深挖讨论",
+      "topicTitle": "环保人士",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why can recycling help the environment?",
@@ -3893,6 +3970,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-05-topic",
       "part": "part3",
       "title": "一个精力充沛的人 · 深挖讨论",
+      "topicTitle": "一个精力充沛的人",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What kinds of jobs need a lot of physical work?",
@@ -3924,6 +4002,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-06-topic",
       "part": "part3",
       "title": "喜欢和他待在一起的人 · 深挖讨论",
+      "topicTitle": "喜欢和他待在一起的人",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What kinds of people are easy to get along with?",
@@ -3955,6 +4034,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-07-topic",
       "part": "part3",
       "title": "和朋友进行的有趣讨论 · 深挖讨论",
+      "topicTitle": "和朋友进行的有趣讨论",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "When do children normally form their own views?",
@@ -3986,6 +4066,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-08-topic",
       "part": "part3",
       "title": "一个你做的重要决定 · 深挖讨论",
+      "topicTitle": "一个你做的重要决定",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think children sometimes have to make important decisions?",
@@ -4017,6 +4098,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-09-topic",
       "part": "part3",
       "title": "许下的承诺 · 深挖讨论",
+      "topicTitle": "许下的承诺",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why do some people fail to keep their promises?",
@@ -4048,6 +4130,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-10-topic",
       "part": "part3",
       "title": "迟到 · 深挖讨论",
+      "topicTitle": "迟到",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Are you a punctual person?",
@@ -4079,6 +4162,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-11-topic",
       "part": "part3",
       "title": "外国食物 · 深挖讨论",
+      "topicTitle": "外国食物",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do most people like to eat the food they are familiar with or try new food?",
@@ -4109,6 +4193,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-12-topic",
       "part": "part3",
       "title": "祖辈的工作 · 深挖讨论",
+      "topicTitle": "祖辈的工作",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What jobs do you think are rather difficult?",
@@ -4140,6 +4225,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-13-topic",
       "part": "part3",
       "title": "喜欢的乡村地点 · 深挖讨论",
+      "topicTitle": "喜欢的乡村地点",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Where do people like to visit in the countryside?",
@@ -4168,6 +4254,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-14-topic",
       "part": "part3",
       "title": "商店 · 深挖讨论",
+      "topicTitle": "商店",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think shops and shopping malls will disappear in the future?",
@@ -4199,6 +4286,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-15-topic",
       "part": "part3",
       "title": "想再去一次的城市 · 深挖讨论",
+      "topicTitle": "想再去一次的城市",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think it is possible that all of the population move to cities?",
@@ -4230,6 +4318,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-16-topic",
       "part": "part3",
       "title": "向游客们推荐的本国旅游地 · 深挖讨论",
+      "topicTitle": "向游客们推荐的本国旅游地",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Can you trust other people's travel journals on the Internet?",
@@ -4261,6 +4350,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-17-topic",
       "part": "part3",
       "title": "看到过动物的地方 · 深挖讨论",
+      "topicTitle": "看到过动物的地方",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think people are more interested in animals now than they were in the past?",
@@ -4290,6 +4380,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-18-topic",
       "part": "part3",
       "title": "经常拜访的熟人之家 · 深挖讨论",
+      "topicTitle": "经常拜访的熟人之家",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you prefer to live in the city or in the countryside?",
@@ -4321,6 +4412,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-19-topic",
       "part": "part3",
       "title": "想参观的不寻常且有趣的建筑 · 深挖讨论",
+      "topicTitle": "想参观的不寻常且有趣的建筑",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why do some people choose to build houses by themselves?",
@@ -4351,6 +4443,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-20-topic",
       "part": "part3",
       "title": "很吵的地方 · 深挖讨论",
+      "topicTitle": "很吵的地方",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think it is good for children to make noise?",
@@ -4382,6 +4475,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-21-topic",
       "part": "part3",
       "title": "家里放松的地方 · 深挖讨论",
+      "topicTitle": "家里放松的地方",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why is it difficult for some people to relax?",
@@ -4413,6 +4507,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-22-topic",
       "part": "part3",
       "title": "别人家的好房子 · 深挖讨论",
+      "topicTitle": "别人家的好房子",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do many people spend a lot of money renovating and decorating their houses or apartments?",
@@ -4443,6 +4538,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-23-topic",
       "part": "part3",
       "title": "受欢迎的运动场所 · 深挖讨论",
+      "topicTitle": "受欢迎的运动场所",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do young people like to do sports?",
@@ -4474,6 +4570,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-24-topic",
       "part": "part3",
       "title": "想要一起学习/工作的人 · 深挖讨论",
+      "topicTitle": "想要一起学习/工作的人",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why should children be kind to their classmates?",
@@ -4505,6 +4602,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-25-topic",
       "part": "part3",
       "title": "情绪外露的人 · 深挖讨论",
+      "topicTitle": "情绪外露的人",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think it is good or bad for people to show feelings openly?",
@@ -4533,6 +4631,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-26-topic",
       "part": "part3",
       "title": "想见的名人 · 深挖讨论",
+      "topicTitle": "想见的名人",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What are the advantages and disadvantages of being a famous child?",
@@ -4563,6 +4662,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-27-topic",
       "part": "part3",
       "title": "喜欢的歌手 · 深挖讨论",
+      "topicTitle": "喜欢的歌手",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do Chinese parents require their children to learn to play musical instruments?",
@@ -4593,6 +4693,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-28-topic",
       "part": "part3",
       "title": "穿着不寻常的人 · 深挖讨论",
+      "topicTitle": "穿着不寻常的人",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What factors affect people’s decisions when buying clothes?",
@@ -4624,6 +4725,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-29-topic",
       "part": "part3",
       "title": "愿意相处的不同文化背景的人 · 深挖讨论",
+      "topicTitle": "愿意相处的不同文化背景的人",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Is it easy to meet people from different cultural backgrounds in your country?",
@@ -4655,6 +4757,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-30-topic",
       "part": "part3",
       "title": "发小 · 深挖讨论",
+      "topicTitle": "发小",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you still keep in touch with your friends from childhood?",
@@ -4686,6 +4789,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-31-topic",
       "part": "part3",
       "title": "激励你做有趣事情的人 · 深挖讨论",
+      "topicTitle": "激励你做有趣事情的人",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What qualities make someone a role model?",
@@ -4717,6 +4821,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-32-topic",
       "part": "part3",
       "title": "熊孩子 · 深挖讨论",
+      "topicTitle": "熊孩子",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What bad behavior do children usually have?",
@@ -4746,6 +4851,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-33-topic",
       "part": "part3",
       "title": "劝你的人 · 深挖讨论",
+      "topicTitle": "劝你的人",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What impact does advertising have on children and their parents?",
@@ -4777,6 +4883,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-34-topic",
       "part": "part3",
       "title": "由不喜欢到喜欢的朋友 · 深挖讨论",
+      "topicTitle": "由不喜欢到喜欢的朋友",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What do you think of making friends online?",
@@ -4808,6 +4915,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-35-topic",
       "part": "part3",
       "title": "会穿搭的朋友 · 深挖讨论",
+      "topicTitle": "会穿搭的朋友",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do most people in your country prefer to buy clothes online or at the street market?",
@@ -4839,6 +4947,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-36-topic",
       "part": "part3",
       "title": "聪明的人 · 深挖讨论",
+      "topicTitle": "聪明的人",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Who do you think plays a more important role in a child’s development, teachers or parents?",
@@ -4870,6 +4979,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-37-topic",
       "part": "part3",
       "title": "养花/种菜的人 · 深挖讨论",
+      "topicTitle": "养花/种菜的人",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Are there many people growing their own vegetables now?",
@@ -4901,6 +5011,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-38-topic",
       "part": "part3",
       "title": "与朋友做的有趣决定 · 深挖讨论",
+      "topicTitle": "与朋友做的有趣决定",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What decisions can children make by themselves?"
@@ -4928,6 +5039,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-39-topic",
       "part": "part3",
       "title": "收钱作礼物 · 深挖讨论",
+      "topicTitle": "收钱作礼物",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why do people rarely use cash now?",
@@ -4959,6 +5071,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-40-topic",
       "part": "part3",
       "title": "和别人的争论 · 深挖讨论",
+      "topicTitle": "和别人的争论",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What do you do if you disagree with someone?",
@@ -4990,6 +5103,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-41-topic",
       "part": "part3",
       "title": "和他人一起计划活动 · 深挖讨论",
+      "topicTitle": "和他人一起计划活动",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What kind of plans do young people often make?",
@@ -5021,6 +5135,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-42-topic",
       "part": "part3",
       "title": "有趣且印象深的谈话 · 深挖讨论",
+      "topicTitle": "有趣且印象深的谈话",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What topics do young people like to talk about?",
@@ -5051,6 +5166,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-43-topic",
       "part": "part3",
       "title": "印象深刻的英语课 · 深挖讨论",
+      "topicTitle": "印象深刻的英语课",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why do people learn foreign languages?",
@@ -5082,6 +5198,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-44-topic",
       "part": "part3",
       "title": "分享时刻 · 深挖讨论",
+      "topicTitle": "分享时刻",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think kids like to share?",
@@ -5112,6 +5229,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-45-topic",
       "part": "part3",
       "title": "努力尝试并实现的目标 · 深挖讨论",
+      "topicTitle": "努力尝试并实现的目标",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do people in your country set goals?",
@@ -5143,6 +5261,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-46-topic",
       "part": "part3",
       "title": "朋友们的争吵 · 深挖讨论",
+      "topicTitle": "朋友们的争吵",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think arguments are important?",
@@ -5174,6 +5293,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-47-topic",
       "part": "part3",
       "title": "失约的事 · 深挖讨论",
+      "topicTitle": "失约的事",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Is punctuality important to people?",
@@ -5205,6 +5325,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-48-topic",
       "part": "part3",
       "title": "看到很多塑料垃圾的时刻 · 深挖讨论",
+      "topicTitle": "看到很多塑料垃圾的时刻",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think we can do without plastic altogether in the future?",
@@ -5236,6 +5357,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-49-topic",
       "part": "part3",
       "title": "在商店购物时遇到的问题 · 深挖讨论",
+      "topicTitle": "在商店购物时遇到的问题",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Can customer complaints help improve product quality?",
@@ -5267,6 +5389,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-50-topic",
       "part": "part3",
       "title": "看过的体育赛事 · 深挖讨论",
+      "topicTitle": "看过的体育赛事",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think it is necessary to award prizes and incentives to athletes?",
@@ -5297,6 +5420,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-51-topic",
       "part": "part3",
       "title": "一场想要成为观众观看的体育赛事 · 深挖讨论",
+      "topicTitle": "一场想要成为观众观看的体育赛事",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do people in your country enjoy watching football games?",
@@ -5328,6 +5452,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-52-topic",
       "part": "part3",
       "title": "被表扬的时刻 · 深挖讨论",
+      "topicTitle": "被表扬的时刻",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "When do parents usually praise their children?",
@@ -5356,6 +5481,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-53-topic",
       "part": "part3",
       "title": "检索信息 · 深挖讨论",
+      "topicTitle": "检索信息",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Is it good if people could have more access to information in the future?",
@@ -5387,6 +5513,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-54-topic",
       "part": "part3",
       "title": "开学第一天 · 深挖讨论",
+      "topicTitle": "开学第一天",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What would parents prepare when their kids go to school on the first day?",
@@ -5418,6 +5545,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-55-topic",
       "part": "part3",
       "title": "和别人一起做的事情 · 深挖讨论",
+      "topicTitle": "和别人一起做的事情",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "How do you get along with your neighbors?",
@@ -5449,6 +5577,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-56-topic",
       "part": "part3",
       "title": "健康文章 · 深挖讨论",
+      "topicTitle": "健康文章",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "How do today’s people keep healthy?",
@@ -5480,6 +5609,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-57-topic",
       "part": "part3",
       "title": "校外学到的重要事情 · 深挖讨论",
+      "topicTitle": "校外学到的重要事情",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What can children learn from parents?",
@@ -5511,6 +5641,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-58-topic",
       "part": "part3",
       "title": "可以教给别人的技能 · 深挖讨论",
+      "topicTitle": "可以教给别人的技能",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Should teachers be funny when they teach?",
@@ -5541,6 +5672,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-59-topic",
       "part": "part3",
       "title": "漂亮物品 · 深挖讨论",
+      "topicTitle": "漂亮物品",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you think there are more beautiful things now than in the past?",
@@ -5572,6 +5704,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-60-topic",
       "part": "part3",
       "title": "想再看的电影 · 深挖讨论",
+      "topicTitle": "想再看的电影",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Where do people normally watch movies?",
@@ -5603,6 +5736,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-61-topic",
       "part": "part3",
       "title": "让你自豪的照片 · 深挖讨论",
+      "topicTitle": "让你自豪的照片",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why do some people like to record important things with photos?",
@@ -5634,6 +5768,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-62-topic",
       "part": "part3",
       "title": "美丽天空 · 深挖讨论",
+      "topicTitle": "美丽天空",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What kind of people are interested in stars?",
@@ -5665,6 +5800,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-63-topic",
       "part": "part3",
       "title": "有名产品的广告 · 深挖讨论",
+      "topicTitle": "有名产品的广告",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Where do we often see advertisements?",
@@ -5696,6 +5832,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-64-topic",
       "part": "part3",
       "title": "决定等待 · 深挖讨论",
+      "topicTitle": "决定等待",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Is being patient good for people?",
@@ -5727,6 +5864,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-65-topic",
       "part": "part3",
       "title": "克服困难获得成功的事 · 深挖讨论",
+      "topicTitle": "克服困难获得成功的事",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "How would you define success?",
@@ -5758,6 +5896,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-66-topic",
       "part": "part3",
       "title": "读过的有趣的故事/小说 · 深挖讨论",
+      "topicTitle": "读过的有趣的故事/小说",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do you prefer to read e-books or printed books?",
@@ -5789,6 +5928,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-67-topic",
       "part": "part3",
       "title": "看过的搞笑电影 · 深挖讨论",
+      "topicTitle": "看过的搞笑电影",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do people like comedy?",
@@ -5820,6 +5960,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-68-topic",
       "part": "part3",
       "title": "喜欢的节目 · 深挖讨论",
+      "topicTitle": "喜欢的节目",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Do people in your country like to watch foreign TV programs?",
@@ -5851,6 +5992,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-69-topic",
       "part": "part3",
       "title": "想要尝试的户外运动 · 深挖讨论",
+      "topicTitle": "想要尝试的户外运动",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "How do weather affect outdoor sports?",
@@ -5879,6 +6021,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-70-topic",
       "part": "part3",
       "title": "喜欢的照片 · 深挖讨论",
+      "topicTitle": "喜欢的照片",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Why do many people like to share photos on social media platforms?"
@@ -5906,6 +6049,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-71-topic",
       "part": "part3",
       "title": "收到想要的物品 · 深挖讨论",
+      "topicTitle": "收到想要的物品",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Should employees have their own goals?",
@@ -5937,6 +6081,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-72-topic",
       "part": "part3",
       "title": "常用的网站 · 深挖讨论",
+      "topicTitle": "常用的网站",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "What are the most popular and least popular apps in China?",
@@ -5968,6 +6113,7 @@ window.__LEXICON_SPEAKING_BANK__ = {
       "id": "pdf-part3-73-topic",
       "part": "part3",
       "title": "二手物品网站 · 深挖讨论",
+      "topicTitle": "二手物品网站",
       "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
       "questions": [
         "Should the government encourage people to recycle items?",

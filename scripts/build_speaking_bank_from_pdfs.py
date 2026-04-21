@@ -85,6 +85,15 @@ def slugify(text):
     return cleaned[:36] or "topic"
 
 
+def format_describe_title(text):
+    title = re.sub(r"\s+", " ", str(text or "")).strip().rstrip(".")
+    if not title:
+        return ""
+    if title.lower().startswith("describe "):
+        return title[:1].upper() + title[1:]
+    return f"Describe {title}"
+
+
 def extract_pdf_text(path):
     reader = PdfReader(str(path))
     return "\n".join((page.extract_text() or "") for page in reader.pages)
@@ -299,6 +308,7 @@ def parse_part23_prompts(text):
         if not describe_match:
             continue
         describe_title = re.sub(r"\s+", " ", describe_match.group(1)).strip().rstrip(".")
+        full_part2_title = format_describe_title(describe_title)
 
         part3_start = lines.index("PART 3")
         describe_line_index = next((i for i, line in enumerate(lines) if line.startswith("Describe ")), None)
@@ -320,7 +330,8 @@ def parse_part23_prompts(text):
                 {
                     "id": f"pdf-part2-{counter:02d}-{slugify(describe_title)}",
                     "part": "part2",
-                    "title": title_cn,
+                    "title": full_part2_title,
+                    "topicTitle": title_cn,
                     "intro": "Cue Card 建议按提示词讲清背景、细节、感受和原因。",
                     "questions": cue_points,
                     "targetDuration": {"min": 95, "max": 135},
@@ -337,6 +348,7 @@ def parse_part23_prompts(text):
                     "id": f"pdf-part3-{counter:02d}-{slugify(title_cn)}",
                     "part": "part3",
                     "title": f"{title_cn} · 深挖讨论",
+                    "topicTitle": title_cn,
                     "intro": "Part 3 尽量给观点、原因和例子，再补一层延伸影响。",
                     "questions": part3_questions,
                     "targetDuration": {"min": 120, "max": 180},

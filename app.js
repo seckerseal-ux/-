@@ -6846,7 +6846,7 @@ function renderSpeakingSessionShell() {
     const response = session.responses[part];
     const status = response ? "done" : part === activePart ? "active" : "pending";
     const modifier = status === "done" ? " mock-stage-card--done" : status === "active" ? " mock-stage-card--active" : "";
-    const promptTitle = response?.promptTitle || speakingMockBank[part]?.[0]?.title || "待选择题目";
+    const promptTitle = response?.promptTitle || getSpeakingPromptOptionLabel(speakingMockBank[part]?.[0]) || "待选择题目";
     const meta = response
       ? `已完成 · Band ${Number(response.overallBand || 0).toFixed(1)}`
       : status === "active"
@@ -6928,7 +6928,7 @@ function populateSpeakingPrompts() {
   }
   const storedPromptId = ui.speakingPromptSelections[part];
   elements.speakingPrompt.innerHTML = prompts
-    .map((prompt) => `<option value="${prompt.id}">${prompt.title}</option>`)
+    .map((prompt) => `<option value="${prompt.id}">${getSpeakingPromptOptionLabel(prompt)}</option>`)
     .join("");
   elements.speakingPrompt.value = prompts.some((prompt) => prompt.id === storedPromptId) ? storedPromptId : prompts[0].id;
   ui.speakingPromptSelections[part] = elements.speakingPrompt.value;
@@ -6943,11 +6943,37 @@ function getSelectedSpeakingPrompt() {
   return prompts.find((prompt) => prompt.id === elements.speakingPrompt.value) || prompts[0];
 }
 
+function getSpeakingPromptFullTitle(prompt) {
+  if (!prompt) {
+    return "";
+  }
+  const title = String(prompt.title || "").trim();
+  const sourceTitle = String(prompt.sourceTitleEn || "").trim();
+  if (prompt.part === "part2" && sourceTitle && !title.toLowerCase().startsWith("describe ")) {
+    return `Describe ${sourceTitle}`;
+  }
+  return title || sourceTitle || "口语题目";
+}
+
+function getSpeakingPromptOptionLabel(prompt) {
+  const fullTitle = getSpeakingPromptFullTitle(prompt);
+  const topicTitle = String(prompt?.topicTitle || "").trim();
+  if (topicTitle && topicTitle !== fullTitle) {
+    return `${topicTitle} · ${fullTitle}`;
+  }
+  if (prompt?.part === "part1" && prompt.sourceTitleEn && prompt.sourceTitleEn !== prompt.title) {
+    return `${prompt.title} · ${prompt.sourceTitleEn}`;
+  }
+  return fullTitle;
+}
+
 function renderSpeakingPromptCard() {
   const prompt = getSelectedSpeakingPrompt();
   if (!prompt) {
     return;
   }
+  const fullTitle = getSpeakingPromptFullTitle(prompt);
+  const topicTitle = String(prompt.topicTitle || "").trim();
   const target = `${formatSeconds(prompt.targetDuration.min)} - ${formatSeconds(prompt.targetDuration.max)}`;
   const intro = getSpeakingPromptIntro(prompt);
   const baseMaterials = dedupeStrings(prompt.materials || []).slice(0, 6);
@@ -6960,8 +6986,14 @@ function renderSpeakingPromptCard() {
       <div class="badge-row">
         <span class="badge">${prompt.part.toUpperCase()}</span>
         <span class="badge">建议时长 ${target}</span>
+        ${topicTitle && topicTitle !== fullTitle ? `<span class="badge">${escapeHtml(topicTitle)}</span>` : ""}
       </div>
-      <h3>${escapeHtml(prompt.title)}</h3>
+      <h3>${escapeHtml(fullTitle)}</h3>
+      ${
+        prompt.sourceTitleEn && prompt.part !== "part2"
+          ? `<p class="mock-shell__meta">${escapeHtml(prompt.sourceTitleEn)}</p>`
+          : ""
+      }
       <p class="mock-shell__meta">${escapeHtml(intro)}</p>
       <p class="mock-shell__meta">${escapeHtml(modeHint)}</p>
       <div class="prompt-list">
@@ -7627,7 +7659,7 @@ function saveSpeakingSummary(prompt, analysis) {
   const entry = {
     timestamp: Date.now(),
     part: prompt.part,
-    promptTitle: prompt.title,
+    promptTitle: getSpeakingPromptFullTitle(prompt),
     primaryIssue: analysis.primaryIssue,
     materials: analysis.materials.slice(0, 3),
   };
@@ -7685,7 +7717,7 @@ function buildAiSpeakingArchiveEntry(prompt, localReview, aiPayload) {
     timestamp: Date.now(),
     part: prompt.part,
     promptId: prompt.id,
-    promptTitle: prompt.title,
+    promptTitle: getSpeakingPromptFullTitle(prompt),
     entryType: "single",
     overallBand: review.overall_band,
     bandBreakdown: review.band_breakdown,
@@ -7725,7 +7757,7 @@ function buildAiSpeakingArchiveEntry(prompt, localReview, aiPayload) {
 function saveAiSpeakingArchive(prompt, localReview, aiPayload) {
   const archiveEntry = buildAiSpeakingArchiveEntry(prompt, localReview, aiPayload);
   recordSpeakingPhraseAccumulation(
-    { topicId: prompt.id, topicTitle: prompt.title, part: prompt.part },
+    { topicId: prompt.id, topicTitle: getSpeakingPromptFullTitle(prompt), part: prompt.part },
     archiveEntry,
   );
   state.speakingArchive = [archiveEntry, ...getSpeakingArchive()].slice(0, 18);
@@ -7747,7 +7779,7 @@ function buildSpeakingMockPartEntry(prompt, localReview, aiPayload) {
   return {
     part: prompt.part,
     promptId: prompt.id,
-    promptTitle: prompt.title,
+    promptTitle: getSpeakingPromptFullTitle(prompt),
     overallBand: review.overall_band,
     bandBreakdown: review.band_breakdown,
     criterionAnalysis: review.criterion_analysis || {},
@@ -8343,7 +8375,14 @@ async function requestAiSpeakingReview(submission, prompt, localReview) {
   });
   formData.append("audio_count", String(audioFiles.length || 0));
   formData.append("part", prompt.part);
-  formData.append("prompt_payload", JSON.stringify(prompt));
+  formData.append(
+    "prompt_payload",
+    JSON.stringify({
+      ...prompt,
+      title: getSpeakingPromptFullTitle(prompt),
+      optionLabel: getSpeakingPromptOptionLabel(prompt),
+    }),
+  );
   formData.append("transcript_hint", localReview.transcript || "");
   formData.append(
     "local_metrics",
@@ -8470,7 +8509,7 @@ async function handleSpeakingAiAnalysis() {
     if (isSpeakingFullMockMode()) {
       const partEntry = buildSpeakingMockPartEntry(prompt, localReview, aiPayload);
       recordSpeakingPhraseAccumulation(
-        { topicId: prompt.id, topicTitle: prompt.title, part: prompt.part },
+        { topicId: prompt.id, topicTitle: getSpeakingPromptFullTitle(prompt), part: prompt.part },
         partEntry,
       );
       if (!ui.speakingMockSession.startedAt) {
